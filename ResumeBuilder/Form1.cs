@@ -209,5 +209,25 @@ namespace ResumeBuilder
         {
             OpenURL("https://github.com/sametcn99");
         }
+
+        private void summaryTbox_TextChanged(object sender, EventArgs e)
+        {
+            summaryTextCounterLabel.Text = $"{summaryTbox.Text.Length}/200";
+        }
+
+        private void jobDtlTbox_TextChanged(object sender, EventArgs e)
+        {
+            jobDetailTextCounterLabel.Text = $"{jobDtlTbox.Text.Length}/200";
+        }
+
+        private void eduDtlTbox_TextChanged(object sender, EventArgs e)
+        {
+            educationTextCounterLabel.Text = $"{eduDtlTbox.Text.Length}/200";
+        }
+
+        private void prsnPrjctDtlTbox_TextChanged(object sender, EventArgs e)
+        {
+            personalProjectTextCounterLabel.Text = $"{prsnPrjctDtlTbox.Text.Length}/200";
+        }
     }
 }

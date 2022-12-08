@@ -120,6 +120,10 @@
             this.Educations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.summaryTextCounterLabel = new System.Windows.Forms.Label();
+            this.jobDetailTextCounterLabel = new System.Windows.Forms.Label();
+            this.educationTextCounterLabel = new System.Windows.Forms.Label();
+            this.personalProjectTextCounterLabel = new System.Windows.Forms.Label();
             this.personalGroupBox1.SuspendLayout();
             this.jobsEduGroupBox.SuspendLayout();
             this.moreGroupBox.SuspendLayout();
@@ -238,6 +242,7 @@
             this.summaryTbox.Name = "summaryTbox";
             this.summaryTbox.Size = new System.Drawing.Size(244, 103);
             this.summaryTbox.TabIndex = 12;
+            this.summaryTbox.TextChanged += new System.EventHandler(this.summaryTbox_TextChanged);
             // 
             // jobTitleLabel
             // 
@@ -389,6 +394,7 @@
             this.prsnPrjctDtlTbox.Name = "prsnPrjctDtlTbox";
             this.prsnPrjctDtlTbox.Size = new System.Drawing.Size(227, 87);
             this.prsnPrjctDtlTbox.TabIndex = 33;
+            this.prsnPrjctDtlTbox.TextChanged += new System.EventHandler(this.prsnPrjctDtlTbox_TextChanged);
             // 
             // languageBtn
             // 
@@ -523,6 +529,7 @@
             this.jobDtlTbox.Name = "jobDtlTbox";
             this.jobDtlTbox.Size = new System.Drawing.Size(196, 70);
             this.jobDtlTbox.TabIndex = 45;
+            this.jobDtlTbox.TextChanged += new System.EventHandler(this.jobDtlTbox_TextChanged);
             // 
             // eduDtlTbox
             // 
@@ -532,6 +539,7 @@
             this.eduDtlTbox.Name = "eduDtlTbox";
             this.eduDtlTbox.Size = new System.Drawing.Size(184, 93);
             this.eduDtlTbox.TabIndex = 46;
+            this.eduDtlTbox.TextChanged += new System.EventHandler(this.eduDtlTbox_TextChanged);
             // 
             // educationDtlLabel
             // 
@@ -570,6 +578,7 @@
             // 
             // personalGroupBox1
             // 
+            this.personalGroupBox1.Controls.Add(this.summaryTextCounterLabel);
             this.personalGroupBox1.Controls.Add(this.nameLabel);
             this.personalGroupBox1.Controls.Add(this.surnameLabel);
             this.personalGroupBox1.Controls.Add(this.addressLabel);
@@ -595,6 +604,8 @@
             // 
             // jobsEduGroupBox
             // 
+            this.jobsEduGroupBox.Controls.Add(this.educationTextCounterLabel);
+            this.jobsEduGroupBox.Controls.Add(this.jobDetailTextCounterLabel);
             this.jobsEduGroupBox.Controls.Add(this.jobTitleLabel);
             this.jobsEduGroupBox.Controls.Add(this.jobttlTbox);
             this.jobsEduGroupBox.Controls.Add(this.jobSDateLabel);
@@ -622,6 +633,7 @@
             // 
             // moreGroupBox
             // 
+            this.moreGroupBox.Controls.Add(this.personalProjectTextCounterLabel);
             this.moreGroupBox.Controls.Add(this.addCertificationBtn);
             this.moreGroupBox.Controls.Add(this.certificationTbox);
             this.moreGroupBox.Controls.Add(this.certificationsLabel);
@@ -998,6 +1010,42 @@
             this.Languages.HeaderText = "Languages";
             this.Languages.Name = "Languages";
             // 
+            // summaryTextCounterLabel
+            // 
+            this.summaryTextCounterLabel.AutoSize = true;
+            this.summaryTextCounterLabel.Location = new System.Drawing.Point(131, 444);
+            this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
+            this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.summaryTextCounterLabel.TabIndex = 40;
+            this.summaryTextCounterLabel.Text = "0/200";
+            // 
+            // jobDetailTextCounterLabel
+            // 
+            this.jobDetailTextCounterLabel.AutoSize = true;
+            this.jobDetailTextCounterLabel.Location = new System.Drawing.Point(131, 222);
+            this.jobDetailTextCounterLabel.Name = "jobDetailTextCounterLabel";
+            this.jobDetailTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.jobDetailTextCounterLabel.TabIndex = 48;
+            this.jobDetailTextCounterLabel.Text = "0/200";
+            // 
+            // educationTextCounterLabel
+            // 
+            this.educationTextCounterLabel.AutoSize = true;
+            this.educationTextCounterLabel.Location = new System.Drawing.Point(145, 476);
+            this.educationTextCounterLabel.Name = "educationTextCounterLabel";
+            this.educationTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.educationTextCounterLabel.TabIndex = 49;
+            this.educationTextCounterLabel.Text = "0/200";
+            // 
+            // personalProjectTextCounterLabel
+            // 
+            this.personalProjectTextCounterLabel.AutoSize = true;
+            this.personalProjectTextCounterLabel.Location = new System.Drawing.Point(141, 402);
+            this.personalProjectTextCounterLabel.Name = "personalProjectTextCounterLabel";
+            this.personalProjectTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.personalProjectTextCounterLabel.TabIndex = 53;
+            this.personalProjectTextCounterLabel.Text = "0/200";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1121,5 +1169,9 @@
         private PictureBox aboutPictureBox;
         private LinkLabel aboutLinkLabel;
         private Button importJsonBtn;
+        private Label summaryTextCounterLabel;
+        private Label jobDetailTextCounterLabel;
+        private Label educationTextCounterLabel;
+        private Label personalProjectTextCounterLabel;
     }
 }
