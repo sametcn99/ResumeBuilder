@@ -80,7 +80,6 @@ namespace ResumeBuilder
                 cnn.Close();
                 index++;
             }
-
         }
 
         public void insertDataSql(string cmdstring)
