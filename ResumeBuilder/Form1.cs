@@ -10,7 +10,6 @@ namespace ResumeBuilder
         /*NOTEPAD
         * Example sql command: string cmdstring = $"insert into TableName (Column1, Column2) values('Row1', {Row2Textbox.text})";
         * TO-DO:
-        *   multiline textbox'lardaki karakter sınırlarını canlı göster
         *   hata mesajlarını göster
         *   hataları yakala
         *   veritabanı veri tiplerini düzenle
@@ -18,8 +17,7 @@ namespace ResumeBuilder
         *   fotoğraf yükleme özelliği ekle
         *   json olarak kaydetme çalışmazsa database'teki verileri datagride yazdırıp datagridden json olarak dışarı aktar
         *   program kapatıldığında veritabanını sıfırla (EN SON YAPILACAK)
-        *   json dosyasından veri aktarma butonunu yap
-        *   
+        *   json dosyasından veri aktarma butonunu yap   
         */
         string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         SqlConnection cnn;
