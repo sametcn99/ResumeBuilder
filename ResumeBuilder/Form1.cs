@@ -7,7 +7,7 @@ namespace ResumeBuilder
 {
     public partial class Form1 : Form
     {
-        /*
+        /*NOTEPAD
         * Example sql command: string cmdstring = $"insert into TableName (Column1, Column2) values('Row1', {Row2Textbox.text})";
         * TO-DO:
         *   multiline textbox'lardaki karakter sınırlarını canlı göster
@@ -19,14 +19,19 @@ namespace ResumeBuilder
         *   json olarak kaydetme çalışmazsa database'teki verileri datagride yazdırıp datagridden json olarak dışarı aktar
         *   program kapatıldığında veritabanını sıfırla (EN SON YAPILACAK)
         *   json dosyasından veri aktarma butonunu yap
+        *   
         */
         string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         SqlConnection cnn;
         SqlDataReader reader1;
+        private DataGridView resumeDataGridView = new DataGridView();
+
         public Form1()
         {
+
             InitializeComponent();
             fillCombobox();
+            dataGridViewFill();
         }
 
         public void fillCombobox()
@@ -77,7 +82,7 @@ namespace ResumeBuilder
                         interestsCombobox.Items.Add(reader1.GetString("Interest"));
                     }
                 }
-                cnn.Close();
+                //cnn.Close();
                 index++;
             }
         }
@@ -184,7 +189,6 @@ namespace ResumeBuilder
             fillCombobox();
         }
 
-
         private void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";
@@ -197,7 +201,6 @@ namespace ResumeBuilder
             p.StartInfo.Arguments = url;
             p.Start();
         }
-
 
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
@@ -227,6 +230,21 @@ namespace ResumeBuilder
         private void prsnPrjctDtlTbox_TextChanged(object sender, EventArgs e)
         {
             personalProjectTextCounterLabel.Text = $"{prsnPrjctDtlTbox.Text.Length}/200";
+        }
+
+        private void dataGridViewFill()
+        {
+            string selectColumnCommand = "select count(*) as AllColumns from INFORMATION_SCHEMA.COLUMNS";
+            cnn = new SqlConnection(connetionString);
+            SqlCommand cmd = new SqlCommand(selectColumnCommand, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                MessageBox.Show("if çalıştı");
+                resumeDataGridView.RowCount = reader1.GetInt32("AllColumns");
+            }
+            cnn.Close();
         }
     }
 }
