@@ -13,23 +13,19 @@ namespace ResumeBuilder
         *   hata mesajlarını göster
         *   hataları yakala
         *   veritabanı veri tiplerini düzenle
-        *   başlama bitiş tarihleri sadece yıl olarak seçilecek
         *   fotoğraf yükleme özelliği ekle
-        *   json olarak kaydetme çalışmazsa database'teki verileri datagride yazdırıp datagridden json olarak dışarı aktar
         *   program kapatıldığında veritabanını sıfırla (EN SON YAPILACAK)
         *   json dosyasından veri aktarma butonunu yap   
         */
         string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
+        string cmdstring = "";
         SqlConnection cnn;
         SqlDataReader reader1;
-        private DataGridView resumeDataGridView = new DataGridView();
 
         public Form1()
         {
-
             InitializeComponent();
             fillCombobox();
-            dataGridViewFill();
         }
 
         public void fillCombobox()
@@ -80,14 +76,24 @@ namespace ResumeBuilder
                         interestsCombobox.Items.Add(reader1.GetString("Interest"));
                     }
                 }
-                //cnn.Close();
                 index++;
             }
         }
-
-        public void insertDataSql(string cmdstring)
+        private void OpenURL(string url)
         {
+            string key = @"htmlfile\shell\open\command";
+            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
+            // Get the default browser path on the system
+            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
+            Process p = new Process();
+            p.StartInfo.FileName = Default_Browser_Path;
+            p.StartInfo.Arguments = url;
+            p.Start();
+        }
 
+        //*****SQL FUNCTIONS*****
+        private void insertDataSql(string cmdstring)
+        {
             if (nameTbox.Text == "" && SurnameTbox.Text == "")
             {
                 MessageBox.Show("Please enter your Name and Surname first!");
@@ -105,144 +111,244 @@ namespace ResumeBuilder
                 }
             }
         }
-
-        private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
+        private void removeDataSql(string cmdstring)
         {
-            string cmdstring = $"insert into Person (Name, Surname, PhoneNumber, Address, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void addJobBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            string cmdstring = $"insert into Job (JobTitle, JobDetail, JobStart, JobEnd) values('{jobttlTbox.Text}', '{jobDtlTbox.Text}', '{jobSDateTbox.Text}', '{jobEDateTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void addEduBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            string cmdstring = $"insert into Education (EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{eduTtlTbox.Text}','{eduDtlTbox.Text}', '{eduSDateTbox.Text}', '{EduEDateTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void addSkillBtn_Click(object sender, EventArgs e)
-        {
-            string cmdstring = $"insert into Skills (Skill) values('{skillTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void languageBtn_Click(object sender, EventArgs e)
-        {
-            string cmdstring = $"insert into Languages (Language) values('{languageTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void addPrsnPrjctBtn_Click(object sender, EventArgs e)
-        {
-            string cmdstring = $"insert into PersonalProjects (PersonalProjectTitle, PersonalProjectDetail) values('{prsnPrcjtTtlTbox.Text}', '{prsnPrjctDtlTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void addInterestBtn_Click(object sender, EventArgs e)
-        {
-            string cmdstring = $"insert into Interests (Interest) values('{interestTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-
-        private void exportJsonBtn_Click(object sender, EventArgs e)
-        {
-            string cmdstring = "select * from Person for json path";
-            string jsondata = "";
             cnn = new SqlConnection(connetionString);
             SqlCommand cmd = new SqlCommand(cmdstring, cnn);
             cnn.Open();
-
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                jsondata = reader1.GetString(0);
-                MessageBox.Show(jsondata);
-                SaveFileDialog save = new SaveFileDialog();
-                save.OverwritePrompt = false;
-                save.CreatePrompt = true;
-                save.InitialDirectory = @"D:\";
-                save.Title = "Save Json File";
-                save.DefaultExt = "json";
-                save.Filter = "text files (*.txt)|*.txt|Tüm Dosyalar(*.*)|*.*";
-                if (save.ShowDialog() == DialogResult.OK)
-                {
-                    StreamWriter sw = new StreamWriter(save.FileName);
-                    sw.WriteLine(jsondata);
-                    sw.Close();
-                }
-            }
-            else
-            {
-                MessageBox.Show("no data found");
-            }
+            int i = cmd.ExecuteNonQuery();
             cnn.Close();
+            if (i != 0)
+            {
+                MessageBox.Show("Data Removed!");
+                fillCombobox();
+            }
         }
 
-        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillCombobox();
-        }
-
-        private void OpenURL(string url)
-        {
-            string key = @"htmlfile\shell\open\command";
-            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
-            // Get the default browser path on the system
-            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
-
-            Process p = new Process();
-            p.StartInfo.FileName = Default_Browser_Path;
-            p.StartInfo.Arguments = url;
-            p.Start();
-        }
-
-        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
-        {
-            OpenURL("https://github.com/sametcn99");
-        }
-
-        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
-        {
-            OpenURL("https://github.com/sametcn99");
-        }
-
+        //*****TEXT COUNTERS*****
         private void summaryTbox_TextChanged(object sender, EventArgs e)
         {
             summaryTextCounterLabel.Text = $"{summaryTbox.Text.Length}/200";
         }
-
         private void jobDtlTbox_TextChanged(object sender, EventArgs e)
         {
             jobDetailTextCounterLabel.Text = $"{jobDtlTbox.Text.Length}/200";
         }
-
         private void eduDtlTbox_TextChanged(object sender, EventArgs e)
         {
             educationTextCounterLabel.Text = $"{eduDtlTbox.Text.Length}/200";
         }
-
         private void prsnPrjctDtlTbox_TextChanged(object sender, EventArgs e)
         {
             personalProjectTextCounterLabel.Text = $"{prsnPrjctDtlTbox.Text.Length}/200";
         }
 
-        private void dataGridViewFill()
+        //*****BUTTON CLICK EVENTS*****
+        //*****ADD BUTTON CLICK EVENTS*****
+        private void addJobBtn_MouseClick(object sender, MouseEventArgs e)
         {
-            string selectColumnCommand = "select count(*) as AllColumns from INFORMATION_SCHEMA.COLUMNS";
+            cmdstring = $"insert into Job (JobTitle, JobDetail, JobStart, JobEnd) values('{jobttlTbox.Text}', '{jobDtlTbox.Text}', '{jobSDateTbox.Text}', '{jobEDateTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addEduBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            cmdstring = $"insert into Education (EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{eduTtlTbox.Text}','{eduDtlTbox.Text}', '{eduSDateTbox.Text}', '{EduEDateTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addSkillBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"insert into Skills (Skill) values('{skillTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addlanguageBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"insert into Languages (Language) values('{languageTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addPrsnPrjctBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"insert into PersonalProjects (PersonalProjectTitle, PersonalProjectDetail) values('{prsnPrcjtTtlTbox.Text}', '{prsnPrjctDtlTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addCertificationBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"insert into Certifications (CertificationName) values('{certificationTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void addInterestBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"insert into Interests (Interest) values('{interestTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        //*****REMOVE BUTTON EVENTS*****
+        private void jobsRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Job WHERE JobTitle='{jobsCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void educationRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Education WHERE EducationTitle='{eduCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void skillsRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Skills WHERE Skill='{skillsCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void languageRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Languages WHERE Language='{languagesCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void personelProjectRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM PersonalProjects WHERE PersonalProjectTitle='{prsnPrjctCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void interestRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Interests WHERE Interest='{interestsCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void certificationRemoveBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = $"DELETE FROM Certifications WHERE CertificationName='{certificationsCombobox.Text}'";
+            removeDataSql(cmdstring);
+        }
+        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            fillCombobox();
+        }
+        //*****OTHER EVENTS*****
+        private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenURL("https://github.com/sametcn99");
+        }
+        private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
+        {
+            OpenURL("https://github.com/sametcn99");
+        }
+        private void exportJsonBtn_Click(object sender, EventArgs e)
+        {
+            cmdstring = "select * from Person for json path";
+            string personData = "person data";
             cnn = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand(selectColumnCommand, cnn);
+            SqlCommand cmd = new SqlCommand(cmdstring, cnn);
             cnn.Open();
             reader1 = cmd.ExecuteReader();
             if (reader1.Read())
             {
-                MessageBox.Show("if çalıştı");
-                resumeDataGridView.RowCount = reader1.GetInt32("AllColumns");
+                personData = reader1.GetString(0);
+                personData = personData + "\"}]";
+            }
+            else
+            {
+                MessageBox.Show("person data not found");
             }
             cnn.Close();
+            string educationData = "education data";
+            cmdstring = "select * from Education for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                educationData = reader1.GetString(0);
+            }
+            else
+            {
+                MessageBox.Show("education data not found");
+            }
+            cnn.Close();
+            string jobData = "job data";
+            cmdstring = "select * from Job for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                jobData = reader1.GetString(0);
+            }
+            else
+            {
+                MessageBox.Show("job data not found");
+            }
+            cnn.Close();
+            string languagesData = "languages data";
+            cmdstring = "select * from Languages for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                languagesData = reader1.GetString(0);
+            }
+            else
+            {
+                MessageBox.Show("languages data not found");
+            }
+            cnn.Close();
+            string certificationsData = "certifications data";
+            cmdstring = "select * from Certifications for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                certificationsData = reader1.GetString(0);
+            }
+            cnn.Close();
+            string interestsData = "intersests data";
+            cmdstring = "select * from Interests for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                interestsData = reader1.GetString(0);
+            }
+            cnn.Close();
+            string personalProjectsData = "personal projects data";
+            cmdstring = "select * from PersonalProjects for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                personalProjectsData = reader1.GetString(0);
+            }
+            cnn.Close();
+            string skillsData = "skills data";
+            cmdstring = "select * from Skills for json path";
+            cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            reader1 = cmd.ExecuteReader();
+            if (reader1.Read())
+            {
+                skillsData = reader1.GetString(0);
+            }
+            cnn.Close();
+            string result = personData.Remove(personData.Length - 1) + "," + educationData.Remove(educationData.Length - 1).Remove(0, 1) + "," + jobData.Remove(jobData.Length - 1).Remove(0, 1) + "," + languagesData.Remove(languagesData.Length - 1).Remove(0, 1) + "," + certificationsData.Remove(certificationsData.Length - 1).Remove(0, 1) + "," + skillsData.Remove(skillsData.Length - 1).Remove(0, 1) + "," + personalProjectsData.Remove(personalProjectsData.Length - 1).Remove(0, 1) + "," + interestsData.Remove(0, 1);
+            MessageBox.Show("it works only all fields filled for now...");
+            SaveFileDialog save = new SaveFileDialog();
+            save.OverwritePrompt = false;
+            save.CreatePrompt = true;
+            save.InitialDirectory = @"D:\";
+            save.Title = "Save Json File";
+            save.DefaultExt = "json";
+            save.Filter = "json files (*.json)|*.txt|All Files(*.*)|*.*";
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                StreamWriter sw = new StreamWriter(save.FileName);
+                sw.WriteLine(result);
+                sw.Close();
+            }
+        }
+        private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            cmdstring = $"insert into Person (Name, Surname, PhoneNumber, Address, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
+            insertDataSql(cmdstring);
         }
     }
 }

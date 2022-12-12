@@ -58,7 +58,7 @@
             this.languageTbox = new System.Windows.Forms.TextBox();
             this.personalPTtlLabel = new System.Windows.Forms.Label();
             this.prsnPrjctDtlTbox = new System.Windows.Forms.TextBox();
-            this.languageBtn = new System.Windows.Forms.Button();
+            this.addLanguageBtn = new System.Windows.Forms.Button();
             this.addPrsnPrjctBtn = new System.Windows.Forms.Button();
             this.websiteLabel = new System.Windows.Forms.Label();
             this.websiteTbox = new System.Windows.Forms.TextBox();
@@ -81,8 +81,12 @@
             this.exportJsonBtn = new System.Windows.Forms.Button();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.personalGroupBox1 = new System.Windows.Forms.GroupBox();
+            this.summaryTextCounterLabel = new System.Windows.Forms.Label();
             this.jobsEduGroupBox = new System.Windows.Forms.GroupBox();
+            this.educationTextCounterLabel = new System.Windows.Forms.Label();
+            this.jobDetailTextCounterLabel = new System.Windows.Forms.Label();
             this.moreGroupBox = new System.Windows.Forms.GroupBox();
+            this.personalProjectTextCounterLabel = new System.Windows.Forms.Label();
             this.addCertificationBtn = new System.Windows.Forms.Button();
             this.certificationTbox = new System.Windows.Forms.TextBox();
             this.certificationsLabel = new System.Windows.Forms.Label();
@@ -120,10 +124,6 @@
             this.Educations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.summaryTextCounterLabel = new System.Windows.Forms.Label();
-            this.jobDetailTextCounterLabel = new System.Windows.Forms.Label();
-            this.educationTextCounterLabel = new System.Windows.Forms.Label();
-            this.personalProjectTextCounterLabel = new System.Windows.Forms.Label();
             this.personalGroupBox1.SuspendLayout();
             this.jobsEduGroupBox.SuspendLayout();
             this.moreGroupBox.SuspendLayout();
@@ -182,6 +182,7 @@
             // 
             // phoneNuTbox
             // 
+            this.phoneNuTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.phoneNuTbox.Location = new System.Drawing.Point(131, 123);
             this.phoneNuTbox.Name = "phoneNuTbox";
             this.phoneNuTbox.Size = new System.Drawing.Size(244, 23);
@@ -189,6 +190,7 @@
             // 
             // emailTbox
             // 
+            this.emailTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailTbox.Location = new System.Drawing.Point(131, 152);
             this.emailTbox.Name = "emailTbox";
             this.emailTbox.Size = new System.Drawing.Size(244, 23);
@@ -196,6 +198,7 @@
             // 
             // AddressTbox
             // 
+            this.AddressTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTbox.Location = new System.Drawing.Point(131, 91);
             this.AddressTbox.Name = "AddressTbox";
             this.AddressTbox.Size = new System.Drawing.Size(244, 23);
@@ -203,6 +206,7 @@
             // 
             // SurnameTbox
             // 
+            this.SurnameTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SurnameTbox.Location = new System.Drawing.Point(131, 62);
             this.SurnameTbox.Name = "SurnameTbox";
             this.SurnameTbox.Size = new System.Drawing.Size(244, 23);
@@ -210,6 +214,7 @@
             // 
             // nameTbox
             // 
+            this.nameTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameTbox.Location = new System.Drawing.Point(131, 35);
             this.nameTbox.Name = "nameTbox";
             this.nameTbox.Size = new System.Drawing.Size(244, 23);
@@ -217,12 +222,14 @@
             // 
             // savePersonDataBtn
             // 
+            this.savePersonDataBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.savePersonDataBtn.ForeColor = System.Drawing.Color.Black;
             this.savePersonDataBtn.Location = new System.Drawing.Point(1029, 528);
             this.savePersonDataBtn.Name = "savePersonDataBtn";
             this.savePersonDataBtn.Size = new System.Drawing.Size(129, 62);
             this.savePersonDataBtn.TabIndex = 10;
             this.savePersonDataBtn.Text = "Save";
-            this.savePersonDataBtn.UseVisualStyleBackColor = true;
+            this.savePersonDataBtn.UseVisualStyleBackColor = false;
             this.savePersonDataBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.savePersonDataBtn_MouseClick);
             // 
             // summaryLabel
@@ -236,6 +243,7 @@
             // 
             // summaryTbox
             // 
+            this.summaryTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summaryTbox.Location = new System.Drawing.Point(131, 338);
             this.summaryTbox.MaxLength = 200;
             this.summaryTbox.Multiline = true;
@@ -255,6 +263,7 @@
             // 
             // jobttlTbox
             // 
+            this.jobttlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobttlTbox.Location = new System.Drawing.Point(127, 27);
             this.jobttlTbox.Name = "jobttlTbox";
             this.jobttlTbox.Size = new System.Drawing.Size(196, 23);
@@ -298,6 +307,7 @@
             // 
             // eduTtlTbox
             // 
+            this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eduTtlTbox.Location = new System.Drawing.Point(139, 278);
             this.eduTtlTbox.Name = "eduTtlTbox";
             this.eduTtlTbox.Size = new System.Drawing.Size(182, 23);
@@ -323,37 +333,44 @@
             // 
             // addJobBtn
             // 
+            this.addJobBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addJobBtn.ForeColor = System.Drawing.Color.Black;
             this.addJobBtn.Location = new System.Drawing.Point(223, 232);
             this.addJobBtn.Name = "addJobBtn";
             this.addJobBtn.Size = new System.Drawing.Size(100, 23);
             this.addJobBtn.TabIndex = 26;
             this.addJobBtn.Text = "Add Job";
             this.addJobBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.addJobBtn.UseVisualStyleBackColor = true;
+            this.addJobBtn.UseVisualStyleBackColor = false;
             this.addJobBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.addJobBtn_MouseClick);
             // 
             // addEduBtn
             // 
+            this.addEduBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addEduBtn.ForeColor = System.Drawing.Color.Black;
             this.addEduBtn.Location = new System.Drawing.Point(223, 477);
             this.addEduBtn.Name = "addEduBtn";
             this.addEduBtn.Size = new System.Drawing.Size(100, 23);
             this.addEduBtn.TabIndex = 27;
             this.addEduBtn.Text = "Add Education";
-            this.addEduBtn.UseVisualStyleBackColor = true;
+            this.addEduBtn.UseVisualStyleBackColor = false;
             this.addEduBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.addEduBtn_MouseClick);
             // 
             // addSkillBtn
             // 
+            this.addSkillBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addSkillBtn.ForeColor = System.Drawing.Color.Black;
             this.addSkillBtn.Location = new System.Drawing.Point(232, 70);
             this.addSkillBtn.Name = "addSkillBtn";
             this.addSkillBtn.Size = new System.Drawing.Size(132, 23);
             this.addSkillBtn.TabIndex = 28;
             this.addSkillBtn.Text = "Add Skill";
-            this.addSkillBtn.UseVisualStyleBackColor = true;
+            this.addSkillBtn.UseVisualStyleBackColor = false;
             this.addSkillBtn.Click += new System.EventHandler(this.addSkillBtn_Click);
             // 
             // skillTbox
             // 
+            this.skillTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.skillTbox.Location = new System.Drawing.Point(137, 37);
             this.skillTbox.Multiline = true;
             this.skillTbox.Name = "skillTbox";
@@ -371,6 +388,7 @@
             // 
             // languageTbox
             // 
+            this.languageTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.languageTbox.Location = new System.Drawing.Point(137, 192);
             this.languageTbox.Multiline = true;
             this.languageTbox.Name = "languageTbox";
@@ -388,6 +406,7 @@
             // 
             // prsnPrjctDtlTbox
             // 
+            this.prsnPrjctDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.prsnPrjctDtlTbox.Location = new System.Drawing.Point(137, 312);
             this.prsnPrjctDtlTbox.MaxLength = 200;
             this.prsnPrjctDtlTbox.Multiline = true;
@@ -396,24 +415,28 @@
             this.prsnPrjctDtlTbox.TabIndex = 33;
             this.prsnPrjctDtlTbox.TextChanged += new System.EventHandler(this.prsnPrjctDtlTbox_TextChanged);
             // 
-            // languageBtn
+            // addLanguageBtn
             // 
-            this.languageBtn.Location = new System.Drawing.Point(232, 232);
-            this.languageBtn.Name = "languageBtn";
-            this.languageBtn.Size = new System.Drawing.Size(132, 23);
-            this.languageBtn.TabIndex = 34;
-            this.languageBtn.Text = "Add Language";
-            this.languageBtn.UseVisualStyleBackColor = true;
-            this.languageBtn.Click += new System.EventHandler(this.languageBtn_Click);
+            this.addLanguageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addLanguageBtn.ForeColor = System.Drawing.Color.Black;
+            this.addLanguageBtn.Location = new System.Drawing.Point(232, 232);
+            this.addLanguageBtn.Name = "addLanguageBtn";
+            this.addLanguageBtn.Size = new System.Drawing.Size(132, 23);
+            this.addLanguageBtn.TabIndex = 34;
+            this.addLanguageBtn.Text = "Add Language";
+            this.addLanguageBtn.UseVisualStyleBackColor = false;
+            this.addLanguageBtn.Click += new System.EventHandler(this.addlanguageBtn_Click);
             // 
             // addPrsnPrjctBtn
             // 
+            this.addPrsnPrjctBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addPrsnPrjctBtn.ForeColor = System.Drawing.Color.Black;
             this.addPrsnPrjctBtn.Location = new System.Drawing.Point(232, 405);
             this.addPrsnPrjctBtn.Name = "addPrsnPrjctBtn";
             this.addPrsnPrjctBtn.Size = new System.Drawing.Size(132, 23);
             this.addPrsnPrjctBtn.TabIndex = 35;
             this.addPrsnPrjctBtn.Text = "Add Personal Project";
-            this.addPrsnPrjctBtn.UseVisualStyleBackColor = true;
+            this.addPrsnPrjctBtn.UseVisualStyleBackColor = false;
             this.addPrsnPrjctBtn.Click += new System.EventHandler(this.addPrsnPrjctBtn_Click);
             // 
             // websiteLabel
@@ -427,6 +450,7 @@
             // 
             // websiteTbox
             // 
+            this.websiteTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.websiteTbox.Location = new System.Drawing.Point(131, 195);
             this.websiteTbox.Name = "websiteTbox";
             this.websiteTbox.Size = new System.Drawing.Size(244, 23);
@@ -443,6 +467,7 @@
             // 
             // sMediaTbox
             // 
+            this.sMediaTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.sMediaTbox.Location = new System.Drawing.Point(131, 245);
             this.sMediaTbox.Multiline = true;
             this.sMediaTbox.Name = "sMediaTbox";
@@ -451,12 +476,14 @@
             // 
             // previewBtn
             // 
+            this.previewBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.previewBtn.ForeColor = System.Drawing.Color.Black;
             this.previewBtn.Location = new System.Drawing.Point(892, 528);
             this.previewBtn.Name = "previewBtn";
             this.previewBtn.Size = new System.Drawing.Size(129, 62);
             this.previewBtn.TabIndex = 40;
             this.previewBtn.Text = "Preview";
-            this.previewBtn.UseVisualStyleBackColor = true;
+            this.previewBtn.UseVisualStyleBackColor = false;
             // 
             // interestsLabel
             // 
@@ -469,6 +496,7 @@
             // 
             // interestTbox
             // 
+            this.interestTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.interestTbox.Location = new System.Drawing.Point(137, 434);
             this.interestTbox.Name = "interestTbox";
             this.interestTbox.Size = new System.Drawing.Size(227, 23);
@@ -476,16 +504,19 @@
             // 
             // addInterestBtn
             // 
+            this.addInterestBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addInterestBtn.ForeColor = System.Drawing.Color.Black;
             this.addInterestBtn.Location = new System.Drawing.Point(232, 463);
             this.addInterestBtn.Name = "addInterestBtn";
             this.addInterestBtn.Size = new System.Drawing.Size(132, 23);
             this.addInterestBtn.TabIndex = 43;
             this.addInterestBtn.Text = "Add Interest";
-            this.addInterestBtn.UseVisualStyleBackColor = true;
+            this.addInterestBtn.UseVisualStyleBackColor = false;
             this.addInterestBtn.Click += new System.EventHandler(this.addInterestBtn_Click);
             // 
             // jobSDateTbox
             // 
+            this.jobSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobSDateTbox.Location = new System.Drawing.Point(127, 61);
             this.jobSDateTbox.Name = "jobSDateTbox";
             this.jobSDateTbox.Size = new System.Drawing.Size(196, 23);
@@ -493,6 +524,7 @@
             // 
             // jobEDateTbox
             // 
+            this.jobEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobEDateTbox.Location = new System.Drawing.Point(127, 100);
             this.jobEDateTbox.Name = "jobEDateTbox";
             this.jobEDateTbox.Size = new System.Drawing.Size(196, 23);
@@ -500,6 +532,7 @@
             // 
             // EduEDateTbox
             // 
+            this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EduEDateTbox.Location = new System.Drawing.Point(139, 349);
             this.EduEDateTbox.Name = "EduEDateTbox";
             this.EduEDateTbox.Size = new System.Drawing.Size(184, 23);
@@ -507,6 +540,7 @@
             // 
             // eduSDateTbox
             // 
+            this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eduSDateTbox.Location = new System.Drawing.Point(139, 313);
             this.eduSDateTbox.Name = "eduSDateTbox";
             this.eduSDateTbox.Size = new System.Drawing.Size(182, 23);
@@ -523,6 +557,7 @@
             // 
             // jobDtlTbox
             // 
+            this.jobDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobDtlTbox.Location = new System.Drawing.Point(127, 149);
             this.jobDtlTbox.MaxLength = 200;
             this.jobDtlTbox.Multiline = true;
@@ -533,6 +568,7 @@
             // 
             // eduDtlTbox
             // 
+            this.eduDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eduDtlTbox.Location = new System.Drawing.Point(139, 378);
             this.eduDtlTbox.MaxLength = 200;
             this.eduDtlTbox.Multiline = true;
@@ -552,6 +588,7 @@
             // 
             // prsnPrcjtTtlTbox
             // 
+            this.prsnPrcjtTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.prsnPrcjtTtlTbox.Location = new System.Drawing.Point(137, 278);
             this.prsnPrcjtTtlTbox.Name = "prsnPrcjtTtlTbox";
             this.prsnPrcjtTtlTbox.Size = new System.Drawing.Size(227, 23);
@@ -568,16 +605,19 @@
             // 
             // exportJsonBtn
             // 
+            this.exportJsonBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.exportJsonBtn.ForeColor = System.Drawing.Color.Black;
             this.exportJsonBtn.Location = new System.Drawing.Point(757, 528);
             this.exportJsonBtn.Name = "exportJsonBtn";
             this.exportJsonBtn.Size = new System.Drawing.Size(129, 62);
             this.exportJsonBtn.TabIndex = 50;
             this.exportJsonBtn.Text = "Export Json";
-            this.exportJsonBtn.UseVisualStyleBackColor = true;
+            this.exportJsonBtn.UseVisualStyleBackColor = false;
             this.exportJsonBtn.Click += new System.EventHandler(this.exportJsonBtn_Click);
             // 
             // personalGroupBox1
             // 
+            this.personalGroupBox1.BackColor = System.Drawing.Color.Transparent;
             this.personalGroupBox1.Controls.Add(this.summaryTextCounterLabel);
             this.personalGroupBox1.Controls.Add(this.nameLabel);
             this.personalGroupBox1.Controls.Add(this.surnameLabel);
@@ -595,6 +635,7 @@
             this.personalGroupBox1.Controls.Add(this.websiteLabel);
             this.personalGroupBox1.Controls.Add(this.sMediaLabel);
             this.personalGroupBox1.Controls.Add(this.websiteTbox);
+            this.personalGroupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.personalGroupBox1.Location = new System.Drawing.Point(17, 13);
             this.personalGroupBox1.Name = "personalGroupBox1";
             this.personalGroupBox1.Size = new System.Drawing.Size(392, 509);
@@ -602,8 +643,18 @@
             this.personalGroupBox1.TabStop = false;
             this.personalGroupBox1.Text = "Personal";
             // 
+            // summaryTextCounterLabel
+            // 
+            this.summaryTextCounterLabel.AutoSize = true;
+            this.summaryTextCounterLabel.Location = new System.Drawing.Point(131, 444);
+            this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
+            this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.summaryTextCounterLabel.TabIndex = 40;
+            this.summaryTextCounterLabel.Text = "0/200";
+            // 
             // jobsEduGroupBox
             // 
+            this.jobsEduGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.jobsEduGroupBox.Controls.Add(this.educationTextCounterLabel);
             this.jobsEduGroupBox.Controls.Add(this.jobDetailTextCounterLabel);
             this.jobsEduGroupBox.Controls.Add(this.jobTitleLabel);
@@ -624,6 +675,7 @@
             this.jobsEduGroupBox.Controls.Add(this.EduEDateTbox);
             this.jobsEduGroupBox.Controls.Add(this.addJobBtn);
             this.jobsEduGroupBox.Controls.Add(this.addEduBtn);
+            this.jobsEduGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobsEduGroupBox.Location = new System.Drawing.Point(415, 13);
             this.jobsEduGroupBox.Name = "jobsEduGroupBox";
             this.jobsEduGroupBox.Size = new System.Drawing.Size(347, 509);
@@ -631,8 +683,27 @@
             this.jobsEduGroupBox.TabStop = false;
             this.jobsEduGroupBox.Text = "Jobs & Educations";
             // 
+            // educationTextCounterLabel
+            // 
+            this.educationTextCounterLabel.AutoSize = true;
+            this.educationTextCounterLabel.Location = new System.Drawing.Point(145, 476);
+            this.educationTextCounterLabel.Name = "educationTextCounterLabel";
+            this.educationTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.educationTextCounterLabel.TabIndex = 49;
+            this.educationTextCounterLabel.Text = "0/200";
+            // 
+            // jobDetailTextCounterLabel
+            // 
+            this.jobDetailTextCounterLabel.AutoSize = true;
+            this.jobDetailTextCounterLabel.Location = new System.Drawing.Point(131, 222);
+            this.jobDetailTextCounterLabel.Name = "jobDetailTextCounterLabel";
+            this.jobDetailTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.jobDetailTextCounterLabel.TabIndex = 48;
+            this.jobDetailTextCounterLabel.Text = "0/200";
+            // 
             // moreGroupBox
             // 
+            this.moreGroupBox.BackColor = System.Drawing.Color.Transparent;
             this.moreGroupBox.Controls.Add(this.personalProjectTextCounterLabel);
             this.moreGroupBox.Controls.Add(this.addCertificationBtn);
             this.moreGroupBox.Controls.Add(this.certificationTbox);
@@ -647,10 +718,11 @@
             this.moreGroupBox.Controls.Add(this.prsnPrcjtTtlTbox);
             this.moreGroupBox.Controls.Add(this.prsnPrjctDtlTbox);
             this.moreGroupBox.Controls.Add(this.addInterestBtn);
-            this.moreGroupBox.Controls.Add(this.languageBtn);
+            this.moreGroupBox.Controls.Add(this.addLanguageBtn);
             this.moreGroupBox.Controls.Add(this.interestTbox);
             this.moreGroupBox.Controls.Add(this.addPrsnPrjctBtn);
             this.moreGroupBox.Controls.Add(this.interestsLabel);
+            this.moreGroupBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.moreGroupBox.Location = new System.Drawing.Point(768, 13);
             this.moreGroupBox.Name = "moreGroupBox";
             this.moreGroupBox.Size = new System.Drawing.Size(386, 509);
@@ -658,17 +730,30 @@
             this.moreGroupBox.TabStop = false;
             this.moreGroupBox.Text = "More";
             // 
+            // personalProjectTextCounterLabel
+            // 
+            this.personalProjectTextCounterLabel.AutoSize = true;
+            this.personalProjectTextCounterLabel.Location = new System.Drawing.Point(141, 402);
+            this.personalProjectTextCounterLabel.Name = "personalProjectTextCounterLabel";
+            this.personalProjectTextCounterLabel.Size = new System.Drawing.Size(36, 15);
+            this.personalProjectTextCounterLabel.TabIndex = 53;
+            this.personalProjectTextCounterLabel.Text = "0/200";
+            // 
             // addCertificationBtn
             // 
+            this.addCertificationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addCertificationBtn.ForeColor = System.Drawing.Color.Black;
             this.addCertificationBtn.Location = new System.Drawing.Point(232, 151);
             this.addCertificationBtn.Name = "addCertificationBtn";
             this.addCertificationBtn.Size = new System.Drawing.Size(132, 23);
             this.addCertificationBtn.TabIndex = 51;
             this.addCertificationBtn.Text = "Add Certification";
-            this.addCertificationBtn.UseVisualStyleBackColor = true;
+            this.addCertificationBtn.UseVisualStyleBackColor = false;
+            this.addCertificationBtn.Click += new System.EventHandler(this.addCertificationBtn_Click);
             // 
             // certificationTbox
             // 
+            this.certificationTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.certificationTbox.Location = new System.Drawing.Point(137, 108);
             this.certificationTbox.Multiline = true;
             this.certificationTbox.Name = "certificationTbox";
@@ -686,13 +771,14 @@
             // 
             // addDetailsPanel
             // 
-            this.addDetailsPanel.Controls.Add(this.importJsonBtn);
+            this.addDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
             this.addDetailsPanel.Controls.Add(this.personalGroupBox1);
             this.addDetailsPanel.Controls.Add(this.moreGroupBox);
-            this.addDetailsPanel.Controls.Add(this.savePersonDataBtn);
             this.addDetailsPanel.Controls.Add(this.jobsEduGroupBox);
-            this.addDetailsPanel.Controls.Add(this.previewBtn);
+            this.addDetailsPanel.Controls.Add(this.importJsonBtn);
             this.addDetailsPanel.Controls.Add(this.exportJsonBtn);
+            this.addDetailsPanel.Controls.Add(this.previewBtn);
+            this.addDetailsPanel.Controls.Add(this.savePersonDataBtn);
             this.addDetailsPanel.Location = new System.Drawing.Point(9, 7);
             this.addDetailsPanel.Name = "addDetailsPanel";
             this.addDetailsPanel.Size = new System.Drawing.Size(1170, 603);
@@ -700,19 +786,21 @@
             // 
             // importJsonBtn
             // 
+            this.importJsonBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.importJsonBtn.ForeColor = System.Drawing.Color.Black;
             this.importJsonBtn.Location = new System.Drawing.Point(622, 528);
             this.importJsonBtn.Name = "importJsonBtn";
             this.importJsonBtn.Size = new System.Drawing.Size(129, 62);
             this.importJsonBtn.TabIndex = 54;
             this.importJsonBtn.Text = "Import Json";
-            this.importJsonBtn.UseVisualStyleBackColor = true;
+            this.importJsonBtn.UseVisualStyleBackColor = false;
             // 
             // resumeBuilderTabControl
             // 
             this.resumeBuilderTabControl.Controls.Add(this.addDetailsTabPage);
             this.resumeBuilderTabControl.Controls.Add(this.removeDetailsTabPage);
             this.resumeBuilderTabControl.Controls.Add(this.aboutTabPage);
-            this.resumeBuilderTabControl.Location = new System.Drawing.Point(-1, 2);
+            this.resumeBuilderTabControl.Location = new System.Drawing.Point(0, 0);
             this.resumeBuilderTabControl.Name = "resumeBuilderTabControl";
             this.resumeBuilderTabControl.SelectedIndex = 0;
             this.resumeBuilderTabControl.Size = new System.Drawing.Size(1183, 639);
@@ -732,6 +820,7 @@
             // 
             // removeDetailsTabPage
             // 
+            this.removeDetailsTabPage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
             this.removeDetailsTabPage.Controls.Add(this.refreshDataBtn);
             this.removeDetailsTabPage.Controls.Add(this.certificationRemoveBtn);
             this.removeDetailsTabPage.Controls.Add(this.certificationsCombobox);
@@ -754,32 +843,37 @@
             this.removeDetailsTabPage.Controls.Add(this.skillRemoveLabel);
             this.removeDetailsTabPage.Controls.Add(this.educationRemoveLabel);
             this.removeDetailsTabPage.Controls.Add(this.jobRemoveLabel);
+            this.removeDetailsTabPage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.removeDetailsTabPage.Location = new System.Drawing.Point(4, 24);
             this.removeDetailsTabPage.Name = "removeDetailsTabPage";
             this.removeDetailsTabPage.Padding = new System.Windows.Forms.Padding(3);
             this.removeDetailsTabPage.Size = new System.Drawing.Size(1175, 611);
             this.removeDetailsTabPage.TabIndex = 1;
             this.removeDetailsTabPage.Text = "Remove Details";
-            this.removeDetailsTabPage.UseVisualStyleBackColor = true;
             // 
             // refreshDataBtn
             // 
+            this.refreshDataBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.refreshDataBtn.ForeColor = System.Drawing.Color.Black;
             this.refreshDataBtn.Location = new System.Drawing.Point(1035, 535);
             this.refreshDataBtn.Name = "refreshDataBtn";
             this.refreshDataBtn.Size = new System.Drawing.Size(131, 66);
             this.refreshDataBtn.TabIndex = 21;
             this.refreshDataBtn.Text = "REFRESH DATA";
-            this.refreshDataBtn.UseVisualStyleBackColor = true;
+            this.refreshDataBtn.UseVisualStyleBackColor = false;
             this.refreshDataBtn.MouseClick += new System.Windows.Forms.MouseEventHandler(this.refreshDataBtn_MouseClick);
             // 
             // certificationRemoveBtn
             // 
+            this.certificationRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.certificationRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.certificationRemoveBtn.Location = new System.Drawing.Point(705, 138);
             this.certificationRemoveBtn.Name = "certificationRemoveBtn";
             this.certificationRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.certificationRemoveBtn.TabIndex = 20;
             this.certificationRemoveBtn.Text = "Remove";
-            this.certificationRemoveBtn.UseVisualStyleBackColor = true;
+            this.certificationRemoveBtn.UseVisualStyleBackColor = false;
+            this.certificationRemoveBtn.Click += new System.EventHandler(this.certificationRemoveBtn_Click);
             // 
             // certificationsCombobox
             // 
@@ -792,6 +886,7 @@
             // certificationsRemoveLabel
             // 
             this.certificationsRemoveLabel.AutoSize = true;
+            this.certificationsRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.certificationsRemoveLabel.Location = new System.Drawing.Point(437, 109);
             this.certificationsRemoveLabel.Name = "certificationsRemoveLabel";
             this.certificationsRemoveLabel.Size = new System.Drawing.Size(77, 15);
@@ -800,12 +895,15 @@
             // 
             // interestRemoveBtn
             // 
+            this.interestRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.interestRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.interestRemoveBtn.Location = new System.Drawing.Point(705, 50);
             this.interestRemoveBtn.Name = "interestRemoveBtn";
             this.interestRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.interestRemoveBtn.TabIndex = 17;
             this.interestRemoveBtn.Text = "Remove";
-            this.interestRemoveBtn.UseVisualStyleBackColor = true;
+            this.interestRemoveBtn.UseVisualStyleBackColor = false;
+            this.interestRemoveBtn.Click += new System.EventHandler(this.interestRemoveBtn_Click);
             // 
             // interestsCombobox
             // 
@@ -818,6 +916,7 @@
             // interestRemoveLabel
             // 
             this.interestRemoveLabel.AutoSize = true;
+            this.interestRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.interestRemoveLabel.Location = new System.Drawing.Point(437, 21);
             this.interestRemoveLabel.Name = "interestRemoveLabel";
             this.interestRemoveLabel.Size = new System.Drawing.Size(51, 15);
@@ -826,48 +925,63 @@
             // 
             // personelProjectRemoveBtn
             // 
+            this.personelProjectRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.personelProjectRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.personelProjectRemoveBtn.Location = new System.Drawing.Point(291, 421);
             this.personelProjectRemoveBtn.Name = "personelProjectRemoveBtn";
             this.personelProjectRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.personelProjectRemoveBtn.TabIndex = 14;
             this.personelProjectRemoveBtn.Text = "Remove";
-            this.personelProjectRemoveBtn.UseVisualStyleBackColor = true;
+            this.personelProjectRemoveBtn.UseVisualStyleBackColor = false;
+            this.personelProjectRemoveBtn.Click += new System.EventHandler(this.personelProjectRemoveBtn_Click);
             // 
             // languageRemoveBtn
             // 
+            this.languageRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.languageRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.languageRemoveBtn.Location = new System.Drawing.Point(291, 323);
             this.languageRemoveBtn.Name = "languageRemoveBtn";
             this.languageRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.languageRemoveBtn.TabIndex = 13;
             this.languageRemoveBtn.Text = "Remove";
-            this.languageRemoveBtn.UseVisualStyleBackColor = true;
+            this.languageRemoveBtn.UseVisualStyleBackColor = false;
+            this.languageRemoveBtn.Click += new System.EventHandler(this.languageRemoveBtn_Click);
             // 
             // skillsRemoveBtn
             // 
+            this.skillsRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.skillsRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.skillsRemoveBtn.Location = new System.Drawing.Point(291, 239);
             this.skillsRemoveBtn.Name = "skillsRemoveBtn";
             this.skillsRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.skillsRemoveBtn.TabIndex = 12;
             this.skillsRemoveBtn.Text = "Remove";
-            this.skillsRemoveBtn.UseVisualStyleBackColor = true;
+            this.skillsRemoveBtn.UseVisualStyleBackColor = false;
+            this.skillsRemoveBtn.Click += new System.EventHandler(this.skillsRemoveBtn_Click);
             // 
             // educationRemoveBtn
             // 
+            this.educationRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.educationRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.educationRemoveBtn.Location = new System.Drawing.Point(291, 146);
             this.educationRemoveBtn.Name = "educationRemoveBtn";
             this.educationRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.educationRemoveBtn.TabIndex = 11;
             this.educationRemoveBtn.Text = "Remove";
-            this.educationRemoveBtn.UseVisualStyleBackColor = true;
+            this.educationRemoveBtn.UseVisualStyleBackColor = false;
+            this.educationRemoveBtn.Click += new System.EventHandler(this.educationRemoveBtn_Click);
             // 
             // jobsRemoveBtn
             // 
+            this.jobsRemoveBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.jobsRemoveBtn.ForeColor = System.Drawing.Color.Black;
             this.jobsRemoveBtn.Location = new System.Drawing.Point(291, 50);
             this.jobsRemoveBtn.Name = "jobsRemoveBtn";
             this.jobsRemoveBtn.Size = new System.Drawing.Size(75, 23);
             this.jobsRemoveBtn.TabIndex = 10;
             this.jobsRemoveBtn.Text = "Remove";
-            this.jobsRemoveBtn.UseVisualStyleBackColor = true;
+            this.jobsRemoveBtn.UseVisualStyleBackColor = false;
+            this.jobsRemoveBtn.Click += new System.EventHandler(this.jobsRemoveBtn_Click);
             // 
             // eduCombobox
             // 
@@ -912,6 +1026,7 @@
             // personalProjectRemoveLabel
             // 
             this.personalProjectRemoveLabel.AutoSize = true;
+            this.personalProjectRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.personalProjectRemoveLabel.Location = new System.Drawing.Point(23, 383);
             this.personalProjectRemoveLabel.Name = "personalProjectRemoveLabel";
             this.personalProjectRemoveLabel.Size = new System.Drawing.Size(97, 15);
@@ -921,6 +1036,7 @@
             // languageRemoveLabel
             // 
             this.languageRemoveLabel.AutoSize = true;
+            this.languageRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.languageRemoveLabel.Location = new System.Drawing.Point(23, 289);
             this.languageRemoveLabel.Name = "languageRemoveLabel";
             this.languageRemoveLabel.Size = new System.Drawing.Size(64, 15);
@@ -930,6 +1046,7 @@
             // skillRemoveLabel
             // 
             this.skillRemoveLabel.AutoSize = true;
+            this.skillRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.skillRemoveLabel.Location = new System.Drawing.Point(23, 202);
             this.skillRemoveLabel.Name = "skillRemoveLabel";
             this.skillRemoveLabel.Size = new System.Drawing.Size(33, 15);
@@ -939,6 +1056,7 @@
             // educationRemoveLabel
             // 
             this.educationRemoveLabel.AutoSize = true;
+            this.educationRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.educationRemoveLabel.Location = new System.Drawing.Point(23, 117);
             this.educationRemoveLabel.Name = "educationRemoveLabel";
             this.educationRemoveLabel.Size = new System.Drawing.Size(65, 15);
@@ -948,6 +1066,7 @@
             // jobRemoveLabel
             // 
             this.jobRemoveLabel.AutoSize = true;
+            this.jobRemoveLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobRemoveLabel.Location = new System.Drawing.Point(23, 21);
             this.jobRemoveLabel.Name = "jobRemoveLabel";
             this.jobRemoveLabel.Size = new System.Drawing.Size(30, 15);
@@ -971,7 +1090,7 @@
             this.aboutLinkLabel.AutoSize = true;
             this.aboutLinkLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.aboutLinkLabel.LinkColor = System.Drawing.Color.White;
-            this.aboutLinkLabel.Location = new System.Drawing.Point(526, 315);
+            this.aboutLinkLabel.Location = new System.Drawing.Point(521, 321);
             this.aboutLinkLabel.Name = "aboutLinkLabel";
             this.aboutLinkLabel.Size = new System.Drawing.Size(150, 19);
             this.aboutLinkLabel.TabIndex = 1;
@@ -982,10 +1101,10 @@
             // aboutPictureBox
             // 
             this.aboutPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.aboutPictureBox.Image = global::ResumeBuilder.Properties.Resources.github_logo;
-            this.aboutPictureBox.Location = new System.Drawing.Point(524, 150);
+            this.aboutPictureBox.Image = global::ResumeBuilder.Properties.Resources.github_mark_white;
+            this.aboutPictureBox.Location = new System.Drawing.Point(481, 101);
             this.aboutPictureBox.Name = "aboutPictureBox";
-            this.aboutPictureBox.Size = new System.Drawing.Size(156, 162);
+            this.aboutPictureBox.Size = new System.Drawing.Size(238, 239);
             this.aboutPictureBox.TabIndex = 0;
             this.aboutPictureBox.TabStop = false;
             this.aboutPictureBox.MouseClick += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseClick);
@@ -1009,42 +1128,6 @@
             // 
             this.Languages.HeaderText = "Languages";
             this.Languages.Name = "Languages";
-            // 
-            // summaryTextCounterLabel
-            // 
-            this.summaryTextCounterLabel.AutoSize = true;
-            this.summaryTextCounterLabel.Location = new System.Drawing.Point(131, 444);
-            this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
-            this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.summaryTextCounterLabel.TabIndex = 40;
-            this.summaryTextCounterLabel.Text = "0/200";
-            // 
-            // jobDetailTextCounterLabel
-            // 
-            this.jobDetailTextCounterLabel.AutoSize = true;
-            this.jobDetailTextCounterLabel.Location = new System.Drawing.Point(131, 222);
-            this.jobDetailTextCounterLabel.Name = "jobDetailTextCounterLabel";
-            this.jobDetailTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.jobDetailTextCounterLabel.TabIndex = 48;
-            this.jobDetailTextCounterLabel.Text = "0/200";
-            // 
-            // educationTextCounterLabel
-            // 
-            this.educationTextCounterLabel.AutoSize = true;
-            this.educationTextCounterLabel.Location = new System.Drawing.Point(145, 476);
-            this.educationTextCounterLabel.Name = "educationTextCounterLabel";
-            this.educationTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.educationTextCounterLabel.TabIndex = 49;
-            this.educationTextCounterLabel.Text = "0/200";
-            // 
-            // personalProjectTextCounterLabel
-            // 
-            this.personalProjectTextCounterLabel.AutoSize = true;
-            this.personalProjectTextCounterLabel.Location = new System.Drawing.Point(141, 402);
-            this.personalProjectTextCounterLabel.Name = "personalProjectTextCounterLabel";
-            this.personalProjectTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.personalProjectTextCounterLabel.TabIndex = 53;
-            this.personalProjectTextCounterLabel.Text = "0/200";
             // 
             // Form1
             // 
@@ -1107,7 +1190,7 @@
         private TextBox languageTbox;
         private Label personalPTtlLabel;
         private TextBox prsnPrjctDtlTbox;
-        private Button languageBtn;
+        private Button addLanguageBtn;
         private Button addPrsnPrjctBtn;
         private Label websiteLabel;
         private TextBox websiteTbox;
