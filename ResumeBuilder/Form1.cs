@@ -118,11 +118,7 @@ namespace ResumeBuilder
             cnn.Open();
             int i = cmd.ExecuteNonQuery();
             cnn.Close();
-            if (i != 0)
-            {
-                MessageBox.Show("Data Removed!");
-                fillCombobox();
-            }
+
         }
 
         //*****TEXT COUNTERS*****
@@ -185,36 +181,50 @@ namespace ResumeBuilder
         {
             cmdstring = $"DELETE FROM Job WHERE JobTitle='{jobsCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void educationRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM Education WHERE EducationTitle='{eduCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void skillsRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM Skills WHERE Skill='{skillsCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void languageRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM Languages WHERE Language='{languagesCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void personelProjectRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM PersonalProjects WHERE PersonalProjectTitle='{prsnPrjctCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void interestRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM Interests WHERE Interest='{interestsCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void certificationRemoveBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"DELETE FROM Certifications WHERE CertificationName='{certificationsCombobox.Text}'";
             removeDataSql(cmdstring);
+            MessageBox.Show("Data Removed!");
+            fillCombobox();
         }
         private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
         {
@@ -349,6 +359,17 @@ namespace ResumeBuilder
         {
             cmdstring = $"insert into Person (Name, Surname, PhoneNumber, Address, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
             insertDataSql(cmdstring);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
+            int i = 0;
+            while (i < clearAllDataSql.Length)
+            {
+                removeDataSql(clearAllDataSql[i]);
+                i++;
+            }
         }
     }
 }
