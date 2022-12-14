@@ -118,7 +118,6 @@ namespace ResumeBuilder
             cnn.Open();
             int i = cmd.ExecuteNonQuery();
             cnn.Close();
-
         }
 
         //*****TEXT COUNTERS*****
