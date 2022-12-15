@@ -1,4 +1,5 @@
 ﻿using Microsoft.Win32;
+using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -19,8 +20,10 @@ namespace ResumeBuilder
         */
         string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         string cmdstring = "";
+        string json = "";
         SqlConnection cnn;
         SqlDataReader reader1;
+        DataSet dataSet = new DataSet();
 
         public Form1()
         {
@@ -28,7 +31,7 @@ namespace ResumeBuilder
             fillCombobox();
         }
 
-        public void fillCombobox()
+        private void fillCombobox()
         {
             jobsCombobox.Items.Clear();
             eduCombobox.Items.Clear();
@@ -240,117 +243,29 @@ namespace ResumeBuilder
         }
         private void exportJsonBtn_Click(object sender, EventArgs e)
         {
-            cmdstring = "select * from Person for json path";
-            string personData = "person data";
-            cnn = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                personData = reader1.GetString(0);
-                personData = personData + "\"}]";
-            }
-            else
-            {
-                MessageBox.Show("person data not found");
-            }
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+            dataAdapter.TableMappings.Add("PersonTable", "Person");
+            dataAdapter.TableMappings.Add("JobTable", "Job");
+            dataAdapter.TableMappings.Add("CertificationTable", "Certification");
+            dataAdapter.TableMappings.Add("PersonalProjectTable", "PersonalProject");
+            dataAdapter.TableMappings.Add("LanguagesTable", "Language");
+            dataAdapter.TableMappings.Add("InterestsTable", "Interests");
+            dataAdapter.TableMappings.Add("SkillsTable", "Skills");
+            dataAdapter.Fill(dataSet);
             cnn.Close();
-            string educationData = "education data";
-            cmdstring = "select * from Education for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                educationData = reader1.GetString(0);
-            }
-            else
-            {
-                MessageBox.Show("education data not found");
-            }
-            cnn.Close();
-            string jobData = "job data";
-            cmdstring = "select * from Job for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                jobData = reader1.GetString(0);
-            }
-            else
-            {
-                MessageBox.Show("job data not found");
-            }
-            cnn.Close();
-            string languagesData = "languages data";
-            cmdstring = "select * from Languages for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                languagesData = reader1.GetString(0);
-            }
-            else
-            {
-                MessageBox.Show("languages data not found");
-            }
-            cnn.Close();
-            string certificationsData = "certifications data";
-            cmdstring = "select * from Certifications for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                certificationsData = reader1.GetString(0);
-            }
-            cnn.Close();
-            string interestsData = "intersests data";
-            cmdstring = "select * from Interests for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                interestsData = reader1.GetString(0);
-            }
-            cnn.Close();
-            string personalProjectsData = "personal projects data";
-            cmdstring = "select * from PersonalProjects for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                personalProjectsData = reader1.GetString(0);
-            }
-            cnn.Close();
-            string skillsData = "skills data";
-            cmdstring = "select * from Skills for json path";
-            cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            if (reader1.Read())
-            {
-                skillsData = reader1.GetString(0);
-            }
-            cnn.Close();
-            string result = personData.Remove(personData.Length - 1) + "," + educationData.Remove(educationData.Length - 1).Remove(0, 1) + "," + jobData.Remove(jobData.Length - 1).Remove(0, 1) + "," + languagesData.Remove(languagesData.Length - 1).Remove(0, 1) + "," + certificationsData.Remove(certificationsData.Length - 1).Remove(0, 1) + "," + skillsData.Remove(skillsData.Length - 1).Remove(0, 1) + "," + personalProjectsData.Remove(personalProjectsData.Length - 1).Remove(0, 1) + "," + interestsData.Remove(0, 1);
-            MessageBox.Show("it works only all fields filled for now...");
+            json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             SaveFileDialog save = new SaveFileDialog();
             save.OverwritePrompt = false;
             save.CreatePrompt = true;
             save.InitialDirectory = @"D:\";
             save.Title = "Save Json File";
             save.DefaultExt = "json";
-            save.Filter = "json files (*.json)|*.txt|All Files(*.*)|*.*";
+            save.Filter = "json files (*.json)|*.json|All Files(*.*)|*.*";
             if (save.ShowDialog() == DialogResult.OK)
             {
                 StreamWriter sw = new StreamWriter(save.FileName);
-                sw.WriteLine(result);
+                sw.WriteLine(json);
                 sw.Close();
             }
         }
@@ -359,7 +274,6 @@ namespace ResumeBuilder
             cmdstring = $"insert into Person (Name, Surname, PhoneNumber, Address, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
             insertDataSql(cmdstring);
         }
-
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
