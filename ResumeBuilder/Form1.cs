@@ -15,7 +15,6 @@ namespace ResumeBuilder
         *   hataları yakala
         *   veritabanı veri tiplerini düzenle
         *   fotoğraf yükleme özelliği ekle
-        *   program kapatıldığında veritabanını sıfırla (EN SON YAPILACAK)
         *   json dosyasından veri aktarma butonunu yap   
         */
         string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
