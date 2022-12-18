@@ -102,14 +102,23 @@ namespace ResumeBuilder
             }
             else
             {
-                cnn = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-                cnn.Open();
-                int i = cmd.ExecuteNonQuery();
-                cnn.Close();
-                if (i != 0)
+
+                try
                 {
-                    MessageBox.Show("Saved data!");
+                    cnn = new SqlConnection(connetionString);
+                    SqlCommand cmd = new SqlCommand(cmdstring, cnn);
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    if (i != 0)
+                    {
+                        MessageBox.Show("Saved data!");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("an unexpected error occurred ");
+                    throw;
                 }
             }
         }
@@ -281,6 +290,22 @@ namespace ResumeBuilder
             {
                 removeDataSql(clearAllDataSql[i]);
                 i++;
+            }
+        }
+        private void importJsonBtn_Click(object sender, EventArgs e)
+        {
+            string readText = "";
+            OpenFileDialog file = new OpenFileDialog();
+            file.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            file.Title = "Select JSON File.";
+            file.Filter = "Json Files |*.json";
+            file.Multiselect = false;
+            if (file.ShowDialog() == DialogResult.OK)
+            {
+                readText = File.ReadAllText(file.FileName);
+                dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
+                //int count = dataSet.Tables.Count;
+                //MessageBox.Show(count.ToString());
             }
         }
     }

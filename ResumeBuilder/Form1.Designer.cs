@@ -124,6 +124,7 @@
             this.Educations = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Skills = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Languages = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.personalGroupBox1.SuspendLayout();
             this.jobsEduGroupBox.SuspendLayout();
             this.moreGroupBox.SuspendLayout();
@@ -794,6 +795,7 @@
             this.importJsonBtn.TabIndex = 54;
             this.importJsonBtn.Text = "Import Json";
             this.importJsonBtn.UseVisualStyleBackColor = false;
+            this.importJsonBtn.Click += new System.EventHandler(this.importJsonBtn_Click);
             // 
             // resumeBuilderTabControl
             // 
@@ -1129,6 +1131,10 @@
             this.Languages.HeaderText = "Languages";
             this.Languages.Name = "Languages";
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -1257,5 +1263,6 @@
         private Label jobDetailTextCounterLabel;
         private Label educationTextCounterLabel;
         private Label personalProjectTextCounterLabel;
+        private OpenFileDialog openFileDialog1;
     }
 }
