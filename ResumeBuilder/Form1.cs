@@ -17,8 +17,8 @@ namespace ResumeBuilder
         *   fotoğraf yükleme özelliği ekle
         *   json dosyasından veri aktarma butonunu yap   
         */
-        string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
-        string cmdstring = "";
+        public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
+        public string cmdstring = "";
         string json = "";
         SqlConnection cnn;
         SqlDataReader reader1;
@@ -92,7 +92,13 @@ namespace ResumeBuilder
             p.StartInfo.Arguments = url;
             p.Start();
         }
-
+        private void showData()
+        {
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+            dataAdapter.Fill(dataSet);
+            dataGridView1.DataSource = dataSet;
+        }
         //*****SQL FUNCTIONS*****
         private void insertDataSql(string cmdstring)
         {
@@ -253,13 +259,6 @@ namespace ResumeBuilder
         {
             cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
-            dataAdapter.TableMappings.Add("PersonTable", "Person");
-            dataAdapter.TableMappings.Add("JobTable", "Job");
-            dataAdapter.TableMappings.Add("CertificationTable", "Certification");
-            dataAdapter.TableMappings.Add("PersonalProjectTable", "PersonalProject");
-            dataAdapter.TableMappings.Add("LanguagesTable", "Language");
-            dataAdapter.TableMappings.Add("InterestsTable", "Interests");
-            dataAdapter.TableMappings.Add("SkillsTable", "Skills");
             dataAdapter.Fill(dataSet);
             cnn.Close();
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
@@ -305,7 +304,16 @@ namespace ResumeBuilder
                 readText = File.ReadAllText(file.FileName);
                 dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
                 //int count = dataSet.Tables.Count;
-                //MessageBox.Show(count.ToString());
+                int i = 0;
+                SqlBulkCopy bulkCopy = new SqlBulkCopy(connetionString);
+                string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.Certifications", "dbo.PersonalProjects", "dbo.Languages", "dbo.Interests", "dbo.Skills" };
+                while (i < dataSet.Tables.Count)
+                {
+                    bulkCopy.DestinationTableName = tableNames[i];
+                    bulkCopy.WriteToServer(dataSet.Tables[i]);
+                    i++;
+                }
+                fillCombobox();
             }
         }
     }
