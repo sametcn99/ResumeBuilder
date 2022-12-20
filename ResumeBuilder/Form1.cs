@@ -8,15 +8,6 @@ namespace ResumeBuilder
 {
     public partial class Form1 : Form
     {
-        /*NOTEPAD
-        * Example sql command: string cmdstring = $"insert into TableName (Column1, Column2) values('Row1', {Row2Textbox.text})";
-        * TO-DO:
-        *   hata mesajlarını göster
-        *   hataları yakala
-        *   veritabanı veri tiplerini düzenle
-        *   fotoğraf yükleme özelliği ekle
-        *   json dosyasından veri aktarma butonunu yap   
-        */
         public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
         string json = "";
