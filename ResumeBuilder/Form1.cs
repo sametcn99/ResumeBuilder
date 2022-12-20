@@ -92,13 +92,7 @@ namespace ResumeBuilder
             p.StartInfo.Arguments = url;
             p.Start();
         }
-        private void showData()
-        {
-            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
-            dataAdapter.Fill(dataSet);
-            dataGridView1.DataSource = dataSet;
-        }
+
         //*****SQL FUNCTIONS*****
         private void insertDataSql(string cmdstring)
         {
@@ -303,18 +297,18 @@ namespace ResumeBuilder
             {
                 readText = File.ReadAllText(file.FileName);
                 dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
-                //int count = dataSet.Tables.Count;
+                int count = dataSet.Tables.Count;
                 int i = 0;
                 SqlBulkCopy bulkCopy = new SqlBulkCopy(connetionString);
                 string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.Certifications", "dbo.PersonalProjects", "dbo.Languages", "dbo.Interests", "dbo.Skills" };
-                while (i < dataSet.Tables.Count)
+                while (i < count)
                 {
                     bulkCopy.DestinationTableName = tableNames[i];
                     bulkCopy.WriteToServer(dataSet.Tables[i]);
                     i++;
                 }
-                fillCombobox();
             }
+            fillCombobox();
         }
     }
 }
