@@ -297,11 +297,10 @@ namespace ResumeBuilder
             {
                 readText = File.ReadAllText(file.FileName);
                 dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
-                int count = dataSet.Tables.Count;
-                int i = 0;
                 SqlBulkCopy bulkCopy = new SqlBulkCopy(connetionString);
                 string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.Certifications", "dbo.PersonalProjects", "dbo.Languages", "dbo.Interests", "dbo.Skills" };
-                while (i < count)
+                int i = 0;
+                while (i < dataSet.Tables.Count)
                 {
                     bulkCopy.DestinationTableName = tableNames[i];
                     bulkCopy.WriteToServer(dataSet.Tables[i]);
