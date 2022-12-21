@@ -298,6 +298,14 @@ namespace ResumeBuilder
                     i++;
                 }
             }
+            nameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Name");
+            SurnameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Surname");
+            AddressTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Address");
+            phoneNuTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber");
+            emailTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Email");
+            websiteTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Website");
+            sMediaTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("SocialMedia");
+            summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
             fillCombobox();
         }
     }
