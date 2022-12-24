@@ -485,6 +485,7 @@
             this.previewBtn.TabIndex = 40;
             this.previewBtn.Text = "Preview";
             this.previewBtn.UseVisualStyleBackColor = false;
+            this.previewBtn.Click += new System.EventHandler(this.previewBtn_Click);
             // 
             // interestsLabel
             // 

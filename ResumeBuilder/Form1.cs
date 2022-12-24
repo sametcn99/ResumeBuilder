@@ -308,5 +308,10 @@ namespace ResumeBuilder
             summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
             fillCombobox();
         }
+
+        private void previewBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
