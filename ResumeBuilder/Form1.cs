@@ -311,7 +311,13 @@ namespace ResumeBuilder
 
         private void previewBtn_Click(object sender, EventArgs e)
         {
-
+            WebBrowser webBrowser1 = new WebBrowser();
+            CreatingHtmlPageForPrinting htmlTextClass = new CreatingHtmlPageForPrinting();
+            webBrowser1.DocumentText = htmlTextClass.htmlPageCode();
+            webBrowser1.DocumentCompleted += (sender, e) =>
+            {
+                webBrowser1.Print();
+            };
         }
     }
 }
