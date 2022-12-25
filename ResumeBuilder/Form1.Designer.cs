@@ -64,7 +64,6 @@
             this.websiteTbox = new System.Windows.Forms.TextBox();
             this.sMediaLabel = new System.Windows.Forms.Label();
             this.sMediaTbox = new System.Windows.Forms.TextBox();
-            this.previewBtn = new System.Windows.Forms.Button();
             this.interestsLabel = new System.Windows.Forms.Label();
             this.interestTbox = new System.Windows.Forms.TextBox();
             this.addInterestBtn = new System.Windows.Forms.Button();
@@ -225,9 +224,9 @@
             // 
             this.savePersonDataBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.savePersonDataBtn.ForeColor = System.Drawing.Color.Black;
-            this.savePersonDataBtn.Location = new System.Drawing.Point(1029, 528);
+            this.savePersonDataBtn.Location = new System.Drawing.Point(275, 476);
             this.savePersonDataBtn.Name = "savePersonDataBtn";
-            this.savePersonDataBtn.Size = new System.Drawing.Size(129, 62);
+            this.savePersonDataBtn.Size = new System.Drawing.Size(100, 23);
             this.savePersonDataBtn.TabIndex = 10;
             this.savePersonDataBtn.Text = "Save";
             this.savePersonDataBtn.UseVisualStyleBackColor = false;
@@ -475,22 +474,10 @@
             this.sMediaTbox.Size = new System.Drawing.Size(244, 74);
             this.sMediaTbox.TabIndex = 39;
             // 
-            // previewBtn
-            // 
-            this.previewBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.previewBtn.ForeColor = System.Drawing.Color.Black;
-            this.previewBtn.Location = new System.Drawing.Point(892, 528);
-            this.previewBtn.Name = "previewBtn";
-            this.previewBtn.Size = new System.Drawing.Size(129, 62);
-            this.previewBtn.TabIndex = 40;
-            this.previewBtn.Text = "Preview";
-            this.previewBtn.UseVisualStyleBackColor = false;
-            this.previewBtn.Click += new System.EventHandler(this.previewBtn_Click);
-            // 
             // interestsLabel
             // 
             this.interestsLabel.AutoSize = true;
-            this.interestsLabel.Location = new System.Drawing.Point(6, 445);
+            this.interestsLabel.Location = new System.Drawing.Point(6, 455);
             this.interestsLabel.Name = "interestsLabel";
             this.interestsLabel.Size = new System.Drawing.Size(51, 15);
             this.interestsLabel.TabIndex = 41;
@@ -499,7 +486,7 @@
             // interestTbox
             // 
             this.interestTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.interestTbox.Location = new System.Drawing.Point(137, 434);
+            this.interestTbox.Location = new System.Drawing.Point(137, 444);
             this.interestTbox.Name = "interestTbox";
             this.interestTbox.Size = new System.Drawing.Size(227, 23);
             this.interestTbox.TabIndex = 42;
@@ -508,7 +495,7 @@
             // 
             this.addInterestBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.addInterestBtn.ForeColor = System.Drawing.Color.Black;
-            this.addInterestBtn.Location = new System.Drawing.Point(232, 463);
+            this.addInterestBtn.Location = new System.Drawing.Point(232, 473);
             this.addInterestBtn.Name = "addInterestBtn";
             this.addInterestBtn.Size = new System.Drawing.Size(132, 23);
             this.addInterestBtn.TabIndex = 43;
@@ -609,7 +596,7 @@
             // 
             this.exportJsonBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.exportJsonBtn.ForeColor = System.Drawing.Color.Black;
-            this.exportJsonBtn.Location = new System.Drawing.Point(757, 528);
+            this.exportJsonBtn.Location = new System.Drawing.Point(1025, 528);
             this.exportJsonBtn.Name = "exportJsonBtn";
             this.exportJsonBtn.Size = new System.Drawing.Size(129, 62);
             this.exportJsonBtn.TabIndex = 50;
@@ -625,6 +612,7 @@
             this.personalGroupBox1.Controls.Add(this.surnameLabel);
             this.personalGroupBox1.Controls.Add(this.addressLabel);
             this.personalGroupBox1.Controls.Add(this.phoneNumberLabel);
+            this.personalGroupBox1.Controls.Add(this.savePersonDataBtn);
             this.personalGroupBox1.Controls.Add(this.emailLabel);
             this.personalGroupBox1.Controls.Add(this.phoneNuTbox);
             this.personalGroupBox1.Controls.Add(this.emailTbox);
@@ -779,8 +767,6 @@
             this.addDetailsPanel.Controls.Add(this.jobsEduGroupBox);
             this.addDetailsPanel.Controls.Add(this.importJsonBtn);
             this.addDetailsPanel.Controls.Add(this.exportJsonBtn);
-            this.addDetailsPanel.Controls.Add(this.previewBtn);
-            this.addDetailsPanel.Controls.Add(this.savePersonDataBtn);
             this.addDetailsPanel.Location = new System.Drawing.Point(9, 7);
             this.addDetailsPanel.Name = "addDetailsPanel";
             this.addDetailsPanel.Size = new System.Drawing.Size(1170, 603);
@@ -790,7 +776,7 @@
             // 
             this.importJsonBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.importJsonBtn.ForeColor = System.Drawing.Color.Black;
-            this.importJsonBtn.Location = new System.Drawing.Point(622, 528);
+            this.importJsonBtn.Location = new System.Drawing.Point(890, 528);
             this.importJsonBtn.Name = "importJsonBtn";
             this.importJsonBtn.Size = new System.Drawing.Size(129, 62);
             this.importJsonBtn.TabIndex = 54;
@@ -1204,7 +1190,6 @@
         private TextBox websiteTbox;
         private Label sMediaLabel;
         private TextBox sMediaTbox;
-        private Button previewBtn;
         private Label interestsLabel;
         private TextBox interestTbox;
         private Button addInterestBtn;

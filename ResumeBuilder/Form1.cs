@@ -8,6 +8,8 @@ namespace ResumeBuilder
 {
     public partial class Form1 : Form
     {
+        string htmlText;
+        public string PersonHTML, JobHTML, EducationHTML, CertificationsHTML, LanguagesHTML, SkillsHTML, PersonalProjectsHTML, InterestsHTML = "";
         public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
         string json = "";
@@ -309,15 +311,5 @@ namespace ResumeBuilder
             fillCombobox();
         }
 
-        private void previewBtn_Click(object sender, EventArgs e)
-        {
-            WebBrowser webBrowser1 = new WebBrowser();
-            CreatingHtmlPageForPrinting htmlTextClass = new CreatingHtmlPageForPrinting();
-            webBrowser1.DocumentText = htmlTextClass.htmlPageCode();
-            webBrowser1.DocumentCompleted += (sender, e) =>
-            {
-                webBrowser1.Print();
-            };
-        }
     }
 }
