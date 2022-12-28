@@ -123,7 +123,7 @@ namespace ResumeBuilder
         //*****TEXT COUNTERS*****
         private void summaryTbox_TextChanged(object sender, EventArgs e)
         {
-            summaryTextCounterLabel.Text = $"{summaryTbox.Text.Length}/200";
+            summaryTextCounterLabel.Text = $"{summaryTbox.Text.Length}/500";
         }
         private void jobDtlTbox_TextChanged(object sender, EventArgs e)
         {

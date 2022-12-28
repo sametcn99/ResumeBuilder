@@ -253,7 +253,7 @@
             // 
             this.summaryTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summaryTbox.Location = new System.Drawing.Point(131, 338);
-            this.summaryTbox.MaxLength = 200;
+            this.summaryTbox.MaxLength = 500;
             this.summaryTbox.Multiline = true;
             this.summaryTbox.Name = "summaryTbox";
             this.summaryTbox.Size = new System.Drawing.Size(244, 103);
@@ -660,7 +660,7 @@
             this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
             this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
             this.summaryTextCounterLabel.TabIndex = 40;
-            this.summaryTextCounterLabel.Text = "0/200";
+            this.summaryTextCounterLabel.Text = "0/500";
             // 
             // jobsEduGroupBox
             // 
