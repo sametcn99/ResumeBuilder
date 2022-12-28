@@ -243,6 +243,7 @@ namespace ResumeBuilder
         private void showDataBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
+            json = "";
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             MessageBox.Show(json);
         }
