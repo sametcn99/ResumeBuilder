@@ -143,36 +143,50 @@ namespace ResumeBuilder
         {
             cmdstring = $"insert into Job (JobTitle, JobDetail, JobStart, JobEnd) values('{jobttlTbox.Text}', '{jobDtlTbox.Text}', '{jobSDateTbox.Text}', '{jobEDateTbox.Text}')";
             insertDataSql(cmdstring);
+            jobttlTbox.Text = "";
+            jobDtlTbox.Text = "";
+            jobSDateTbox.Text = "";
+            jobEDateTbox.Text = "";
         }
         private void addEduBtn_MouseClick(object sender, MouseEventArgs e)
         {
             cmdstring = $"insert into Education (EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{eduTtlTbox.Text}','{eduDtlTbox.Text}', '{eduSDateTbox.Text}', '{EduEDateTbox.Text}')";
             insertDataSql(cmdstring);
+            eduTtlTbox.Text = "";
+            eduDtlTbox.Text = "";
+            eduSDateTbox.Text = "";
+            EduEDateTbox.Text = "";
         }
         private void addSkillBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"insert into Skills (Skill) values('{skillTbox.Text}')";
             insertDataSql(cmdstring);
+            skillTbox.Text = "";
         }
         private void addlanguageBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"insert into Languages (Language) values('{languageTbox.Text}')";
             insertDataSql(cmdstring);
+            languageTbox.Text = "";
         }
         private void addPrsnPrjctBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"insert into PersonalProjects (PersonalProjectTitle, PersonalProjectDetail) values('{prsnPrcjtTtlTbox.Text}', '{prsnPrjctDtlTbox.Text}')";
             insertDataSql(cmdstring);
+            prsnPrcjtTtlTbox.Text = "";
+            prsnPrjctDtlTbox.Text = "";
         }
         private void addCertificationBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"insert into Certifications (CertificationName) values('{certificationTbox.Text}')";
             insertDataSql(cmdstring);
+            certificationTbox.Text = "";
         }
         private void addInterestBtn_Click(object sender, EventArgs e)
         {
             cmdstring = $"insert into Interests (Interest) values('{interestTbox.Text}')";
             insertDataSql(cmdstring);
+            interestTbox.Text = "";
         }
         //*****REMOVE BUTTON EVENTS*****
         private void jobsRemoveBtn_Click(object sender, EventArgs e)
@@ -228,6 +242,7 @@ namespace ResumeBuilder
         //*****OTHER EVENTS*****
         private void showDataBtn_Click(object sender, EventArgs e)
         {
+            getDataFromDB();
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             MessageBox.Show(json);
         }
@@ -259,7 +274,9 @@ namespace ResumeBuilder
         }
         private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
         {
-            cmdstring = $"insert into Person (Name, Surname, PhoneNumber, Address, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
+            cmdstring = $"delete from Person";
+            insertDataSql(cmdstring);
+            cmdstring = $"insert into Person (Name, Surname, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
             insertDataSql(cmdstring);
         }
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
