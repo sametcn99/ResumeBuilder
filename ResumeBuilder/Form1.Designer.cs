@@ -90,6 +90,8 @@
             this.certificationTbox = new System.Windows.Forms.TextBox();
             this.certificationsLabel = new System.Windows.Forms.Label();
             this.addDetailsPanel = new System.Windows.Forms.Panel();
+            this.showDataBtn = new System.Windows.Forms.Button();
+            this.printBtn = new System.Windows.Forms.Button();
             this.importJsonBtn = new System.Windows.Forms.Button();
             this.resumeBuilderTabControl = new System.Windows.Forms.TabControl();
             this.addDetailsTabPage = new System.Windows.Forms.TabPage();
@@ -184,14 +186,17 @@
             // 
             this.phoneNuTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.phoneNuTbox.Location = new System.Drawing.Point(131, 123);
+            this.phoneNuTbox.MaxLength = 12;
             this.phoneNuTbox.Name = "phoneNuTbox";
             this.phoneNuTbox.Size = new System.Drawing.Size(244, 23);
             this.phoneNuTbox.TabIndex = 5;
+            this.phoneNuTbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNuTbox_KeyPress);
             // 
             // emailTbox
             // 
             this.emailTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailTbox.Location = new System.Drawing.Point(131, 152);
+            this.emailTbox.MaxLength = 50;
             this.emailTbox.Name = "emailTbox";
             this.emailTbox.Size = new System.Drawing.Size(244, 23);
             this.emailTbox.TabIndex = 6;
@@ -200,6 +205,7 @@
             // 
             this.AddressTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTbox.Location = new System.Drawing.Point(131, 91);
+            this.AddressTbox.MaxLength = 200;
             this.AddressTbox.Name = "AddressTbox";
             this.AddressTbox.Size = new System.Drawing.Size(244, 23);
             this.AddressTbox.TabIndex = 7;
@@ -208,6 +214,7 @@
             // 
             this.SurnameTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.SurnameTbox.Location = new System.Drawing.Point(131, 62);
+            this.SurnameTbox.MaxLength = 20;
             this.SurnameTbox.Name = "SurnameTbox";
             this.SurnameTbox.Size = new System.Drawing.Size(244, 23);
             this.SurnameTbox.TabIndex = 8;
@@ -216,6 +223,7 @@
             // 
             this.nameTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameTbox.Location = new System.Drawing.Point(131, 35);
+            this.nameTbox.MaxLength = 20;
             this.nameTbox.Name = "nameTbox";
             this.nameTbox.Size = new System.Drawing.Size(244, 23);
             this.nameTbox.TabIndex = 9;
@@ -265,6 +273,7 @@
             // 
             this.jobttlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobttlTbox.Location = new System.Drawing.Point(127, 27);
+            this.jobttlTbox.MaxLength = 50;
             this.jobttlTbox.Name = "jobttlTbox";
             this.jobttlTbox.Size = new System.Drawing.Size(196, 23);
             this.jobttlTbox.TabIndex = 14;
@@ -309,6 +318,7 @@
             // 
             this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eduTtlTbox.Location = new System.Drawing.Point(139, 278);
+            this.eduTtlTbox.MaxLength = 50;
             this.eduTtlTbox.Name = "eduTtlTbox";
             this.eduTtlTbox.Size = new System.Drawing.Size(182, 23);
             this.eduTtlTbox.TabIndex = 21;
@@ -372,6 +382,7 @@
             // 
             this.skillTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.skillTbox.Location = new System.Drawing.Point(137, 37);
+            this.skillTbox.MaxLength = 100;
             this.skillTbox.Multiline = true;
             this.skillTbox.Name = "skillTbox";
             this.skillTbox.Size = new System.Drawing.Size(227, 26);
@@ -390,6 +401,7 @@
             // 
             this.languageTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.languageTbox.Location = new System.Drawing.Point(137, 192);
+            this.languageTbox.MaxLength = 100;
             this.languageTbox.Multiline = true;
             this.languageTbox.Name = "languageTbox";
             this.languageTbox.Size = new System.Drawing.Size(227, 23);
@@ -452,6 +464,7 @@
             // 
             this.websiteTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.websiteTbox.Location = new System.Drawing.Point(131, 195);
+            this.websiteTbox.MaxLength = 50;
             this.websiteTbox.Name = "websiteTbox";
             this.websiteTbox.Size = new System.Drawing.Size(244, 23);
             this.websiteTbox.TabIndex = 37;
@@ -469,6 +482,7 @@
             // 
             this.sMediaTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.sMediaTbox.Location = new System.Drawing.Point(131, 245);
+            this.sMediaTbox.MaxLength = 500;
             this.sMediaTbox.Multiline = true;
             this.sMediaTbox.Name = "sMediaTbox";
             this.sMediaTbox.Size = new System.Drawing.Size(244, 74);
@@ -487,6 +501,7 @@
             // 
             this.interestTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.interestTbox.Location = new System.Drawing.Point(137, 444);
+            this.interestTbox.MaxLength = 100;
             this.interestTbox.Name = "interestTbox";
             this.interestTbox.Size = new System.Drawing.Size(227, 23);
             this.interestTbox.TabIndex = 42;
@@ -507,6 +522,7 @@
             // 
             this.jobSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobSDateTbox.Location = new System.Drawing.Point(127, 61);
+            this.jobSDateTbox.MaxLength = 10;
             this.jobSDateTbox.Name = "jobSDateTbox";
             this.jobSDateTbox.Size = new System.Drawing.Size(196, 23);
             this.jobSDateTbox.TabIndex = 16;
@@ -515,6 +531,7 @@
             // 
             this.jobEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobEDateTbox.Location = new System.Drawing.Point(127, 100);
+            this.jobEDateTbox.MaxLength = 10;
             this.jobEDateTbox.Name = "jobEDateTbox";
             this.jobEDateTbox.Size = new System.Drawing.Size(196, 23);
             this.jobEDateTbox.TabIndex = 18;
@@ -523,6 +540,7 @@
             // 
             this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.EduEDateTbox.Location = new System.Drawing.Point(139, 349);
+            this.EduEDateTbox.MaxLength = 10;
             this.EduEDateTbox.Name = "EduEDateTbox";
             this.EduEDateTbox.Size = new System.Drawing.Size(184, 23);
             this.EduEDateTbox.TabIndex = 24;
@@ -531,6 +549,7 @@
             // 
             this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.eduSDateTbox.Location = new System.Drawing.Point(139, 313);
+            this.eduSDateTbox.MaxLength = 10;
             this.eduSDateTbox.Name = "eduSDateTbox";
             this.eduSDateTbox.Size = new System.Drawing.Size(182, 23);
             this.eduSDateTbox.TabIndex = 23;
@@ -579,6 +598,7 @@
             // 
             this.prsnPrcjtTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.prsnPrcjtTtlTbox.Location = new System.Drawing.Point(137, 278);
+            this.prsnPrcjtTtlTbox.MaxLength = 50;
             this.prsnPrcjtTtlTbox.Name = "prsnPrcjtTtlTbox";
             this.prsnPrcjtTtlTbox.Size = new System.Drawing.Size(227, 23);
             this.prsnPrcjtTtlTbox.TabIndex = 48;
@@ -745,6 +765,7 @@
             // 
             this.certificationTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.certificationTbox.Location = new System.Drawing.Point(137, 108);
+            this.certificationTbox.MaxLength = 100;
             this.certificationTbox.Multiline = true;
             this.certificationTbox.Name = "certificationTbox";
             this.certificationTbox.Size = new System.Drawing.Size(227, 26);
@@ -762,6 +783,8 @@
             // addDetailsPanel
             // 
             this.addDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
+            this.addDetailsPanel.Controls.Add(this.showDataBtn);
+            this.addDetailsPanel.Controls.Add(this.printBtn);
             this.addDetailsPanel.Controls.Add(this.personalGroupBox1);
             this.addDetailsPanel.Controls.Add(this.moreGroupBox);
             this.addDetailsPanel.Controls.Add(this.jobsEduGroupBox);
@@ -771,6 +794,30 @@
             this.addDetailsPanel.Name = "addDetailsPanel";
             this.addDetailsPanel.Size = new System.Drawing.Size(1170, 603);
             this.addDetailsPanel.TabIndex = 40;
+            // 
+            // showDataBtn
+            // 
+            this.showDataBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.showDataBtn.ForeColor = System.Drawing.Color.Black;
+            this.showDataBtn.Location = new System.Drawing.Point(755, 528);
+            this.showDataBtn.Name = "showDataBtn";
+            this.showDataBtn.Size = new System.Drawing.Size(129, 62);
+            this.showDataBtn.TabIndex = 56;
+            this.showDataBtn.Text = "Show Json";
+            this.showDataBtn.UseVisualStyleBackColor = false;
+            this.showDataBtn.Click += new System.EventHandler(this.showDataBtn_Click);
+            // 
+            // printBtn
+            // 
+            this.printBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printBtn.ForeColor = System.Drawing.Color.Black;
+            this.printBtn.Location = new System.Drawing.Point(17, 528);
+            this.printBtn.Name = "printBtn";
+            this.printBtn.Size = new System.Drawing.Size(129, 62);
+            this.printBtn.TabIndex = 55;
+            this.printBtn.Text = "Print";
+            this.printBtn.UseVisualStyleBackColor = false;
+            this.printBtn.Click += new System.EventHandler(this.printBtn_Click);
             // 
             // importJsonBtn
             // 
@@ -1250,5 +1297,7 @@
         private Label educationTextCounterLabel;
         private Label personalProjectTextCounterLabel;
         private OpenFileDialog openFileDialog1;
+        private Button printBtn;
+        private Button showDataBtn;
     }
 }

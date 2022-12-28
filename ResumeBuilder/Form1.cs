@@ -1,5 +1,8 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
+using QuestPDF.Fluent;
+using QuestPDF.Helpers;
+using QuestPDF.Infrastructure;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
@@ -8,8 +11,6 @@ namespace ResumeBuilder
 {
     public partial class Form1 : Form
     {
-        string htmlText;
-        public string PersonHTML, JobHTML, EducationHTML, CertificationsHTML, LanguagesHTML, SkillsHTML, PersonalProjectsHTML, InterestsHTML = "";
         public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
         string json = "";
@@ -23,6 +24,50 @@ namespace ResumeBuilder
             fillCombobox();
         }
 
+        //*****SQL FUNCTIONS*****
+        private void insertDataSql(string cmdstring)
+        {
+            if (nameTbox.Text == "" && SurnameTbox.Text == "")
+            {
+                MessageBox.Show("Please enter your Name and Surname first!");
+            }
+            else
+            {
+
+                try
+                {
+                    cnn = new SqlConnection(connetionString);
+                    SqlCommand cmd = new SqlCommand(cmdstring, cnn);
+                    cnn.Open();
+                    int i = cmd.ExecuteNonQuery();
+                    cnn.Close();
+                    if (i != 0)
+                    {
+                        MessageBox.Show("Saved data!");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("an unexpected error occurred ");
+                    throw;
+                }
+            }
+        }
+        private void removeDataSql(string cmdstring)
+        {
+            cnn = new SqlConnection(connetionString);
+            SqlCommand cmd = new SqlCommand(cmdstring, cnn);
+            cnn.Open();
+            int i = cmd.ExecuteNonQuery();
+            cnn.Close();
+        }
+        private void getDataFromDB()
+        {
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+            dataAdapter.Fill(dataSet);
+            cnn.Close();
+        }
         private void fillCombobox()
         {
             jobsCombobox.Items.Clear();
@@ -74,55 +119,6 @@ namespace ResumeBuilder
                 index++;
             }
         }
-        private void OpenURL(string url)
-        {
-            string key = @"htmlfile\shell\open\command";
-            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
-            // Get the default browser path on the system
-            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
-            Process p = new Process();
-            p.StartInfo.FileName = Default_Browser_Path;
-            p.StartInfo.Arguments = url;
-            p.Start();
-        }
-
-        //*****SQL FUNCTIONS*****
-        private void insertDataSql(string cmdstring)
-        {
-            if (nameTbox.Text == "" && SurnameTbox.Text == "")
-            {
-                MessageBox.Show("Please enter your Name and Surname first!");
-            }
-            else
-            {
-
-                try
-                {
-                    cnn = new SqlConnection(connetionString);
-                    SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-                    cnn.Open();
-                    int i = cmd.ExecuteNonQuery();
-                    cnn.Close();
-                    if (i != 0)
-                    {
-                        MessageBox.Show("Saved data!");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("an unexpected error occurred ");
-                    throw;
-                }
-            }
-        }
-        private void removeDataSql(string cmdstring)
-        {
-            cnn = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
-        }
 
         //*****TEXT COUNTERS*****
         private void summaryTbox_TextChanged(object sender, EventArgs e)
@@ -142,7 +138,6 @@ namespace ResumeBuilder
             personalProjectTextCounterLabel.Text = $"{prsnPrjctDtlTbox.Text.Length}/200";
         }
 
-        //*****BUTTON CLICK EVENTS*****
         //*****ADD BUTTON CLICK EVENTS*****
         private void addJobBtn_MouseClick(object sender, MouseEventArgs e)
         {
@@ -229,11 +224,13 @@ namespace ResumeBuilder
             MessageBox.Show("Data Removed!");
             fillCombobox();
         }
-        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillCombobox();
-        }
+
         //*****OTHER EVENTS*****
+        private void showDataBtn_Click(object sender, EventArgs e)
+        {
+            json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
+            MessageBox.Show(json);
+        }
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
             OpenURL("https://github.com/sametcn99");
@@ -244,10 +241,7 @@ namespace ResumeBuilder
         }
         private void exportJsonBtn_Click(object sender, EventArgs e)
         {
-            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
-            dataAdapter.Fill(dataSet);
-            cnn.Close();
+            getDataFromDB();
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             SaveFileDialog save = new SaveFileDialog();
             save.OverwritePrompt = false;
@@ -310,6 +304,28 @@ namespace ResumeBuilder
             summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
             fillCombobox();
         }
+        private void printBtn_Click(object sender, EventArgs e)
+        {
 
+        }
+        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            fillCombobox();
+        }
+        private void phoneNuTbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void OpenURL(string url)
+        {
+            string key = @"htmlfile\shell\open\command";
+            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
+            // Get the default browser path on the system
+            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
+            Process p = new Process();
+            p.StartInfo.FileName = Default_Browser_Path;
+            p.StartInfo.Arguments = url;
+            p.Start();
+        }
     }
 }
