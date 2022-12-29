@@ -76,16 +76,15 @@ namespace ResumeBuilder
         }
         private void getDataFromDB()
         {
+            ds.Clear();
+            json = "";
             cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(ds);
-            int i = 0;
-            while (i < ds.Tables.Count)
-            {
-                ds.Tables[i].TableName = tableNames[i];
-                i++;
-            }
             cnn.Close();
+            MessageBox.Show(ds.Tables[0].TableName);
+            json = "";
+            json = JsonConvert.SerializeObject(ds, Formatting.Indented);
         }
         private void fillCombobox()
         {
@@ -323,9 +322,14 @@ namespace ResumeBuilder
         private void showDataBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
-            json = null;
-            json = JsonConvert.SerializeObject(ds, Formatting.Indented);
-            MessageBox.Show(json);
+            if (json != "")
+            {
+                MessageBox.Show(json);
+            }
+            else
+            {
+                MessageBox.Show("Dataset is null");
+            }
         }
         private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
         {
@@ -354,7 +358,6 @@ namespace ResumeBuilder
         private void exportJsonBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
-            json = JsonConvert.SerializeObject(ds, Formatting.Indented);
             SaveFileDialog save = new SaveFileDialog();
             save.OverwritePrompt = false;
             save.CreatePrompt = true;
@@ -405,7 +408,6 @@ namespace ResumeBuilder
             catch (System.IndexOutOfRangeException)
             {
                 MessageBox.Show("something went wrong");
-                //throw;
             }
             fillCombobox();
         }
