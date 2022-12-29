@@ -342,6 +342,7 @@ namespace ResumeBuilder
             }
             catch (System.IndexOutOfRangeException)
             {
+                MessageBox.Show("something went wrong");
                 //throw;
             }
             fillCombobox();
