@@ -25,7 +25,6 @@ namespace ResumeBuilder
         public Form1()
         {
             InitializeComponent();
-            fillCombobox();
         }
 
         //*****CONTROLLERS*****
@@ -53,6 +52,7 @@ namespace ResumeBuilder
                 if (i != 0)
                 {
                     MessageBox.Show("Saved data!");
+                    fillCombobox();
                 }
             }
             catch (System.IndexOutOfRangeException)
@@ -65,6 +65,7 @@ namespace ResumeBuilder
                 MessageBox.Show("an unexpected error occurred ");
                 throw;
             }
+
         }
         private void removeDataSql(string cmdstring)
         {
@@ -195,7 +196,6 @@ namespace ResumeBuilder
             }
             i = 0;
         }
-
 
         //*****TEXT COUNTER EVENTS*****
         private void summaryTbox_TextChanged(object sender, EventArgs e)
