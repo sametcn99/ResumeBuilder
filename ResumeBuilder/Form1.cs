@@ -21,10 +21,21 @@ namespace ResumeBuilder
         public Form1()
         {
             InitializeComponent();
-            fillCombobox();
         }
 
-        //*****SQL FUNCTIONS*****
+        //*****CONTROLLERS*****
+        private void OpenURL(string url)
+        {
+            string key = @"htmlfile\shell\open\command";
+            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
+            // Get the default browser path on the system
+            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
+            Process p = new Process();
+            p.StartInfo.FileName = Default_Browser_Path;
+            p.StartInfo.Arguments = url;
+            p.Start();
+        }
+        //*****SQL CONTROLLERS*****
         private void insertDataSql(string cmdstring)
         {
             if (nameTbox.Text == "" && SurnameTbox.Text == "")
@@ -120,7 +131,7 @@ namespace ResumeBuilder
             }
         }
 
-        //*****TEXT COUNTERS*****
+        //*****TEXT COUNTER EVENTS*****
         private void summaryTbox_TextChanged(object sender, EventArgs e)
         {
             summaryTextCounterLabel.Text = $"{summaryTbox.Text.Length}/500";
@@ -188,6 +199,7 @@ namespace ResumeBuilder
             insertDataSql(cmdstring);
             interestTbox.Text = "";
         }
+
         //*****REMOVE BUTTON EVENTS*****
         private void jobsRemoveBtn_Click(object sender, EventArgs e)
         {
@@ -239,7 +251,7 @@ namespace ResumeBuilder
             fillCombobox();
         }
 
-        //*****OTHER EVENTS*****
+        //*****DATA EVENTS*****
         private void showDataBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
@@ -247,6 +259,20 @@ namespace ResumeBuilder
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
             MessageBox.Show(json);
         }
+        private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            cmdstring = $"delete from Person";
+            insertDataSql(cmdstring);
+            cmdstring = $"insert into Person (Name, Surname, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
+            insertDataSql(cmdstring);
+        }
+        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
+        {
+            fillCombobox();
+            MessageBox.Show("Refreshed!");
+        }
+
+        //*****ABOUT PAGE EVENTS*****
         private void linkLabel1_MouseClick(object sender, MouseEventArgs e)
         {
             OpenURL("https://github.com/sametcn99");
@@ -255,6 +281,8 @@ namespace ResumeBuilder
         {
             OpenURL("https://github.com/sametcn99");
         }
+
+        //*****JSON EVENTS*****
         private void exportJsonBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
@@ -271,23 +299,6 @@ namespace ResumeBuilder
                 StreamWriter sw = new StreamWriter(save.FileName);
                 sw.WriteLine(json);
                 sw.Close();
-            }
-        }
-        private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            cmdstring = $"delete from Person";
-            insertDataSql(cmdstring);
-            cmdstring = $"insert into Person (Name, Surname, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('{nameTbox.Text}', '{SurnameTbox.Text}', '{AddressTbox.Text}', '{phoneNuTbox.Text}', '{emailTbox.Text}', '{summaryTbox.Text}', '{websiteTbox.Text}', '{sMediaTbox.Text}')";
-            insertDataSql(cmdstring);
-        }
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
-            int i = 0;
-            while (i < clearAllDataSql.Length)
-            {
-                removeDataSql(clearAllDataSql[i]);
-                i++;
             }
         }
         private void importJsonBtn_Click(object sender, EventArgs e)
@@ -322,28 +333,29 @@ namespace ResumeBuilder
             summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
             fillCombobox();
         }
+
+        //*****OTHER EVENTS*****
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
+            int i = 0;
+            while (i < clearAllDataSql.Length)
+            {
+                removeDataSql(clearAllDataSql[i]);
+                i++;
+            }
+        }
         private void printBtn_Click(object sender, EventArgs e)
         {
 
-        }
-        private void refreshDataBtn_MouseClick(object sender, MouseEventArgs e)
-        {
-            fillCombobox();
         }
         private void phoneNuTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
         }
-        private void OpenURL(string url)
+        private void resumeBuilderTabControl_Selected(object sender, TabControlEventArgs e)
         {
-            string key = @"htmlfile\shell\open\command";
-            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
-            // Get the default browser path on the system
-            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
-            Process p = new Process();
-            p.StartInfo.FileName = Default_Browser_Path;
-            p.StartInfo.Arguments = url;
-            p.Start();
+            fillCombobox();
         }
     }
 }

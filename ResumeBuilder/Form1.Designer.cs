@@ -841,6 +841,7 @@
             this.resumeBuilderTabControl.SelectedIndex = 0;
             this.resumeBuilderTabControl.Size = new System.Drawing.Size(1183, 639);
             this.resumeBuilderTabControl.TabIndex = 41;
+            this.resumeBuilderTabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.resumeBuilderTabControl_Selected);
             // 
             // addDetailsTabPage
             // 
