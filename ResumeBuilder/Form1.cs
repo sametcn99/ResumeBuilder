@@ -89,7 +89,7 @@ namespace ResumeBuilder
             interestsCombobox.Items.Clear();
             prsnPrjctCombobox.Items.Clear();
             languagesCombobox.Items.Clear();
-            skillsCombobox.Items.Clear();
+            certificationsCombobox.Items.Clear();
             string[] comboboxesStrings = { "select * from Job", "select * from Education", "select * from Skills", "select * from PersonalProjects", "select * from Languages", "select * from Certifications", "select * from Interests" };
             int index = 0;
             while (index < comboboxesStrings.Length)
