@@ -83,7 +83,6 @@ namespace ResumeBuilder
             dataAdapter.Fill(ds);
             cnn.Close();
             MessageBox.Show(ds.Tables[0].TableName);
-            json = "";
             json = JsonConvert.SerializeObject(ds, Formatting.Indented);
         }
         private void fillCombobox()
