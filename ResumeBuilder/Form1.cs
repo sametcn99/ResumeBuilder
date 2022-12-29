@@ -14,6 +14,7 @@ namespace ResumeBuilder
     {
         public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
+        string[] tableNames = { "Person", "Job", "Education", "Certifications", "PersonalProjects", "Languages", "Interests", "Skills" };
         string json = "";
         SqlConnection cnn;
         SqlDataReader reader1;
@@ -40,30 +41,27 @@ namespace ResumeBuilder
         //*****SQL CONTROLLERS*****
         private void insertDataSql(string cmdstring)
         {
-            if (nameTbox.Text == "" && SurnameTbox.Text == "")
+            try
             {
-                MessageBox.Show("Please enter your Name and Surname first!");
+                cnn = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand(cmdstring, cnn);
+                cnn.Open();
+                int i = cmd.ExecuteNonQuery();
+                cnn.Close();
+                if (i != 0)
+                {
+                    MessageBox.Show("Saved data!");
+                }
             }
-            else
+            catch (System.IndexOutOfRangeException)
             {
-
-                try
-                {
-                    cnn = new SqlConnection(connetionString);
-                    SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-                    cnn.Open();
-                    int i = cmd.ExecuteNonQuery();
-                    cnn.Close();
-                    if (i != 0)
-                    {
-                        MessageBox.Show("Saved data!");
-                    }
-                }
-                catch (Exception)
-                {
-                    MessageBox.Show("an unexpected error occurred ");
-                    throw;
-                }
+                MessageBox.Show("something went wrong");
+                //throw;
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("an unexpected error occurred ");
+                throw;
             }
         }
         private void removeDataSql(string cmdstring)
@@ -79,6 +77,12 @@ namespace ResumeBuilder
             cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(dataSet);
+            int i = 0;
+            while (i < dataSet.Tables.Count)
+            {
+                dataSet.Tables[i].TableName = tableNames[i];
+                i++;
+            }
             cnn.Close();
         }
         private void fillCombobox()
@@ -325,14 +329,21 @@ namespace ResumeBuilder
                     i++;
                 }
             }
-            nameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Name");
-            SurnameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Surname");
-            AddressTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Address");
-            phoneNuTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber");
-            emailTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Email");
-            websiteTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Website");
-            sMediaTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("SocialMedia");
-            summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
+            try
+            {
+                nameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Name");
+                SurnameTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Surname");
+                AddressTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Address");
+                phoneNuTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber");
+                emailTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Email");
+                websiteTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Website");
+                sMediaTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("SocialMedia");
+                summaryTbox.Text = dataSet.Tables[0].Rows[0].Field<string>("Summary");
+            }
+            catch (System.IndexOutOfRangeException)
+            {
+                //throw;
+            }
             fillCombobox();
         }
 
