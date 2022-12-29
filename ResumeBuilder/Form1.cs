@@ -157,14 +157,14 @@ namespace ResumeBuilder
             {
                 educations = educations + ds.Tables[2].Rows[i].Field<string>("EducationTitle").Trim();
                 educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationStart").Trim() + "-" + ds.Tables[2].Rows[i].Field<string>("EducationEnd");
-                educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationDetail" + "\n");
+                educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationDetail") + "\n";
                 i++;
             }
             i = 0;
             certifications = "";
             while (i < ds.Tables[3].Rows.Count)
             {
-                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName" + "\n");
+                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName") + "\n";
                 i++;
             }
             i = 0;
