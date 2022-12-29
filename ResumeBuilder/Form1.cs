@@ -6,6 +6,7 @@ using QuestPDF.Infrastructure;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
+using System.Security.Cryptography;
 
 namespace ResumeBuilder
 {
@@ -21,6 +22,7 @@ namespace ResumeBuilder
         public Form1()
         {
             InitializeComponent();
+            fillCombobox();
         }
 
         //*****CONTROLLERS*****
