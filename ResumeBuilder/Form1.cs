@@ -15,7 +15,6 @@ namespace ResumeBuilder
     {
         public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
-        string[] tableNames = { "Person", "Job", "Education", "Certifications", "PersonalProjects", "Languages", "Interests", "Skills" };
         string json = "";
         string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills = "";
         SqlConnection cnn;
@@ -55,14 +54,14 @@ namespace ResumeBuilder
                     fillCombobox();
                 }
             }
-            catch (System.IndexOutOfRangeException)
+            catch (System.IndexOutOfRangeException ex)
             {
-                MessageBox.Show("something went wrong");
+                MessageBox.Show("something went wrong\n " + ex.Message);
                 //throw;
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("an unexpected error occurred ");
+                MessageBox.Show("an unexpected error occurred " + ex.Message);
                 throw;
             }
 
@@ -369,6 +368,7 @@ namespace ResumeBuilder
                 StreamWriter sw = new StreamWriter(save.FileName);
                 sw.WriteLine(json);
                 sw.Close();
+                MessageBox.Show("Saved!\nYou can import this file when you need edit.");
             }
         }
         private void importJsonBtn_Click(object sender, EventArgs e)
@@ -392,23 +392,23 @@ namespace ResumeBuilder
                     bulkCopy.WriteToServer(ds.Tables[i]);
                     i++;
                 }
+                try
+                {
+                    fillCombobox();
+                    nameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Name").Trim();
+                    SurnameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Surname").Trim();
+                    AddressTbox.Text = ds.Tables[0].Rows[0].Field<string>("Address").Trim();
+                    phoneNuTbox.Text = ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
+                    emailTbox.Text = ds.Tables[0].Rows[0].Field<string>("Email").Trim();
+                    websiteTbox.Text = ds.Tables[0].Rows[0].Field<string>("Website").Trim();
+                    sMediaTbox.Text = ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
+                    summaryTbox.Text = ds.Tables[0].Rows[0].Field<string>("Summary").Trim();
+                }
+                catch (System.IndexOutOfRangeException ex)
+                {
+                    MessageBox.Show("something went wrong\n" + ex.Message);
+                }
             }
-            try
-            {
-                nameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Name").Trim();
-                SurnameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Surname").Trim();
-                AddressTbox.Text = ds.Tables[0].Rows[0].Field<string>("Address").Trim();
-                phoneNuTbox.Text = ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
-                emailTbox.Text = ds.Tables[0].Rows[0].Field<string>("Email").Trim();
-                websiteTbox.Text = ds.Tables[0].Rows[0].Field<string>("Website").Trim();
-                sMediaTbox.Text = ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
-                summaryTbox.Text = ds.Tables[0].Rows[0].Field<string>("Summary").Trim();
-            }
-            catch (System.IndexOutOfRangeException)
-            {
-                MessageBox.Show("something went wrong");
-            }
-            fillCombobox();
         }
 
         //*****OTHER EVENTS*****
