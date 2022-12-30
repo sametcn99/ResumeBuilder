@@ -1181,7 +1181,6 @@
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.Text = "Resume Builder";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.personalGroupBox1.ResumeLayout(false);
             this.personalGroupBox1.PerformLayout();
             this.jobsEduGroupBox.ResumeLayout(false);

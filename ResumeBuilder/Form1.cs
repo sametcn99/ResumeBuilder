@@ -8,6 +8,7 @@ using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Security.Cryptography;
+using System.Windows.Forms;
 
 namespace ResumeBuilder
 {
@@ -24,6 +25,47 @@ namespace ResumeBuilder
         public Form1()
         {
             InitializeComponent();
+            restroreSession();
+        }
+
+        private void restroreSession()
+        {
+            try
+            {
+                getDataFromDB();
+                if (ds.Tables[0].Rows[0].ToString().Trim() != "")
+                {
+                    DialogResult dialogResult = MessageBox.Show("Do you want to restore previous last session?", "Saved Previous Session", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        fillCombobox();
+                        nameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Name").Trim();
+                        SurnameTbox.Text = ds.Tables[0].Rows[0].Field<string>("Surname").Trim();
+                        AddressTbox.Text = ds.Tables[0].Rows[0].Field<string>("Address").Trim();
+                        phoneNuTbox.Text = ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
+                        emailTbox.Text = ds.Tables[0].Rows[0].Field<string>("Email").Trim();
+                        websiteTbox.Text = ds.Tables[0].Rows[0].Field<string>("Website").Trim();
+                        sMediaTbox.Text = ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
+                        summaryTbox.Text = ds.Tables[0].Rows[0].Field<string>("Summary").Trim();
+                        MessageBox.Show("Restored last session!");
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
+                        int i = 0;
+                        while (i < clearAllDataSql.Length)
+                        {
+                            removeDataSql(clearAllDataSql[i]);
+                            i++;
+                        }
+                    }
+                }
+            }
+            catch (System.IndexOutOfRangeException ex)
+            {
+                //MessageBox.Show("dataset is null " + ex.Message);
+                //throw;
+            }
         }
 
         //*****CONTROLLERS*****
@@ -57,7 +99,6 @@ namespace ResumeBuilder
             catch (System.IndexOutOfRangeException ex)
             {
                 MessageBox.Show("something went wrong\n " + ex.Message);
-                //throw;
             }
             catch (Exception ex)
             {
@@ -423,73 +464,86 @@ namespace ResumeBuilder
         }
 
         //*****OTHER EVENTS*****
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            string[] clearAllDataSql = { "delete from Certifications", "delete from Education", "delete from Interests", "delete from Job", "delete from Languages", "delete from Person", "delete from PersonalProjects", "delete from Skills" };
-            int i = 0;
-            while (i < clearAllDataSql.Length)
-            {
-                removeDataSql(clearAllDataSql[i]);
-                i++;
-            }
-        }
         private void printBtn_Click(object sender, EventArgs e)
         {
-            printingDetailsFill();
-            Document.Create(container =>
+            try
             {
-                container.Page(page =>
+                SaveFileDialog save = new SaveFileDialog();
+                save.OverwritePrompt = false;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"D:\";
+                save.Title = "Save PDF File";
+                save.DefaultExt = "pdf";
+                save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+                if (save.ShowDialog() == DialogResult.OK)
                 {
-                    page.Size(PageSizes.A4);
-                    page.Margin(2, Unit.Centimetre);
-                    page.PageColor(Colors.White);
-                    page.DefaultTextStyle(x => x.FontSize(11));
-                    page.Content()
-                        .PaddingVertical(1, Unit.Centimetre)
-                        .Column(x =>
-                        {
-                            x.Spacing(20);
-                            x.Item().Text(name).FontSize(30).FontColor(Colors.Blue.Medium);
-                            x.Item().Text(personDetails);
-                            if (jobs != "")
+                    MessageBox.Show("Saved!");
+                }
+                printingDetailsFill();
+                Document.Create(container =>
+                {
+                    container.Page(page =>
+                    {
+                        page.Size(PageSizes.A4);
+                        page.Margin(2, Unit.Centimetre);
+                        page.PageColor(Colors.White);
+                        page.DefaultTextStyle(x => x.FontSize(11));
+                        page.Content()
+                            .PaddingVertical(1, Unit.Centimetre)
+                            .Column(x =>
                             {
-                                x.Item().Text("JOB").Bold().FontSize(15);
-                                x.Item().Text(jobs);
-                            }
-                            if (educations != "")
-                            {
-                                x.Item().Text("EDUCATION").Bold().FontSize(15);
-                                x.Item().Text(educations);
-                            }
-                            if (certifications != "")
-                            {
-                                x.Item().Text("CERTIFICATIONS").Bold().FontSize(15);
-                                x.Item().Text(certifications);
-                            }
-                            if (personalProjects != "")
-                            {
-                                x.Item().Text("PERSONAL PROJECTS").Bold().FontSize(15);
-                                x.Item().Text(personalProjects);
-                            }
-                            if (languages != "")
-                            {
-                                x.Item().Text("LANGUAGES").Bold().FontSize(15);
-                                x.Item().Text(languages);
-                            }
-                            if (interests != "")
-                            {
-                                x.Item().Text("INTERESTS").Bold().FontSize(15);
-                                x.Item().Text(interests);
-                            }
-                            if (skills != "")
-                            {
-                                x.Item().Text("SKILLS").Bold().FontSize(15);
-                                x.Item().Text(skills);
-                            }
-                        });
-                });
-            })
-            .GeneratePdf("C:\\hello.pdf");
+                                x.Spacing(20);
+                                x.Item().Text(name).FontSize(30).FontColor(Colors.Blue.Medium);
+                                x.Item().Text(personDetails);
+                                if (jobs != "")
+                                {
+                                    x.Item().Text("JOB").Bold().FontSize(15);
+                                    x.Item().Text(jobs);
+                                }
+                                if (educations != "")
+                                {
+                                    x.Item().Text("EDUCATION").Bold().FontSize(15);
+                                    x.Item().Text(educations);
+                                }
+                                if (certifications != "")
+                                {
+                                    x.Item().Text("CERTIFICATIONS").Bold().FontSize(15);
+                                    x.Item().Text(certifications);
+                                }
+                                if (personalProjects != "")
+                                {
+                                    x.Item().Text("PERSONAL PROJECTS").Bold().FontSize(15);
+                                    x.Item().Text(personalProjects);
+                                }
+                                if (languages != "")
+                                {
+                                    x.Item().Text("LANGUAGES").Bold().FontSize(15);
+                                    x.Item().Text(languages);
+                                }
+                                if (interests != "")
+                                {
+                                    x.Item().Text("INTERESTS").Bold().FontSize(15);
+                                    x.Item().Text(interests);
+                                }
+                                if (skills != "")
+                                {
+                                    x.Item().Text("SKILLS").Bold().FontSize(15);
+                                    x.Item().Text(skills);
+                                }
+                            });
+                    });
+                })
+                .GeneratePdf(save.FileName);
+                MessageBox.Show("Saved!");
+            }
+            catch (System.ArgumentException ex)
+            {
+                MessageBox.Show($"Canceled!\n{ex.Message}");
+            }
+            catch (System.IndexOutOfRangeException ex)
+            {
+                MessageBox.Show($"Canceled!\nDataset is null.\n{ex.Message}");
+            }
         }
         private void phoneNuTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
