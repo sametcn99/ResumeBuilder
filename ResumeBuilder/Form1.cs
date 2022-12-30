@@ -28,6 +28,20 @@ namespace ResumeBuilder
             restroreSession();
         }
 
+
+
+        //*****CONTROLLERS*****
+        private void OpenURL(string url)
+        {
+            string key = @"htmlfile\shell\open\command";
+            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
+            // Get the default browser path on the system
+            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
+            Process p = new Process();
+            p.StartInfo.FileName = Default_Browser_Path;
+            p.StartInfo.Arguments = url;
+            p.Start();
+        }
         private void restroreSession()
         {
             try
@@ -66,19 +80,6 @@ namespace ResumeBuilder
                 //MessageBox.Show("dataset is null " + ex.Message);
                 //throw;
             }
-        }
-
-        //*****CONTROLLERS*****
-        private void OpenURL(string url)
-        {
-            string key = @"htmlfile\shell\open\command";
-            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
-            // Get the default browser path on the system
-            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
-            Process p = new Process();
-            p.StartInfo.FileName = Default_Browser_Path;
-            p.StartInfo.Arguments = url;
-            p.Start();
         }
         //*****SQL CONTROLLERS*****
         private void insertDataSql(string cmdstring)
