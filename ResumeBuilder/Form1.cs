@@ -539,9 +539,7 @@ namespace ResumeBuilder
                 catch (System.IO.IOException ex)
                 {
                     MessageBox.Show(ex.Message + "Please close file and retry!");
-                    //throw;
                 }
-                MessageBox.Show("Saved!");
             }
             catch (System.ArgumentException ex)
             {
