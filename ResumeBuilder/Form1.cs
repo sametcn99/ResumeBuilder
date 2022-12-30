@@ -28,8 +28,6 @@ namespace ResumeBuilder
             restroreSession();
         }
 
-
-
         //*****CONTROLLERS*****
         private void OpenURL(string url)
         {
