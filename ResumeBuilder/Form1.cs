@@ -81,8 +81,6 @@ namespace ResumeBuilder
             cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(ds);
-            cnn.Close();
-            MessageBox.Show(ds.Tables[0].TableName);
             json = JsonConvert.SerializeObject(ds, Formatting.Indented);
         }
         private void fillCombobox()
@@ -329,13 +327,16 @@ namespace ResumeBuilder
         private void showDataBtn_Click(object sender, EventArgs e)
         {
             getDataFromDB();
-            if (json != "")
+            try
             {
-                MessageBox.Show(json);
+                if (ds.Tables[0].Rows[0].Field<string>("Name").Trim() != "")
+                {
+                    MessageBox.Show(json);
+                }
             }
-            else
+            catch (System.IndexOutOfRangeException ex)
             {
-                MessageBox.Show("Dataset is null");
+                MessageBox.Show($"Dataset is null.");
             }
         }
         private void savePersonDataBtn_MouseClick(object sender, MouseEventArgs e)
@@ -371,6 +372,7 @@ namespace ResumeBuilder
             save.InitialDirectory = @"D:\";
             save.Title = "Save Json File";
             save.DefaultExt = "json";
+
             save.Filter = "json files (*.json)|*.json|All Files(*.*)|*.*";
             if (save.ShowDialog() == DialogResult.OK)
             {
@@ -487,7 +489,7 @@ namespace ResumeBuilder
                         });
                 });
             })
-            .GeneratePdf("hello.pdf");
+            .GeneratePdf("C:\\hello.pdf");
         }
         private void phoneNuTbox_KeyPress(object sender, KeyPressEventArgs e)
         {
