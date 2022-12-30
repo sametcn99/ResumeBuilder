@@ -209,7 +209,7 @@ namespace ResumeBuilder
             certifications = "";
             while (i < ds.Tables[3].Rows.Count)
             {
-                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName").Trim() + "\n";
+                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName").Trim() + ", ";
                 i++;
             }
             i = 0;
@@ -223,21 +223,21 @@ namespace ResumeBuilder
             languages = "";
             while (i < ds.Tables[5].Rows.Count)
             {
-                languages = languages + ds.Tables[5].Rows[i].Field<string>("Language").Trim() + "\n";
+                languages = languages + ds.Tables[5].Rows[i].Field<string>("Language").Trim() + ",";
                 i++;
             }
             i = 0;
             interests = "";
             while (i < ds.Tables[6].Rows.Count)
             {
-                interests = interests + ds.Tables[6].Rows[i].Field<string>("Interest").Trim() + "\n";
+                interests = interests + ds.Tables[6].Rows[i].Field<string>("Interest").Trim() + ", ";
                 i++;
             }
             i = 0;
             skills = "";
             while (i < ds.Tables[7].Rows.Count)
             {
-                skills = skills + ds.Tables[7].Rows[i].Field<string>("Skill").Trim() + "\n";
+                skills = skills + ds.Tables[7].Rows[i].Field<string>("Skill").Trim() + ", ";
                 i++;
             }
             i = 0;
