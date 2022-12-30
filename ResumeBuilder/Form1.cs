@@ -13,7 +13,7 @@ namespace ResumeBuilder
 {
     public partial class Form1 : Form
     {
-        public string connetionString = "Data Source=samet\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
+        public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
         public string cmdstring = "";
         string json = "";
         string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills = "";
@@ -96,50 +96,59 @@ namespace ResumeBuilder
             certificationsCombobox.Items.Clear();
             string[] comboboxesStrings = { "select * from Job", "select * from Education", "select * from Skills", "select * from PersonalProjects", "select * from Languages", "select * from Certifications", "select * from Interests" };
             int index = 0;
-            while (index < comboboxesStrings.Length)
+            try
             {
-                cnn = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand(comboboxesStrings[index], cnn);
-                cnn.Open();
-                reader1 = cmd.ExecuteReader();
-                while (reader1.Read())
+                while (index < comboboxesStrings.Length)
                 {
-                    if (index == 0)
+                    cnn = new SqlConnection(connetionString);
+                    SqlCommand cmd = new SqlCommand(comboboxesStrings[index], cnn);
+                    cnn.Open();
+                    reader1 = cmd.ExecuteReader();
+                    while (reader1.Read())
                     {
-                        jobsCombobox.Items.Add(reader1.GetString("JobTitle"));
+                        if (index == 0)
+                        {
+                            jobsCombobox.Items.Add(reader1.GetString("JobTitle"));
+                        }
+                        else if (index == 1)
+                        {
+                            eduCombobox.Items.Add(reader1.GetString("EducationTitle"));
+                        }
+                        else if (index == 2)
+                        {
+                            skillsCombobox.Items.Add(reader1.GetString("Skill"));
+                        }
+                        else if (index == 3)
+                        {
+                            prsnPrjctCombobox.Items.Add(reader1.GetString("PersonalProjectTitle"));
+                        }
+                        else if (index == 4)
+                        {
+                            languagesCombobox.Items.Add(reader1.GetString("Language"));
+                        }
+                        else if (index == 5)
+                        {
+                            certificationsCombobox.Items.Add(reader1.GetString("CertificationName"));
+                        }
+                        else if (index == 6)
+                        {
+                            interestsCombobox.Items.Add(reader1.GetString("Interest"));
+                        }
                     }
-                    else if (index == 1)
-                    {
-                        eduCombobox.Items.Add(reader1.GetString("EducationTitle"));
-                    }
-                    else if (index == 2)
-                    {
-                        skillsCombobox.Items.Add(reader1.GetString("Skill"));
-                    }
-                    else if (index == 3)
-                    {
-                        prsnPrjctCombobox.Items.Add(reader1.GetString("PersonalProjectTitle"));
-                    }
-                    else if (index == 4)
-                    {
-                        languagesCombobox.Items.Add(reader1.GetString("Language"));
-                    }
-                    else if (index == 5)
-                    {
-                        certificationsCombobox.Items.Add(reader1.GetString("CertificationName"));
-                    }
-                    else if (index == 6)
-                    {
-                        interestsCombobox.Items.Add(reader1.GetString("Interest"));
-                    }
+                    index++;
+                    cnn.Close();
                 }
-                index++;
+            }
+            catch (System.InvalidOperationException e)
+            {
+                MessageBox.Show("An unexpected error." + e.Message);
+                throw;
             }
         }
         private void printingDetailsFill()
         {
             name = ds.Tables[0].Rows[0].Field<string>("Name").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Surname").Trim();
-            personDetails = ds.Tables[0].Rows[0].Field<string>("Address").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Email").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Website").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Summary").Trim() + "\n";
+            personDetails = ds.Tables[0].Rows[0].Field<string>("Address").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Email").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Website").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Summary").Trim() + " ";
             jobs = "";
             int i = 0;
             while (i < ds.Tables[1].Rows.Count)

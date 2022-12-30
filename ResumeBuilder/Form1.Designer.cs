@@ -790,9 +790,9 @@
             this.addDetailsPanel.Controls.Add(this.jobsEduGroupBox);
             this.addDetailsPanel.Controls.Add(this.importJsonBtn);
             this.addDetailsPanel.Controls.Add(this.exportJsonBtn);
-            this.addDetailsPanel.Location = new System.Drawing.Point(9, 7);
+            this.addDetailsPanel.Location = new System.Drawing.Point(-4, 0);
             this.addDetailsPanel.Name = "addDetailsPanel";
-            this.addDetailsPanel.Size = new System.Drawing.Size(1170, 603);
+            this.addDetailsPanel.Size = new System.Drawing.Size(1183, 610);
             this.addDetailsPanel.TabIndex = 40;
             // 
             // showDataBtn
