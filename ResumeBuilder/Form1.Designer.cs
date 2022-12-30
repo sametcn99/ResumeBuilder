@@ -783,13 +783,13 @@
             // addDetailsPanel
             // 
             this.addDetailsPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(36)))), ((int)(((byte)(41)))), ((int)(((byte)(47)))));
-            this.addDetailsPanel.Controls.Add(this.showDataBtn);
-            this.addDetailsPanel.Controls.Add(this.printBtn);
             this.addDetailsPanel.Controls.Add(this.personalGroupBox1);
             this.addDetailsPanel.Controls.Add(this.moreGroupBox);
             this.addDetailsPanel.Controls.Add(this.jobsEduGroupBox);
             this.addDetailsPanel.Controls.Add(this.importJsonBtn);
             this.addDetailsPanel.Controls.Add(this.exportJsonBtn);
+            this.addDetailsPanel.Controls.Add(this.printBtn);
+            this.addDetailsPanel.Controls.Add(this.showDataBtn);
             this.addDetailsPanel.Location = new System.Drawing.Point(-4, 0);
             this.addDetailsPanel.Name = "addDetailsPanel";
             this.addDetailsPanel.Size = new System.Drawing.Size(1183, 610);
