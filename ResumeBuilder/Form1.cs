@@ -146,31 +146,31 @@ namespace ResumeBuilder
                     {
                         if (index == 0)
                         {
-                            jobsCombobox.Items.Add(reader1.GetString("JobTitle"));
+                            jobsCombobox.Items.Add(reader1.GetString("JobTitle").Trim());
                         }
                         else if (index == 1)
                         {
-                            eduCombobox.Items.Add(reader1.GetString("EducationTitle"));
+                            eduCombobox.Items.Add(reader1.GetString("EducationTitle").Trim());
                         }
                         else if (index == 2)
                         {
-                            skillsCombobox.Items.Add(reader1.GetString("Skill"));
+                            skillsCombobox.Items.Add(reader1.GetString("Skill").Trim());
                         }
                         else if (index == 3)
                         {
-                            prsnPrjctCombobox.Items.Add(reader1.GetString("PersonalProjectTitle"));
+                            prsnPrjctCombobox.Items.Add(reader1.GetString("PersonalProjectTitle").Trim());
                         }
                         else if (index == 4)
                         {
-                            languagesCombobox.Items.Add(reader1.GetString("Language"));
+                            languagesCombobox.Items.Add(reader1.GetString("Language").Trim());
                         }
                         else if (index == 5)
                         {
-                            certificationsCombobox.Items.Add(reader1.GetString("CertificationName"));
+                            certificationsCombobox.Items.Add(reader1.GetString("CertificationName").Trim());
                         }
                         else if (index == 6)
                         {
-                            interestsCombobox.Items.Add(reader1.GetString("Interest"));
+                            interestsCombobox.Items.Add(reader1.GetString("Interest").Trim());
                         }
                     }
                     index++;
@@ -186,7 +186,7 @@ namespace ResumeBuilder
         private void printingDetailsFill()
         {
             name = ds.Tables[0].Rows[0].Field<string>("Name").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Surname").Trim();
-            personDetails = ds.Tables[0].Rows[0].Field<string>("Address").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Email").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Website").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + " " + ds.Tables[0].Rows[0].Field<string>("Summary").Trim() + " ";
+            personDetails = ds.Tables[0].Rows[0].Field<string>("Address").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Email").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Website").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + "\n" + ds.Tables[0].Rows[0].Field<string>("Summary").Trim();
             jobs = "";
             int i = 0;
             while (i < ds.Tables[1].Rows.Count)
@@ -202,42 +202,42 @@ namespace ResumeBuilder
             {
                 educations = educations + ds.Tables[2].Rows[i].Field<string>("EducationTitle").Trim();
                 educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationStart").Trim() + "-" + ds.Tables[2].Rows[i].Field<string>("EducationEnd");
-                educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationDetail") + "\n";
+                educations = educations + "\n" + ds.Tables[2].Rows[i].Field<string>("EducationDetail").Trim() + "\n";
                 i++;
             }
             i = 0;
             certifications = "";
             while (i < ds.Tables[3].Rows.Count)
             {
-                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName") + "\n";
+                certifications = certifications + ds.Tables[3].Rows[i].Field<string>("CertificationName").Trim() + "\n";
                 i++;
             }
             i = 0;
             personalProjects = "";
             while (i < ds.Tables[4].Rows.Count)
             {
-                personalProjects = personalProjects + ds.Tables[4].Rows[i].Field<string>("PersonalProjectTitle") + "\n" + ds.Tables[4].Rows[i].Field<string>("PersonalProjectDetail") + "\n";
+                personalProjects = personalProjects + ds.Tables[4].Rows[i].Field<string>("PersonalProjectTitle").Trim() + "\n" + ds.Tables[4].Rows[i].Field<string>("PersonalProjectDetail").Trim() + "\n";
                 i++;
             }
             i = 0;
             languages = "";
             while (i < ds.Tables[5].Rows.Count)
             {
-                languages = languages + ds.Tables[5].Rows[i].Field<string>("Language") + "\n";
+                languages = languages + ds.Tables[5].Rows[i].Field<string>("Language").Trim() + "\n";
                 i++;
             }
             i = 0;
             interests = "";
             while (i < ds.Tables[6].Rows.Count)
             {
-                interests = interests + ds.Tables[6].Rows[i].Field<string>("Interest") + "\n";
+                interests = interests + ds.Tables[6].Rows[i].Field<string>("Interest").Trim() + "\n";
                 i++;
             }
             i = 0;
             skills = "";
             while (i < ds.Tables[7].Rows.Count)
             {
-                skills = skills + ds.Tables[7].Rows[i].Field<string>("Skill") + "\n";
+                skills = skills + ds.Tables[7].Rows[i].Field<string>("Skill").Trim() + "\n";
                 i++;
             }
             i = 0;
@@ -479,60 +479,68 @@ namespace ResumeBuilder
                     MessageBox.Show("Saved!");
                 }
                 printingDetailsFill();
-                Document.Create(container =>
+                try
                 {
-                    container.Page(page =>
-                    {
-                        page.Size(PageSizes.A4);
-                        page.Margin(2, Unit.Centimetre);
-                        page.PageColor(Colors.White);
-                        page.DefaultTextStyle(x => x.FontSize(11));
-                        page.Content()
-                            .PaddingVertical(1, Unit.Centimetre)
-                            .Column(x =>
+                    Document.Create(container =>
+            {
+                container.Page(page =>
+                {
+                    page.Size(PageSizes.A4);
+                    page.Margin(1, Unit.Centimetre);
+                    page.PageColor(Colors.White);
+                    page.DefaultTextStyle(x => x.FontSize(11));
+                    page.Content()
+                        .PaddingVertical(1, Unit.Centimetre)
+                        .Column(x =>
+                        {
+                            x.Spacing(20);
+                            x.Item().Text(name).FontSize(18).FontColor(Colors.Blue.Medium).Bold();
+                            x.Item().Text(personDetails);
+                            if (jobs != "")
                             {
-                                x.Spacing(20);
-                                x.Item().Text(name).FontSize(30).FontColor(Colors.Blue.Medium);
-                                x.Item().Text(personDetails);
-                                if (jobs != "")
-                                {
-                                    x.Item().Text("JOB").Bold().FontSize(15);
-                                    x.Item().Text(jobs);
-                                }
-                                if (educations != "")
-                                {
-                                    x.Item().Text("EDUCATION").Bold().FontSize(15);
-                                    x.Item().Text(educations);
-                                }
-                                if (certifications != "")
-                                {
-                                    x.Item().Text("CERTIFICATIONS").Bold().FontSize(15);
-                                    x.Item().Text(certifications);
-                                }
-                                if (personalProjects != "")
-                                {
-                                    x.Item().Text("PERSONAL PROJECTS").Bold().FontSize(15);
-                                    x.Item().Text(personalProjects);
-                                }
-                                if (languages != "")
-                                {
-                                    x.Item().Text("LANGUAGES").Bold().FontSize(15);
-                                    x.Item().Text(languages);
-                                }
-                                if (interests != "")
-                                {
-                                    x.Item().Text("INTERESTS").Bold().FontSize(15);
-                                    x.Item().Text(interests);
-                                }
-                                if (skills != "")
-                                {
-                                    x.Item().Text("SKILLS").Bold().FontSize(15);
-                                    x.Item().Text(skills);
-                                }
-                            });
-                    });
-                })
-                .GeneratePdf(save.FileName);
+                                x.Item().Text("JOB").Bold().FontSize(13);
+                                x.Item().Text(jobs);
+                            }
+                            if (educations != "")
+                            {
+                                x.Item().Text("EDUCATION").Bold().FontSize(13);
+                                x.Item().Text(educations);
+                            }
+                            if (certifications != "")
+                            {
+                                x.Item().Text("CERTIFICATIONS").Bold().FontSize(13);
+                                x.Item().Text(certifications);
+                            }
+                            if (personalProjects != "")
+                            {
+                                x.Item().Text("PERSONAL PROJECTS").Bold().FontSize(13);
+                                x.Item().Text(personalProjects);
+                            }
+                            if (languages != "")
+                            {
+                                x.Item().Text("LANGUAGES").Bold().FontSize(13);
+                                x.Item().Text(languages);
+                            }
+                            if (interests != "")
+                            {
+                                x.Item().Text("INTERESTS").Bold().FontSize(13);
+                                x.Item().Text(interests);
+                            }
+                            if (skills != "")
+                            {
+                                x.Item().Text("SKILLS").Bold().FontSize(13);
+                                x.Item().Text(skills);
+                            }
+                        });
+                });
+            })
+            .GeneratePdf(save.FileName);
+                }
+                catch (System.IO.IOException ex)
+                {
+                    MessageBox.Show(ex.Message + "Please close file and retry!");
+                    //throw;
+                }
                 MessageBox.Show("Saved!");
             }
             catch (System.ArgumentException ex)
