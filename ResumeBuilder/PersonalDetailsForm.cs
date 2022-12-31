@@ -21,5 +21,10 @@ namespace ResumeBuilder
         {
             summaryTextCounterLabel.Text = $"{summaryTextbox.Text.Length}/500";
         }
+
+        private void phoneNumberTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
     }
 }

@@ -16,5 +16,10 @@ namespace ResumeBuilder
         {
             InitializeComponent();
         }
+
+        private void prsnPrjctDtlTbox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

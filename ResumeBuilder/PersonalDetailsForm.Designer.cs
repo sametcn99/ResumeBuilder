@@ -140,6 +140,7 @@
             this.phoneNumberTextbox.Name = "phoneNumberTextbox";
             this.phoneNumberTextbox.Size = new System.Drawing.Size(244, 23);
             this.phoneNumberTextbox.TabIndex = 5;
+            this.phoneNumberTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextbox_KeyPress);
             // 
             // emailTextbox
             // 

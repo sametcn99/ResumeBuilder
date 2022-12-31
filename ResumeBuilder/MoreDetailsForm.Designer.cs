@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.personalProjectTextCounterLabel = new System.Windows.Forms.Label();
-            this.addCertificationBtn = new System.Windows.Forms.Button();
-            this.certificationTbox = new System.Windows.Forms.TextBox();
+            this.addCertificationButton = new System.Windows.Forms.Button();
+            this.certificationTextbox = new System.Windows.Forms.TextBox();
             this.certificationsLabel = new System.Windows.Forms.Label();
             this.skillsLabel = new System.Windows.Forms.Label();
-            this.addSkillBtn = new System.Windows.Forms.Button();
-            this.skillTbox = new System.Windows.Forms.TextBox();
+            this.addSkillButton = new System.Windows.Forms.Button();
+            this.skillTextbox = new System.Windows.Forms.TextBox();
             this.languagesLabel = new System.Windows.Forms.Label();
-            this.languageTbox = new System.Windows.Forms.TextBox();
-            this.personalPDtlLabel = new System.Windows.Forms.Label();
-            this.personalPTtlLabel = new System.Windows.Forms.Label();
-            this.prsnPrcjtTtlTbox = new System.Windows.Forms.TextBox();
-            this.prsnPrjctDtlTbox = new System.Windows.Forms.TextBox();
-            this.addInterestBtn = new System.Windows.Forms.Button();
-            this.addLanguageBtn = new System.Windows.Forms.Button();
-            this.interestTbox = new System.Windows.Forms.TextBox();
-            this.addPrsnPrjctBtn = new System.Windows.Forms.Button();
+            this.languageTextbox = new System.Windows.Forms.TextBox();
+            this.personalProjectDetailLabel = new System.Windows.Forms.Label();
+            this.personalProjectLabel = new System.Windows.Forms.Label();
+            this.prsnProjectTitleTextbox = new System.Windows.Forms.TextBox();
+            this.prsnProjectDetailTextbox = new System.Windows.Forms.TextBox();
+            this.addInterestButton = new System.Windows.Forms.Button();
+            this.addLanguageButton = new System.Windows.Forms.Button();
+            this.interestTextbox = new System.Windows.Forms.TextBox();
+            this.addPersonalProjectButton = new System.Windows.Forms.Button();
             this.interestsLabel = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.removeButton = new System.Windows.Forms.Button();
@@ -61,27 +61,27 @@
             this.personalProjectTextCounterLabel.TabIndex = 71;
             this.personalProjectTextCounterLabel.Text = "0/200";
             // 
-            // addCertificationBtn
+            // addCertificationButton
             // 
-            this.addCertificationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addCertificationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addCertificationBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addCertificationBtn.Location = new System.Drawing.Point(241, 102);
-            this.addCertificationBtn.Name = "addCertificationBtn";
-            this.addCertificationBtn.Size = new System.Drawing.Size(132, 23);
-            this.addCertificationBtn.TabIndex = 69;
-            this.addCertificationBtn.Text = "Add Certification";
-            this.addCertificationBtn.UseVisualStyleBackColor = false;
+            this.addCertificationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addCertificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addCertificationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addCertificationButton.Location = new System.Drawing.Point(241, 102);
+            this.addCertificationButton.Name = "addCertificationButton";
+            this.addCertificationButton.Size = new System.Drawing.Size(132, 23);
+            this.addCertificationButton.TabIndex = 69;
+            this.addCertificationButton.Text = "Add Certification";
+            this.addCertificationButton.UseVisualStyleBackColor = false;
             // 
-            // certificationTbox
+            // certificationTextbox
             // 
-            this.certificationTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.certificationTbox.Location = new System.Drawing.Point(129, 73);
-            this.certificationTbox.MaxLength = 100;
-            this.certificationTbox.Multiline = true;
-            this.certificationTbox.Name = "certificationTbox";
-            this.certificationTbox.Size = new System.Drawing.Size(244, 23);
-            this.certificationTbox.TabIndex = 70;
+            this.certificationTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.certificationTextbox.Location = new System.Drawing.Point(129, 73);
+            this.certificationTextbox.MaxLength = 100;
+            this.certificationTextbox.Multiline = true;
+            this.certificationTextbox.Name = "certificationTextbox";
+            this.certificationTextbox.Size = new System.Drawing.Size(244, 23);
+            this.certificationTextbox.TabIndex = 70;
             // 
             // certificationsLabel
             // 
@@ -103,27 +103,27 @@
             this.skillsLabel.TabIndex = 54;
             this.skillsLabel.Text = "Skills";
             // 
-            // addSkillBtn
+            // addSkillButton
             // 
-            this.addSkillBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addSkillBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addSkillBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addSkillBtn.Location = new System.Drawing.Point(241, 41);
-            this.addSkillBtn.Name = "addSkillBtn";
-            this.addSkillBtn.Size = new System.Drawing.Size(132, 23);
-            this.addSkillBtn.TabIndex = 55;
-            this.addSkillBtn.Text = "Add Skill";
-            this.addSkillBtn.UseVisualStyleBackColor = false;
+            this.addSkillButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addSkillButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addSkillButton.Location = new System.Drawing.Point(241, 41);
+            this.addSkillButton.Name = "addSkillButton";
+            this.addSkillButton.Size = new System.Drawing.Size(132, 23);
+            this.addSkillButton.TabIndex = 55;
+            this.addSkillButton.Text = "Add Skill";
+            this.addSkillButton.UseVisualStyleBackColor = false;
             // 
-            // skillTbox
+            // skillTextbox
             // 
-            this.skillTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.skillTbox.Location = new System.Drawing.Point(129, 12);
-            this.skillTbox.MaxLength = 100;
-            this.skillTbox.Multiline = true;
-            this.skillTbox.Name = "skillTbox";
-            this.skillTbox.Size = new System.Drawing.Size(244, 23);
-            this.skillTbox.TabIndex = 56;
+            this.skillTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.skillTextbox.Location = new System.Drawing.Point(129, 12);
+            this.skillTextbox.MaxLength = 100;
+            this.skillTextbox.Multiline = true;
+            this.skillTextbox.Name = "skillTextbox";
+            this.skillTextbox.Size = new System.Drawing.Size(244, 23);
+            this.skillTextbox.TabIndex = 56;
             // 
             // languagesLabel
             // 
@@ -135,100 +135,101 @@
             this.languagesLabel.TabIndex = 57;
             this.languagesLabel.Text = "Languages";
             // 
-            // languageTbox
+            // languageTextbox
             // 
-            this.languageTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.languageTbox.Location = new System.Drawing.Point(129, 134);
-            this.languageTbox.MaxLength = 100;
-            this.languageTbox.Multiline = true;
-            this.languageTbox.Name = "languageTbox";
-            this.languageTbox.Size = new System.Drawing.Size(244, 23);
-            this.languageTbox.TabIndex = 58;
+            this.languageTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.languageTextbox.Location = new System.Drawing.Point(129, 134);
+            this.languageTextbox.MaxLength = 100;
+            this.languageTextbox.Multiline = true;
+            this.languageTextbox.Name = "languageTextbox";
+            this.languageTextbox.Size = new System.Drawing.Size(244, 23);
+            this.languageTextbox.TabIndex = 58;
             // 
-            // personalPDtlLabel
+            // personalProjectDetailLabel
             // 
-            this.personalPDtlLabel.AutoSize = true;
-            this.personalPDtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalPDtlLabel.Location = new System.Drawing.Point(28, 221);
-            this.personalPDtlLabel.Name = "personalPDtlLabel";
-            this.personalPDtlLabel.Size = new System.Drawing.Size(95, 30);
-            this.personalPDtlLabel.TabIndex = 67;
-            this.personalPDtlLabel.Text = "Personal Project \r\nDetail";
-            this.personalPDtlLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.personalProjectDetailLabel.AutoSize = true;
+            this.personalProjectDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.personalProjectDetailLabel.Location = new System.Drawing.Point(28, 221);
+            this.personalProjectDetailLabel.Name = "personalProjectDetailLabel";
+            this.personalProjectDetailLabel.Size = new System.Drawing.Size(95, 30);
+            this.personalProjectDetailLabel.TabIndex = 67;
+            this.personalProjectDetailLabel.Text = "Personal Project \r\nDetail";
+            this.personalProjectDetailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // personalPTtlLabel
+            // personalProjectLabel
             // 
-            this.personalPTtlLabel.AutoSize = true;
-            this.personalPTtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalPTtlLabel.Location = new System.Drawing.Point(6, 192);
-            this.personalPTtlLabel.Name = "personalPTtlLabel";
-            this.personalPTtlLabel.Size = new System.Drawing.Size(117, 15);
-            this.personalPTtlLabel.TabIndex = 59;
-            this.personalPTtlLabel.Text = "Personel Project Title";
+            this.personalProjectLabel.AutoSize = true;
+            this.personalProjectLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.personalProjectLabel.Location = new System.Drawing.Point(6, 192);
+            this.personalProjectLabel.Name = "personalProjectLabel";
+            this.personalProjectLabel.Size = new System.Drawing.Size(117, 15);
+            this.personalProjectLabel.TabIndex = 59;
+            this.personalProjectLabel.Text = "Personel Project Title";
             // 
-            // prsnPrcjtTtlTbox
+            // prsnProjectTitleTextbox
             // 
-            this.prsnPrcjtTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.prsnPrcjtTtlTbox.Location = new System.Drawing.Point(129, 192);
-            this.prsnPrcjtTtlTbox.MaxLength = 50;
-            this.prsnPrcjtTtlTbox.Name = "prsnPrcjtTtlTbox";
-            this.prsnPrcjtTtlTbox.Size = new System.Drawing.Size(244, 23);
-            this.prsnPrcjtTtlTbox.TabIndex = 66;
+            this.prsnProjectTitleTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.prsnProjectTitleTextbox.Location = new System.Drawing.Point(129, 192);
+            this.prsnProjectTitleTextbox.MaxLength = 50;
+            this.prsnProjectTitleTextbox.Name = "prsnProjectTitleTextbox";
+            this.prsnProjectTitleTextbox.Size = new System.Drawing.Size(244, 23);
+            this.prsnProjectTitleTextbox.TabIndex = 66;
             // 
-            // prsnPrjctDtlTbox
+            // prsnProjectDetailTextbox
             // 
-            this.prsnPrjctDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.prsnPrjctDtlTbox.Location = new System.Drawing.Point(129, 221);
-            this.prsnPrjctDtlTbox.MaxLength = 200;
-            this.prsnPrjctDtlTbox.Multiline = true;
-            this.prsnPrjctDtlTbox.Name = "prsnPrjctDtlTbox";
-            this.prsnPrjctDtlTbox.Size = new System.Drawing.Size(244, 90);
-            this.prsnPrjctDtlTbox.TabIndex = 60;
+            this.prsnProjectDetailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.prsnProjectDetailTextbox.Location = new System.Drawing.Point(129, 221);
+            this.prsnProjectDetailTextbox.MaxLength = 200;
+            this.prsnProjectDetailTextbox.Multiline = true;
+            this.prsnProjectDetailTextbox.Name = "prsnProjectDetailTextbox";
+            this.prsnProjectDetailTextbox.Size = new System.Drawing.Size(244, 90);
+            this.prsnProjectDetailTextbox.TabIndex = 60;
+            this.prsnProjectDetailTextbox.TextChanged += new System.EventHandler(this.prsnPrjctDtlTbox_TextChanged);
             // 
-            // addInterestBtn
+            // addInterestButton
             // 
-            this.addInterestBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addInterestBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addInterestBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addInterestBtn.Location = new System.Drawing.Point(241, 372);
-            this.addInterestBtn.Name = "addInterestBtn";
-            this.addInterestBtn.Size = new System.Drawing.Size(132, 23);
-            this.addInterestBtn.TabIndex = 65;
-            this.addInterestBtn.Text = "Add Interest";
-            this.addInterestBtn.UseVisualStyleBackColor = false;
+            this.addInterestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addInterestButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addInterestButton.Location = new System.Drawing.Point(241, 372);
+            this.addInterestButton.Name = "addInterestButton";
+            this.addInterestButton.Size = new System.Drawing.Size(132, 23);
+            this.addInterestButton.TabIndex = 65;
+            this.addInterestButton.Text = "Add Interest";
+            this.addInterestButton.UseVisualStyleBackColor = false;
             // 
-            // addLanguageBtn
+            // addLanguageButton
             // 
-            this.addLanguageBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addLanguageBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addLanguageBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addLanguageBtn.Location = new System.Drawing.Point(241, 163);
-            this.addLanguageBtn.Name = "addLanguageBtn";
-            this.addLanguageBtn.Size = new System.Drawing.Size(132, 23);
-            this.addLanguageBtn.TabIndex = 61;
-            this.addLanguageBtn.Text = "Add Language";
-            this.addLanguageBtn.UseVisualStyleBackColor = false;
+            this.addLanguageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addLanguageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addLanguageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addLanguageButton.Location = new System.Drawing.Point(241, 163);
+            this.addLanguageButton.Name = "addLanguageButton";
+            this.addLanguageButton.Size = new System.Drawing.Size(132, 23);
+            this.addLanguageButton.TabIndex = 61;
+            this.addLanguageButton.Text = "Add Language";
+            this.addLanguageButton.UseVisualStyleBackColor = false;
             // 
-            // interestTbox
+            // interestTextbox
             // 
-            this.interestTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.interestTbox.Location = new System.Drawing.Point(129, 343);
-            this.interestTbox.MaxLength = 100;
-            this.interestTbox.Name = "interestTbox";
-            this.interestTbox.Size = new System.Drawing.Size(244, 23);
-            this.interestTbox.TabIndex = 64;
+            this.interestTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.interestTextbox.Location = new System.Drawing.Point(129, 343);
+            this.interestTextbox.MaxLength = 100;
+            this.interestTextbox.Name = "interestTextbox";
+            this.interestTextbox.Size = new System.Drawing.Size(244, 23);
+            this.interestTextbox.TabIndex = 64;
             // 
-            // addPrsnPrjctBtn
+            // addPersonalProjectButton
             // 
-            this.addPrsnPrjctBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.addPrsnPrjctBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addPrsnPrjctBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addPrsnPrjctBtn.Location = new System.Drawing.Point(241, 314);
-            this.addPrsnPrjctBtn.Name = "addPrsnPrjctBtn";
-            this.addPrsnPrjctBtn.Size = new System.Drawing.Size(132, 23);
-            this.addPrsnPrjctBtn.TabIndex = 62;
-            this.addPrsnPrjctBtn.Text = "Add Personal Project";
-            this.addPrsnPrjctBtn.UseVisualStyleBackColor = false;
+            this.addPersonalProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.addPersonalProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addPersonalProjectButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addPersonalProjectButton.Location = new System.Drawing.Point(241, 314);
+            this.addPersonalProjectButton.Name = "addPersonalProjectButton";
+            this.addPersonalProjectButton.Size = new System.Drawing.Size(132, 23);
+            this.addPersonalProjectButton.TabIndex = 62;
+            this.addPersonalProjectButton.Text = "Add Personal Project";
+            this.addPersonalProjectButton.UseVisualStyleBackColor = false;
             // 
             // interestsLabel
             // 
@@ -277,22 +278,22 @@
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.personalProjectTextCounterLabel);
-            this.Controls.Add(this.addCertificationBtn);
-            this.Controls.Add(this.certificationTbox);
+            this.Controls.Add(this.addCertificationButton);
+            this.Controls.Add(this.certificationTextbox);
             this.Controls.Add(this.certificationsLabel);
             this.Controls.Add(this.skillsLabel);
-            this.Controls.Add(this.addSkillBtn);
-            this.Controls.Add(this.skillTbox);
+            this.Controls.Add(this.addSkillButton);
+            this.Controls.Add(this.skillTextbox);
             this.Controls.Add(this.languagesLabel);
-            this.Controls.Add(this.languageTbox);
-            this.Controls.Add(this.personalPDtlLabel);
-            this.Controls.Add(this.personalPTtlLabel);
-            this.Controls.Add(this.prsnPrcjtTtlTbox);
-            this.Controls.Add(this.prsnPrjctDtlTbox);
-            this.Controls.Add(this.addInterestBtn);
-            this.Controls.Add(this.addLanguageBtn);
-            this.Controls.Add(this.interestTbox);
-            this.Controls.Add(this.addPrsnPrjctBtn);
+            this.Controls.Add(this.languageTextbox);
+            this.Controls.Add(this.personalProjectDetailLabel);
+            this.Controls.Add(this.personalProjectLabel);
+            this.Controls.Add(this.prsnProjectTitleTextbox);
+            this.Controls.Add(this.prsnProjectDetailTextbox);
+            this.Controls.Add(this.addInterestButton);
+            this.Controls.Add(this.addLanguageButton);
+            this.Controls.Add(this.interestTextbox);
+            this.Controls.Add(this.addPersonalProjectButton);
             this.Controls.Add(this.interestsLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "MoreDetailsForm";
@@ -306,22 +307,22 @@
         #endregion
 
         private Label personalProjectTextCounterLabel;
-        private Button addCertificationBtn;
-        private TextBox certificationTbox;
+        private Button addCertificationButton;
+        private TextBox certificationTextbox;
         private Label certificationsLabel;
         private Label skillsLabel;
-        private Button addSkillBtn;
-        private TextBox skillTbox;
+        private Button addSkillButton;
+        private TextBox skillTextbox;
         private Label languagesLabel;
-        private TextBox languageTbox;
-        private Label personalPDtlLabel;
-        private Label personalPTtlLabel;
-        private TextBox prsnPrcjtTtlTbox;
-        private TextBox prsnPrjctDtlTbox;
-        private Button addInterestBtn;
-        private Button addLanguageBtn;
-        private TextBox interestTbox;
-        private Button addPrsnPrjctBtn;
+        private TextBox languageTextbox;
+        private Label personalProjectDetailLabel;
+        private Label personalProjectLabel;
+        private TextBox prsnProjectTitleTextbox;
+        private TextBox prsnProjectDetailTextbox;
+        private Button addInterestButton;
+        private Button addLanguageButton;
+        private TextBox interestTextbox;
+        private Button addPersonalProjectButton;
         private Label interestsLabel;
         private DataGridView dataGridView1;
         private Button removeButton;

@@ -99,7 +99,6 @@ namespace ResumeBuilder
                 MessageBox.Show("an unexpected error occurred " + ex.Message);
                 throw;
             }
-
         }
         private void removeDataSql(string cmdstring)
         {
