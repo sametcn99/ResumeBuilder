@@ -11,7 +11,16 @@ namespace ResumeBuilder
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            DialogResult dialogResult = MessageBox.Show("Open new design?(NOT WORKING CORRECTLY!!!)", "", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Application.Run(new FormHome());
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                Application.Run(new Form1());
+            }
+
         }
     }
 }

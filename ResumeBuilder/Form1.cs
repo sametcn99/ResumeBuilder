@@ -59,7 +59,6 @@ namespace ResumeBuilder
                         websiteTbox.Text = ds.Tables[0].Rows[0].Field<string>("Website").Trim();
                         sMediaTbox.Text = ds.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
                         summaryTbox.Text = ds.Tables[0].Rows[0].Field<string>("Summary").Trim();
-                        MessageBox.Show("Restored last session!");
                     }
                     else if (dialogResult == DialogResult.No)
                     {
@@ -73,11 +72,7 @@ namespace ResumeBuilder
                     }
                 }
             }
-            catch (System.IndexOutOfRangeException ex)
-            {
-                //MessageBox.Show("dataset is null " + ex.Message);
-                //throw;
-            }
+            catch (System.IndexOutOfRangeException ex) { }
         }
         //*****SQL CONTROLLERS*****
         private void insertDataSql(string cmdstring)
