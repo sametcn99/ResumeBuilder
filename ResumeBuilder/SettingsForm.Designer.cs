@@ -31,6 +31,10 @@
             this.rjToggleButton1 = new ResumeBuilder.RJControls.RJToggleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.personalDetailsPanelButton = new System.Windows.Forms.Button();
+            this.sqlModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.localModeRadioButton = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // rjToggleButton1
@@ -72,18 +76,59 @@
             this.personalDetailsPanelButton.Text = "Show Json Data";
             this.personalDetailsPanelButton.UseVisualStyleBackColor = true;
             // 
+            // sqlModeRadioButton
+            // 
+            this.sqlModeRadioButton.AutoSize = true;
+            this.sqlModeRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.sqlModeRadioButton.Checked = true;
+            this.sqlModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.sqlModeRadioButton.Location = new System.Drawing.Point(13, 22);
+            this.sqlModeRadioButton.Name = "sqlModeRadioButton";
+            this.sqlModeRadioButton.Size = new System.Drawing.Size(131, 19);
+            this.sqlModeRadioButton.TabIndex = 4;
+            this.sqlModeRadioButton.TabStop = true;
+            this.sqlModeRadioButton.Text = "SQL Database Mode";
+            this.sqlModeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // localModeRadioButton
+            // 
+            this.localModeRadioButton.AutoSize = true;
+            this.localModeRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.localModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.localModeRadioButton.Location = new System.Drawing.Point(6, 47);
+            this.localModeRadioButton.Name = "localModeRadioButton";
+            this.localModeRadioButton.Size = new System.Drawing.Size(138, 19);
+            this.localModeRadioButton.TabIndex = 5;
+            this.localModeRadioButton.Text = "Local Database Mode";
+            this.localModeRadioButton.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.sqlModeRadioButton);
+            this.groupBox1.Controls.Add(this.localModeRadioButton);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.groupBox1.Location = new System.Drawing.Point(12, 101);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(150, 78);
+            this.groupBox1.TabIndex = 6;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Database Modes";
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.personalDetailsPanelButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjToggleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsForm";
             this.Text = "SettingsForm";
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -94,5 +139,8 @@
         private RJControls.RJToggleButton rjToggleButton1;
         private Label label1;
         private Button personalDetailsPanelButton;
+        private RadioButton sqlModeRadioButton;
+        private RadioButton localModeRadioButton;
+        private GroupBox groupBox1;
     }
 }

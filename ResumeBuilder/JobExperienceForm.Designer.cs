@@ -47,7 +47,7 @@
             // 
             this.jobDetailTextCounterLabel.AutoSize = true;
             this.jobDetailTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.jobDetailTextCounterLabel.Location = new System.Drawing.Point(103, 193);
+            this.jobDetailTextCounterLabel.Location = new System.Drawing.Point(136, 191);
             this.jobDetailTextCounterLabel.Margin = new System.Windows.Forms.Padding(5);
             this.jobDetailTextCounterLabel.Name = "jobDetailTextCounterLabel";
             this.jobDetailTextCounterLabel.Size = new System.Drawing.Size(36, 15);
@@ -58,7 +58,7 @@
             // 
             this.jobTitleLabel.AutoSize = true;
             this.jobTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.jobTitleLabel.Location = new System.Drawing.Point(43, 14);
+            this.jobTitleLabel.Location = new System.Drawing.Point(76, 12);
             this.jobTitleLabel.Margin = new System.Windows.Forms.Padding(5);
             this.jobTitleLabel.Name = "jobTitleLabel";
             this.jobTitleLabel.Size = new System.Drawing.Size(50, 15);
@@ -69,7 +69,7 @@
             // 
             this.jobTitleTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobTitleTextbox.ForeColor = System.Drawing.Color.Black;
-            this.jobTitleTextbox.Location = new System.Drawing.Point(103, 14);
+            this.jobTitleTextbox.Location = new System.Drawing.Point(136, 12);
             this.jobTitleTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.jobTitleTextbox.MaxLength = 50;
             this.jobTitleTextbox.Name = "jobTitleTextbox";
@@ -80,7 +80,7 @@
             // 
             this.jobStartDateLabel.AutoSize = true;
             this.jobStartDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.jobStartDateLabel.Location = new System.Drawing.Point(14, 47);
+            this.jobStartDateLabel.Location = new System.Drawing.Point(47, 45);
             this.jobStartDateLabel.Margin = new System.Windows.Forms.Padding(5);
             this.jobStartDateLabel.Name = "jobStartDateLabel";
             this.jobStartDateLabel.Size = new System.Drawing.Size(79, 15);
@@ -91,7 +91,7 @@
             // 
             this.jobStartDateTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobStartDateTextbox.ForeColor = System.Drawing.Color.Black;
-            this.jobStartDateTextbox.Location = new System.Drawing.Point(103, 47);
+            this.jobStartDateTextbox.Location = new System.Drawing.Point(136, 45);
             this.jobStartDateTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.jobStartDateTextbox.MaxLength = 10;
             this.jobStartDateTextbox.Name = "jobStartDateTextbox";
@@ -102,7 +102,7 @@
             // 
             this.jobEndDateLabel.AutoSize = true;
             this.jobEndDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.jobEndDateLabel.Location = new System.Drawing.Point(18, 80);
+            this.jobEndDateLabel.Location = new System.Drawing.Point(51, 78);
             this.jobEndDateLabel.Margin = new System.Windows.Forms.Padding(5);
             this.jobEndDateLabel.Name = "jobEndDateLabel";
             this.jobEndDateLabel.Size = new System.Drawing.Size(75, 15);
@@ -113,7 +113,7 @@
             // 
             this.jobEndDateTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobEndDateTextbox.ForeColor = System.Drawing.Color.Black;
-            this.jobEndDateTextbox.Location = new System.Drawing.Point(103, 80);
+            this.jobEndDateTextbox.Location = new System.Drawing.Point(136, 78);
             this.jobEndDateTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.jobEndDateTextbox.MaxLength = 10;
             this.jobEndDateTextbox.Name = "jobEndDateTextbox";
@@ -124,7 +124,7 @@
             // 
             this.jobDetailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.jobDetailTextbox.ForeColor = System.Drawing.Color.Black;
-            this.jobDetailTextbox.Location = new System.Drawing.Point(103, 113);
+            this.jobDetailTextbox.Location = new System.Drawing.Point(136, 111);
             this.jobDetailTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.jobDetailTextbox.MaxLength = 200;
             this.jobDetailTextbox.Multiline = true;
@@ -136,7 +136,7 @@
             // 
             this.jobDetailLabel.AutoSize = true;
             this.jobDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.jobDetailLabel.Location = new System.Drawing.Point(35, 113);
+            this.jobDetailLabel.Location = new System.Drawing.Point(68, 111);
             this.jobDetailLabel.Margin = new System.Windows.Forms.Padding(5);
             this.jobDetailLabel.Name = "jobDetailLabel";
             this.jobDetailLabel.Size = new System.Drawing.Size(58, 15);
@@ -149,7 +149,7 @@
             this.addJobBtn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.addJobBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addJobBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addJobBtn.Location = new System.Drawing.Point(247, 193);
+            this.addJobBtn.Location = new System.Drawing.Point(280, 191);
             this.addJobBtn.Margin = new System.Windows.Forms.Padding(5);
             this.addJobBtn.Name = "addJobBtn";
             this.addJobBtn.Size = new System.Drawing.Size(100, 23);

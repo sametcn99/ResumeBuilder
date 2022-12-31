@@ -29,15 +29,16 @@
         private void InitializeComponent()
         {
             this.leftMenuPanel = new System.Windows.Forms.Panel();
+            this.layoutPanelButton = new System.Windows.Forms.Button();
+            this.selectPhotoPanelButton = new System.Windows.Forms.Button();
+            this.addMoreDetailPanelButton = new System.Windows.Forms.Button();
+            this.educationPanelButton = new System.Windows.Forms.Button();
+            this.addJobExperiencePanelButton = new System.Windows.Forms.Button();
             this.userPanel = new System.Windows.Forms.Panel();
             this.helloLbl = new System.Windows.Forms.Label();
             this.nameLbl = new System.Windows.Forms.Label();
-            this.layoutPanelButton = new System.Windows.Forms.Button();
-            this.educationPanelButton = new System.Windows.Forms.Button();
             this.personalDetailsPanelButton = new System.Windows.Forms.Button();
-            this.addMoreDetailPanelButton = new System.Windows.Forms.Button();
             this.settingsPanelButton = new System.Windows.Forms.Button();
-            this.addJobExperiencePanelButton = new System.Windows.Forms.Button();
             this.aboutPanelButton = new System.Windows.Forms.Button();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
@@ -53,19 +54,95 @@
             // leftMenuPanel
             // 
             this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.leftMenuPanel.Controls.Add(this.userPanel);
             this.leftMenuPanel.Controls.Add(this.layoutPanelButton);
-            this.leftMenuPanel.Controls.Add(this.educationPanelButton);
-            this.leftMenuPanel.Controls.Add(this.personalDetailsPanelButton);
+            this.leftMenuPanel.Controls.Add(this.selectPhotoPanelButton);
             this.leftMenuPanel.Controls.Add(this.addMoreDetailPanelButton);
-            this.leftMenuPanel.Controls.Add(this.settingsPanelButton);
+            this.leftMenuPanel.Controls.Add(this.educationPanelButton);
             this.leftMenuPanel.Controls.Add(this.addJobExperiencePanelButton);
+            this.leftMenuPanel.Controls.Add(this.userPanel);
+            this.leftMenuPanel.Controls.Add(this.personalDetailsPanelButton);
+            this.leftMenuPanel.Controls.Add(this.settingsPanelButton);
             this.leftMenuPanel.Controls.Add(this.aboutPanelButton);
             this.leftMenuPanel.Dock = System.Windows.Forms.DockStyle.Left;
             this.leftMenuPanel.Location = new System.Drawing.Point(0, 0);
             this.leftMenuPanel.Name = "leftMenuPanel";
             this.leftMenuPanel.Size = new System.Drawing.Size(150, 600);
             this.leftMenuPanel.TabIndex = 0;
+            // 
+            // layoutPanelButton
+            // 
+            this.layoutPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.layoutPanelButton.FlatAppearance.BorderSize = 0;
+            this.layoutPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.layoutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.layoutPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.layoutPanelButton.Location = new System.Drawing.Point(0, 336);
+            this.layoutPanelButton.Name = "layoutPanelButton";
+            this.layoutPanelButton.Size = new System.Drawing.Size(150, 50);
+            this.layoutPanelButton.TabIndex = 7;
+            this.layoutPanelButton.Text = "Layout";
+            this.layoutPanelButton.UseVisualStyleBackColor = true;
+            // 
+            // selectPhotoPanelButton
+            // 
+            this.selectPhotoPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.selectPhotoPanelButton.FlatAppearance.BorderSize = 0;
+            this.selectPhotoPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.selectPhotoPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.selectPhotoPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.selectPhotoPanelButton.Location = new System.Drawing.Point(0, 112);
+            this.selectPhotoPanelButton.Name = "selectPhotoPanelButton";
+            this.selectPhotoPanelButton.Size = new System.Drawing.Size(150, 50);
+            this.selectPhotoPanelButton.TabIndex = 9;
+            this.selectPhotoPanelButton.Text = "Photo";
+            this.selectPhotoPanelButton.UseVisualStyleBackColor = true;
+            this.selectPhotoPanelButton.Click += new System.EventHandler(this.selectPhotoPanelButton_Click);
+            // 
+            // addMoreDetailPanelButton
+            // 
+            this.addMoreDetailPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.addMoreDetailPanelButton.FlatAppearance.BorderSize = 0;
+            this.addMoreDetailPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addMoreDetailPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addMoreDetailPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addMoreDetailPanelButton.Location = new System.Drawing.Point(0, 280);
+            this.addMoreDetailPanelButton.Name = "addMoreDetailPanelButton";
+            this.addMoreDetailPanelButton.Size = new System.Drawing.Size(150, 50);
+            this.addMoreDetailPanelButton.TabIndex = 3;
+            this.addMoreDetailPanelButton.Text = "More Details";
+            this.addMoreDetailPanelButton.UseVisualStyleBackColor = true;
+            this.addMoreDetailPanelButton.Click += new System.EventHandler(this.addMoreDetailPanelButton_Click);
+            // 
+            // educationPanelButton
+            // 
+            this.educationPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.educationPanelButton.FlatAppearance.BorderSize = 0;
+            this.educationPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.educationPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.educationPanelButton.Location = new System.Drawing.Point(0, 224);
+            this.educationPanelButton.Name = "educationPanelButton";
+            this.educationPanelButton.Size = new System.Drawing.Size(150, 50);
+            this.educationPanelButton.TabIndex = 8;
+            this.educationPanelButton.Text = "Education";
+            this.educationPanelButton.UseVisualStyleBackColor = true;
+            this.educationPanelButton.Click += new System.EventHandler(this.educationPanelButton_Click);
+            // 
+            // addJobExperiencePanelButton
+            // 
+            this.addJobExperiencePanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.addJobExperiencePanelButton.FlatAppearance.BorderSize = 0;
+            this.addJobExperiencePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addJobExperiencePanelButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.addJobExperiencePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addJobExperiencePanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.addJobExperiencePanelButton.Location = new System.Drawing.Point(0, 168);
+            this.addJobExperiencePanelButton.Name = "addJobExperiencePanelButton";
+            this.addJobExperiencePanelButton.Size = new System.Drawing.Size(150, 50);
+            this.addJobExperiencePanelButton.TabIndex = 1;
+            this.addJobExperiencePanelButton.Text = "Job Experience";
+            this.addJobExperiencePanelButton.UseVisualStyleBackColor = true;
+            this.addJobExperiencePanelButton.Click += new System.EventHandler(this.addJobExperiencePanelButton_Click);
             // 
             // userPanel
             // 
@@ -101,35 +178,6 @@
             this.nameLbl.Text = "User Name";
             this.nameLbl.Visible = false;
             // 
-            // layoutPanelButton
-            // 
-            this.layoutPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.layoutPanelButton.FlatAppearance.BorderSize = 0;
-            this.layoutPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.layoutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.layoutPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.layoutPanelButton.Location = new System.Drawing.Point(3, 280);
-            this.layoutPanelButton.Name = "layoutPanelButton";
-            this.layoutPanelButton.Size = new System.Drawing.Size(150, 50);
-            this.layoutPanelButton.TabIndex = 7;
-            this.layoutPanelButton.Text = "Layout";
-            this.layoutPanelButton.UseVisualStyleBackColor = true;
-            // 
-            // educationPanelButton
-            // 
-            this.educationPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.educationPanelButton.FlatAppearance.BorderSize = 0;
-            this.educationPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.educationPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.educationPanelButton.Location = new System.Drawing.Point(0, 168);
-            this.educationPanelButton.Name = "educationPanelButton";
-            this.educationPanelButton.Size = new System.Drawing.Size(150, 50);
-            this.educationPanelButton.TabIndex = 8;
-            this.educationPanelButton.Text = "Education";
-            this.educationPanelButton.UseVisualStyleBackColor = true;
-            this.educationPanelButton.Click += new System.EventHandler(this.educationPanelButton_Click);
-            // 
             // personalDetailsPanelButton
             // 
             this.personalDetailsPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -145,20 +193,6 @@
             this.personalDetailsPanelButton.UseVisualStyleBackColor = true;
             this.personalDetailsPanelButton.Click += new System.EventHandler(this.personalDetailsPanelButton_Click);
             // 
-            // addMoreDetailPanelButton
-            // 
-            this.addMoreDetailPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.addMoreDetailPanelButton.FlatAppearance.BorderSize = 0;
-            this.addMoreDetailPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMoreDetailPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addMoreDetailPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addMoreDetailPanelButton.Location = new System.Drawing.Point(0, 224);
-            this.addMoreDetailPanelButton.Name = "addMoreDetailPanelButton";
-            this.addMoreDetailPanelButton.Size = new System.Drawing.Size(150, 50);
-            this.addMoreDetailPanelButton.TabIndex = 3;
-            this.addMoreDetailPanelButton.Text = "More Details";
-            this.addMoreDetailPanelButton.UseVisualStyleBackColor = true;
-            // 
             // settingsPanelButton
             // 
             this.settingsPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
@@ -173,22 +207,6 @@
             this.settingsPanelButton.Text = "Settings";
             this.settingsPanelButton.UseVisualStyleBackColor = true;
             this.settingsPanelButton.Click += new System.EventHandler(this.settingsPanelButton_Click);
-            // 
-            // addJobExperiencePanelButton
-            // 
-            this.addJobExperiencePanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.addJobExperiencePanelButton.FlatAppearance.BorderSize = 0;
-            this.addJobExperiencePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addJobExperiencePanelButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.addJobExperiencePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addJobExperiencePanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.addJobExperiencePanelButton.Location = new System.Drawing.Point(0, 112);
-            this.addJobExperiencePanelButton.Name = "addJobExperiencePanelButton";
-            this.addJobExperiencePanelButton.Size = new System.Drawing.Size(150, 50);
-            this.addJobExperiencePanelButton.TabIndex = 1;
-            this.addJobExperiencePanelButton.Text = "Job Experience";
-            this.addJobExperiencePanelButton.UseVisualStyleBackColor = true;
-            this.addJobExperiencePanelButton.Click += new System.EventHandler(this.addJobExperiencePanelButton_Click);
             // 
             // aboutPanelButton
             // 
@@ -331,5 +349,6 @@
         private Panel userPanel;
         private Panel childFormPanel;
         private Button saveButton;
+        private Button selectPhotoPanelButton;
     }
 }

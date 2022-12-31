@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace ResumeBuilder
 {
-    public partial class SettingsForm : Form
+    public partial class PhotoUploadForm : Form
     {
-        public SettingsForm()
+        public PhotoUploadForm()
         {
             InitializeComponent();
         }

@@ -32,7 +32,8 @@ namespace ResumeBuilder
                     currentButton = (Button)btnSender;
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                     currentButton.ForeColor = Color.White;
-                    //btnCloseChildForm.Visible = true;
+                    homeButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                    homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
                 }
             }
         }
@@ -46,6 +47,7 @@ namespace ResumeBuilder
                     previousBtn.BackColor = Color.FromArgb(33, 33, 33);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+
                 }
             }
         }
@@ -97,6 +99,19 @@ namespace ResumeBuilder
         private void homeButton_Click(object sender, EventArgs e)
         {
             activeForm.Close();
+            DisableButton();
+            homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            homeButton.ForeColor = Color.White;
+        }
+
+        private void selectPhotoPanelButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PhotoUploadForm(), sender);
+        }
+
+        private void addMoreDetailPanelButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MoreDetailsForm(), sender);
         }
     }
 }
