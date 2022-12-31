@@ -8,20 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace ResumeBuilder
 {
     public partial class FormHome : Form
     {
         private Button currentButton;
-        private Random random;
-        private int tempIndex;
         private Form activeForm;
+
 
         public FormHome()
         {
             InitializeComponent();
         }
-
 
         private void ActivateButton(object btnSender)
         {
@@ -30,9 +29,9 @@ namespace ResumeBuilder
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-
                     currentButton = (Button)btnSender;
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                    currentButton.ForeColor = Color.White;
                     //btnCloseChildForm.Visible = true;
                 }
             }
@@ -53,8 +52,7 @@ namespace ResumeBuilder
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
-            if (activeForm != null)
-                activeForm.Close();
+            if (activeForm != null) { activeForm.Close(); }
             ActivateButton(btnSender);
             activeForm = childForm;
             childForm.TopLevel = false;

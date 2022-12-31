@@ -30,7 +30,9 @@
         {
             this.aboutLinkLabel = new System.Windows.Forms.LinkLabel();
             this.aboutPictureBox = new System.Windows.Forms.PictureBox();
+            this.panel1 = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.aboutPictureBox)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // aboutLinkLabel
@@ -38,7 +40,7 @@
             this.aboutLinkLabel.AutoSize = true;
             this.aboutLinkLabel.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.aboutLinkLabel.LinkColor = System.Drawing.Color.White;
-            this.aboutLinkLabel.Location = new System.Drawing.Point(332, 344);
+            this.aboutLinkLabel.Location = new System.Drawing.Point(47, 230);
             this.aboutLinkLabel.Name = "aboutLinkLabel";
             this.aboutLinkLabel.Size = new System.Drawing.Size(150, 19);
             this.aboutLinkLabel.TabIndex = 3;
@@ -49,11 +51,22 @@
             // 
             this.aboutPictureBox.Cursor = System.Windows.Forms.Cursors.Hand;
             this.aboutPictureBox.Image = global::ResumeBuilder.Properties.Resources.github_mark_white;
-            this.aboutPictureBox.Location = new System.Drawing.Point(292, 124);
+            this.aboutPictureBox.Location = new System.Drawing.Point(3, 3);
             this.aboutPictureBox.Name = "aboutPictureBox";
             this.aboutPictureBox.Size = new System.Drawing.Size(238, 239);
             this.aboutPictureBox.TabIndex = 2;
             this.aboutPictureBox.TabStop = false;
+            this.aboutPictureBox.Click += new System.EventHandler(this.aboutPictureBox_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.panel1.Controls.Add(this.aboutLinkLabel);
+            this.panel1.Controls.Add(this.aboutPictureBox);
+            this.panel1.Location = new System.Drawing.Point(299, 139);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(244, 253);
+            this.panel1.TabIndex = 4;
             // 
             // AboutForm
             // 
@@ -61,15 +74,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
-            this.Controls.Add(this.aboutLinkLabel);
-            this.Controls.Add(this.aboutPictureBox);
+            this.Controls.Add(this.panel1);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AboutForm";
             this.Text = "AboutForm";
             ((System.ComponentModel.ISupportInitialize)(this.aboutPictureBox)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -77,5 +90,6 @@
 
         private LinkLabel aboutLinkLabel;
         private PictureBox aboutPictureBox;
+        private Panel panel1;
     }
 }
