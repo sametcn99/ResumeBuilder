@@ -41,10 +41,10 @@
             this.rjToggleButton1.Location = new System.Drawing.Point(88, 6);
             this.rjToggleButton1.MinimumSize = new System.Drawing.Size(45, 22);
             this.rjToggleButton1.Name = "rjToggleButton1";
-            this.rjToggleButton1.OffBackColor = System.Drawing.Color.Gray;
-            this.rjToggleButton1.OffToggleColor = System.Drawing.Color.Gainsboro;
-            this.rjToggleButton1.OnBackColor = System.Drawing.Color.DimGray;
-            this.rjToggleButton1.OnToggleColor = System.Drawing.Color.WhiteSmoke;
+            this.rjToggleButton1.OffBackColor = System.Drawing.Color.White;
+            this.rjToggleButton1.OffToggleColor = System.Drawing.Color.Black;
+            this.rjToggleButton1.OnBackColor = System.Drawing.Color.Black;
+            this.rjToggleButton1.OnToggleColor = System.Drawing.Color.White;
             this.rjToggleButton1.Size = new System.Drawing.Size(45, 22);
             this.rjToggleButton1.TabIndex = 1;
             this.rjToggleButton1.UseVisualStyleBackColor = true;

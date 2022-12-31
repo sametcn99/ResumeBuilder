@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace ResumeBuilder
 {
-    public partial class PersonalDetailsForm : Form
+    public partial class AboutForm : Form
     {
-        public PersonalDetailsForm()
+        public AboutForm()
         {
             InitializeComponent();
-        }
-
-        private void summaryTextbox_TextChanged(object sender, EventArgs e)
-        {
-            summaryTextCounterLabel.Text = $"{summaryTextbox.Text.Length}/500";
         }
     }
 }

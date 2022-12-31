@@ -53,9 +53,8 @@
             // 
             // createNewResumeButton
             // 
-            this.createNewResumeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.createNewResumeButton.FlatAppearance.BorderSize = 0;
-            this.createNewResumeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.createNewResumeButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.createNewResumeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.createNewResumeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.createNewResumeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createNewResumeButton.Location = new System.Drawing.Point(337, 200);
@@ -89,6 +88,7 @@
             // 
             // resumeVersionCombobox
             // 
+            this.resumeVersionCombobox.ForeColor = System.Drawing.Color.Black;
             this.resumeVersionCombobox.FormattingEnabled = true;
             this.resumeVersionCombobox.Location = new System.Drawing.Point(211, 108);
             this.resumeVersionCombobox.Margin = new System.Windows.Forms.Padding(10);
@@ -98,6 +98,7 @@
             // 
             // userLoginCombobox
             // 
+            this.userLoginCombobox.ForeColor = System.Drawing.Color.Black;
             this.userLoginCombobox.FormattingEnabled = true;
             this.userLoginCombobox.Location = new System.Drawing.Point(213, 65);
             this.userLoginCombobox.Margin = new System.Windows.Forms.Padding(10);
@@ -107,9 +108,8 @@
             // 
             // loginButton
             // 
-            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.loginButton.FlatAppearance.BorderSize = 0;
-            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.loginButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loginButton.Location = new System.Drawing.Point(339, 144);

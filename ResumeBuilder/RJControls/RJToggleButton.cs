@@ -16,7 +16,7 @@ namespace ResumeBuilder.RJControls
         //Fields
         private Color onBackColor = Color.Black;
         private Color onToggleColor = Color.WhiteSmoke;
-        private Color offBackColor = Color.Gray;
+        private Color offBackColor = Color.White;
         private Color offToggleColor = Color.Gainsboro;
         private bool solidStyle = true;
 

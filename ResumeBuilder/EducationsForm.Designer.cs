@@ -68,6 +68,7 @@
             // eduDtlTbox
             // 
             this.eduDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.eduDtlTbox.ForeColor = System.Drawing.Color.Black;
             this.eduDtlTbox.Location = new System.Drawing.Point(134, 114);
             this.eduDtlTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduDtlTbox.MaxLength = 200;
@@ -101,6 +102,7 @@
             // eduTtlTbox
             // 
             this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.eduTtlTbox.ForeColor = System.Drawing.Color.Black;
             this.eduTtlTbox.Location = new System.Drawing.Point(136, 15);
             this.eduTtlTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduTtlTbox.MaxLength = 50;
@@ -122,6 +124,7 @@
             // eduSDateTbox
             // 
             this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.eduSDateTbox.ForeColor = System.Drawing.Color.Black;
             this.eduSDateTbox.Location = new System.Drawing.Point(136, 48);
             this.eduSDateTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduSDateTbox.MaxLength = 10;
@@ -132,6 +135,7 @@
             // EduEDateTbox
             // 
             this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.EduEDateTbox.ForeColor = System.Drawing.Color.Black;
             this.EduEDateTbox.Location = new System.Drawing.Point(134, 81);
             this.EduEDateTbox.Margin = new System.Windows.Forms.Padding(5);
             this.EduEDateTbox.MaxLength = 10;

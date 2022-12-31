@@ -133,7 +133,7 @@
             // phoneNumberTextbox
             // 
             this.phoneNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.phoneNumberTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.phoneNumberTextbox.ForeColor = System.Drawing.Color.Black;
             this.phoneNumberTextbox.Location = new System.Drawing.Point(128, 113);
             this.phoneNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.phoneNumberTextbox.MaxLength = 12;
@@ -144,7 +144,7 @@
             // emailTextbox
             // 
             this.emailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.emailTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.emailTextbox.ForeColor = System.Drawing.Color.Black;
             this.emailTextbox.Location = new System.Drawing.Point(128, 146);
             this.emailTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.emailTextbox.MaxLength = 50;
@@ -155,7 +155,7 @@
             // AddressTextbox
             // 
             this.AddressTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.AddressTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.AddressTextbox.ForeColor = System.Drawing.Color.Black;
             this.AddressTextbox.Location = new System.Drawing.Point(128, 80);
             this.AddressTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.AddressTextbox.MaxLength = 200;
@@ -166,7 +166,7 @@
             // SurnameTextbox
             // 
             this.SurnameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SurnameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.SurnameTextbox.ForeColor = System.Drawing.Color.Black;
             this.SurnameTextbox.Location = new System.Drawing.Point(128, 47);
             this.SurnameTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.SurnameTextbox.MaxLength = 20;
@@ -177,7 +177,7 @@
             // nameTextbox
             // 
             this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.nameTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.nameTextbox.ForeColor = System.Drawing.Color.Black;
             this.nameTextbox.Location = new System.Drawing.Point(128, 14);
             this.nameTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.nameTextbox.MaxLength = 20;
@@ -199,7 +199,7 @@
             // summaryTextbox
             // 
             this.summaryTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.summaryTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.summaryTextbox.ForeColor = System.Drawing.Color.Black;
             this.summaryTextbox.Location = new System.Drawing.Point(128, 296);
             this.summaryTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.summaryTextbox.MaxLength = 500;
@@ -207,11 +207,12 @@
             this.summaryTextbox.Name = "summaryTextbox";
             this.summaryTextbox.Size = new System.Drawing.Size(244, 103);
             this.summaryTextbox.TabIndex = 12;
+            this.summaryTextbox.TextChanged += new System.EventHandler(this.summaryTextbox_TextChanged);
             // 
             // socialMediaLinksTextBox
             // 
             this.socialMediaLinksTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.socialMediaLinksTextBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.socialMediaLinksTextBox.ForeColor = System.Drawing.Color.Black;
             this.socialMediaLinksTextBox.Location = new System.Drawing.Point(128, 212);
             this.socialMediaLinksTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.socialMediaLinksTextBox.MaxLength = 500;
@@ -245,7 +246,7 @@
             // websiteTextbox
             // 
             this.websiteTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.websiteTextbox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.websiteTextbox.ForeColor = System.Drawing.Color.Black;
             this.websiteTextbox.Location = new System.Drawing.Point(128, 179);
             this.websiteTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.websiteTextbox.MaxLength = 50;
