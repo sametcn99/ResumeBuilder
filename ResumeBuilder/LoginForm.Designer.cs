@@ -56,7 +56,7 @@
             this.createNewResumeButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.createNewResumeButton.FlatAppearance.BorderSize = 0;
             this.createNewResumeButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.createNewResumeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.createNewResumeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.createNewResumeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.createNewResumeButton.Location = new System.Drawing.Point(337, 200);
             this.createNewResumeButton.Name = "createNewResumeButton";
@@ -69,6 +69,7 @@
             // 
             this.loginPanelResumeVersionLabel.AutoSize = true;
             this.loginPanelResumeVersionLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPanelResumeVersionLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.loginPanelResumeVersionLabel.Location = new System.Drawing.Point(86, 111);
             this.loginPanelResumeVersionLabel.Name = "loginPanelResumeVersionLabel";
             this.loginPanelResumeVersionLabel.Size = new System.Drawing.Size(116, 20);
@@ -79,6 +80,7 @@
             // 
             this.loginPanelNameLabel.AutoSize = true;
             this.loginPanelNameLabel.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginPanelNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.loginPanelNameLabel.Location = new System.Drawing.Point(86, 68);
             this.loginPanelNameLabel.Name = "loginPanelNameLabel";
             this.loginPanelNameLabel.Size = new System.Drawing.Size(114, 20);
@@ -108,7 +110,7 @@
             this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.loginButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.loginButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.loginButton.Location = new System.Drawing.Point(339, 144);
             this.loginButton.Name = "loginButton";
@@ -121,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.loginPanel);
             this.Name = "LoginForm";

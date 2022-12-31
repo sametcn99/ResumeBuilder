@@ -46,6 +46,7 @@
             // educationTextCounterLabel
             // 
             this.educationTextCounterLabel.AutoSize = true;
+            this.educationTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationTextCounterLabel.Location = new System.Drawing.Point(134, 147);
             this.educationTextCounterLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationTextCounterLabel.Name = "educationTextCounterLabel";
@@ -56,6 +57,7 @@
             // educationDtlLabel
             // 
             this.educationDtlLabel.AutoSize = true;
+            this.educationDtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationDtlLabel.Location = new System.Drawing.Point(33, 114);
             this.educationDtlLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationDtlLabel.Name = "educationDtlLabel";
@@ -65,7 +67,7 @@
             // 
             // eduDtlTbox
             // 
-            this.eduDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.eduDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.eduDtlTbox.Location = new System.Drawing.Point(134, 114);
             this.eduDtlTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduDtlTbox.MaxLength = 200;
@@ -77,6 +79,7 @@
             // educationTtlLabel
             // 
             this.educationTtlLabel.AutoSize = true;
+            this.educationTtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationTtlLabel.Location = new System.Drawing.Point(43, 15);
             this.educationTtlLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationTtlLabel.Name = "educationTtlLabel";
@@ -87,6 +90,7 @@
             // educationSDateLabel
             // 
             this.educationSDateLabel.AutoSize = true;
+            this.educationSDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationSDateLabel.Location = new System.Drawing.Point(14, 48);
             this.educationSDateLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationSDateLabel.Name = "educationSDateLabel";
@@ -96,7 +100,7 @@
             // 
             // eduTtlTbox
             // 
-            this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.eduTtlTbox.Location = new System.Drawing.Point(136, 15);
             this.eduTtlTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduTtlTbox.MaxLength = 50;
@@ -107,6 +111,7 @@
             // educationEDateLabel
             // 
             this.educationEDateLabel.AutoSize = true;
+            this.educationEDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationEDateLabel.Location = new System.Drawing.Point(16, 81);
             this.educationEDateLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationEDateLabel.Name = "educationEDateLabel";
@@ -116,7 +121,7 @@
             // 
             // eduSDateTbox
             // 
-            this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.eduSDateTbox.Location = new System.Drawing.Point(136, 48);
             this.eduSDateTbox.Margin = new System.Windows.Forms.Padding(5);
             this.eduSDateTbox.MaxLength = 10;
@@ -126,7 +131,7 @@
             // 
             // EduEDateTbox
             // 
-            this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.EduEDateTbox.Location = new System.Drawing.Point(134, 81);
             this.EduEDateTbox.Margin = new System.Windows.Forms.Padding(5);
             this.EduEDateTbox.MaxLength = 10;
@@ -136,8 +141,8 @@
             // 
             // addEduBtn
             // 
-            this.addEduBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.addEduBtn.ForeColor = System.Drawing.Color.Black;
+            this.addEduBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addEduBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.addEduBtn.Location = new System.Drawing.Point(278, 147);
             this.addEduBtn.Margin = new System.Windows.Forms.Padding(5);
             this.addEduBtn.Name = "addEduBtn";
@@ -150,7 +155,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
@@ -163,8 +168,8 @@
             // 
             // removeButton
             // 
-            this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.removeButton.ForeColor = System.Drawing.Color.Black;
+            this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.removeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.removeButton.Location = new System.Drawing.Point(258, 442);
             this.removeButton.Margin = new System.Windows.Forms.Padding(5);
             this.removeButton.Name = "removeButton";
@@ -177,7 +182,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(61)))), ((int)(((byte)(85)))), ((int)(((byte)(109)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
@@ -191,6 +196,7 @@
             this.Controls.Add(this.eduSDateTbox);
             this.Controls.Add(this.EduEDateTbox);
             this.Controls.Add(this.addEduBtn);
+            this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EducationsForm";
             this.Text = "EducationsForm";

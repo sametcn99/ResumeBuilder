@@ -40,6 +40,7 @@
             this.addJobExperiencePanelButton = new System.Windows.Forms.Button();
             this.aboutPanelButton = new System.Windows.Forms.Button();
             this.navigationPanel = new System.Windows.Forms.Panel();
+            this.saveButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.closeAppButton = new System.Windows.Forms.Button();
@@ -51,7 +52,7 @@
             // 
             // leftMenuPanel
             // 
-            this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.leftMenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
             this.leftMenuPanel.Controls.Add(this.userPanel);
             this.leftMenuPanel.Controls.Add(this.layoutPanelButton);
             this.leftMenuPanel.Controls.Add(this.educationPanelButton);
@@ -80,6 +81,7 @@
             // 
             this.helloLbl.AutoSize = true;
             this.helloLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.helloLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.helloLbl.Location = new System.Drawing.Point(50, 0);
             this.helloLbl.Name = "helloLbl";
             this.helloLbl.Size = new System.Drawing.Size(46, 21);
@@ -91,6 +93,7 @@
             // 
             this.nameLbl.AutoSize = true;
             this.nameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.nameLbl.Location = new System.Drawing.Point(30, 21);
             this.nameLbl.Name = "nameLbl";
             this.nameLbl.Size = new System.Drawing.Size(82, 20);
@@ -103,7 +106,7 @@
             this.layoutPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.layoutPanelButton.FlatAppearance.BorderSize = 0;
             this.layoutPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.layoutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.layoutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.layoutPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.layoutPanelButton.Location = new System.Drawing.Point(3, 334);
             this.layoutPanelButton.Name = "layoutPanelButton";
@@ -117,7 +120,7 @@
             this.educationPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.educationPanelButton.FlatAppearance.BorderSize = 0;
             this.educationPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.educationPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.educationPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.educationPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.educationPanelButton.Location = new System.Drawing.Point(0, 222);
             this.educationPanelButton.Name = "educationPanelButton";
@@ -131,7 +134,7 @@
             this.personalDetailsPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.personalDetailsPanelButton.FlatAppearance.BorderSize = 0;
             this.personalDetailsPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.personalDetailsPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.personalDetailsPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.personalDetailsPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.personalDetailsPanelButton.Location = new System.Drawing.Point(0, 110);
             this.personalDetailsPanelButton.Name = "personalDetailsPanelButton";
@@ -145,7 +148,7 @@
             this.addMoreDetailPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.addMoreDetailPanelButton.FlatAppearance.BorderSize = 0;
             this.addMoreDetailPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addMoreDetailPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addMoreDetailPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.addMoreDetailPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addMoreDetailPanelButton.Location = new System.Drawing.Point(0, 278);
             this.addMoreDetailPanelButton.Name = "addMoreDetailPanelButton";
@@ -159,7 +162,7 @@
             this.settingsPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.settingsPanelButton.FlatAppearance.BorderSize = 0;
             this.settingsPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.settingsPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.settingsPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.settingsPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.settingsPanelButton.Location = new System.Drawing.Point(0, 491);
             this.settingsPanelButton.Name = "settingsPanelButton";
@@ -173,7 +176,7 @@
             this.addJobExperiencePanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.addJobExperiencePanelButton.FlatAppearance.BorderSize = 0;
             this.addJobExperiencePanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addJobExperiencePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.addJobExperiencePanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.addJobExperiencePanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.addJobExperiencePanelButton.Location = new System.Drawing.Point(0, 166);
             this.addJobExperiencePanelButton.Name = "addJobExperiencePanelButton";
@@ -187,7 +190,7 @@
             this.aboutPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
             this.aboutPanelButton.FlatAppearance.BorderSize = 0;
             this.aboutPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.aboutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.aboutPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.aboutPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.aboutPanelButton.Location = new System.Drawing.Point(0, 547);
             this.aboutPanelButton.Name = "aboutPanelButton";
@@ -198,7 +201,8 @@
             // 
             // navigationPanel
             // 
-            this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(62)))), ((int)(((byte)(80)))));
+            this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.navigationPanel.Controls.Add(this.saveButton);
             this.navigationPanel.Controls.Add(this.printButton);
             this.navigationPanel.Controls.Add(this.homeButton);
             this.navigationPanel.Controls.Add(this.closeAppButton);
@@ -208,6 +212,22 @@
             this.navigationPanel.Size = new System.Drawing.Size(850, 50);
             this.navigationPanel.TabIndex = 1;
             // 
+            // saveButton
+            // 
+            this.saveButton.Dock = System.Windows.Forms.DockStyle.Left;
+            this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.saveButton.FlatAppearance.BorderSize = 0;
+            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.saveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.saveButton.Location = new System.Drawing.Point(193, 0);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(98, 50);
+            this.saveButton.TabIndex = 9;
+            this.saveButton.Text = "SAVE";
+            this.saveButton.UseVisualStyleBackColor = true;
+            // 
             // printButton
             // 
             this.printButton.Dock = System.Windows.Forms.DockStyle.Left;
@@ -215,7 +235,7 @@
             this.printButton.FlatAppearance.BorderSize = 0;
             this.printButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.printButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.printButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.printButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.printButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.printButton.Location = new System.Drawing.Point(95, 0);
             this.printButton.Name = "printButton";
@@ -231,7 +251,7 @@
             this.homeButton.FlatAppearance.BorderSize = 0;
             this.homeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.homeButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.homeButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.homeButton.Location = new System.Drawing.Point(0, 0);
             this.homeButton.Name = "homeButton";
@@ -246,6 +266,7 @@
             this.closeAppButton.FlatAppearance.BorderSize = 0;
             this.closeAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.closeAppButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.closeAppButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.closeAppButton.Location = new System.Drawing.Point(800, 0);
             this.closeAppButton.Name = "closeAppButton";
             this.closeAppButton.Size = new System.Drawing.Size(50, 50);
@@ -256,6 +277,7 @@
             // 
             // childFormPanel
             // 
+            this.childFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.childFormPanel.Location = new System.Drawing.Point(150, 50);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(850, 550);
@@ -300,5 +322,6 @@
         private Button educationPanelButton;
         private Panel userPanel;
         private Panel childFormPanel;
+        private Button saveButton;
     }
 }
