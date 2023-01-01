@@ -52,7 +52,6 @@ namespace ResumeBuilder
                     previousBtn.BackColor = Color.FromArgb(33, 33, 33);
                     previousBtn.ForeColor = Color.Gainsboro;
                     previousBtn.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-
                 }
             }
         }

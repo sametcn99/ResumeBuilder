@@ -14,7 +14,7 @@ namespace ResumeBuilder
             DialogResult dialogResult = MessageBox.Show("Open new design?(NOT WORKING CORRECTLY!!!)", "", MessageBoxButtons.YesNo);
             if (dialogResult == DialogResult.Yes)
             {
-                Application.Run(new LoginForm());
+                Application.Run(new FormLogin());
             }
             else if (dialogResult == DialogResult.No)
             {

@@ -6,6 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.Metadata;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -17,22 +18,13 @@ namespace ResumeBuilder
         public DataSet personalDataSet = new DataSet();
         SqlConnection cnn;
         SqlDataReader reader1;
+        public int id { get; set; }
         public string json, cmdstring = "";
         public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
-        public int id { get; set; }
         public string description { get; set; }
-        public void OpenURL(string url)
-        {
-            string key = @"htmlfile\shell\open\command";
-            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
-            // Get the default browser path on the system
-            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
-            Process p = new Process();
-            p.StartInfo.FileName = Default_Browser_Path;
-            p.StartInfo.Arguments = url;
-            p.Start();
-        }
         public string clearDatabase = "delete from Person; delete from Job; delete from Education; delete from MoreDetails";
+
+
         //*****SQL CONTROLLERS*****
         public void insertDataSql(string cmdstring)
         {
@@ -77,9 +69,23 @@ namespace ResumeBuilder
         }
         public void getPersonalDataFromDb()
         {
-            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '{id}';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
+            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '1';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
+            MessageBox.Show(cmdstring);
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(personalDataSet);
+
+        }
+
+        public void OpenURL(string url)
+        {
+            string key = @"htmlfile\shell\open\command";
+            RegistryKey registryKey = Registry.ClassesRoot.OpenSubKey(key, false);
+            // Get the default browser path on the system
+            string Default_Browser_Path = ((string)registryKey.GetValue(null, null)).Split('"')[1];
+            Process p = new Process();
+            p.StartInfo.FileName = Default_Browser_Path;
+            p.StartInfo.Arguments = url;
+            p.Start();
         }
     }
 }
