@@ -47,7 +47,7 @@
             // 
             this.educationTextCounterLabel.AutoSize = true;
             this.educationTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationTextCounterLabel.Location = new System.Drawing.Point(134, 147);
+            this.educationTextCounterLabel.Location = new System.Drawing.Point(134, 194);
             this.educationTextCounterLabel.Margin = new System.Windows.Forms.Padding(5);
             this.educationTextCounterLabel.Name = "educationTextCounterLabel";
             this.educationTextCounterLabel.Size = new System.Drawing.Size(36, 15);
@@ -74,7 +74,7 @@
             this.eduDtlTbox.MaxLength = 200;
             this.eduDtlTbox.Multiline = true;
             this.eduDtlTbox.Name = "eduDtlTbox";
-            this.eduDtlTbox.Size = new System.Drawing.Size(244, 23);
+            this.eduDtlTbox.Size = new System.Drawing.Size(244, 70);
             this.eduDtlTbox.TabIndex = 57;
             // 
             // educationTtlLabel
@@ -147,7 +147,7 @@
             // 
             this.addEduBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addEduBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addEduBtn.Location = new System.Drawing.Point(278, 147);
+            this.addEduBtn.Location = new System.Drawing.Point(278, 194);
             this.addEduBtn.Margin = new System.Windows.Forms.Padding(5);
             this.addEduBtn.Name = "addEduBtn";
             this.addEduBtn.Size = new System.Drawing.Size(100, 23);
@@ -159,7 +159,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
@@ -186,7 +186,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);

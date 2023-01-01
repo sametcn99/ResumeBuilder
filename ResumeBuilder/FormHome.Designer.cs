@@ -235,6 +235,7 @@
             this.navigationPanel.Name = "navigationPanel";
             this.navigationPanel.Size = new System.Drawing.Size(850, 50);
             this.navigationPanel.TabIndex = 1;
+            this.navigationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.navigationPanel_MouseDown);
             // 
             // saveButton
             // 
@@ -302,11 +303,12 @@
             // 
             // childFormPanel
             // 
-            this.childFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.childFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.childFormPanel.Location = new System.Drawing.Point(150, 50);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(850, 550);
             this.childFormPanel.TabIndex = 2;
+            this.childFormPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.childFormPanel_MouseDown);
             // 
             // FormHome
             // 

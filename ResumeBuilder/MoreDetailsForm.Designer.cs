@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.personalProjectTextCounterLabel = new System.Windows.Forms.Label();
             this.addCertificationButton = new System.Windows.Forms.Button();
             this.certificationTextbox = new System.Windows.Forms.TextBox();
             this.certificationsLabel = new System.Windows.Forms.Label();
@@ -37,10 +36,8 @@
             this.skillTextbox = new System.Windows.Forms.TextBox();
             this.languagesLabel = new System.Windows.Forms.Label();
             this.languageTextbox = new System.Windows.Forms.TextBox();
-            this.personalProjectDetailLabel = new System.Windows.Forms.Label();
             this.personalProjectLabel = new System.Windows.Forms.Label();
             this.prsnProjectTitleTextbox = new System.Windows.Forms.TextBox();
-            this.prsnProjectDetailTextbox = new System.Windows.Forms.TextBox();
             this.addInterestButton = new System.Windows.Forms.Button();
             this.addLanguageButton = new System.Windows.Forms.Button();
             this.interestTextbox = new System.Windows.Forms.TextBox();
@@ -50,16 +47,6 @@
             this.removeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // personalProjectTextCounterLabel
-            // 
-            this.personalProjectTextCounterLabel.AutoSize = true;
-            this.personalProjectTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalProjectTextCounterLabel.Location = new System.Drawing.Point(129, 314);
-            this.personalProjectTextCounterLabel.Name = "personalProjectTextCounterLabel";
-            this.personalProjectTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.personalProjectTextCounterLabel.TabIndex = 71;
-            this.personalProjectTextCounterLabel.Text = "0/200";
             // 
             // addCertificationButton
             // 
@@ -77,7 +64,7 @@
             // 
             this.certificationTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.certificationTextbox.Location = new System.Drawing.Point(129, 73);
-            this.certificationTextbox.MaxLength = 100;
+            this.certificationTextbox.MaxLength = 10;
             this.certificationTextbox.Multiline = true;
             this.certificationTextbox.Name = "certificationTextbox";
             this.certificationTextbox.Size = new System.Drawing.Size(244, 23);
@@ -119,7 +106,7 @@
             // 
             this.skillTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.skillTextbox.Location = new System.Drawing.Point(129, 12);
-            this.skillTextbox.MaxLength = 100;
+            this.skillTextbox.MaxLength = 10;
             this.skillTextbox.Multiline = true;
             this.skillTextbox.Name = "skillTextbox";
             this.skillTextbox.Size = new System.Drawing.Size(244, 23);
@@ -139,22 +126,11 @@
             // 
             this.languageTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.languageTextbox.Location = new System.Drawing.Point(129, 134);
-            this.languageTextbox.MaxLength = 100;
+            this.languageTextbox.MaxLength = 10;
             this.languageTextbox.Multiline = true;
             this.languageTextbox.Name = "languageTextbox";
             this.languageTextbox.Size = new System.Drawing.Size(244, 23);
             this.languageTextbox.TabIndex = 58;
-            // 
-            // personalProjectDetailLabel
-            // 
-            this.personalProjectDetailLabel.AutoSize = true;
-            this.personalProjectDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalProjectDetailLabel.Location = new System.Drawing.Point(28, 221);
-            this.personalProjectDetailLabel.Name = "personalProjectDetailLabel";
-            this.personalProjectDetailLabel.Size = new System.Drawing.Size(95, 30);
-            this.personalProjectDetailLabel.TabIndex = 67;
-            this.personalProjectDetailLabel.Text = "Personal Project \r\nDetail";
-            this.personalProjectDetailLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // personalProjectLabel
             // 
@@ -175,23 +151,12 @@
             this.prsnProjectTitleTextbox.Size = new System.Drawing.Size(244, 23);
             this.prsnProjectTitleTextbox.TabIndex = 66;
             // 
-            // prsnProjectDetailTextbox
-            // 
-            this.prsnProjectDetailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.prsnProjectDetailTextbox.Location = new System.Drawing.Point(129, 221);
-            this.prsnProjectDetailTextbox.MaxLength = 200;
-            this.prsnProjectDetailTextbox.Multiline = true;
-            this.prsnProjectDetailTextbox.Name = "prsnProjectDetailTextbox";
-            this.prsnProjectDetailTextbox.Size = new System.Drawing.Size(244, 90);
-            this.prsnProjectDetailTextbox.TabIndex = 60;
-            this.prsnProjectDetailTextbox.TextChanged += new System.EventHandler(this.prsnPrjctDtlTbox_TextChanged);
-            // 
             // addInterestButton
             // 
             this.addInterestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addInterestButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addInterestButton.Location = new System.Drawing.Point(241, 372);
+            this.addInterestButton.Location = new System.Drawing.Point(241, 279);
             this.addInterestButton.Name = "addInterestButton";
             this.addInterestButton.Size = new System.Drawing.Size(132, 23);
             this.addInterestButton.TabIndex = 65;
@@ -213,8 +178,8 @@
             // interestTextbox
             // 
             this.interestTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.interestTextbox.Location = new System.Drawing.Point(129, 343);
-            this.interestTextbox.MaxLength = 100;
+            this.interestTextbox.Location = new System.Drawing.Point(129, 250);
+            this.interestTextbox.MaxLength = 10;
             this.interestTextbox.Name = "interestTextbox";
             this.interestTextbox.Size = new System.Drawing.Size(244, 23);
             this.interestTextbox.TabIndex = 64;
@@ -224,7 +189,7 @@
             this.addPersonalProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addPersonalProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPersonalProjectButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addPersonalProjectButton.Location = new System.Drawing.Point(241, 314);
+            this.addPersonalProjectButton.Location = new System.Drawing.Point(241, 221);
             this.addPersonalProjectButton.Name = "addPersonalProjectButton";
             this.addPersonalProjectButton.Size = new System.Drawing.Size(132, 23);
             this.addPersonalProjectButton.TabIndex = 62;
@@ -235,7 +200,7 @@
             // 
             this.interestsLabel.AutoSize = true;
             this.interestsLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.interestsLabel.Location = new System.Drawing.Point(72, 343);
+            this.interestsLabel.Location = new System.Drawing.Point(72, 250);
             this.interestsLabel.Name = "interestsLabel";
             this.interestsLabel.Size = new System.Drawing.Size(51, 15);
             this.interestsLabel.TabIndex = 63;
@@ -245,7 +210,7 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
@@ -273,11 +238,10 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.personalProjectTextCounterLabel);
             this.Controls.Add(this.addCertificationButton);
             this.Controls.Add(this.certificationTextbox);
             this.Controls.Add(this.certificationsLabel);
@@ -286,10 +250,8 @@
             this.Controls.Add(this.skillTextbox);
             this.Controls.Add(this.languagesLabel);
             this.Controls.Add(this.languageTextbox);
-            this.Controls.Add(this.personalProjectDetailLabel);
             this.Controls.Add(this.personalProjectLabel);
             this.Controls.Add(this.prsnProjectTitleTextbox);
-            this.Controls.Add(this.prsnProjectDetailTextbox);
             this.Controls.Add(this.addInterestButton);
             this.Controls.Add(this.addLanguageButton);
             this.Controls.Add(this.interestTextbox);
@@ -305,8 +267,6 @@
         }
 
         #endregion
-
-        private Label personalProjectTextCounterLabel;
         private Button addCertificationButton;
         private TextBox certificationTextbox;
         private Label certificationsLabel;
@@ -315,10 +275,8 @@
         private TextBox skillTextbox;
         private Label languagesLabel;
         private TextBox languageTextbox;
-        private Label personalProjectDetailLabel;
         private Label personalProjectLabel;
         private TextBox prsnProjectTitleTextbox;
-        private TextBox prsnProjectDetailTextbox;
         private Button addInterestButton;
         private Button addLanguageButton;
         private TextBox interestTextbox;

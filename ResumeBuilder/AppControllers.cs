@@ -17,7 +17,9 @@ namespace ResumeBuilder
         SqlConnection cnn;
         SqlDataReader reader1;
         public string json, cmdstring = "";
-        public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeDb;Integrated Security=True";
+        public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
+        public string id { get; set; }
+        public string description { get; set; }
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";
@@ -67,7 +69,7 @@ namespace ResumeBuilder
         {
             ds.Clear();
             json = "";
-            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM Certifications;SELECT * FROM PersonalProjects;SELECT * FROM Languages;SELECT * FROM Interests;SELECT * FROM Skills";
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM MoreDetails";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(ds);
             json = JsonConvert.SerializeObject(ds, Formatting.Indented);
