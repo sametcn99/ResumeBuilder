@@ -18,46 +18,33 @@ namespace ResumeBuilder
         public PersonalDetailsForm()
         {
             InitializeComponent();
-        }
-
-
-        private void summaryTextbox_TextChanged(object sender, EventArgs e)
-        {
-            summaryTextCounterLabel.Text = $"{summaryTextbox.Text.Length}/500";
-        }
-
-        private void phoneNumberTextbox_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
-        }
-
-        private void savePersonDataButton_Click(object sender, EventArgs e)
-        {
-            appControllers.insertDataSql($"insert into Person (id,description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
-
+            appControllers.getPersonalDataFromDb();
+            fillTextboxes();
         }
 
         private void fillTextboxes()
         {
-            //MessageBox.Show(appControllers.ds.Tables[0].Rows[0].Field<string>("Name").Trim().ToLower());
-            //nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim().ToString();
+            nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
+            AddressTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Address").Trim();
+            phoneNumberTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
+            emailTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Email").Trim();
+            websiteTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Website").Trim();
+            socialMediaLinksTextBox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
+            summaryTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Summary").Trim();
+        }
 
-
-            ////var textboxArray = new[] { "nameTextbox", "AddressTextbox", "phoneNumberTextbox", "emailTextbox", "websiteTextbox", "socialMediaLinksTextBox", "summaryTextbox" };
-            //foreach (Control control in this.Controls)
-            //{
-            //    //MessageBox.Show("foreach");
-            //    if (control is System.Windows.Forms.TextBox)
-            //    {
-            //        MessageBox.Show(appControllers.personalDataSet.Tables[0].Rows.ToString());
-            //        System.Windows.Forms.TextBox textBox = (System.Windows.Forms.TextBox)control;
-            //        foreach (var item in appControllers.personalDataSet.Tables[0].Rows)
-            //        {
-            //            textBox.Text = appControllers.personalDataSet.Tables[0].Rows.ToString();
-            //        }
-            //    }
-            //}
-
+        //*****EVENT HANDLERS*****
+        private void summaryTextbox_TextChanged(object sender, EventArgs e)
+        {
+            summaryTextCounterLabel.Text = $"{summaryTextbox.Text.Length}/500";
+        }
+        private void phoneNumberTextbox_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = !char.IsDigit(e.KeyChar) && !char.IsControl(e.KeyChar);
+        }
+        private void savePersonDataButton_Click(object sender, EventArgs e)
+        {
+            appControllers.insertDataSql($"insert into Person (id,description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
         }
     }
 }

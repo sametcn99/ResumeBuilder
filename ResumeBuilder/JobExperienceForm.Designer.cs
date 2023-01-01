@@ -157,6 +157,7 @@
             this.addJobBtn.Text = "Add Job";
             this.addJobBtn.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.addJobBtn.UseVisualStyleBackColor = false;
+            this.addJobBtn.Click += new System.EventHandler(this.addJobBtn_Click);
             // 
             // removeButton
             // 

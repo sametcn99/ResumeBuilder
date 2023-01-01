@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
+
 namespace ResumeBuilder
 {
     public partial class FormLogin : Form
@@ -19,6 +20,16 @@ namespace ResumeBuilder
         public string cmdstring = "";
         SqlConnection cnn;
         SqlDataReader reader1;
+        public static string id;
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+        [System.Runtime.InteropServices.DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        FormHome formHome = new FormHome();
+
         public FormLogin()
         {
             InitializeComponent();
@@ -38,7 +49,10 @@ namespace ResumeBuilder
                 userLoginCombobox.Items.Add(item);
             }
         }
-
+        public string getId()
+        {
+            return id;
+        }
         private void userLoginCombobox_SelectedValueChanged_1(object sender, EventArgs e)
         {
             resumeVersionCombobox.Items.Clear();
@@ -52,6 +66,42 @@ namespace ResumeBuilder
                 resumeVersionCombobox.Items.Add(reader1.GetString("description"));
             }
             cnn.Close();
+        }
+
+        private void loginButton_Click(object sender, EventArgs e)
+        {
+            if (resumeVersionCombobox.Items.Count > 0)
+            {
+                cnn = new SqlConnection(connetionString);
+                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'", cnn);
+                cnn.Open();
+                reader1 = cmd.ExecuteReader();
+                while (reader1.Read())
+                {
+                    id = reader1.GetValue("id").ToString();
+                }
+
+                formHome.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Select resume to continue!");
+            }
+        }
+
+        private void navigationPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
+
+        private void closeAppButton_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

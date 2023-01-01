@@ -17,13 +17,10 @@ namespace ResumeBuilder
         public DataSet ds = new DataSet();
         public DataSet personalDataSet = new DataSet();
         SqlConnection cnn;
-        SqlDataReader reader1;
-        public int id { get; set; }
+        public string id;
         public string json, cmdstring = "";
         public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
-        public string description { get; set; }
         public string clearDatabase = "delete from Person; delete from Job; delete from Education; delete from MoreDetails";
-
 
         //*****SQL CONTROLLERS*****
         public void insertDataSql(string cmdstring)
@@ -69,11 +66,11 @@ namespace ResumeBuilder
         }
         public void getPersonalDataFromDb()
         {
-            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '1';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
-            MessageBox.Show(cmdstring);
+            FormLogin formLogin = new FormLogin();
+            id = formLogin.getId().ToString();
+            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '{id}';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(personalDataSet);
-
         }
 
         public void OpenURL(string url)

@@ -50,6 +50,7 @@
             this.navigationPanel.Name = "navigationPanel";
             this.navigationPanel.Size = new System.Drawing.Size(800, 50);
             this.navigationPanel.TabIndex = 7;
+            this.navigationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.navigationPanel_MouseDown);
             // 
             // closeAppButton
             // 
@@ -64,6 +65,7 @@
             this.closeAppButton.TabIndex = 0;
             this.closeAppButton.Text = "X";
             this.closeAppButton.UseVisualStyleBackColor = true;
+            this.closeAppButton.Click += new System.EventHandler(this.closeAppButton_Click);
             // 
             // loginPanel
             // 
@@ -146,6 +148,7 @@
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "CONTINUE";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // FormLogin
             // 
@@ -155,7 +158,9 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.loginPanel);
             this.Controls.Add(this.navigationPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormLogin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormLogin";
             this.navigationPanel.ResumeLayout(false);
             this.loginPanel.ResumeLayout(false);
