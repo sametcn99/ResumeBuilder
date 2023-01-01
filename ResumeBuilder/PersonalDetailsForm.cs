@@ -14,7 +14,6 @@ namespace ResumeBuilder
     {
         AppControllers appControllers = new AppControllers();
 
-
         public PersonalDetailsForm()
         {
             InitializeComponent();
@@ -32,8 +31,7 @@ namespace ResumeBuilder
 
         private void savePersonDataButton_Click(object sender, EventArgs e)
         {
-            //string cmdstring =
-            appControllers.insertDataSql($"insert into Person (id, Name, Surname, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{nameTextbox.Text}', '{SurnameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
+            appControllers.insertDataSql($"insert into Person (id, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
         }
     }
 }

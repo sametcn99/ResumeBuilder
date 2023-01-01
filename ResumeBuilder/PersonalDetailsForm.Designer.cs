@@ -30,7 +30,6 @@
         {
             this.summaryTextCounterLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
-            this.surnameLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.savePersonDataButton = new System.Windows.Forms.Button();
@@ -38,7 +37,6 @@
             this.phoneNumberTextbox = new System.Windows.Forms.TextBox();
             this.emailTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
-            this.SurnameTextbox = new System.Windows.Forms.TextBox();
             this.nameTextbox = new System.Windows.Forms.TextBox();
             this.summaryLabel = new System.Windows.Forms.Label();
             this.summaryTextbox = new System.Windows.Forms.TextBox();
@@ -55,7 +53,7 @@
             // 
             this.summaryTextCounterLabel.AutoSize = true;
             this.summaryTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.summaryTextCounterLabel.Location = new System.Drawing.Point(128, 409);
+            this.summaryTextCounterLabel.Location = new System.Drawing.Point(128, 376);
             this.summaryTextCounterLabel.Margin = new System.Windows.Forms.Padding(5);
             this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
             this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
@@ -73,22 +71,11 @@
             this.nameLabel.TabIndex = 0;
             this.nameLabel.Text = "Name";
             // 
-            // surnameLabel
-            // 
-            this.surnameLabel.AutoSize = true;
-            this.surnameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.surnameLabel.Location = new System.Drawing.Point(64, 47);
-            this.surnameLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.surnameLabel.Name = "surnameLabel";
-            this.surnameLabel.Size = new System.Drawing.Size(54, 15);
-            this.surnameLabel.TabIndex = 1;
-            this.surnameLabel.Text = "Surname";
-            // 
             // addressLabel
             // 
             this.addressLabel.AutoSize = true;
             this.addressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addressLabel.Location = new System.Drawing.Point(69, 80);
+            this.addressLabel.Location = new System.Drawing.Point(69, 47);
             this.addressLabel.Margin = new System.Windows.Forms.Padding(5);
             this.addressLabel.Name = "addressLabel";
             this.addressLabel.Size = new System.Drawing.Size(49, 15);
@@ -99,7 +86,7 @@
             // 
             this.phoneNumberLabel.AutoSize = true;
             this.phoneNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.phoneNumberLabel.Location = new System.Drawing.Point(30, 113);
+            this.phoneNumberLabel.Location = new System.Drawing.Point(30, 80);
             this.phoneNumberLabel.Margin = new System.Windows.Forms.Padding(5);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
             this.phoneNumberLabel.Size = new System.Drawing.Size(88, 15);
@@ -111,7 +98,7 @@
             this.savePersonDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.savePersonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePersonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.savePersonDataButton.Location = new System.Drawing.Point(272, 409);
+            this.savePersonDataButton.Location = new System.Drawing.Point(272, 376);
             this.savePersonDataButton.Margin = new System.Windows.Forms.Padding(5);
             this.savePersonDataButton.Name = "savePersonDataButton";
             this.savePersonDataButton.Size = new System.Drawing.Size(100, 23);
@@ -124,7 +111,7 @@
             // 
             this.emailLabel.AutoSize = true;
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.emailLabel.Location = new System.Drawing.Point(82, 146);
+            this.emailLabel.Location = new System.Drawing.Point(82, 113);
             this.emailLabel.Margin = new System.Windows.Forms.Padding(5);
             this.emailLabel.Name = "emailLabel";
             this.emailLabel.Size = new System.Drawing.Size(36, 15);
@@ -135,7 +122,7 @@
             // 
             this.phoneNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.phoneNumberTextbox.ForeColor = System.Drawing.Color.Black;
-            this.phoneNumberTextbox.Location = new System.Drawing.Point(128, 113);
+            this.phoneNumberTextbox.Location = new System.Drawing.Point(128, 80);
             this.phoneNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.phoneNumberTextbox.MaxLength = 12;
             this.phoneNumberTextbox.Name = "phoneNumberTextbox";
@@ -147,7 +134,7 @@
             // 
             this.emailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailTextbox.ForeColor = System.Drawing.Color.Black;
-            this.emailTextbox.Location = new System.Drawing.Point(128, 146);
+            this.emailTextbox.Location = new System.Drawing.Point(128, 113);
             this.emailTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.emailTextbox.MaxLength = 50;
             this.emailTextbox.Name = "emailTextbox";
@@ -158,23 +145,12 @@
             // 
             this.AddressTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTextbox.ForeColor = System.Drawing.Color.Black;
-            this.AddressTextbox.Location = new System.Drawing.Point(128, 80);
+            this.AddressTextbox.Location = new System.Drawing.Point(128, 47);
             this.AddressTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.AddressTextbox.MaxLength = 200;
             this.AddressTextbox.Name = "AddressTextbox";
             this.AddressTextbox.Size = new System.Drawing.Size(244, 23);
             this.AddressTextbox.TabIndex = 7;
-            // 
-            // SurnameTextbox
-            // 
-            this.SurnameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.SurnameTextbox.ForeColor = System.Drawing.Color.Black;
-            this.SurnameTextbox.Location = new System.Drawing.Point(128, 47);
-            this.SurnameTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.SurnameTextbox.MaxLength = 20;
-            this.SurnameTextbox.Name = "SurnameTextbox";
-            this.SurnameTextbox.Size = new System.Drawing.Size(244, 23);
-            this.SurnameTextbox.TabIndex = 8;
             // 
             // nameTextbox
             // 
@@ -191,7 +167,7 @@
             // 
             this.summaryLabel.AutoSize = true;
             this.summaryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.summaryLabel.Location = new System.Drawing.Point(60, 296);
+            this.summaryLabel.Location = new System.Drawing.Point(60, 263);
             this.summaryLabel.Margin = new System.Windows.Forms.Padding(5);
             this.summaryLabel.Name = "summaryLabel";
             this.summaryLabel.Size = new System.Drawing.Size(58, 15);
@@ -202,7 +178,7 @@
             // 
             this.summaryTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summaryTextbox.ForeColor = System.Drawing.Color.Black;
-            this.summaryTextbox.Location = new System.Drawing.Point(128, 296);
+            this.summaryTextbox.Location = new System.Drawing.Point(128, 263);
             this.summaryTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.summaryTextbox.MaxLength = 500;
             this.summaryTextbox.Multiline = true;
@@ -215,7 +191,7 @@
             // 
             this.socialMediaLinksTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.socialMediaLinksTextBox.ForeColor = System.Drawing.Color.Black;
-            this.socialMediaLinksTextBox.Location = new System.Drawing.Point(128, 212);
+            this.socialMediaLinksTextBox.Location = new System.Drawing.Point(128, 179);
             this.socialMediaLinksTextBox.Margin = new System.Windows.Forms.Padding(5);
             this.socialMediaLinksTextBox.MaxLength = 500;
             this.socialMediaLinksTextBox.Multiline = true;
@@ -227,7 +203,7 @@
             // 
             this.websiteLabel.AutoSize = true;
             this.websiteLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.websiteLabel.Location = new System.Drawing.Point(69, 179);
+            this.websiteLabel.Location = new System.Drawing.Point(69, 146);
             this.websiteLabel.Margin = new System.Windows.Forms.Padding(5);
             this.websiteLabel.Name = "websiteLabel";
             this.websiteLabel.Size = new System.Drawing.Size(49, 15);
@@ -238,7 +214,7 @@
             // 
             this.socialMediaLinksLabel.AutoSize = true;
             this.socialMediaLinksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.socialMediaLinksLabel.Location = new System.Drawing.Point(14, 212);
+            this.socialMediaLinksLabel.Location = new System.Drawing.Point(14, 179);
             this.socialMediaLinksLabel.Margin = new System.Windows.Forms.Padding(5);
             this.socialMediaLinksLabel.Name = "socialMediaLinksLabel";
             this.socialMediaLinksLabel.Size = new System.Drawing.Size(104, 15);
@@ -249,7 +225,7 @@
             // 
             this.websiteTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.websiteTextbox.ForeColor = System.Drawing.Color.Black;
-            this.websiteTextbox.Location = new System.Drawing.Point(128, 179);
+            this.websiteTextbox.Location = new System.Drawing.Point(128, 146);
             this.websiteTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.websiteTextbox.MaxLength = 50;
             this.websiteTextbox.Name = "websiteTextbox";
@@ -294,7 +270,6 @@
             this.Controls.Add(this.summaryTextCounterLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.summaryTextbox);
-            this.Controls.Add(this.surnameLabel);
             this.Controls.Add(this.websiteTextbox);
             this.Controls.Add(this.addressLabel);
             this.Controls.Add(this.socialMediaLinksLabel);
@@ -307,7 +282,6 @@
             this.Controls.Add(this.phoneNumberTextbox);
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.emailTextbox);
-            this.Controls.Add(this.SurnameTextbox);
             this.Controls.Add(this.AddressTextbox);
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -322,7 +296,6 @@
         #endregion
         private Label summaryTextCounterLabel;
         private Label nameLabel;
-        private Label surnameLabel;
         private Label addressLabel;
         private Label phoneNumberLabel;
         private Button savePersonDataButton;
@@ -330,7 +303,6 @@
         public TextBox phoneNumberTextbox;
         public TextBox emailTextbox;
         public TextBox AddressTextbox;
-        public TextBox SurnameTextbox;
         public TextBox nameTextbox;
         private Label summaryLabel;
         private TextBox summaryTextbox;

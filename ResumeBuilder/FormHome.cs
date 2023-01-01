@@ -103,10 +103,13 @@ namespace ResumeBuilder
 
         private void homeButton_Click(object sender, EventArgs e)
         {
-            activeForm.Close();
-            DisableButton();
-            homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            homeButton.ForeColor = Color.White;
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                DisableButton();
+                homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                homeButton.ForeColor = Color.White;
+            }
         }
 
         private void selectPhotoPanelButton_Click(object sender, EventArgs e)

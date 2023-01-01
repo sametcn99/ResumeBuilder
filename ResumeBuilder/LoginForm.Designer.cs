@@ -35,7 +35,10 @@
             this.resumeVersionCombobox = new System.Windows.Forms.ComboBox();
             this.userLoginCombobox = new System.Windows.Forms.ComboBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.navigationPanel = new System.Windows.Forms.Panel();
+            this.closeAppButton = new System.Windows.Forms.Button();
             this.loginPanel.SuspendLayout();
+            this.navigationPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // loginPanel
@@ -63,6 +66,7 @@
             this.createNewResumeButton.TabIndex = 7;
             this.createNewResumeButton.Text = "CREATE NEW";
             this.createNewResumeButton.UseVisualStyleBackColor = true;
+            this.createNewResumeButton.Click += new System.EventHandler(this.createNewResumeButton_Click);
             // 
             // loginPanelResumeVersionLabel
             // 
@@ -105,6 +109,7 @@
             this.userLoginCombobox.Name = "userLoginCombobox";
             this.userLoginCombobox.Size = new System.Drawing.Size(276, 23);
             this.userLoginCombobox.TabIndex = 3;
+            this.userLoginCombobox.SelectedValueChanged += new System.EventHandler(this.userLoginCombobox_SelectedValueChanged);
             // 
             // loginButton
             // 
@@ -118,6 +123,32 @@
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = true;
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
+            // 
+            // navigationPanel
+            // 
+            this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
+            this.navigationPanel.Controls.Add(this.closeAppButton);
+            this.navigationPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.navigationPanel.Location = new System.Drawing.Point(0, 0);
+            this.navigationPanel.Name = "navigationPanel";
+            this.navigationPanel.Size = new System.Drawing.Size(800, 50);
+            this.navigationPanel.TabIndex = 6;
+            // 
+            // closeAppButton
+            // 
+            this.closeAppButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.closeAppButton.FlatAppearance.BorderSize = 0;
+            this.closeAppButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.closeAppButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.closeAppButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.closeAppButton.Location = new System.Drawing.Point(750, 0);
+            this.closeAppButton.Name = "closeAppButton";
+            this.closeAppButton.Size = new System.Drawing.Size(50, 50);
+            this.closeAppButton.TabIndex = 0;
+            this.closeAppButton.Text = "X";
+            this.closeAppButton.UseVisualStyleBackColor = true;
+            this.closeAppButton.Click += new System.EventHandler(this.closeAppButton_Click);
             // 
             // LoginForm
             // 
@@ -125,11 +156,15 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.navigationPanel);
             this.Controls.Add(this.loginPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginForm";
             this.loginPanel.ResumeLayout(false);
             this.loginPanel.PerformLayout();
+            this.navigationPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -140,8 +175,10 @@
         private Button createNewResumeButton;
         private Label loginPanelResumeVersionLabel;
         private Label loginPanelNameLabel;
-        private ComboBox resumeVersionCombobox;
         private ComboBox userLoginCombobox;
         private Button loginButton;
+        public ComboBox resumeVersionCombobox;
+        private Panel navigationPanel;
+        private Button closeAppButton;
     }
 }

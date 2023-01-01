@@ -13,12 +13,13 @@ namespace ResumeBuilder
 {
     internal class AppControllers
     {
-        DataSet ds = new DataSet();
+        public DataSet ds = new DataSet();
+        public DataSet personalDataSet = new DataSet();
         SqlConnection cnn;
         SqlDataReader reader1;
         public string json, cmdstring = "";
         public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
-        public string id { get; set; }
+        public int id { get; set; }
         public string description { get; set; }
         public void OpenURL(string url)
         {
@@ -31,7 +32,7 @@ namespace ResumeBuilder
             p.StartInfo.Arguments = url;
             p.Start();
         }
-
+        public string clearDatabase = "delete from Person; delete from Job; delete from Education; delete from MoreDetails";
         //*****SQL CONTROLLERS*****
         public void insertDataSql(string cmdstring)
         {
@@ -73,6 +74,12 @@ namespace ResumeBuilder
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
             dataAdapter.Fill(ds);
             json = JsonConvert.SerializeObject(ds, Formatting.Indented);
+        }
+        public void getPersonalDataFromDb()
+        {
+            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '{id}';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+            dataAdapter.Fill(personalDataSet);
         }
     }
 }
