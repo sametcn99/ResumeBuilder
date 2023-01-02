@@ -20,7 +20,7 @@ namespace ResumeBuilder
         public string cmdstring = "";
         SqlConnection cnn;
         SqlDataReader reader1;
-        public static string id;
+        public static string id = "";
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]

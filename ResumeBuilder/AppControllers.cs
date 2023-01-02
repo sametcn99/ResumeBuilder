@@ -67,11 +67,17 @@ namespace ResumeBuilder
         }
         public void getPersonalDataFromDb()
         {
+
             FormLogin formLogin = new FormLogin();
             id = formLogin.getId().ToString();
-            cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '{id}';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
-            dataAdapter.Fill(personalDataSet);
+            if (id != "")
+            {
+                cmdstring = $"select Name, Address, PhoneNumber, Email, Website, SocialMedia, Summary from Person where id = '{id}';select JobTitle, JobDetail, JobStart, JobEnd from Job where id = '{id}';select EducationTitle, EducationDetail, EducationStart, EducationEnd from Education where id = '{id}';select Skill, Languages, Interests, Certifications, PersonalProjects from MoreDetails where id = '{id}';";
+                SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+                dataAdapter.Fill(personalDataSet);
+            }
+
+
         }
 
         public void OpenURL(string url)

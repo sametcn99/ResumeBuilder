@@ -24,13 +24,19 @@ namespace ResumeBuilder
 
         private void fillTextboxes()
         {
-            nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
-            AddressTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Address").Trim();
-            phoneNumberTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
-            emailTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Email").Trim();
-            websiteTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Website").Trim();
-            socialMediaLinksTextBox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
-            summaryTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Summary").Trim();
+            FormLogin formLogin = new FormLogin();
+
+            if (formLogin.getId().ToString().Trim() != "")
+            {
+                nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
+                AddressTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Address").Trim();
+                phoneNumberTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").Trim();
+                emailTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Email").Trim();
+                websiteTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Website").Trim();
+                socialMediaLinksTextBox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
+                summaryTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Summary").Trim();
+            }
+
         }
 
         //*****EVENT HANDLERS*****
