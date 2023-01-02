@@ -1,15 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class FormHome : Form
     {
@@ -118,6 +107,21 @@ namespace ResumeBuilder
         //*****OTHER EVENTS*****
         private void closeAppBtn_Click(object sender, EventArgs e)
         {
+            FormLogin formLogin = new FormLogin();
+            AppControllers appControllers = new AppControllers();
+            formLogin.getId().ToString().Trim();
+            DialogResult dialogResult = MessageBox.Show("Do you want to save your data?", "Closing Application", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                //do something
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                if (formLogin.getId().ToString().Trim() == "")
+                {
+                    appControllers.insertDataSql($"delete from Person where id = '{formLogin.getId().ToString().Trim()}'; delete from Job where id = '{formLogin.getId().ToString().Trim()}'; delete from Education where id = '{formLogin.getId().ToString().Trim()}'; delete from MoreDetails where id = '{formLogin.getId().ToString().Trim()}'");
+                }
+            }
             Application.Exit();
         }
         private void childFormPanel_MouseDown(object sender, MouseEventArgs e)

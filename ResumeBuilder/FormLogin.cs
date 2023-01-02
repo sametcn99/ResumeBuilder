@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
+﻿using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 
 namespace ResumeBuilder
@@ -80,8 +72,10 @@ namespace ResumeBuilder
                 {
                     id = reader1.GetValue("id").ToString();
                 }
-
                 formHome.Show();
+                formHome.nameLbl.Visible = true;
+                formHome.helloLbl.Visible = true;
+                formHome.nameLbl.Text = appControllers.ds.Tables[0].Rows[0].Field<string>("Name").Trim();
                 this.Hide();
             }
             else

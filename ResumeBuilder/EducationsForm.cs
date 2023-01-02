@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class EducationsForm : Form
     {
@@ -32,7 +22,6 @@ namespace ResumeBuilder
                     else
                         func(control.Controls);
             };
-
             func(Controls);
         }
 
@@ -40,7 +29,7 @@ namespace ResumeBuilder
         {
             FormLogin formLogin = new FormLogin();
             int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{formLogin.getId().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')");
             }

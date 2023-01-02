@@ -4,11 +4,8 @@ using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using System.Data;
-using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Security.Cryptography;
-using System.Windows.Forms;
 
 namespace ResumeBuilder
 {

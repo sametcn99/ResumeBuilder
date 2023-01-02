@@ -1,15 +1,8 @@
 ﻿using Microsoft.Win32;
 using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Diagnostics;
-using System.Linq;
-using System.Reflection.Metadata;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace ResumeBuilder
 {
@@ -68,7 +61,11 @@ namespace ResumeBuilder
                 dataAdapter.Fill(personalDataSet);
             }
         }
-
+        public int returnIdCount()
+        {
+            getDataFromDB();
+            return personalDataSet.Tables[0].Rows.Count;
+        }
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";

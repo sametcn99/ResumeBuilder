@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.leftMenuPanel = new System.Windows.Forms.Panel();
             this.layoutPanelButton = new System.Windows.Forms.Button();
             this.selectPhotoPanelButton = new System.Windows.Forms.Button();
@@ -35,20 +36,21 @@
             this.educationPanelButton = new System.Windows.Forms.Button();
             this.addJobExperiencePanelButton = new System.Windows.Forms.Button();
             this.userPanel = new System.Windows.Forms.Panel();
-            this.helloLbl = new System.Windows.Forms.Label();
-            this.nameLbl = new System.Windows.Forms.Label();
             this.personalDetailsPanelButton = new System.Windows.Forms.Button();
             this.settingsPanelButton = new System.Windows.Forms.Button();
             this.aboutPanelButton = new System.Windows.Forms.Button();
+            this.helloLbl = new System.Windows.Forms.Label();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.closeAppButton = new System.Windows.Forms.Button();
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.leftMenuPanel.SuspendLayout();
-            this.userPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
+            this.childFormPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftMenuPanel
@@ -147,37 +149,11 @@
             // 
             // userPanel
             // 
-            this.userPanel.Controls.Add(this.helloLbl);
-            this.userPanel.Controls.Add(this.nameLbl);
             this.userPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.userPanel.Location = new System.Drawing.Point(0, 0);
             this.userPanel.Name = "userPanel";
             this.userPanel.Size = new System.Drawing.Size(150, 50);
             this.userPanel.TabIndex = 3;
-            // 
-            // helloLbl
-            // 
-            this.helloLbl.AutoSize = true;
-            this.helloLbl.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.helloLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.helloLbl.Location = new System.Drawing.Point(50, 0);
-            this.helloLbl.Name = "helloLbl";
-            this.helloLbl.Size = new System.Drawing.Size(46, 21);
-            this.helloLbl.TabIndex = 4;
-            this.helloLbl.Text = "Hello";
-            this.helloLbl.Visible = false;
-            // 
-            // nameLbl
-            // 
-            this.nameLbl.AutoSize = true;
-            this.nameLbl.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nameLbl.Location = new System.Drawing.Point(30, 21);
-            this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(82, 20);
-            this.nameLbl.TabIndex = 5;
-            this.nameLbl.Text = "User Name";
-            this.nameLbl.Visible = false;
             // 
             // personalDetailsPanelButton
             // 
@@ -224,6 +200,30 @@
             this.aboutPanelButton.UseVisualStyleBackColor = true;
             this.aboutPanelButton.Click += new System.EventHandler(this.aboutPanelButton_Click);
             // 
+            // helloLbl
+            // 
+            this.helloLbl.AutoSize = true;
+            this.helloLbl.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.helloLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.helloLbl.Location = new System.Drawing.Point(54, 31);
+            this.helloLbl.Name = "helloLbl";
+            this.helloLbl.Size = new System.Drawing.Size(104, 46);
+            this.helloLbl.TabIndex = 4;
+            this.helloLbl.Text = "Hello,";
+            this.helloLbl.Visible = false;
+            // 
+            // nameLbl
+            // 
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.nameLbl.Location = new System.Drawing.Point(164, 44);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(108, 28);
+            this.nameLbl.TabIndex = 5;
+            this.nameLbl.Text = "User Name";
+            this.nameLbl.Visible = false;
+            // 
             // navigationPanel
             // 
             this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
@@ -252,6 +252,7 @@
             this.saveButton.Size = new System.Drawing.Size(98, 50);
             this.saveButton.TabIndex = 9;
             this.saveButton.Text = "SAVE";
+            this.toolTip1.SetToolTip(this.saveButton, "Save your data to edit it again");
             this.saveButton.UseVisualStyleBackColor = true;
             // 
             // printButton
@@ -268,6 +269,7 @@
             this.printButton.Size = new System.Drawing.Size(98, 50);
             this.printButton.TabIndex = 8;
             this.printButton.Text = "PRINT";
+            this.toolTip1.SetToolTip(this.printButton, "Print your resume as pdf file.");
             this.printButton.UseVisualStyleBackColor = true;
             // 
             // homeButton
@@ -299,12 +301,15 @@
             this.closeAppButton.Size = new System.Drawing.Size(50, 50);
             this.closeAppButton.TabIndex = 0;
             this.closeAppButton.Text = "X";
+            this.toolTip1.SetToolTip(this.closeAppButton, "Close");
             this.closeAppButton.UseVisualStyleBackColor = true;
             this.closeAppButton.Click += new System.EventHandler(this.closeAppBtn_Click);
             // 
             // childFormPanel
             // 
             this.childFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.childFormPanel.Controls.Add(this.helloLbl);
+            this.childFormPanel.Controls.Add(this.nameLbl);
             this.childFormPanel.Location = new System.Drawing.Point(150, 50);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(850, 550);
@@ -326,9 +331,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
             this.leftMenuPanel.ResumeLayout(false);
-            this.userPanel.ResumeLayout(false);
-            this.userPanel.PerformLayout();
             this.navigationPanel.ResumeLayout(false);
+            this.childFormPanel.ResumeLayout(false);
+            this.childFormPanel.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -340,8 +345,6 @@
         private Button personalDetailsPanelButton;
         private Button addMoreDetailPanelButton;
         private Button aboutPanelButton;
-        private Label nameLbl;
-        private Label helloLbl;
         private Panel navigationPanel;
         private Button closeAppButton;
         private Button settingsPanelButton;
@@ -353,5 +356,8 @@
         private Panel childFormPanel;
         private Button saveButton;
         private Button selectPhotoPanelButton;
+        public Label nameLbl;
+        public Label helloLbl;
+        private ToolTip toolTip1;
     }
 }

@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class MoreDetailsForm : Form
     {
@@ -23,7 +13,6 @@ namespace ResumeBuilder
         private void ClearTextBoxes()
         {
             Action<Control.ControlCollection> func = null;
-
             func = (controls) =>
             {
                 foreach (Control control in controls)
@@ -39,14 +28,15 @@ namespace ResumeBuilder
         private void addSkillButton_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Skill) values('{formLogin.getId().ToString().Trim()}', '{skillTextbox.Text}')");
             }
             else
             {
-                idCount = idCount + 1;
+                idCount++; ;
                 appControllers.insertDataSql($"insert into MoreDetails (id, Skill) values('{idCount}', '{skillTextbox.Text}')");
             }
             ClearTextBoxes();
@@ -55,7 +45,7 @@ namespace ResumeBuilder
         {
             FormLogin formLogin = new FormLogin();
             int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Certifications) values('{formLogin.getId().ToString().Trim()}', '{certificationTextbox.Text}')");
             }
@@ -70,7 +60,7 @@ namespace ResumeBuilder
         {
             FormLogin formLogin = new FormLogin();
             int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Languages) values('{formLogin.getId().ToString().Trim()}', '{languageTextbox.Text}')");
             }
@@ -85,7 +75,7 @@ namespace ResumeBuilder
         {
             FormLogin formLogin = new FormLogin();
             int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, PersonalProjects) values('{formLogin.getId().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')");
             }
@@ -100,7 +90,7 @@ namespace ResumeBuilder
         {
             FormLogin formLogin = new FormLogin();
             int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != null)
+            if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Interests) values('{formLogin.getId().ToString().Trim()}', '{interestTextbox.Text}')");
             }

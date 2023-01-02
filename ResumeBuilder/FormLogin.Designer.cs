@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.closeAppButton = new System.Windows.Forms.Button();
             this.loginPanel = new System.Windows.Forms.Panel();
@@ -37,6 +38,7 @@
             this.resumeVersionCombobox = new System.Windows.Forms.ComboBox();
             this.userLoginCombobox = new System.Windows.Forms.ComboBox();
             this.loginButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.navigationPanel.SuspendLayout();
             this.loginPanel.SuspendLayout();
             this.SuspendLayout();
@@ -64,6 +66,7 @@
             this.closeAppButton.Size = new System.Drawing.Size(50, 50);
             this.closeAppButton.TabIndex = 0;
             this.closeAppButton.Text = "X";
+            this.toolTip1.SetToolTip(this.closeAppButton, "Close");
             this.closeAppButton.UseVisualStyleBackColor = true;
             this.closeAppButton.Click += new System.EventHandler(this.closeAppButton_Click);
             // 
@@ -148,6 +151,7 @@
             this.loginButton.Size = new System.Drawing.Size(150, 50);
             this.loginButton.TabIndex = 2;
             this.loginButton.Text = "CONTINUE";
+            this.toolTip1.SetToolTip(this.loginButton, "Continue editing to existing resume");
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
@@ -181,5 +185,6 @@
         public ComboBox resumeVersionCombobox;
         private ComboBox userLoginCombobox;
         public Button loginButton;
+        private ToolTip toolTip1;
     }
 }

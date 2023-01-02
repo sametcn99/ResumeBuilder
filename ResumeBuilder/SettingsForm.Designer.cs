@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.rjToggleButton1 = new ResumeBuilder.RJControls.RJToggleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.showJsonDataButton = new System.Windows.Forms.Button();
@@ -37,6 +38,7 @@
             this.importJsonDataButton = new System.Windows.Forms.Button();
             this.exportJsonDataButton = new System.Windows.Forms.Button();
             this.clearJsonDataButton = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +56,7 @@
             this.rjToggleButton1.OnToggleColor = System.Drawing.Color.White;
             this.rjToggleButton1.Size = new System.Drawing.Size(45, 22);
             this.rjToggleButton1.TabIndex = 1;
+            this.toolTip1.SetToolTip(this.rjToggleButton1, "Theme changer is not avaible");
             this.rjToggleButton1.UseVisualStyleBackColor = true;
             // 
             // label1
@@ -65,6 +68,7 @@
             this.label1.Size = new System.Drawing.Size(70, 15);
             this.label1.TabIndex = 2;
             this.label1.Text = "Dark Theme";
+            this.toolTip1.SetToolTip(this.label1, "Theme changer is not avaible");
             // 
             // showJsonDataButton
             // 
@@ -76,8 +80,10 @@
             this.showJsonDataButton.Name = "showJsonDataButton";
             this.showJsonDataButton.Size = new System.Drawing.Size(150, 50);
             this.showJsonDataButton.TabIndex = 3;
-            this.showJsonDataButton.Text = "Show Json Data";
+            this.showJsonDataButton.Text = "Show Data";
+            this.toolTip1.SetToolTip(this.showJsonDataButton, "Show Data");
             this.showJsonDataButton.UseVisualStyleBackColor = true;
+            this.showJsonDataButton.Click += new System.EventHandler(this.showJsonDataButton_Click);
             // 
             // sqlModeRadioButton
             // 
@@ -103,6 +109,7 @@
             this.localModeRadioButton.Size = new System.Drawing.Size(138, 19);
             this.localModeRadioButton.TabIndex = 5;
             this.localModeRadioButton.Text = "Local Database Mode";
+            this.toolTip1.SetToolTip(this.localModeRadioButton, "Local Database is not availble");
             this.localModeRadioButton.UseVisualStyleBackColor = true;
             // 
             // groupBox1
@@ -116,6 +123,7 @@
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Database Modes";
+            this.toolTip1.SetToolTip(this.groupBox1, "Change Database models");
             // 
             // importJsonDataButton
             // 
@@ -128,7 +136,9 @@
             this.importJsonDataButton.Size = new System.Drawing.Size(150, 50);
             this.importJsonDataButton.TabIndex = 7;
             this.importJsonDataButton.Text = "Import Data";
+            this.toolTip1.SetToolTip(this.importJsonDataButton, "Import your data");
             this.importJsonDataButton.UseVisualStyleBackColor = true;
+            this.importJsonDataButton.Click += new System.EventHandler(this.importJsonDataButton_Click);
             // 
             // exportJsonDataButton
             // 
@@ -141,6 +151,7 @@
             this.exportJsonDataButton.Size = new System.Drawing.Size(150, 50);
             this.exportJsonDataButton.TabIndex = 8;
             this.exportJsonDataButton.Text = "Export Data";
+            this.toolTip1.SetToolTip(this.exportJsonDataButton, "Export your data");
             this.exportJsonDataButton.UseVisualStyleBackColor = true;
             this.exportJsonDataButton.Click += new System.EventHandler(this.exportJsonDataButton_Click);
             // 
@@ -155,6 +166,7 @@
             this.clearJsonDataButton.Size = new System.Drawing.Size(150, 50);
             this.clearJsonDataButton.TabIndex = 9;
             this.clearJsonDataButton.Text = "Clear Data";
+            this.toolTip1.SetToolTip(this.clearJsonDataButton, "Clear all data");
             this.clearJsonDataButton.UseVisualStyleBackColor = true;
             this.clearJsonDataButton.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -192,5 +204,6 @@
         private Button importJsonDataButton;
         private Button exportJsonDataButton;
         private Button clearJsonDataButton;
+        private ToolTip toolTip1;
     }
 }

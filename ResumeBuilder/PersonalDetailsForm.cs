@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+﻿using System.Data;
 
 namespace ResumeBuilder
 {
@@ -15,16 +6,19 @@ namespace ResumeBuilder
     {
         AppControllers appControllers = new AppControllers();
 
+        FormHome formHome = new FormHome();
         public PersonalDetailsForm()
         {
             InitializeComponent();
             appControllers.getPersonalDataFromDb();
             fillTextboxes();
+
         }
 
         private void fillTextboxes()
         {
             FormLogin formLogin = new FormLogin();
+
             if (formLogin.getId().ToString().Trim() != "")
             {
                 nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
@@ -48,7 +42,18 @@ namespace ResumeBuilder
         }
         private void savePersonDataButton_Click(object sender, EventArgs e)
         {
-            appControllers.insertDataSql($"insert into Person (id,description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
+            FormLogin formLogin = new FormLogin();
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
+            idCount++;
+            if (formLogin.getId().ToString().Trim() != "")
+            {
+                appControllers.insertDataSql($"update Person set description = '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', Name = '{nameTextbox.Text}', Address = '{AddressTextbox.Text}', PhoneNumber = '{phoneNumberTextbox.Text}', Email = '{emailTextbox.Text}', Summary = '{summaryTextbox.Text}', Website = '{websiteTextbox.Text}', SocialMedia = '{socialMediaLinksTextBox.Text}' where id = '{formLogin.getId().ToString().Trim()}'");
+            }
+            else
+            {
+                appControllers.insertDataSql($"insert into Person ({idCount},description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
+            }
         }
     }
 }

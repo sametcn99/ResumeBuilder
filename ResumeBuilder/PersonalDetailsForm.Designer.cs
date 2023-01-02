@@ -103,7 +103,7 @@
             this.savePersonDataButton.Name = "savePersonDataButton";
             this.savePersonDataButton.Size = new System.Drawing.Size(100, 23);
             this.savePersonDataButton.TabIndex = 10;
-            this.savePersonDataButton.Text = "Save";
+            this.savePersonDataButton.Text = "Save/Update";
             this.savePersonDataButton.UseVisualStyleBackColor = false;
             this.savePersonDataButton.Click += new System.EventHandler(this.savePersonDataButton_Click);
             // 
