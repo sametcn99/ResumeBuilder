@@ -15,6 +15,8 @@ namespace ResumeBuilder
     {
         private Button currentButton;
         private Form activeForm;
+
+        //*****DRAG FORM FIELDS*****
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -27,6 +29,20 @@ namespace ResumeBuilder
             InitializeComponent();
         }
 
+        //*****CHILDFORM METHODS*****
+        private void OpenChildForm(Form childForm, object btnSender)
+        {
+            if (activeForm != null) { activeForm.Close(); }
+            ActivateButton(btnSender);
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.childFormPanel.Controls.Add(childForm);
+            this.childFormPanel.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -42,7 +58,6 @@ namespace ResumeBuilder
                 }
             }
         }
-
         private void DisableButton()
         {
             foreach (Control previousBtn in leftMenuPanel.Controls)
@@ -56,50 +71,39 @@ namespace ResumeBuilder
             }
         }
 
-        private void OpenChildForm(Form childForm, object btnSender)
-        {
-            if (activeForm != null) { activeForm.Close(); }
-            ActivateButton(btnSender);
-            activeForm = childForm;
-            childForm.TopLevel = false;
-            childForm.FormBorderStyle = FormBorderStyle.None;
-            childForm.Dock = DockStyle.Fill;
-            this.childFormPanel.Controls.Add(childForm);
-            this.childFormPanel.Tag = childForm;
-            childForm.BringToFront();
-            childForm.Show();
-        }
-
-        private void closeAppBtn_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        //*****CHILDFORM EVENTS*****
         private void personalDetailsPanelButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new PersonalDetailsForm(), sender);
         }
-
         private void addJobExperiencePanelButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new JobExperienceForm(), sender);
         }
-
         private void educationPanelButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new EducationsForm(), sender);
         }
-
         private void settingsPanelButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new SettingsForm(), sender);
         }
-
         private void aboutPanelButton_Click(object sender, EventArgs e)
         {
             OpenChildForm(new AboutForm(), sender);
         }
-
+        private void selectPhotoPanelButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new PhotoUploadForm(), sender);
+        }
+        private void addMoreDetailPanelButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new MoreDetailsForm(), sender);
+        }
+        private void layoutPanelButton_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new LayoutForm(), sender);
+        }
         private void homeButton_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
@@ -111,25 +115,11 @@ namespace ResumeBuilder
             }
         }
 
-        private void selectPhotoPanelButton_Click(object sender, EventArgs e)
+        //*****OTHER EVENTS*****
+        private void closeAppBtn_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new PhotoUploadForm(), sender);
+            Application.Exit();
         }
-
-        private void addMoreDetailPanelButton_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new MoreDetailsForm(), sender);
-        }
-
-        private void navigationPanel_MouseDown(object sender, MouseEventArgs e)
-        {
-            if (e.Button == MouseButtons.Left)
-            {
-                ReleaseCapture();
-                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
-            }
-        }
-
         private void childFormPanel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -138,6 +128,13 @@ namespace ResumeBuilder
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
+        private void navigationPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                ReleaseCapture();
+                SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+            }
+        }
     }
 }

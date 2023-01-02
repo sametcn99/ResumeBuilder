@@ -92,6 +92,7 @@
             this.createNewResumeButton.TabIndex = 7;
             this.createNewResumeButton.Text = "CREATE NEW";
             this.createNewResumeButton.UseVisualStyleBackColor = true;
+            this.createNewResumeButton.Click += new System.EventHandler(this.createNewResumeButton_Click);
             // 
             // loginPanelResumeVersionLabel
             // 

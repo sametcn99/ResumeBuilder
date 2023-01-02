@@ -82,6 +82,7 @@
             this.layoutPanelButton.TabIndex = 7;
             this.layoutPanelButton.Text = "Layout";
             this.layoutPanelButton.UseVisualStyleBackColor = true;
+            this.layoutPanelButton.Click += new System.EventHandler(this.layoutPanelButton_Click);
             // 
             // selectPhotoPanelButton
             // 

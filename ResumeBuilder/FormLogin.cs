@@ -103,5 +103,11 @@ namespace ResumeBuilder
         {
             Application.Exit();
         }
+
+        private void createNewResumeButton_Click(object sender, EventArgs e)
+        {
+            formHome.Show();
+            this.Hide();
+        }
     }
 }
