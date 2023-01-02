@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.educationTextCounterLabel = new System.Windows.Forms.Label();
-            this.educationDtlLabel = new System.Windows.Forms.Label();
-            this.eduDtlTbox = new System.Windows.Forms.TextBox();
-            this.educationTtlLabel = new System.Windows.Forms.Label();
-            this.educationSDateLabel = new System.Windows.Forms.Label();
-            this.eduTtlTbox = new System.Windows.Forms.TextBox();
-            this.educationEDateLabel = new System.Windows.Forms.Label();
-            this.eduSDateTbox = new System.Windows.Forms.TextBox();
-            this.EduEDateTbox = new System.Windows.Forms.TextBox();
-            this.addEduBtn = new System.Windows.Forms.Button();
+            this.educationDetailLabel = new System.Windows.Forms.Label();
+            this.educationDetailTextbox = new System.Windows.Forms.TextBox();
+            this.educationTitleLabel = new System.Windows.Forms.Label();
+            this.educationStartDateLabel = new System.Windows.Forms.Label();
+            this.educationTitleTextbox = new System.Windows.Forms.TextBox();
+            this.educationEndDateLabel = new System.Windows.Forms.Label();
+            this.educationStartDateTextbox = new System.Windows.Forms.TextBox();
+            this.educationEndDateTextbox = new System.Windows.Forms.TextBox();
+            this.addEducationButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.removeButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -54,106 +54,107 @@
             this.educationTextCounterLabel.TabIndex = 59;
             this.educationTextCounterLabel.Text = "0/200";
             // 
-            // educationDtlLabel
+            // educationDetailLabel
             // 
-            this.educationDtlLabel.AutoSize = true;
-            this.educationDtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationDtlLabel.Location = new System.Drawing.Point(33, 114);
-            this.educationDtlLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.educationDtlLabel.Name = "educationDtlLabel";
-            this.educationDtlLabel.Size = new System.Drawing.Size(93, 15);
-            this.educationDtlLabel.TabIndex = 58;
-            this.educationDtlLabel.Text = "Education Detail";
+            this.educationDetailLabel.AutoSize = true;
+            this.educationDetailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationDetailLabel.Location = new System.Drawing.Point(33, 114);
+            this.educationDetailLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.educationDetailLabel.Name = "educationDetailLabel";
+            this.educationDetailLabel.Size = new System.Drawing.Size(93, 15);
+            this.educationDetailLabel.TabIndex = 58;
+            this.educationDetailLabel.Text = "Education Detail";
             // 
-            // eduDtlTbox
+            // educationDetailTextbox
             // 
-            this.eduDtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.eduDtlTbox.ForeColor = System.Drawing.Color.Black;
-            this.eduDtlTbox.Location = new System.Drawing.Point(134, 114);
-            this.eduDtlTbox.Margin = new System.Windows.Forms.Padding(5);
-            this.eduDtlTbox.MaxLength = 200;
-            this.eduDtlTbox.Multiline = true;
-            this.eduDtlTbox.Name = "eduDtlTbox";
-            this.eduDtlTbox.Size = new System.Drawing.Size(244, 70);
-            this.eduDtlTbox.TabIndex = 57;
+            this.educationDetailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationDetailTextbox.ForeColor = System.Drawing.Color.Black;
+            this.educationDetailTextbox.Location = new System.Drawing.Point(134, 114);
+            this.educationDetailTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.educationDetailTextbox.MaxLength = 200;
+            this.educationDetailTextbox.Multiline = true;
+            this.educationDetailTextbox.Name = "educationDetailTextbox";
+            this.educationDetailTextbox.Size = new System.Drawing.Size(244, 70);
+            this.educationDetailTextbox.TabIndex = 57;
             // 
-            // educationTtlLabel
+            // educationTitleLabel
             // 
-            this.educationTtlLabel.AutoSize = true;
-            this.educationTtlLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationTtlLabel.Location = new System.Drawing.Point(43, 15);
-            this.educationTtlLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.educationTtlLabel.Name = "educationTtlLabel";
-            this.educationTtlLabel.Size = new System.Drawing.Size(85, 15);
-            this.educationTtlLabel.TabIndex = 50;
-            this.educationTtlLabel.Text = "Education Title";
+            this.educationTitleLabel.AutoSize = true;
+            this.educationTitleLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationTitleLabel.Location = new System.Drawing.Point(43, 15);
+            this.educationTitleLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.educationTitleLabel.Name = "educationTitleLabel";
+            this.educationTitleLabel.Size = new System.Drawing.Size(85, 15);
+            this.educationTitleLabel.TabIndex = 50;
+            this.educationTitleLabel.Text = "Education Title";
             // 
-            // educationSDateLabel
+            // educationStartDateLabel
             // 
-            this.educationSDateLabel.AutoSize = true;
-            this.educationSDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationSDateLabel.Location = new System.Drawing.Point(14, 48);
-            this.educationSDateLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.educationSDateLabel.Name = "educationSDateLabel";
-            this.educationSDateLabel.Size = new System.Drawing.Size(114, 15);
-            this.educationSDateLabel.TabIndex = 51;
-            this.educationSDateLabel.Text = "Education Start Date";
+            this.educationStartDateLabel.AutoSize = true;
+            this.educationStartDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationStartDateLabel.Location = new System.Drawing.Point(14, 48);
+            this.educationStartDateLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.educationStartDateLabel.Name = "educationStartDateLabel";
+            this.educationStartDateLabel.Size = new System.Drawing.Size(114, 15);
+            this.educationStartDateLabel.TabIndex = 51;
+            this.educationStartDateLabel.Text = "Education Start Date";
             // 
-            // eduTtlTbox
+            // educationTitleTextbox
             // 
-            this.eduTtlTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.eduTtlTbox.ForeColor = System.Drawing.Color.Black;
-            this.eduTtlTbox.Location = new System.Drawing.Point(136, 15);
-            this.eduTtlTbox.Margin = new System.Windows.Forms.Padding(5);
-            this.eduTtlTbox.MaxLength = 50;
-            this.eduTtlTbox.Name = "eduTtlTbox";
-            this.eduTtlTbox.Size = new System.Drawing.Size(244, 23);
-            this.eduTtlTbox.TabIndex = 52;
+            this.educationTitleTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationTitleTextbox.ForeColor = System.Drawing.Color.Black;
+            this.educationTitleTextbox.Location = new System.Drawing.Point(136, 15);
+            this.educationTitleTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.educationTitleTextbox.MaxLength = 50;
+            this.educationTitleTextbox.Name = "educationTitleTextbox";
+            this.educationTitleTextbox.Size = new System.Drawing.Size(244, 23);
+            this.educationTitleTextbox.TabIndex = 52;
             // 
-            // educationEDateLabel
+            // educationEndDateLabel
             // 
-            this.educationEDateLabel.AutoSize = true;
-            this.educationEDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.educationEDateLabel.Location = new System.Drawing.Point(16, 81);
-            this.educationEDateLabel.Margin = new System.Windows.Forms.Padding(5);
-            this.educationEDateLabel.Name = "educationEDateLabel";
-            this.educationEDateLabel.Size = new System.Drawing.Size(110, 15);
-            this.educationEDateLabel.TabIndex = 53;
-            this.educationEDateLabel.Text = "Education End Date";
+            this.educationEndDateLabel.AutoSize = true;
+            this.educationEndDateLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationEndDateLabel.Location = new System.Drawing.Point(16, 81);
+            this.educationEndDateLabel.Margin = new System.Windows.Forms.Padding(5);
+            this.educationEndDateLabel.Name = "educationEndDateLabel";
+            this.educationEndDateLabel.Size = new System.Drawing.Size(110, 15);
+            this.educationEndDateLabel.TabIndex = 53;
+            this.educationEndDateLabel.Text = "Education End Date";
             // 
-            // eduSDateTbox
+            // educationStartDateTextbox
             // 
-            this.eduSDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.eduSDateTbox.ForeColor = System.Drawing.Color.Black;
-            this.eduSDateTbox.Location = new System.Drawing.Point(136, 48);
-            this.eduSDateTbox.Margin = new System.Windows.Forms.Padding(5);
-            this.eduSDateTbox.MaxLength = 10;
-            this.eduSDateTbox.Name = "eduSDateTbox";
-            this.eduSDateTbox.Size = new System.Drawing.Size(244, 23);
-            this.eduSDateTbox.TabIndex = 54;
+            this.educationStartDateTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationStartDateTextbox.ForeColor = System.Drawing.Color.Black;
+            this.educationStartDateTextbox.Location = new System.Drawing.Point(136, 48);
+            this.educationStartDateTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.educationStartDateTextbox.MaxLength = 10;
+            this.educationStartDateTextbox.Name = "educationStartDateTextbox";
+            this.educationStartDateTextbox.Size = new System.Drawing.Size(244, 23);
+            this.educationStartDateTextbox.TabIndex = 54;
             // 
-            // EduEDateTbox
+            // educationEndDateTextbox
             // 
-            this.EduEDateTbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.EduEDateTbox.ForeColor = System.Drawing.Color.Black;
-            this.EduEDateTbox.Location = new System.Drawing.Point(134, 81);
-            this.EduEDateTbox.Margin = new System.Windows.Forms.Padding(5);
-            this.EduEDateTbox.MaxLength = 10;
-            this.EduEDateTbox.Name = "EduEDateTbox";
-            this.EduEDateTbox.Size = new System.Drawing.Size(244, 23);
-            this.EduEDateTbox.TabIndex = 55;
+            this.educationEndDateTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.educationEndDateTextbox.ForeColor = System.Drawing.Color.Black;
+            this.educationEndDateTextbox.Location = new System.Drawing.Point(134, 81);
+            this.educationEndDateTextbox.Margin = new System.Windows.Forms.Padding(5);
+            this.educationEndDateTextbox.MaxLength = 10;
+            this.educationEndDateTextbox.Name = "educationEndDateTextbox";
+            this.educationEndDateTextbox.Size = new System.Drawing.Size(244, 23);
+            this.educationEndDateTextbox.TabIndex = 55;
             // 
-            // addEduBtn
+            // addEducationButton
             // 
-            this.addEduBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.addEduBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addEduBtn.Location = new System.Drawing.Point(278, 194);
-            this.addEduBtn.Margin = new System.Windows.Forms.Padding(5);
-            this.addEduBtn.Name = "addEduBtn";
-            this.addEduBtn.Size = new System.Drawing.Size(100, 23);
-            this.addEduBtn.TabIndex = 56;
-            this.addEduBtn.Text = "Add Education";
-            this.addEduBtn.UseVisualStyleBackColor = false;
+            this.addEducationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addEducationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.addEducationButton.Location = new System.Drawing.Point(278, 194);
+            this.addEducationButton.Margin = new System.Windows.Forms.Padding(5);
+            this.addEducationButton.Name = "addEducationButton";
+            this.addEducationButton.Size = new System.Drawing.Size(100, 23);
+            this.addEducationButton.TabIndex = 56;
+            this.addEducationButton.Text = "Add Education";
+            this.addEducationButton.UseVisualStyleBackColor = false;
+            this.addEducationButton.Click += new System.EventHandler(this.addEduBtn_Click);
             // 
             // dataGridView1
             // 
@@ -191,15 +192,15 @@
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.educationTextCounterLabel);
-            this.Controls.Add(this.educationDtlLabel);
-            this.Controls.Add(this.eduDtlTbox);
-            this.Controls.Add(this.educationTtlLabel);
-            this.Controls.Add(this.educationSDateLabel);
-            this.Controls.Add(this.eduTtlTbox);
-            this.Controls.Add(this.educationEDateLabel);
-            this.Controls.Add(this.eduSDateTbox);
-            this.Controls.Add(this.EduEDateTbox);
-            this.Controls.Add(this.addEduBtn);
+            this.Controls.Add(this.educationDetailLabel);
+            this.Controls.Add(this.educationDetailTextbox);
+            this.Controls.Add(this.educationTitleLabel);
+            this.Controls.Add(this.educationStartDateLabel);
+            this.Controls.Add(this.educationTitleTextbox);
+            this.Controls.Add(this.educationEndDateLabel);
+            this.Controls.Add(this.educationStartDateTextbox);
+            this.Controls.Add(this.educationEndDateTextbox);
+            this.Controls.Add(this.addEducationButton);
             this.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "EducationsForm";
@@ -213,15 +214,15 @@
         #endregion
 
         private Label educationTextCounterLabel;
-        private Label educationDtlLabel;
-        private TextBox eduDtlTbox;
-        private Label educationTtlLabel;
-        private Label educationSDateLabel;
-        private TextBox eduTtlTbox;
-        private Label educationEDateLabel;
-        private TextBox eduSDateTbox;
-        private TextBox EduEDateTbox;
-        private Button addEduBtn;
+        private Label educationDetailLabel;
+        private TextBox educationDetailTextbox;
+        private Label educationTitleLabel;
+        private Label educationStartDateLabel;
+        private TextBox educationTitleTextbox;
+        private Label educationEndDateLabel;
+        private TextBox educationStartDateTextbox;
+        private TextBox educationEndDateTextbox;
+        private Button addEducationButton;
         private DataGridView dataGridView1;
         private Button removeButton;
     }

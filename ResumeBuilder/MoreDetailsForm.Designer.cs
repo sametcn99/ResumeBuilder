@@ -37,7 +37,7 @@
             this.languagesLabel = new System.Windows.Forms.Label();
             this.languageTextbox = new System.Windows.Forms.TextBox();
             this.personalProjectLabel = new System.Windows.Forms.Label();
-            this.prsnProjectTitleTextbox = new System.Windows.Forms.TextBox();
+            this.personalProjectTitleTextbox = new System.Windows.Forms.TextBox();
             this.addInterestButton = new System.Windows.Forms.Button();
             this.addLanguageButton = new System.Windows.Forms.Button();
             this.interestTextbox = new System.Windows.Forms.TextBox();
@@ -59,6 +59,7 @@
             this.addCertificationButton.TabIndex = 69;
             this.addCertificationButton.Text = "Add Certification";
             this.addCertificationButton.UseVisualStyleBackColor = false;
+            this.addCertificationButton.Click += new System.EventHandler(this.addCertificationButton_Click);
             // 
             // certificationTextbox
             // 
@@ -101,6 +102,7 @@
             this.addSkillButton.TabIndex = 55;
             this.addSkillButton.Text = "Add Skill";
             this.addSkillButton.UseVisualStyleBackColor = false;
+            this.addSkillButton.Click += new System.EventHandler(this.addSkillButton_Click);
             // 
             // skillTextbox
             // 
@@ -142,14 +144,14 @@
             this.personalProjectLabel.TabIndex = 59;
             this.personalProjectLabel.Text = "Personel Project Title";
             // 
-            // prsnProjectTitleTextbox
+            // personalProjectTitleTextbox
             // 
-            this.prsnProjectTitleTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.prsnProjectTitleTextbox.Location = new System.Drawing.Point(129, 192);
-            this.prsnProjectTitleTextbox.MaxLength = 50;
-            this.prsnProjectTitleTextbox.Name = "prsnProjectTitleTextbox";
-            this.prsnProjectTitleTextbox.Size = new System.Drawing.Size(244, 23);
-            this.prsnProjectTitleTextbox.TabIndex = 66;
+            this.personalProjectTitleTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.personalProjectTitleTextbox.Location = new System.Drawing.Point(129, 192);
+            this.personalProjectTitleTextbox.MaxLength = 50;
+            this.personalProjectTitleTextbox.Name = "personalProjectTitleTextbox";
+            this.personalProjectTitleTextbox.Size = new System.Drawing.Size(244, 23);
+            this.personalProjectTitleTextbox.TabIndex = 66;
             // 
             // addInterestButton
             // 
@@ -162,6 +164,7 @@
             this.addInterestButton.TabIndex = 65;
             this.addInterestButton.Text = "Add Interest";
             this.addInterestButton.UseVisualStyleBackColor = false;
+            this.addInterestButton.Click += new System.EventHandler(this.addInterestButton_Click);
             // 
             // addLanguageButton
             // 
@@ -174,6 +177,7 @@
             this.addLanguageButton.TabIndex = 61;
             this.addLanguageButton.Text = "Add Language";
             this.addLanguageButton.UseVisualStyleBackColor = false;
+            this.addLanguageButton.Click += new System.EventHandler(this.addLanguageButton_Click);
             // 
             // interestTextbox
             // 
@@ -195,6 +199,7 @@
             this.addPersonalProjectButton.TabIndex = 62;
             this.addPersonalProjectButton.Text = "Add Personal Project";
             this.addPersonalProjectButton.UseVisualStyleBackColor = false;
+            this.addPersonalProjectButton.Click += new System.EventHandler(this.addPersonalProjectButton_Click);
             // 
             // interestsLabel
             // 
@@ -251,7 +256,7 @@
             this.Controls.Add(this.languagesLabel);
             this.Controls.Add(this.languageTextbox);
             this.Controls.Add(this.personalProjectLabel);
-            this.Controls.Add(this.prsnProjectTitleTextbox);
+            this.Controls.Add(this.personalProjectTitleTextbox);
             this.Controls.Add(this.addInterestButton);
             this.Controls.Add(this.addLanguageButton);
             this.Controls.Add(this.interestTextbox);
@@ -276,7 +281,7 @@
         private Label languagesLabel;
         private TextBox languageTextbox;
         private Label personalProjectLabel;
-        private TextBox prsnProjectTitleTextbox;
+        private TextBox personalProjectTitleTextbox;
         private Button addInterestButton;
         private Button addLanguageButton;
         private TextBox interestTextbox;
