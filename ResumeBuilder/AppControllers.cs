@@ -61,11 +61,6 @@ namespace ResumeBuilder
                 dataAdapter.Fill(personalDataSet);
             }
         }
-        public int returnIdCount()
-        {
-            getDataFromDB();
-            return personalDataSet.Tables[0].Rows.Count;
-        }
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";
