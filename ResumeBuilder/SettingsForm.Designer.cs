@@ -30,10 +30,13 @@
         {
             this.rjToggleButton1 = new ResumeBuilder.RJControls.RJToggleButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.personalDetailsPanelButton = new System.Windows.Forms.Button();
+            this.showJsonDataButton = new System.Windows.Forms.Button();
             this.sqlModeRadioButton = new System.Windows.Forms.RadioButton();
             this.localModeRadioButton = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.importJsonDataButton = new System.Windows.Forms.Button();
+            this.exportJsonDataButton = new System.Windows.Forms.Button();
+            this.clearJsonDataButton = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,18 +66,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Dark Theme";
             // 
-            // personalDetailsPanelButton
+            // showJsonDataButton
             // 
-            this.personalDetailsPanelButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalDetailsPanelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.personalDetailsPanelButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalDetailsPanelButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.personalDetailsPanelButton.Location = new System.Drawing.Point(12, 45);
-            this.personalDetailsPanelButton.Name = "personalDetailsPanelButton";
-            this.personalDetailsPanelButton.Size = new System.Drawing.Size(150, 50);
-            this.personalDetailsPanelButton.TabIndex = 3;
-            this.personalDetailsPanelButton.Text = "Show Json Data";
-            this.personalDetailsPanelButton.UseVisualStyleBackColor = true;
+            this.showJsonDataButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.showJsonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.showJsonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.showJsonDataButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.showJsonDataButton.Location = new System.Drawing.Point(12, 154);
+            this.showJsonDataButton.Name = "showJsonDataButton";
+            this.showJsonDataButton.Size = new System.Drawing.Size(150, 50);
+            this.showJsonDataButton.TabIndex = 3;
+            this.showJsonDataButton.Text = "Show Json Data";
+            this.showJsonDataButton.UseVisualStyleBackColor = true;
             // 
             // sqlModeRadioButton
             // 
@@ -107,12 +110,53 @@
             this.groupBox1.Controls.Add(this.sqlModeRadioButton);
             this.groupBox1.Controls.Add(this.localModeRadioButton);
             this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.groupBox1.Location = new System.Drawing.Point(12, 101);
+            this.groupBox1.Location = new System.Drawing.Point(12, 50);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(150, 78);
             this.groupBox1.TabIndex = 6;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Database Modes";
+            // 
+            // importJsonDataButton
+            // 
+            this.importJsonDataButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.importJsonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.importJsonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.importJsonDataButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.importJsonDataButton.Location = new System.Drawing.Point(12, 266);
+            this.importJsonDataButton.Name = "importJsonDataButton";
+            this.importJsonDataButton.Size = new System.Drawing.Size(150, 50);
+            this.importJsonDataButton.TabIndex = 7;
+            this.importJsonDataButton.Text = "Import Data";
+            this.importJsonDataButton.UseVisualStyleBackColor = true;
+            // 
+            // exportJsonDataButton
+            // 
+            this.exportJsonDataButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.exportJsonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.exportJsonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.exportJsonDataButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.exportJsonDataButton.Location = new System.Drawing.Point(12, 210);
+            this.exportJsonDataButton.Name = "exportJsonDataButton";
+            this.exportJsonDataButton.Size = new System.Drawing.Size(150, 50);
+            this.exportJsonDataButton.TabIndex = 8;
+            this.exportJsonDataButton.Text = "Export Data";
+            this.exportJsonDataButton.UseVisualStyleBackColor = true;
+            this.exportJsonDataButton.Click += new System.EventHandler(this.exportJsonDataButton_Click);
+            // 
+            // clearJsonDataButton
+            // 
+            this.clearJsonDataButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.clearJsonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clearJsonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.clearJsonDataButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.clearJsonDataButton.Location = new System.Drawing.Point(12, 322);
+            this.clearJsonDataButton.Name = "clearJsonDataButton";
+            this.clearJsonDataButton.Size = new System.Drawing.Size(150, 50);
+            this.clearJsonDataButton.TabIndex = 9;
+            this.clearJsonDataButton.Text = "Clear Data";
+            this.clearJsonDataButton.UseVisualStyleBackColor = true;
+            this.clearJsonDataButton.Click += new System.EventHandler(this.button1_Click);
             // 
             // SettingsForm
             // 
@@ -120,8 +164,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.clearJsonDataButton);
+            this.Controls.Add(this.exportJsonDataButton);
+            this.Controls.Add(this.importJsonDataButton);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.personalDetailsPanelButton);
+            this.Controls.Add(this.showJsonDataButton);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.rjToggleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -138,9 +185,12 @@
 
         private RJControls.RJToggleButton rjToggleButton1;
         private Label label1;
-        private Button personalDetailsPanelButton;
+        private Button showJsonDataButton;
         private RadioButton sqlModeRadioButton;
         private RadioButton localModeRadioButton;
         private GroupBox groupBox1;
+        private Button importJsonDataButton;
+        private Button exportJsonDataButton;
+        private Button clearJsonDataButton;
     }
 }

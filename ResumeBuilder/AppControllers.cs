@@ -33,28 +33,10 @@ namespace ResumeBuilder
                 cnn.Open();
                 int i = cmd.ExecuteNonQuery();
                 cnn.Close();
-                if (i != 0)
-                {
-                    MessageBox.Show("Saved data!");
-                }
+                if (i != 0) { MessageBox.Show("OK!"); }
             }
-            catch (System.IndexOutOfRangeException ex)
-            {
-                MessageBox.Show("something went wrong\n " + ex.Message);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("an unexpected error occurred " + ex.Message);
-                throw;
-            }
-        }
-        public void removeDataSql(string cmdstring)
-        {
-            cnn = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand(cmdstring, cnn);
-            cnn.Open();
-            int i = cmd.ExecuteNonQuery();
-            cnn.Close();
+            catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
+            catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
         }
         public void getDataFromDB()
         {
@@ -65,9 +47,18 @@ namespace ResumeBuilder
             dataAdapter.Fill(ds);
             json = JsonConvert.SerializeObject(ds, Formatting.Indented);
         }
+        public string exportJsonData()
+        {
+            ds.Clear();
+            json = "";
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM MoreDetails";
+            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
+            dataAdapter.Fill(ds);
+            json = JsonConvert.SerializeObject(ds, Formatting.Indented);
+            return json;
+        }
         public void getPersonalDataFromDb()
         {
-
             FormLogin formLogin = new FormLogin();
             id = formLogin.getId().ToString();
             if (id != "")
@@ -76,8 +67,6 @@ namespace ResumeBuilder
                 SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
                 dataAdapter.Fill(personalDataSet);
             }
-
-
         }
 
         public void OpenURL(string url)
