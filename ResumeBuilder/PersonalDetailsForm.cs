@@ -25,7 +25,6 @@ namespace ResumeBuilder
         private void fillTextboxes()
         {
             FormLogin formLogin = new FormLogin();
-
             if (formLogin.getId().ToString().Trim() != "")
             {
                 nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
@@ -36,7 +35,6 @@ namespace ResumeBuilder
                 socialMediaLinksTextBox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("SocialMedia").Trim();
                 summaryTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Summary").Trim();
             }
-
         }
 
         //*****EVENT HANDLERS*****
