@@ -168,7 +168,7 @@
             this.clearJsonDataButton.Text = "Clear Data";
             this.toolTip1.SetToolTip(this.clearJsonDataButton, "Clear all data");
             this.clearJsonDataButton.UseVisualStyleBackColor = true;
-            this.clearJsonDataButton.Click += new System.EventHandler(this.button1_Click);
+            this.clearJsonDataButton.Click += new System.EventHandler(this.clearJsonDataButton_Click);
             // 
             // SettingsForm
             // 

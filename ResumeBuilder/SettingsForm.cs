@@ -33,14 +33,6 @@ namespace ResumeBuilder
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Clearing all data.", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                appControllers.insertDataSql("delete from Person; delete from Job; delete from Education; delete from MoreDetails");
-            }
-        }
 
         private void importJsonDataButton_Click(object sender, EventArgs e)
         {
@@ -81,6 +73,15 @@ namespace ResumeBuilder
             catch (System.IndexOutOfRangeException ex)
             {
                 MessageBox.Show($"Dataset is null.");
+            }
+        }
+
+        private void clearJsonDataButton_Click(object sender, EventArgs e)
+        {
+            DialogResult dialogResult = MessageBox.Show("Are you sure?", "Clearing all data.", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                appControllers.insertDataSql("delete from Person; delete from Job; delete from Education; delete from MoreDetails");
             }
         }
     }
