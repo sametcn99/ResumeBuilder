@@ -15,6 +15,8 @@ namespace ResumeBuilder
         public string json, cmdstring = "";
         public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string clearDatabase = "delete from Person; delete from Job; delete from Education; delete from MoreDetails";
+        string path, name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills;
+
 
         //*****SQL CONTROLLERS*****
         public void insertDataSql(string cmdstring)

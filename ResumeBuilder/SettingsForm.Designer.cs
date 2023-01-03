@@ -39,7 +39,11 @@
             this.exportJsonDataButton = new System.Windows.Forms.Button();
             this.clearJsonDataButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // rjToggleButton1
@@ -91,12 +95,12 @@
             this.sqlModeRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.sqlModeRadioButton.Checked = true;
             this.sqlModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.sqlModeRadioButton.Location = new System.Drawing.Point(13, 22);
+            this.sqlModeRadioButton.Location = new System.Drawing.Point(24, 22);
             this.sqlModeRadioButton.Name = "sqlModeRadioButton";
-            this.sqlModeRadioButton.Size = new System.Drawing.Size(131, 19);
+            this.sqlModeRadioButton.Size = new System.Drawing.Size(97, 19);
             this.sqlModeRadioButton.TabIndex = 4;
             this.sqlModeRadioButton.TabStop = true;
-            this.sqlModeRadioButton.Text = "SQL Database Mode";
+            this.sqlModeRadioButton.Text = "SQL Database";
             this.sqlModeRadioButton.UseVisualStyleBackColor = true;
             // 
             // localModeRadioButton
@@ -104,11 +108,11 @@
             this.localModeRadioButton.AutoSize = true;
             this.localModeRadioButton.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.localModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.localModeRadioButton.Location = new System.Drawing.Point(6, 47);
+            this.localModeRadioButton.Location = new System.Drawing.Point(17, 47);
             this.localModeRadioButton.Name = "localModeRadioButton";
-            this.localModeRadioButton.Size = new System.Drawing.Size(138, 19);
+            this.localModeRadioButton.Size = new System.Drawing.Size(104, 19);
             this.localModeRadioButton.TabIndex = 5;
-            this.localModeRadioButton.Text = "Local Database Mode";
+            this.localModeRadioButton.Text = "Local Database";
             this.toolTip1.SetToolTip(this.localModeRadioButton, "Local Database is not availble");
             this.localModeRadioButton.UseVisualStyleBackColor = true;
             // 
@@ -170,12 +174,53 @@
             this.clearJsonDataButton.UseVisualStyleBackColor = true;
             this.clearJsonDataButton.Click += new System.EventHandler(this.clearJsonDataButton_Click);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.radioButton1);
+            this.groupBox2.Controls.Add(this.radioButton2);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.groupBox2.Location = new System.Drawing.Point(227, 50);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(141, 78);
+            this.groupBox2.TabIndex = 7;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Save Resume as";
+            this.toolTip1.SetToolTip(this.groupBox2, "Change Database models");
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton1.Checked = true;
+            this.radioButton1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.radioButton1.Location = new System.Drawing.Point(52, 22);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(67, 19);
+            this.radioButton1.TabIndex = 4;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "PDF File";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.radioButton2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.radioButton2.Location = new System.Drawing.Point(25, 47);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(94, 19);
+            this.radioButton2.TabIndex = 5;
+            this.radioButton2.Text = "Ms Word File";
+            this.toolTip1.SetToolTip(this.radioButton2, "Local Database is not availble");
+            this.radioButton2.UseVisualStyleBackColor = true;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.clearJsonDataButton);
             this.Controls.Add(this.exportJsonDataButton);
             this.Controls.Add(this.importJsonDataButton);
@@ -188,6 +233,8 @@
             this.Text = "SettingsForm";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,5 +252,8 @@
         private Button exportJsonDataButton;
         private Button clearJsonDataButton;
         private ToolTip toolTip1;
+        private GroupBox groupBox2;
+        private RadioButton radioButton1;
+        private RadioButton radioButton2;
     }
 }
