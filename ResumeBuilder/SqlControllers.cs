@@ -10,6 +10,7 @@ namespace ResumeBuilder
         SqlConnection cnn;
         SqlDataReader reader1;
         public string id;
+        public int id2 = 0;
         string cmdstring = "";
         public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string defaultEmptyValue = "UPDATE MoreDetails\r\nSET PersonalProjects = ''\r\nWHERE PersonalProjects IS NULL;\r\nUPDATE MoreDetails\r\nSET Skill = ''\r\nWHERE Skill IS NULL;\r\nUPDATE MoreDetails\r\nSET Languages = ''\r\nWHERE Languages IS NULL;\r\nUPDATE MoreDetails\r\nSET Interests = ''\r\nWHERE Interests IS NULL;\r\nUPDATE MoreDetails\r\nSET Certifications = ''\r\nWHERE Certifications IS NULL;\r\nUPDATE Person\r\nSET Website = ''\r\nWHERE Website IS NULL;\r\nUPDATE Person\r\nSET SocialMedia = ''\r\nWHERE SocialMedia IS NULL;\r\nUPDATE Person\r\nSET Address = ''\r\nWHERE Address IS NULL;";
@@ -148,14 +149,21 @@ namespace ResumeBuilder
         }
         public int getIdFromDescription()
         {
-            FormLogin formLogin = new FormLogin();
-            formLogin.getDescription();
-            cnn = new SqlConnection(connectionString);
-            SqlCommand cmd = new SqlCommand($"select id from Person where description = '{formLogin.getDescription().Trim()}'", cnn);
-            cnn.Open();
-            int id = (int)cmd.ExecuteScalar();
-            cnn.Close();
-            return id;
+            try
+            {
+                FormLogin formLogin = new FormLogin();
+                formLogin.getDescription();
+                cnn = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{formLogin.getDescription().Trim()}'", cnn);
+                cnn.Open();
+                id2 = (int)cmd.ExecuteScalar();
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please fill Person Details First!");
+            }
+            return id2;
         }
     }
 }

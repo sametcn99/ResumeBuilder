@@ -26,7 +26,7 @@
         private void addJobBtn_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{personalDetailsForm.getID().ToString().Trim()}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')", $"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{personalDetailsForm.getID().ToString().Trim()}', '{jobTitleTextbox.Text.Trim()}', '{jobDetailTextbox.Text.Trim()}', '{jobStartDateTextbox.Text.Trim()}', '{jobEndDateTextbox.Text.Trim()}')", $"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{jobTitleTextbox.Text.Trim()}', '{jobDetailTextbox.Text.Trim()}', '{jobStartDateTextbox.Text.Trim()}', '{jobEndDateTextbox.Text.Trim()}')");
             ClearTextBoxes();
         }
     }
