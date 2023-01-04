@@ -26,18 +26,35 @@
 
         private void addJobBtn_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-            if (formLogin.getId().ToString().Trim() != "")
+            try
             {
-                appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{formLogin.getId().ToString().Trim()}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
+                //int idCount = 0;
+                FormLogin formLogin = new FormLogin();
+                AppControllers appControllers = new AppControllers();
+                appControllers.getDataFromDB();
+                int idCount = appControllers.ds.Tables[0].Rows.Count;
+                idCount++;
+                //if (appControllers.personalDataSet.Tables.Count > 0)
+                //{
+                //    idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
+                //    idCount++;
+                //}
+                //MessageBox.Show("asf " + formLogin.getId().ToString().Trim());
+                if (formLogin.getId().ToString().Trim() != "")
+                {
+                    appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{formLogin.getId().ToString().Trim()}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
+                }
+                else
+                {
+
+                    appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{idCount}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
+                }
+                ClearTextBoxes();
             }
-            else
+            catch (Exception ex)
             {
-                idCount = idCount + 1;
-                appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{idCount}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
+                MessageBox.Show(ex.Message);
             }
-            ClearTextBoxes();
         }
     }
 }

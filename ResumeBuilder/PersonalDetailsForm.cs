@@ -52,7 +52,7 @@ namespace ResumeBuilder
             }
             else
             {
-                appControllers.insertDataSql($"insert into Person ({idCount},description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('1', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
+                appControllers.insertDataSql($"insert into Person (id, description, Name, Address, PhoneNumber, Email, Summary, Website, SocialMedia) values('{idCount}', '{DateTime.Now.ToString(@"MM\/dd\/yyyy h\:mm tt")}', '{nameTextbox.Text}', '{AddressTextbox.Text}', '{phoneNumberTextbox.Text}', '{emailTextbox.Text}', '{summaryTextbox.Text}', '{websiteTextbox.Text}', '{socialMediaLinksTextBox.Text}')");
             }
         }
     }

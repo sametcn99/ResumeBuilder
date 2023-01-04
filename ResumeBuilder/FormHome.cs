@@ -140,5 +140,32 @@
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog save = new SaveFileDialog();
+            save.OverwritePrompt = false;
+            save.CreatePrompt = true;
+            save.InitialDirectory = @"D:\";
+            save.Title = "Save PDF File";
+            save.DefaultExt = "pdf";
+            save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+            //if (save.ShowDialog() == DialogResult.OK)
+            //{
+            //    MessageBox.Show("Saved!");
+            //}
+            AppControllers appControllers = new AppControllers();
+            ResumeLayouts resumeLayouts = new ResumeLayouts();
+            try
+            {
+
+                resumeLayouts.ClassicLayout(save.FileName, appControllers.fillPdfFields().Item2.ToString(), appControllers.fillPdfFields().Item3.ToString(), appControllers.fillPdfFields().Item4.ToString(), appControllers.fillPdfFields().Item5.ToString(), appControllers.fillPdfFields().Item6.ToString(), appControllers.fillPdfFields().Item7.ToString(), appControllers.fillPdfFields().Item8.ToString(), appControllers.fillPdfFields().Item9.ToString(), appControllers.fillPdfFields().Item10.ToString());
+            }
+            catch (System.NullReferenceException ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+        }
     }
 }

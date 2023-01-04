@@ -271,6 +271,7 @@
             this.printButton.Text = "PRINT";
             this.toolTip1.SetToolTip(this.printButton, "Print your resume as pdf file.");
             this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // homeButton
             // 

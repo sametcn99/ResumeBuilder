@@ -44,7 +44,8 @@
         private void addCertificationButton_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
             if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Certifications) values('{formLogin.getId().ToString().Trim()}', '{certificationTextbox.Text}')");
@@ -59,7 +60,8 @@
         private void addLanguageButton_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
             if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Languages) values('{formLogin.getId().ToString().Trim()}', '{languageTextbox.Text}')");
@@ -74,7 +76,8 @@
         private void addPersonalProjectButton_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
             if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, PersonalProjects) values('{formLogin.getId().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')");
@@ -89,7 +92,8 @@
         private void addInterestButton_Click(object sender, EventArgs e)
         {
             FormLogin formLogin = new FormLogin();
-            int idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
+            appControllers.getDataFromDB();
+            int idCount = appControllers.ds.Tables[0].Rows.Count;
             if (formLogin.getId().ToString().Trim() != "")
             {
                 appControllers.insertDataSql($"insert into MoreDetails (id, Interests) values('{formLogin.getId().ToString().Trim()}', '{interestTextbox.Text}')");
