@@ -36,19 +36,22 @@
             this.educationPanelButton = new System.Windows.Forms.Button();
             this.addJobExperiencePanelButton = new System.Windows.Forms.Button();
             this.userPanel = new System.Windows.Forms.Panel();
+            this.logoLabel = new System.Windows.Forms.Label();
             this.personalDetailsPanelButton = new System.Windows.Forms.Button();
             this.settingsPanelButton = new System.Windows.Forms.Button();
             this.aboutPanelButton = new System.Windows.Forms.Button();
             this.helloLbl = new System.Windows.Forms.Label();
-            this.nameLbl = new System.Windows.Forms.Label();
             this.navigationPanel = new System.Windows.Forms.Panel();
             this.saveButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.closeAppButton = new System.Windows.Forms.Button();
             this.childFormPanel = new System.Windows.Forms.Panel();
+            this.savingLabel = new System.Windows.Forms.Label();
+            this.nameLbl = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.leftMenuPanel.SuspendLayout();
+            this.userPanel.SuspendLayout();
             this.navigationPanel.SuspendLayout();
             this.childFormPanel.SuspendLayout();
             this.SuspendLayout();
@@ -149,11 +152,24 @@
             // 
             // userPanel
             // 
+            this.userPanel.Controls.Add(this.logoLabel);
             this.userPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.userPanel.Location = new System.Drawing.Point(0, 0);
             this.userPanel.Name = "userPanel";
             this.userPanel.Size = new System.Drawing.Size(150, 50);
             this.userPanel.TabIndex = 3;
+            // 
+            // logoLabel
+            // 
+            this.logoLabel.Font = new System.Drawing.Font("Yu Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.logoLabel.ForeColor = System.Drawing.Color.White;
+            this.logoLabel.Location = new System.Drawing.Point(0, 0);
+            this.logoLabel.Name = "logoLabel";
+            this.logoLabel.Size = new System.Drawing.Size(150, 50);
+            this.logoLabel.TabIndex = 0;
+            this.logoLabel.Text = "RESUME\r\nBUILDER\r\n";
+            this.logoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.logoLabel.Click += new System.EventHandler(this.logoLabel_Click);
             // 
             // personalDetailsPanelButton
             // 
@@ -211,18 +227,6 @@
             this.helloLbl.TabIndex = 4;
             this.helloLbl.Text = "Hello,";
             this.helloLbl.Visible = false;
-            // 
-            // nameLbl
-            // 
-            this.nameLbl.AutoSize = true;
-            this.nameLbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nameLbl.Location = new System.Drawing.Point(164, 44);
-            this.nameLbl.Name = "nameLbl";
-            this.nameLbl.Size = new System.Drawing.Size(108, 28);
-            this.nameLbl.TabIndex = 5;
-            this.nameLbl.Text = "User Name";
-            this.nameLbl.Visible = false;
             // 
             // navigationPanel
             // 
@@ -309,13 +313,38 @@
             // childFormPanel
             // 
             this.childFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.childFormPanel.Controls.Add(this.helloLbl);
+            this.childFormPanel.Controls.Add(this.savingLabel);
             this.childFormPanel.Controls.Add(this.nameLbl);
+            this.childFormPanel.Controls.Add(this.helloLbl);
             this.childFormPanel.Location = new System.Drawing.Point(150, 50);
             this.childFormPanel.Name = "childFormPanel";
             this.childFormPanel.Size = new System.Drawing.Size(850, 550);
             this.childFormPanel.TabIndex = 2;
             this.childFormPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.childFormPanel_MouseDown);
+            // 
+            // savingLabel
+            // 
+            this.savingLabel.AutoSize = true;
+            this.savingLabel.Font = new System.Drawing.Font("Segoe UI", 17F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.savingLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.savingLabel.Location = new System.Drawing.Point(54, 91);
+            this.savingLabel.Name = "savingLabel";
+            this.savingLabel.Size = new System.Drawing.Size(97, 31);
+            this.savingLabel.TabIndex = 10;
+            this.savingLabel.Text = "Saving...";
+            this.savingLabel.Visible = false;
+            // 
+            // nameLbl
+            // 
+            this.nameLbl.AutoSize = true;
+            this.nameLbl.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.nameLbl.Location = new System.Drawing.Point(149, 44);
+            this.nameLbl.Name = "nameLbl";
+            this.nameLbl.Size = new System.Drawing.Size(108, 28);
+            this.nameLbl.TabIndex = 5;
+            this.nameLbl.Text = "User Name";
+            this.nameLbl.Visible = false;
             // 
             // FormHome
             // 
@@ -332,6 +361,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormHome";
             this.leftMenuPanel.ResumeLayout(false);
+            this.userPanel.ResumeLayout(false);
             this.navigationPanel.ResumeLayout(false);
             this.childFormPanel.ResumeLayout(false);
             this.childFormPanel.PerformLayout();
@@ -357,8 +387,10 @@
         private Panel childFormPanel;
         private Button saveButton;
         private Button selectPhotoPanelButton;
-        public Label nameLbl;
         public Label helloLbl;
         private ToolTip toolTip1;
+        private Label savingLabel;
+        public Label nameLbl;
+        private Label logoLabel;
     }
 }

@@ -21,6 +21,7 @@
         //*****CHILDFORM METHODS*****
         private void OpenChildForm(Form childForm, object btnSender)
         {
+            savingLabel.Visible = false;
             if (activeForm != null) { activeForm.Close(); }
             ActivateButton(btnSender);
             activeForm = childForm;
@@ -128,6 +129,7 @@
 
         private void printButton_Click(object sender, EventArgs e)
         {
+
             SqlControllers sqlControllers = new SqlControllers();
             ResumeLayouts resumeLayouts = new ResumeLayouts();
             SaveFileDialog save = new SaveFileDialog();
@@ -137,12 +139,30 @@
             save.Title = "Save PDF File";
             save.DefaultExt = "pdf";
             save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+            savingLabel.Visible = true;
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                DisableButton();
+                homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                homeButton.ForeColor = Color.White;
+            }
             if (save.ShowDialog() == DialogResult.OK)
             {
                 resumeLayouts.ClassicLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString());
-
+                savingLabel.Text = "Saved!";
             }
+        }
 
+        private void logoLabel_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+                DisableButton();
+                homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+                homeButton.ForeColor = Color.White;
+            }
         }
     }
 }

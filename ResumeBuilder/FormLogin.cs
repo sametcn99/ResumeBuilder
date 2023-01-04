@@ -33,6 +33,9 @@
                 description = resumeVersionCombobox.SelectedItem.ToString().Trim();
                 FormHome formHome = new FormHome();
                 formHome.Show();
+                formHome.helloLbl.Visible = true;
+                formHome.nameLbl.Visible = true;
+                formHome.nameLbl.Text = namesCombobox.SelectedItem.ToString().Trim();
                 this.Hide();
             }
             else
