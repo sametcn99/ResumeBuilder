@@ -128,6 +128,21 @@
 
         private void printButton_Click(object sender, EventArgs e)
         {
+            SqlControllers sqlControllers = new SqlControllers();
+            ResumeLayouts resumeLayouts = new ResumeLayouts();
+            SaveFileDialog save = new SaveFileDialog();
+            save.OverwritePrompt = false;
+            save.CreatePrompt = true;
+            save.InitialDirectory = @"D:\";
+            save.Title = "Save PDF File";
+            save.DefaultExt = "pdf";
+            save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+            if (save.ShowDialog() == DialogResult.OK)
+            {
+                resumeLayouts.ClassicLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString());
+
+            }
+
         }
     }
 }

@@ -105,7 +105,7 @@
             this.educationTitleTextbox.ForeColor = System.Drawing.Color.Black;
             this.educationTitleTextbox.Location = new System.Drawing.Point(136, 15);
             this.educationTitleTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.educationTitleTextbox.MaxLength = 50;
+            this.educationTitleTextbox.MaxLength = 100;
             this.educationTitleTextbox.Name = "educationTitleTextbox";
             this.educationTitleTextbox.Size = new System.Drawing.Size(244, 23);
             this.educationTitleTextbox.TabIndex = 52;

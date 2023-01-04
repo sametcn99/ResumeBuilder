@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using HarfBuzzSharp;
+using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -9,11 +10,32 @@ namespace ResumeBuilder
     {
         SqlConnection cnn;
         SqlDataReader reader1;
+        public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills;
         public string id;
         public int id2 = 0;
         string cmdstring = "";
         public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
-        public string defaultEmptyValue = "UPDATE MoreDetails\r\nSET PersonalProjects = ''\r\nWHERE PersonalProjects IS NULL;\r\nUPDATE MoreDetails\r\nSET Skill = ''\r\nWHERE Skill IS NULL;\r\nUPDATE MoreDetails\r\nSET Languages = ''\r\nWHERE Languages IS NULL;\r\nUPDATE MoreDetails\r\nSET Interests = ''\r\nWHERE Interests IS NULL;\r\nUPDATE MoreDetails\r\nSET Certifications = ''\r\nWHERE Certifications IS NULL;\r\nUPDATE Person\r\nSET Website = ''\r\nWHERE Website IS NULL;\r\nUPDATE Person\r\nSET SocialMedia = ''\r\nWHERE SocialMedia IS NULL;\r\nUPDATE Person\r\nSET Address = ''\r\nWHERE Address IS NULL;";
+        public string defaultEmptyValue = """
+            UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
+            UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
+            UPDATE MoreDetails SET Languages = '' WHERE Languages IS NULL;
+            UPDATE MoreDetails SET Interests = '' WHERE Interests IS NULL;
+            UPDATE MoreDetails SET Certifications = '' WHERE Certifications IS NULL;
+            UPDATE Person SET Website = '' WHERE Website IS NULL;
+            UPDATE Person SET SocialMedia = '' WHERE SocialMedia IS NULL;
+            UPDATE Person SET Address = '' WHERE Address IS NULL;
+            UPDATE Person SET PhoneNumber = '' WHERE PhoneNumber IS NULL;
+            UPDATE Person SET Website = '' WHERE Website IS NULL;
+            UPDATE Person SET Email = '' WHERE Email IS NULL;
+            UPDATE Job SET JobTitle = '' WHERE JobTitle IS NULL;
+            UPDATE Job SET JobStart = '' WHERE JobStart IS NULL;
+            UPDATE Job SET JobEnd = '' WHERE JobEnd IS NULL;
+            UPDATE Job SET JobDetail = '' WHERE JobDetail IS NULL;
+            UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
+            UPDATE Education SET EducationStart = '' WHERE EducationStart IS NULL;
+            UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
+            UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
+            """;
         public void SqlExecuter(string cmdstring)
         {
             try
@@ -136,7 +158,7 @@ namespace ResumeBuilder
                 MessageBox.Show("Saved!\nYou can import this file when you need edit.");
             }
         }
-        public DataSet getPersonDetails()
+        public DataSet GetPersonTable()
         {
             FormLogin formLogin = new FormLogin();
             DataSet dataSet = new DataSet();
@@ -147,7 +169,98 @@ namespace ResumeBuilder
             }
             return dataSet;
         }
-        public int getIdFromDescription()
+        public DataSet GetPersonalTables()
+        {
+            DataSet dataSet = new DataSet();
+            FormLogin formLogin = new FormLogin();
+            if (formLogin.getDescription() != "")
+            {
+                //MessageBox.Show($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'");
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'", connectionString);
+                dataAdapter.Fill(dataSet);
+            }
+            else
+            {
+                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Job where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Education where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from MoreDetails where id = '{personalDetailsForm.getID().ToString().Trim()}'", connectionString);
+                dataAdapter.Fill(dataSet);
+            }
+            return dataSet;
+        }
+
+        public (string, string, string, string, string, string, string, string, string) fillPdfFields()
+        {
+            SqlExecuter(defaultEmptyValue);
+            name = GetPersonalTables().Tables[0].Rows[0].Field<string>("Name").Trim();
+            personDetails = GetPersonalTables().Tables[0].Rows[0].Field<string>("Address").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Email").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Website").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Summary").Trim();
+            jobs = "";
+            int i = 0;
+            while (i < GetPersonalTables().Tables[1].Rows.Count)
+            {
+
+                jobs = jobs + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobTitle").Trim();
+                jobs = jobs + " (" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobStart").Trim() + "-" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobEnd").Trim() + ")";
+                jobs = jobs + "\n" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobDetail").Trim() + "\n";
+                i++;
+            }
+            educations = "";
+            i = 0;
+            while (i < GetPersonalTables().Tables[2].Rows.Count)
+            {
+                educations = educations + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationTitle").Trim();
+                educations = educations + " (" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationStart").Trim() + "-" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationEnd").Trim() + ")";
+                educations = educations + "\n" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationDetail").Trim() + "\n";
+                i++;
+            }
+            i = 0;
+            certifications = "";
+            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            {
+                if (GetPersonalTables().Tables[3].Rows[i]["Certifications"] is not null)
+                {
+                    certifications = certifications + GetPersonalTables().Tables[3].Rows[i].Field<string>("Certifications").Trim() + ", ";
+                    i++;
+                }
+
+            }
+            i = 0;
+            personalProjects = "";
+            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            {
+
+                personalProjects = personalProjects + GetPersonalTables().Tables[3].Rows[i].Field<string>("PersonalProjects").Trim() + "\n";
+                i++;
+
+
+            }
+            i = 0;
+            languages = "";
+            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            {
+                languages = languages + GetPersonalTables().Tables[3].Rows[i].Field<string>("Languages").Trim() + ",";
+                i++;
+            }
+            i = 0;
+            interests = "";
+            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            {
+                interests = interests + GetPersonalTables().Tables[3].Rows[i].Field<string>("Interests").Trim() + ", ";
+                i++;
+            }
+            i = 0;
+            skills = "";
+            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            {
+                skills = skills + GetPersonalTables().Tables[3].Rows[i].Field<string>("Skill").Trim() + ", ";
+                i++;
+            }
+            i = 0;
+
+            return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills);
+        }
+
+        public int GetIdFromDescription()
         {
             try
             {

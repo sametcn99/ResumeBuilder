@@ -31,7 +31,7 @@ namespace ResumeBuilder
         private void addEduBtn_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{personalDetailsForm.getID().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')", $"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{personalDetailsForm.getID().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')", $"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')");
             ClearTextBoxes();
         }
     }

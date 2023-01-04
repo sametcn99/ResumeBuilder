@@ -71,7 +71,7 @@
             this.jobTitleTextbox.ForeColor = System.Drawing.Color.Black;
             this.jobTitleTextbox.Location = new System.Drawing.Point(136, 12);
             this.jobTitleTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.jobTitleTextbox.MaxLength = 50;
+            this.jobTitleTextbox.MaxLength = 100;
             this.jobTitleTextbox.Name = "jobTitleTextbox";
             this.jobTitleTextbox.Size = new System.Drawing.Size(244, 23);
             this.jobTitleTextbox.TabIndex = 50;

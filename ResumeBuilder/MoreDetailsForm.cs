@@ -27,31 +27,31 @@
         private void addSkillButton_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Skill) values('{personalDetailsForm.getID().ToString().Trim()}', '{skillTextbox.Text}')", $"insert into MoreDetails (id, Skill) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{skillTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Skill) values('{personalDetailsForm.getID().ToString().Trim()}', '{skillTextbox.Text}')", $"insert into MoreDetails (id, Skill) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{skillTextbox.Text}')");
             ClearTextBoxes();
         }
         private void addCertificationButton_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Certifications) values('{personalDetailsForm.getID().ToString().Trim()}', '{certificationTextbox.Text}')", $"insert into MoreDetails (id, Certifications) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{certificationTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Certifications) values('{personalDetailsForm.getID().ToString().Trim()}', '{certificationTextbox.Text}')", $"insert into MoreDetails (id, Certifications) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{certificationTextbox.Text}')");
             ClearTextBoxes();
         }
         private void addLanguageButton_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Languages) values('{personalDetailsForm.getID().ToString().Trim()}', '{languageTextbox.Text}')", $"insert into MoreDetails (id, Languages) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{languageTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Languages) values('{personalDetailsForm.getID().ToString().Trim()}', '{languageTextbox.Text}')", $"insert into MoreDetails (id, Languages) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{languageTextbox.Text}')");
             ClearTextBoxes();
         }
         private void addPersonalProjectButton_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, PersonalProjects) values('{personalDetailsForm.getID().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')", $"insert into MoreDetails (id, PersonalProjects) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, PersonalProjects) values('{personalDetailsForm.getID().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')", $"insert into MoreDetails (id, PersonalProjects) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{personalProjectTitleTextbox.Text}')");
             ClearTextBoxes();
         }
         private void addInterestButton_Click(object sender, EventArgs e)
         {
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Interests) values('{personalDetailsForm.getID().ToString().Trim()}', '{interestTextbox.Text}')", $"insert into MoreDetails (id, Interests) values('{sqlControllers.getIdFromDescription().ToString().Trim()}', '{interestTextbox.Text}')");
+            sqlControllers.AddNewDataOrEdit($"insert into MoreDetails (id, Interests) values('{personalDetailsForm.getID().ToString().Trim()}', '{interestTextbox.Text}')", $"insert into MoreDetails (id, Interests) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{interestTextbox.Text}')");
             ClearTextBoxes();
         }
     }

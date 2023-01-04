@@ -94,18 +94,6 @@ namespace ResumeBuilder
             catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
         }*/
 
-        /*public string exportJsonData()
-        {
-            ds.Clear();
-            json = "";
-            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM MoreDetails";
-            SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connetionString);
-            dataAdapter.Fill(ds);
-            json = JsonConvert.SerializeObject(ds, Formatting.Indented);
-            return json;
-        }*/
-
-
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";

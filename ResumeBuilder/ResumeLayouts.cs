@@ -6,8 +6,6 @@ namespace ResumeBuilder
 {
     internal class ResumeLayouts
     {
-
-
         public void ClassicLayout(string path, string name, string personDetails, string jobs, string educations, string certifications, string personalProjects, string languages, string interests, string skills)
         {
             try

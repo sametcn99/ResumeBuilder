@@ -12,13 +12,13 @@
             FormLogin formLogin = new FormLogin();
             if (formLogin.getDescription() != "")
             {
-                nameTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["Name"].ToString().Trim();
-                AddressTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["Address"].ToString().Trim();
-                phoneNumberTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["PhoneNumber"].ToString().Trim();
-                emailTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["Email"].ToString().Trim();
-                websiteTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["Website"].ToString().Trim();
-                socialMediaLinksTextBox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["SocialMedia"].ToString().Trim();
-                summaryTextbox.Text = SqlControllers.getPersonDetails().Tables[0].Rows[0]["Summary"].ToString().Trim();
+                nameTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["Name"].ToString().Trim();
+                AddressTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["Address"].ToString().Trim();
+                phoneNumberTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["PhoneNumber"].ToString().Trim();
+                emailTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["Email"].ToString().Trim();
+                websiteTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["Website"].ToString().Trim();
+                socialMediaLinksTextBox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["SocialMedia"].ToString().Trim();
+                summaryTextbox.Text = SqlControllers.GetPersonTable().Tables[0].Rows[0]["Summary"].ToString().Trim();
             }
         }
 
