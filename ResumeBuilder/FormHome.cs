@@ -107,21 +107,6 @@
         //*****OTHER EVENTS*****
         private void closeAppBtn_Click(object sender, EventArgs e)
         {
-            FormLogin formLogin = new FormLogin();
-            AppControllers appControllers = new AppControllers();
-            formLogin.getId().ToString().Trim();
-            DialogResult dialogResult = MessageBox.Show("Do you want to save your data?", "Closing Application", MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes)
-            {
-                //do something
-            }
-            else if (dialogResult == DialogResult.No)
-            {
-                if (formLogin.getId().ToString().Trim() == "")
-                {
-                    appControllers.insertDataSql($"delete from Person where id = '{formLogin.getId().ToString().Trim()}'; delete from Job where id = '{formLogin.getId().ToString().Trim()}'; delete from Education where id = '{formLogin.getId().ToString().Trim()}'; delete from MoreDetails where id = '{formLogin.getId().ToString().Trim()}'");
-                }
-            }
             Application.Exit();
         }
         private void childFormPanel_MouseDown(object sender, MouseEventArgs e)
@@ -143,23 +128,6 @@
 
         private void printButton_Click(object sender, EventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            save.OverwritePrompt = false;
-            save.CreatePrompt = true;
-            save.InitialDirectory = @"D:\";
-            save.Title = "Save PDF File";
-            save.DefaultExt = "pdf";
-            save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
-            AppControllers appControllers = new AppControllers();
-            ResumeLayouts resumeLayouts = new ResumeLayouts();
-            try
-            {
-                resumeLayouts.ClassicLayout(save.FileName, appControllers.fillPdfFields().Item2.ToString(), appControllers.fillPdfFields().Item3.ToString(), appControllers.fillPdfFields().Item4.ToString(), appControllers.fillPdfFields().Item5.ToString(), appControllers.fillPdfFields().Item6.ToString(), appControllers.fillPdfFields().Item7.ToString(), appControllers.fillPdfFields().Item8.ToString(), appControllers.fillPdfFields().Item9.ToString(), appControllers.fillPdfFields().Item10.ToString());
-            }
-            catch (System.NullReferenceException ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
         }
     }
 }

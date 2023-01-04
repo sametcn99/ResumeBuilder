@@ -126,6 +126,7 @@
             this.phoneNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
             this.phoneNumberTextbox.MaxLength = 12;
             this.phoneNumberTextbox.Name = "phoneNumberTextbox";
+            this.phoneNumberTextbox.ShortcutsEnabled = false;
             this.phoneNumberTextbox.Size = new System.Drawing.Size(244, 23);
             this.phoneNumberTextbox.TabIndex = 5;
             this.phoneNumberTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextbox_KeyPress);

@@ -36,7 +36,7 @@
             this.loginPanelResumeVersionLabel = new System.Windows.Forms.Label();
             this.loginPanelNameLabel = new System.Windows.Forms.Label();
             this.resumeVersionCombobox = new System.Windows.Forms.ComboBox();
-            this.userLoginCombobox = new System.Windows.Forms.ComboBox();
+            this.namesCombobox = new System.Windows.Forms.ComboBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.navigationPanel.SuspendLayout();
@@ -76,7 +76,7 @@
             this.loginPanel.Controls.Add(this.loginPanelResumeVersionLabel);
             this.loginPanel.Controls.Add(this.loginPanelNameLabel);
             this.loginPanel.Controls.Add(this.resumeVersionCombobox);
-            this.loginPanel.Controls.Add(this.userLoginCombobox);
+            this.loginPanel.Controls.Add(this.namesCombobox);
             this.loginPanel.Controls.Add(this.loginButton);
             this.loginPanel.Location = new System.Drawing.Point(121, 81);
             this.loginPanel.Name = "loginPanel";
@@ -129,16 +129,16 @@
             this.resumeVersionCombobox.Size = new System.Drawing.Size(276, 23);
             this.resumeVersionCombobox.TabIndex = 4;
             // 
-            // userLoginCombobox
+            // namesCombobox
             // 
-            this.userLoginCombobox.ForeColor = System.Drawing.Color.Black;
-            this.userLoginCombobox.FormattingEnabled = true;
-            this.userLoginCombobox.Location = new System.Drawing.Point(213, 65);
-            this.userLoginCombobox.Margin = new System.Windows.Forms.Padding(10);
-            this.userLoginCombobox.Name = "userLoginCombobox";
-            this.userLoginCombobox.Size = new System.Drawing.Size(276, 23);
-            this.userLoginCombobox.TabIndex = 3;
-            this.userLoginCombobox.SelectedValueChanged += new System.EventHandler(this.userLoginCombobox_SelectedValueChanged_1);
+            this.namesCombobox.ForeColor = System.Drawing.Color.Black;
+            this.namesCombobox.FormattingEnabled = true;
+            this.namesCombobox.Location = new System.Drawing.Point(213, 65);
+            this.namesCombobox.Margin = new System.Windows.Forms.Padding(10);
+            this.namesCombobox.Name = "namesCombobox";
+            this.namesCombobox.Size = new System.Drawing.Size(276, 23);
+            this.namesCombobox.TabIndex = 3;
+            this.namesCombobox.SelectedIndexChanged += new System.EventHandler(this.namesCombobox_SelectedIndexChanged);
             // 
             // loginButton
             // 
@@ -183,7 +183,7 @@
         private Label loginPanelResumeVersionLabel;
         private Label loginPanelNameLabel;
         public ComboBox resumeVersionCombobox;
-        private ComboBox userLoginCombobox;
+        private ComboBox namesCombobox;
         public Button loginButton;
         private ToolTip toolTip1;
     }

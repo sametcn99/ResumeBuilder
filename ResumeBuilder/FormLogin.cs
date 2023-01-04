@@ -1,18 +1,11 @@
-﻿using System.Data;
-using System.Data.SqlClient;
-using System.Text;
-
-
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class FormLogin : Form
     {
         AppControllers appControllers = new AppControllers();
-        public string connetionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
-        public string cmdstring = "";
-        SqlConnection cnn;
-        SqlDataReader reader1;
-        public static string id = "";
+        SqlControllers sqlControllers = new SqlControllers();
+        public static string description = "";
+        public static int id = 0;
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]
@@ -24,65 +17,29 @@ namespace ResumeBuilder
         public FormLogin()
         {
             InitializeComponent();
-            appControllers.getDataFromDB();
-            resumeVersionCombobox.Items.Clear();
-            var i = 0;
-            while (i < appControllers.ds.Tables[0].Rows.Count)
+            foreach (var item in sqlControllers.GetNames())
             {
-                userLoginCombobox.Items.Add(appControllers.ds.Tables[0].Rows[i].Field<string>("Name").Trim().ToLower());
-                i++;
-            }
-            HashSet<string> items = new HashSet<string>();
-            items.UnionWith(userLoginCombobox.Items.OfType<string>());
-            userLoginCombobox.Items.Clear();
-            foreach (string item in items)
-            {
-                userLoginCombobox.Items.Add(item);
+                namesCombobox.Items.Add(item.Trim());
             }
         }
-        public string getId()
-        {
-            return id;
-        }
-        private void userLoginCombobox_SelectedValueChanged_1(object sender, EventArgs e)
-        {
-            resumeVersionCombobox.Items.Clear();
-            cnn = new SqlConnection(connetionString);
-            SqlCommand cmd = new SqlCommand($"select description from Person where Name = '{userLoginCombobox.SelectedItem.ToString().Trim()}'", cnn);
-            cnn.Open();
-            reader1 = cmd.ExecuteReader();
-            int i = 0;
-            while (reader1.Read())
-            {
-                resumeVersionCombobox.Items.Add(reader1.GetString("description"));
-            }
-            cnn.Close();
-        }
+
+        public string getDescription() { return description; }
+        public int getID() { return id; }
 
         private void loginButton_Click(object sender, EventArgs e)
         {
-            if (resumeVersionCombobox.Items.Count > 0)
+            if (resumeVersionCombobox.SelectedItem is not null)
             {
-                cnn = new SqlConnection(connetionString);
-                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'", cnn);
-                cnn.Open();
-                reader1 = cmd.ExecuteReader();
-                while (reader1.Read())
-                {
-                    id = reader1.GetValue("id").ToString();
-                }
+                description = resumeVersionCombobox.SelectedItem.ToString().Trim();
+                FormHome formHome = new FormHome();
                 formHome.Show();
-                formHome.nameLbl.Visible = true;
-                formHome.helloLbl.Visible = true;
-                formHome.nameLbl.Text = appControllers.ds.Tables[0].Rows[0].Field<string>("Name").Trim();
                 this.Hide();
             }
             else
             {
-                MessageBox.Show("Select resume to continue!");
+                MessageBox.Show("Select Resume to Continue!");
             }
         }
-
         private void navigationPanel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -91,16 +48,21 @@ namespace ResumeBuilder
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
             }
         }
-
         private void closeAppButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void createNewResumeButton_Click(object sender, EventArgs e)
         {
             formHome.Show();
             this.Hide();
+        }
+        private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            foreach (var item in sqlControllers.GetDescriptions(namesCombobox.SelectedItem.ToString().Trim()))
+            {
+                resumeVersionCombobox.Items.Add(item.Trim());
+            }
         }
     }
 }

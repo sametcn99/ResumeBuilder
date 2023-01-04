@@ -69,7 +69,7 @@ namespace ResumeBuilder
                     }
                 }
             }
-            catch (System.IndexOutOfRangeException ex) { }
+            catch (System.IndexOutOfRangeException) { }
         }
         //*****SQL CONTROLLERS*****
         private void insertDataSql(string cmdstring)
@@ -365,7 +365,7 @@ namespace ResumeBuilder
                     MessageBox.Show(json);
                 }
             }
-            catch (System.IndexOutOfRangeException ex)
+            catch (System.IndexOutOfRangeException)
             {
                 MessageBox.Show($"Dataset is null.");
             }
