@@ -28,25 +28,17 @@
         {
             try
             {
-                //int idCount = 0;
                 FormLogin formLogin = new FormLogin();
                 AppControllers appControllers = new AppControllers();
                 appControllers.getDataFromDB();
                 int idCount = appControllers.ds.Tables[0].Rows.Count;
                 idCount++;
-                //if (appControllers.personalDataSet.Tables.Count > 0)
-                //{
-                //    idCount = appControllers.personalDataSet.Tables[0].Rows.Count;
-                //    idCount++;
-                //}
-                //MessageBox.Show("asf " + formLogin.getId().ToString().Trim());
                 if (formLogin.getId().ToString().Trim() != "")
                 {
                     appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{formLogin.getId().ToString().Trim()}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
                 }
                 else
                 {
-
                     appControllers.insertDataSql($"insert into Job (id, JobTitle, JobDetail, JobStart, JobEnd) values('{idCount}', '{jobTitleTextbox.Text}', '{jobDetailTextbox.Text}', '{jobStartDateTextbox.Text}', '{jobEndDateTextbox.Text}')");
                 }
                 ClearTextBoxes();

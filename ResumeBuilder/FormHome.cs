@@ -43,7 +43,7 @@
                     currentButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                     currentButton.ForeColor = Color.White;
                     homeButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-                    homeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+                    homeButton.ForeColor = System.Drawing.Color.FromArgb(238, 238, 238);
                 }
             }
         }
@@ -150,20 +150,14 @@
             save.Title = "Save PDF File";
             save.DefaultExt = "pdf";
             save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
-            //if (save.ShowDialog() == DialogResult.OK)
-            //{
-            //    MessageBox.Show("Saved!");
-            //}
             AppControllers appControllers = new AppControllers();
             ResumeLayouts resumeLayouts = new ResumeLayouts();
             try
             {
-
                 resumeLayouts.ClassicLayout(save.FileName, appControllers.fillPdfFields().Item2.ToString(), appControllers.fillPdfFields().Item3.ToString(), appControllers.fillPdfFields().Item4.ToString(), appControllers.fillPdfFields().Item5.ToString(), appControllers.fillPdfFields().Item6.ToString(), appControllers.fillPdfFields().Item7.ToString(), appControllers.fillPdfFields().Item8.ToString(), appControllers.fillPdfFields().Item9.ToString(), appControllers.fillPdfFields().Item10.ToString());
             }
             catch (System.NullReferenceException ex)
             {
-
                 MessageBox.Show(ex.Message);
             }
         }

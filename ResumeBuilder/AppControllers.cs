@@ -1,5 +1,4 @@
-﻿using Microsoft.IdentityModel.Tokens;
-using Microsoft.Win32;
+﻿using Microsoft.Win32;
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
@@ -22,7 +21,6 @@ namespace ResumeBuilder
         public (string, string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
             getPersonalDataFromDb();
-
             try
             {
                 name = personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();
@@ -86,13 +84,11 @@ namespace ResumeBuilder
             catch (NullReferenceException ex)
             {
                 MessageBox.Show(ex.Message);
-                //throw;
             }
             catch (System.IndexOutOfRangeException ex)
             {
                 MessageBox.Show("data is empty." + ex.Message);
             }
-            //return name;
             return (path, name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills);
         }
 

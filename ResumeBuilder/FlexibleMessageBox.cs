@@ -287,7 +287,7 @@ namespace ResumeBuilder
                 // 
                 // button1
                 // 
-                this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button1.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button1.AutoSize = true;
                 this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button1.Location = new System.Drawing.Point(11, 67);
@@ -301,13 +301,13 @@ namespace ResumeBuilder
                 // 
                 // richTextBoxMessage
                 // 
-                this.richTextBoxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                this.richTextBoxMessage.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
+                | System.Windows.Forms.AnchorStyles.Right);
                 this.richTextBoxMessage.BackColor = System.Drawing.Color.White;
                 this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.richTextBoxMessage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FlexibleMessageBoxFormBindingSource, "MessageText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
                 this.richTextBoxMessage.Location = new System.Drawing.Point(50, 26);
                 this.richTextBoxMessage.Margin = new System.Windows.Forms.Padding(0);
                 this.richTextBoxMessage.Name = "richTextBoxMessage";
@@ -321,9 +321,9 @@ namespace ResumeBuilder
                 // 
                 // panel1
                 // 
-                this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                this.panel1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
+                | System.Windows.Forms.AnchorStyles.Right);
                 this.panel1.BackColor = System.Drawing.Color.White;
                 this.panel1.Controls.Add(this.pictureBoxForIcon);
                 this.panel1.Controls.Add(this.richTextBoxMessage);
@@ -343,7 +343,7 @@ namespace ResumeBuilder
                 // 
                 // button2
                 // 
-                this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button2.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button2.Location = new System.Drawing.Point(92, 67);
                 this.button2.MinimumSize = new System.Drawing.Size(0, 24);
@@ -356,7 +356,7 @@ namespace ResumeBuilder
                 // 
                 // button3
                 // 
-                this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button3.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button3.AutoSize = true;
                 this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button3.Location = new System.Drawing.Point(173, 67);

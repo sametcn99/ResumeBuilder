@@ -19,7 +19,6 @@ namespace ResumeBuilder
         public static extern bool ReleaseCapture();
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-
         FormHome formHome = new FormHome();
 
         public FormLogin()

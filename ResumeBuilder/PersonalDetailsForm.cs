@@ -5,20 +5,16 @@ namespace ResumeBuilder
     public partial class PersonalDetailsForm : Form
     {
         AppControllers appControllers = new AppControllers();
-
-        FormHome formHome = new FormHome();
         public PersonalDetailsForm()
         {
             InitializeComponent();
             appControllers.getPersonalDataFromDb();
             fillTextboxes();
-
         }
 
         private void fillTextboxes()
         {
             FormLogin formLogin = new FormLogin();
-
             if (formLogin.getId().ToString().Trim() != "")
             {
                 nameTextbox.Text = appControllers.personalDataSet.Tables[0].Rows[0].Field<string>("Name").Trim();

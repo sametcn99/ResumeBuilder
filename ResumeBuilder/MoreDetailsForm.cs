@@ -21,7 +21,6 @@
                     else
                         func(control.Controls);
             };
-
             func(Controls);
         }
 
