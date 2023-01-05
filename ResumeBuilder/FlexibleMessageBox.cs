@@ -287,6 +287,7 @@ namespace ResumeBuilder
                 // 
                 // button1
                 // 
+
                 this.button1.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button1.AutoSize = true;
                 this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
@@ -304,7 +305,8 @@ namespace ResumeBuilder
                 this.richTextBoxMessage.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right);
-                this.richTextBoxMessage.BackColor = System.Drawing.Color.White;
+                this.richTextBoxMessage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+                this.richTextBoxMessage.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
                 this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.richTextBoxMessage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FlexibleMessageBoxFormBindingSource, "MessageText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
                 this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
@@ -324,7 +326,7 @@ namespace ResumeBuilder
                 this.panel1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
                 | System.Windows.Forms.AnchorStyles.Right);
-                this.panel1.BackColor = System.Drawing.Color.White;
+                this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
                 this.panel1.Controls.Add(this.pictureBoxForIcon);
                 this.panel1.Controls.Add(this.richTextBoxMessage);
                 this.panel1.Location = new System.Drawing.Point(-3, -4);

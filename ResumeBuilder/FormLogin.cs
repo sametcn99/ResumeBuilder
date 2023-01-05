@@ -4,8 +4,10 @@
     {
         AppControllers appControllers = new AppControllers();
         SqlControllers sqlControllers = new SqlControllers();
+
         public static string description = "";
         public static int id = 0;
+
         [System.Runtime.InteropServices.DllImport("user32.dll")]
         public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
         [System.Runtime.InteropServices.DllImport("user32.dll")]

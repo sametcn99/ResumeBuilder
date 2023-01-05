@@ -175,8 +175,6 @@ namespace ResumeBuilder
             FormLogin formLogin = new FormLogin();
             if (formLogin.getDescription() != "")
             {
-                //MessageBox.Show($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'");
-
                 SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'", connectionString);
                 dataAdapter.Fill(dataSet);
             }
@@ -194,7 +192,6 @@ namespace ResumeBuilder
             SqlExecuter(defaultEmptyValue);
             name = GetPersonalTables().Tables[0].Rows[0].Field<string>("Name").Trim();
             personDetails = GetPersonalTables().Tables[0].Rows[0].Field<string>("Address").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Email").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Website").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Summary").Trim();
-            //progressBarForm.progressBar1.Value = 10;
             jobs = "";
             int i = 0;
             while (i < GetPersonalTables().Tables[1].Rows.Count)
@@ -205,7 +202,6 @@ namespace ResumeBuilder
                 jobs = jobs + "\n" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobDetail").Trim() + "\n";
                 i++;
             }
-            //progressBarForm.progressBar1.Value = 20;
             educations = "";
             i = 0;
             while (i < GetPersonalTables().Tables[2].Rows.Count)
@@ -215,7 +211,6 @@ namespace ResumeBuilder
                 educations = educations + "\n" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationDetail").Trim() + "\n";
                 i++;
             }
-            //progressBarForm.progressBar1.Value = 30;
             i = 0;
             certifications = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
@@ -227,7 +222,6 @@ namespace ResumeBuilder
                 }
 
             }
-            //progressBarForm.progressBar1.Value = 40;
             i = 0;
             personalProjects = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
@@ -235,7 +229,6 @@ namespace ResumeBuilder
                 personalProjects = personalProjects + GetPersonalTables().Tables[3].Rows[i].Field<string>("PersonalProjects").Trim() + "\n";
                 i++;
             }
-            //progressBarForm.progressBar1.Value = 50;
             i = 0;
             languages = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
@@ -243,7 +236,6 @@ namespace ResumeBuilder
                 languages = languages + GetPersonalTables().Tables[3].Rows[i].Field<string>("Languages").Trim() + ",";
                 i++;
             }
-            //progressBarForm.progressBar1.Value = 60;
             i = 0;
             interests = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
@@ -251,7 +243,6 @@ namespace ResumeBuilder
                 interests = interests + GetPersonalTables().Tables[3].Rows[i].Field<string>("Interests").Trim() + ", ";
                 i++;
             }
-            //progressBarForm.progressBar1.Value = 70;
             i = 0;
             skills = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
@@ -272,6 +263,24 @@ namespace ResumeBuilder
                 formLogin.getDescription();
                 cnn = new SqlConnection(connectionString);
                 SqlCommand cmd = new SqlCommand($"select id from Person where description = '{formLogin.getDescription().Trim()}'", cnn);
+                cnn.Open();
+                id2 = (int)cmd.ExecuteScalar();
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please fill Person Details First!");
+            }
+            return id2;
+        }
+        public int GetIdFromDescriptionForRemovePerson(string description)
+        {
+            try
+            {
+                FormLogin formLogin = new FormLogin();
+                formLogin.getDescription();
+                cnn = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{description}'", cnn);
                 cnn.Open();
                 id2 = (int)cmd.ExecuteScalar();
                 cnn.Close();
