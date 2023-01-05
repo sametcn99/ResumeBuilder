@@ -26,6 +26,11 @@
         }
 
         public string getDescription() { return description; }
+        public string setDescription(string value)
+        {
+            description = value;
+            return description;
+        }
         public int getID() { return id; }
 
         private void loginButton_Click(object sender, EventArgs e)

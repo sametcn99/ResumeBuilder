@@ -7,9 +7,11 @@ namespace ResumeBuilder
     public partial class JobExperienceForm : Form
     {
         SqlControllers sqlControllers = new SqlControllers();
+        public static string JobTitle;
         public JobExperienceForm()
         {
             InitializeComponent();
+            dataGridView1.Rows.Clear();
             dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[1];
         }
 
@@ -38,8 +40,15 @@ namespace ResumeBuilder
 
         private void removeButton_Click(object sender, EventArgs e)
         {
-
+            PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
+            sqlControllers.AddNewDataOrEdit($"delete from Job where id = '{personalDetailsForm.getID().ToString().Trim()}' and JobTitle = '{JobTitle}'", $"delete from Job where id = '{sqlControllers.GetIdFromDescription().ToString().Trim()}' and JobTitle = '{JobTitle}'");
+            dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[1];
+            ClearTextBoxes();
         }
 
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            JobTitle = dataGridView1.Rows[e.RowIndex].Cells["JobTitle"].Value.ToString().Trim();
+        }
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.educationTextCounterLabel = new System.Windows.Forms.Label();
             this.educationDetailLabel = new System.Windows.Forms.Label();
             this.educationDetailTextbox = new System.Windows.Forms.TextBox();
@@ -167,6 +168,7 @@
             this.removeButton.TabIndex = 62;
             this.removeButton.Text = "Remove Education";
             this.removeButton.UseVisualStyleBackColor = false;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // dataGridView1
             // 
@@ -176,13 +178,13 @@
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
             this.dataGridView1.Location = new System.Drawing.Point(388, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(450, 500);
-            this.dataGridView1.TabIndex = 75;
+            this.dataGridView1.TabIndex = 73;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // EducationsForm
             // 

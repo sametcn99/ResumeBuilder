@@ -21,6 +21,8 @@
         private void importJsonDataButton_Click(object sender, EventArgs e)
         {
             sqlControllers.ImportDatabase();
+            MessageBox.Show("Imported!\nApplication restarted.");
+            Application.Restart();
         }
         private void showJsonDataButton_Click(object sender, EventArgs e)
         {
@@ -29,6 +31,8 @@
         private void clearJsonDataButton_Click(object sender, EventArgs e)
         {
             sqlControllers.ClearDatabase();
+            MessageBox.Show("Cleared!\nApplication restarted.");
+            Application.Restart();
         }
         private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {

@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
+using static QuestPDF.Helpers.Colors;
 
 namespace ResumeBuilder
 {
@@ -11,9 +12,10 @@ namespace ResumeBuilder
         SqlConnection cnn;
         SqlDataReader reader1;
         public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills;
-        public string id;
+        public static int id;
         public int id2 = 0;
         string cmdstring = "";
+
         public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
@@ -57,6 +59,11 @@ namespace ResumeBuilder
             UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
             UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
             """;
+        public int getRandomID()
+        {
+            return id;
+        }
+
         public void SqlExecuter(string cmdstring)
         {
             try
@@ -77,8 +84,20 @@ namespace ResumeBuilder
                 FormLogin formLogin = new FormLogin();
                 if (formLogin.getDescription().ToString().Trim() == "")
                 {
+                    string descp = "";
+                    PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
                     cnn = new SqlConnection(connectionString);
-                    SqlCommand cmd = new SqlCommand(addCmd, cnn);
+                    SqlCommand cmd = new SqlCommand($"select description from Person where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
+                    cnn.Open();
+                    reader1 = cmd.ExecuteReader();
+                    while (reader1.Read())
+                    {
+                        descp = (reader1.GetString("description").ToString().Trim());
+                    }
+                    cnn.Close();
+                    formLogin.setDescription(descp);
+                    cnn = new SqlConnection(connectionString);
+                    cmd = new SqlCommand(addCmd, cnn);
                     cnn.Open();
                     cmd.ExecuteNonQuery();
                     cnn.Close();
@@ -92,6 +111,7 @@ namespace ResumeBuilder
                     cnn.Close();
                 }
             }
+            catch (System.Data.SqlClient.SqlException) { }
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
             catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
         }
@@ -299,7 +319,7 @@ namespace ResumeBuilder
             }
             catch (Exception)
             {
-                MessageBox.Show("Please fill Person Details First!");
+                //MessageBox.Show("Please fill Person Details First!");
             }
             return id2;
         }

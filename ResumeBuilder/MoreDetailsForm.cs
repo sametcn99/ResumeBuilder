@@ -8,7 +8,9 @@
         public MoreDetailsForm()
         {
             InitializeComponent();
+            dataGridView1.Rows.Clear();
             dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[3];
+            dataGridView1.Refresh();
         }
 
         private void ClearTextBoxes()
