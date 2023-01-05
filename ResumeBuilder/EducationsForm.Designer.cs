@@ -38,8 +38,8 @@
             this.educationStartDateTextbox = new System.Windows.Forms.TextBox();
             this.educationEndDateTextbox = new System.Windows.Forms.TextBox();
             this.addEducationButton = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.removeButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -156,21 +156,6 @@
             this.addEducationButton.UseVisualStyleBackColor = false;
             this.addEducationButton.Click += new System.EventHandler(this.addEduBtn_Click);
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(388, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 500);
-            this.dataGridView1.TabIndex = 60;
-            // 
             // removeButton
             // 
             this.removeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -183,14 +168,30 @@
             this.removeButton.Text = "Remove Education";
             this.removeButton.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
+            this.dataGridView1.DefaultCellStyle.ForeColor = Color.Black;
+            this.dataGridView1.Location = new System.Drawing.Point(388, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(450, 500);
+            this.dataGridView1.TabIndex = 75;
+            // 
             // EducationsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
-            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.educationTextCounterLabel);
             this.Controls.Add(this.educationDetailLabel);
             this.Controls.Add(this.educationDetailTextbox);
@@ -223,7 +224,7 @@
         private TextBox educationStartDateTextbox;
         private TextBox educationEndDateTextbox;
         private Button addEducationButton;
-        private DataGridView dataGridView1;
         private Button removeButton;
+        private DataGridView dataGridView1;
     }
 }

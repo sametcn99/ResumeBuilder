@@ -186,7 +186,6 @@ namespace ResumeBuilder
             }
             return dataSet;
         }
-
         public (string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
             SqlExecuter(defaultEmptyValue);
@@ -254,7 +253,6 @@ namespace ResumeBuilder
 
             return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills);
         }
-
         public int GetIdFromDescription()
         {
             try

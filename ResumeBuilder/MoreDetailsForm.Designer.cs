@@ -43,8 +43,8 @@
             this.interestTextbox = new System.Windows.Forms.TextBox();
             this.addPersonalProjectButton = new System.Windows.Forms.Button();
             this.interestsLabel = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.removeButton = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -211,21 +211,6 @@
             this.interestsLabel.TabIndex = 63;
             this.interestsLabel.Text = "Interests";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(388, 12);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 500);
-            this.dataGridView1.TabIndex = 72;
-            // 
             // removeButton
             // 
             this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
@@ -239,14 +224,29 @@
             this.removeButton.Text = "Remove";
             this.removeButton.UseVisualStyleBackColor = false;
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
+            this.dataGridView1.Location = new System.Drawing.Point(388, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 25;
+            this.dataGridView1.Size = new System.Drawing.Size(450, 500);
+            this.dataGridView1.TabIndex = 74;
+            // 
             // MoreDetailsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
-            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.addCertificationButton);
             this.Controls.Add(this.certificationTextbox);
             this.Controls.Add(this.certificationsLabel);
@@ -287,7 +287,7 @@
         private TextBox interestTextbox;
         private Button addPersonalProjectButton;
         private Label interestsLabel;
-        private DataGridView dataGridView1;
         private Button removeButton;
+        private DataGridView dataGridView1;
     }
 }

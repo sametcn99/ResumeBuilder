@@ -10,7 +10,7 @@ namespace ResumeBuilder
         public EducationsForm()
         {
             InitializeComponent();
-
+            dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[2];
         }
 
         private void ClearTextBoxes()
@@ -33,6 +33,7 @@ namespace ResumeBuilder
             PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
             sqlControllers.AddNewDataOrEdit($"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{personalDetailsForm.getID().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')", $"insert into Education (id, EducationTitle, EducationDetail, EducationStart, EducationEnd) values('{sqlControllers.GetIdFromDescription().ToString().Trim()}', '{educationTitleTextbox.Text}','{educationDetailTextbox.Text}', '{educationStartDateTextbox.Text}', '{educationEndDateTextbox.Text}')");
             ClearTextBoxes();
+            dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[2];
         }
     }
 }

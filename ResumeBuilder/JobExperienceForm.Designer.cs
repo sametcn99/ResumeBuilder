@@ -171,6 +171,7 @@
             this.removeButton.TabIndex = 60;
             this.removeButton.Text = "Remove Job";
             this.removeButton.UseVisualStyleBackColor = false;
+            this.removeButton.Click += new System.EventHandler(this.removeButton_Click);
             // 
             // dataGridView1
             // 
@@ -185,7 +186,7 @@
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(450, 500);
-            this.dataGridView1.TabIndex = 59;
+            this.dataGridView1.TabIndex = 73;
             // 
             // JobExperienceForm
             // 
@@ -193,8 +194,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
-            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.jobDetailTextCounterLabel);
             this.Controls.Add(this.jobTitleLabel);
             this.Controls.Add(this.jobTitleTextbox);
