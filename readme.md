@@ -3,7 +3,7 @@ this app generates your CV as PDF file <br>
 <h1>Features</h1>
 <ul>
   <li>Save multiple Resumes for one person and edit anytime.</li>
-  <li>Import and Export your personal resume data</li>
+  <li>Import and Export your all created resumes</li>
   <li>Print as Pdf file</li>
 </ul>
 
