@@ -43,8 +43,12 @@
             this.interestTextbox = new System.Windows.Forms.TextBox();
             this.addPersonalProjectButton = new System.Windows.Forms.Button();
             this.interestsLabel = new System.Windows.Forms.Label();
-            this.removeButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.skillRemoveButton = new System.Windows.Forms.Button();
+            this.certificationsRemoveButton = new System.Windows.Forms.Button();
+            this.languagesRemoveButton = new System.Windows.Forms.Button();
+            this.personalProjectRemoveButton = new System.Windows.Forms.Button();
+            this.interestsRemoveButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,11 +57,11 @@
             this.addCertificationButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addCertificationButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addCertificationButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addCertificationButton.Location = new System.Drawing.Point(241, 102);
+            this.addCertificationButton.Location = new System.Drawing.Point(283, 102);
             this.addCertificationButton.Name = "addCertificationButton";
-            this.addCertificationButton.Size = new System.Drawing.Size(132, 23);
+            this.addCertificationButton.Size = new System.Drawing.Size(90, 23);
             this.addCertificationButton.TabIndex = 69;
-            this.addCertificationButton.Text = "Add Certification";
+            this.addCertificationButton.Text = "Add/Update";
             this.addCertificationButton.UseVisualStyleBackColor = false;
             this.addCertificationButton.Click += new System.EventHandler(this.addCertificationButton_Click);
             // 
@@ -96,11 +100,11 @@
             this.addSkillButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addSkillButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addSkillButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addSkillButton.Location = new System.Drawing.Point(241, 41);
+            this.addSkillButton.Location = new System.Drawing.Point(283, 41);
             this.addSkillButton.Name = "addSkillButton";
-            this.addSkillButton.Size = new System.Drawing.Size(132, 23);
+            this.addSkillButton.Size = new System.Drawing.Size(90, 23);
             this.addSkillButton.TabIndex = 55;
-            this.addSkillButton.Text = "Add Skill";
+            this.addSkillButton.Text = "Add/Update";
             this.addSkillButton.UseVisualStyleBackColor = false;
             this.addSkillButton.Click += new System.EventHandler(this.addSkillButton_Click);
             // 
@@ -138,11 +142,11 @@
             // 
             this.personalProjectLabel.AutoSize = true;
             this.personalProjectLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.personalProjectLabel.Location = new System.Drawing.Point(6, 192);
+            this.personalProjectLabel.Location = new System.Drawing.Point(31, 192);
             this.personalProjectLabel.Name = "personalProjectLabel";
-            this.personalProjectLabel.Size = new System.Drawing.Size(117, 15);
+            this.personalProjectLabel.Size = new System.Drawing.Size(92, 15);
             this.personalProjectLabel.TabIndex = 59;
-            this.personalProjectLabel.Text = "Personel Project Title";
+            this.personalProjectLabel.Text = "Personel Project";
             // 
             // personalProjectTitleTextbox
             // 
@@ -158,11 +162,11 @@
             this.addInterestButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addInterestButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addInterestButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addInterestButton.Location = new System.Drawing.Point(241, 279);
+            this.addInterestButton.Location = new System.Drawing.Point(283, 279);
             this.addInterestButton.Name = "addInterestButton";
-            this.addInterestButton.Size = new System.Drawing.Size(132, 23);
+            this.addInterestButton.Size = new System.Drawing.Size(90, 23);
             this.addInterestButton.TabIndex = 65;
-            this.addInterestButton.Text = "Add Interest";
+            this.addInterestButton.Text = "Add/Update";
             this.addInterestButton.UseVisualStyleBackColor = false;
             this.addInterestButton.Click += new System.EventHandler(this.addInterestButton_Click);
             // 
@@ -171,11 +175,11 @@
             this.addLanguageButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addLanguageButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addLanguageButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addLanguageButton.Location = new System.Drawing.Point(241, 163);
+            this.addLanguageButton.Location = new System.Drawing.Point(283, 163);
             this.addLanguageButton.Name = "addLanguageButton";
-            this.addLanguageButton.Size = new System.Drawing.Size(132, 23);
+            this.addLanguageButton.Size = new System.Drawing.Size(90, 23);
             this.addLanguageButton.TabIndex = 61;
-            this.addLanguageButton.Text = "Add Language";
+            this.addLanguageButton.Text = "Add/Update";
             this.addLanguageButton.UseVisualStyleBackColor = false;
             this.addLanguageButton.Click += new System.EventHandler(this.addLanguageButton_Click);
             // 
@@ -193,11 +197,11 @@
             this.addPersonalProjectButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.addPersonalProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.addPersonalProjectButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addPersonalProjectButton.Location = new System.Drawing.Point(241, 221);
+            this.addPersonalProjectButton.Location = new System.Drawing.Point(283, 221);
             this.addPersonalProjectButton.Name = "addPersonalProjectButton";
-            this.addPersonalProjectButton.Size = new System.Drawing.Size(132, 23);
+            this.addPersonalProjectButton.Size = new System.Drawing.Size(90, 23);
             this.addPersonalProjectButton.TabIndex = 62;
-            this.addPersonalProjectButton.Text = "Add Personal Project";
+            this.addPersonalProjectButton.Text = "Add/Update";
             this.addPersonalProjectButton.UseVisualStyleBackColor = false;
             this.addPersonalProjectButton.Click += new System.EventHandler(this.addPersonalProjectButton_Click);
             // 
@@ -210,19 +214,6 @@
             this.interestsLabel.Size = new System.Drawing.Size(51, 15);
             this.interestsLabel.TabIndex = 63;
             this.interestsLabel.Text = "Interests";
-            // 
-            // removeButton
-            // 
-            this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.removeButton.FlatAppearance.BorderSize = 0;
-            this.removeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.removeButton.Location = new System.Drawing.Point(253, 442);
-            this.removeButton.Margin = new System.Windows.Forms.Padding(5);
-            this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(120, 70);
-            this.removeButton.TabIndex = 73;
-            this.removeButton.Text = "Remove";
-            this.removeButton.UseVisualStyleBackColor = false;
             // 
             // dataGridView1
             // 
@@ -238,6 +229,72 @@
             this.dataGridView1.RowTemplate.Height = 25;
             this.dataGridView1.Size = new System.Drawing.Size(450, 500);
             this.dataGridView1.TabIndex = 74;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // skillRemoveButton
+            // 
+            this.skillRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.skillRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.skillRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.skillRemoveButton.Location = new System.Drawing.Point(129, 41);
+            this.skillRemoveButton.Name = "skillRemoveButton";
+            this.skillRemoveButton.Size = new System.Drawing.Size(90, 23);
+            this.skillRemoveButton.TabIndex = 75;
+            this.skillRemoveButton.Text = "Remove";
+            this.skillRemoveButton.UseVisualStyleBackColor = false;
+            this.skillRemoveButton.Click += new System.EventHandler(this.skillRemoveButton_Click);
+            // 
+            // certificationsRemoveButton
+            // 
+            this.certificationsRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.certificationsRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.certificationsRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.certificationsRemoveButton.Location = new System.Drawing.Point(129, 105);
+            this.certificationsRemoveButton.Name = "certificationsRemoveButton";
+            this.certificationsRemoveButton.Size = new System.Drawing.Size(90, 23);
+            this.certificationsRemoveButton.TabIndex = 76;
+            this.certificationsRemoveButton.Text = "Remove";
+            this.certificationsRemoveButton.UseVisualStyleBackColor = false;
+            this.certificationsRemoveButton.Click += new System.EventHandler(this.certificationsRemoveButton_Click);
+            // 
+            // languagesRemoveButton
+            // 
+            this.languagesRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.languagesRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.languagesRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.languagesRemoveButton.Location = new System.Drawing.Point(129, 163);
+            this.languagesRemoveButton.Name = "languagesRemoveButton";
+            this.languagesRemoveButton.Size = new System.Drawing.Size(90, 23);
+            this.languagesRemoveButton.TabIndex = 77;
+            this.languagesRemoveButton.Text = "Remove";
+            this.languagesRemoveButton.UseVisualStyleBackColor = false;
+            this.languagesRemoveButton.Click += new System.EventHandler(this.languagesRemoveButton_Click);
+            // 
+            // personalProjectRemoveButton
+            // 
+            this.personalProjectRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.personalProjectRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.personalProjectRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.personalProjectRemoveButton.Location = new System.Drawing.Point(129, 221);
+            this.personalProjectRemoveButton.Name = "personalProjectRemoveButton";
+            this.personalProjectRemoveButton.Size = new System.Drawing.Size(90, 23);
+            this.personalProjectRemoveButton.TabIndex = 78;
+            this.personalProjectRemoveButton.Text = "Remove";
+            this.personalProjectRemoveButton.UseVisualStyleBackColor = false;
+            this.personalProjectRemoveButton.Click += new System.EventHandler(this.personalProjectRemoveButton_Click);
+            // 
+            // interestsRemoveButton
+            // 
+            this.interestsRemoveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            this.interestsRemoveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.interestsRemoveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.interestsRemoveButton.Location = new System.Drawing.Point(129, 279);
+            this.interestsRemoveButton.Name = "interestsRemoveButton";
+            this.interestsRemoveButton.Size = new System.Drawing.Size(90, 23);
+            this.interestsRemoveButton.TabIndex = 79;
+            this.interestsRemoveButton.Text = "Remove";
+            this.interestsRemoveButton.UseVisualStyleBackColor = false;
+            this.interestsRemoveButton.Click += new System.EventHandler(this.interestsRemoveButton_Click);
             // 
             // MoreDetailsForm
             // 
@@ -245,8 +302,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.interestsRemoveButton);
+            this.Controls.Add(this.personalProjectRemoveButton);
+            this.Controls.Add(this.languagesRemoveButton);
+            this.Controls.Add(this.certificationsRemoveButton);
+            this.Controls.Add(this.skillRemoveButton);
             this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.removeButton);
             this.Controls.Add(this.addCertificationButton);
             this.Controls.Add(this.certificationTextbox);
             this.Controls.Add(this.certificationsLabel);
@@ -287,7 +348,11 @@
         private TextBox interestTextbox;
         private Button addPersonalProjectButton;
         private Label interestsLabel;
-        private Button removeButton;
         private DataGridView dataGridView1;
+        private Button skillRemoveButton;
+        private Button certificationsRemoveButton;
+        private Button languagesRemoveButton;
+        private Button personalProjectRemoveButton;
+        private Button interestsRemoveButton;
     }
 }

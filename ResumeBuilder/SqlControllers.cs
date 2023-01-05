@@ -36,6 +36,27 @@ namespace ResumeBuilder
             UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
             UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
             """;
+        public string defaultNullValue = """
+            UPDATE MoreDetails SET PersonalProjects = null  WHERE PersonalProjects = '';
+            UPDATE MoreDetails SET Skill = null WHERE Skill = '';
+            UPDATE MoreDetails SET Languages = null WHERE Languages = '';
+            UPDATE MoreDetails SET Interests = null WHERE Interests = '';
+            UPDATE MoreDetails SET Certifications = null WHERE Certifications = '';
+            UPDATE Person SET Website = null WHERE Website = '';
+            UPDATE Person SET SocialMedia = null WHERE SocialMedia = '';
+            UPDATE Person SET Address = null WHERE Address = '';
+            UPDATE Person SET PhoneNumber = null WHERE PhoneNumber = '';
+            UPDATE Person SET Website = null WHERE Website = '';
+            UPDATE Person SET Email = null WHERE Email = '';
+            UPDATE Job SET JobTitle = null WHERE JobTitle = '';
+            UPDATE Job SET JobStart = null WHERE JobStart = '';
+            UPDATE Job SET JobEnd = null WHERE JobEnd = '';
+            UPDATE Job SET JobDetail = null WHERE JobDetail = '';
+            UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
+            UPDATE Education SET EducationStart = null WHERE EducationStart = '';
+            UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
+            UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
+            """;
         public void SqlExecuter(string cmdstring)
         {
             try
@@ -214,12 +235,8 @@ namespace ResumeBuilder
             certifications = "";
             while (i < GetPersonalTables().Tables[3].Rows.Count)
             {
-                if (GetPersonalTables().Tables[3].Rows[i]["Certifications"] is not null)
-                {
-                    certifications = certifications + GetPersonalTables().Tables[3].Rows[i].Field<string>("Certifications").Trim() + ", ";
-                    i++;
-                }
-
+                certifications = certifications + GetPersonalTables().Tables[3].Rows[i].Field<string>("Certifications").Trim() + ", ";
+                i++;
             }
             i = 0;
             personalProjects = "";
@@ -250,7 +267,7 @@ namespace ResumeBuilder
                 i++;
             }
             i = 0;
-
+            SqlExecuter(defaultNullValue);
             return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills);
         }
         public int GetIdFromDescription()
