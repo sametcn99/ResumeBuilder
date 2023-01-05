@@ -37,11 +37,11 @@ namespace ResumeBuilder
             UPDATE Education SET EducationTitle = '' WHERE EducationTitle IS NULL;
             """;
         public string defaultNullValue = """
-            UPDATE MoreDetails SET PersonalProjects = null  WHERE PersonalProjects = '';
-            UPDATE MoreDetails SET Skill = null WHERE Skill = '';
-            UPDATE MoreDetails SET Languages = null WHERE Languages = '';
-            UPDATE MoreDetails SET Interests = null WHERE Interests = '';
-            UPDATE MoreDetails SET Certifications = null WHERE Certifications = '';
+            UPDATE MoreDetails SET PersonalProjects = null  WHERE PersonalProjects = 'empty';
+            UPDATE MoreDetails SET Skill = null WHERE Skill = 'empty';
+            UPDATE MoreDetails SET Languages = null WHERE Languages = 'empty';
+            UPDATE MoreDetails SET Interests = null WHERE Interests = 'empty';
+            UPDATE MoreDetails SET Certifications = null WHERE Certifications = 'empty';
             UPDATE Person SET Website = null WHERE Website = '';
             UPDATE Person SET SocialMedia = null WHERE SocialMedia = '';
             UPDATE Person SET Address = null WHERE Address = '';
@@ -209,61 +209,76 @@ namespace ResumeBuilder
         }
         public (string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
+            DataSet dataSet = GetPersonalTables();
             SqlExecuter(defaultEmptyValue);
-            name = GetPersonalTables().Tables[0].Rows[0].Field<string>("Name").Trim();
-            personDetails = GetPersonalTables().Tables[0].Rows[0].Field<string>("Address").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("PhoneNumber").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Email").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Website").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("SocialMedia").Trim() + "\n" + GetPersonalTables().Tables[0].Rows[0].Field<string>("Summary").Trim();
+            name = dataSet.Tables[0].Rows[0].Field<string>("Name").ToString().Trim();
+            personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();
             jobs = "";
             int i = 0;
-            while (i < GetPersonalTables().Tables[1].Rows.Count)
+            while (i < dataSet.Tables[1].Rows.Count)
             {
-
-                jobs = jobs + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobTitle").Trim();
-                jobs = jobs + " (" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobStart").Trim() + "-" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobEnd").Trim() + ")";
-                jobs = jobs + "\n" + GetPersonalTables().Tables[1].Rows[i].Field<string>("JobDetail").Trim() + "\n";
+                jobs = jobs + dataSet.Tables[1].Rows[i].Field<string>("JobTitle").ToString().Trim();
+                jobs = jobs + " (" + dataSet.Tables[1].Rows[i].Field<string>("JobStart").ToString().Trim() + "-" + dataSet.Tables[1].Rows[i].Field<string>("JobEnd").ToString().Trim() + ")";
+                jobs = jobs + "\n" + dataSet.Tables[1].Rows[i].Field<string>("JobDetail").ToString().Trim() + "\n";
                 i++;
             }
             educations = "";
             i = 0;
-            while (i < GetPersonalTables().Tables[2].Rows.Count)
+            while (i < dataSet.Tables[2].Rows.Count)
             {
-                educations = educations + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationTitle").Trim();
-                educations = educations + " (" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationStart").Trim() + "-" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationEnd").Trim() + ")";
-                educations = educations + "\n" + GetPersonalTables().Tables[2].Rows[i].Field<string>("EducationDetail").Trim() + "\n";
+                educations = educations + dataSet.Tables[2].Rows[i].Field<string>("EducationTitle").ToString().Trim();
+                educations = educations + " (" + dataSet.Tables[2].Rows[i].Field<string>("EducationStart").ToString().Trim() + "-" + dataSet.Tables[2].Rows[i].Field<string>("EducationEnd").ToString().Trim() + ")";
+                educations = educations + "\n" + dataSet.Tables[2].Rows[i].Field<string>("EducationDetail").ToString().Trim() + "\n";
                 i++;
             }
             i = 0;
             certifications = "";
-            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            while (i < dataSet.Tables[3].Rows.Count)
             {
-                certifications = certifications + GetPersonalTables().Tables[3].Rows[i].Field<string>("Certifications").Trim() + ", ";
+                if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Certifications").ToString().Trim()) == false)
+                {
+                    certifications = certifications + dataSet.Tables[3].Rows[i].Field<string>("Certifications").ToString().Trim() + " ";
+                }
                 i++;
             }
             i = 0;
             personalProjects = "";
-            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            while (i < dataSet.Tables[3].Rows.Count)
             {
-                personalProjects = personalProjects + GetPersonalTables().Tables[3].Rows[i].Field<string>("PersonalProjects").Trim() + "\n";
+                if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim()) == false)
+                {
+                    personalProjects = personalProjects + dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim() + "\n";
+                }
                 i++;
             }
             i = 0;
             languages = "";
-            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            while (i < dataSet.Tables[3].Rows.Count)
             {
-                languages = languages + GetPersonalTables().Tables[3].Rows[i].Field<string>("Languages").Trim() + ",";
+                if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Languages").ToString().Trim()) == false)
+                {
+                    languages = languages + dataSet.Tables[3].Rows[i].Field<string>("Languages").ToString().Trim() + " ";
+                }
                 i++;
             }
             i = 0;
             interests = "";
-            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            while (i < dataSet.Tables[3].Rows.Count)
             {
-                interests = interests + GetPersonalTables().Tables[3].Rows[i].Field<string>("Interests").Trim() + ", ";
+                if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Interests").ToString().Trim()) == false)
+                {
+                    interests = interests + dataSet.Tables[3].Rows[i].Field<string>("Interests").ToString().Trim() + " ";
+                }
                 i++;
             }
             i = 0;
             skills = "";
-            while (i < GetPersonalTables().Tables[3].Rows.Count)
+            while (i < dataSet.Tables[3].Rows.Count)
             {
-                skills = skills + GetPersonalTables().Tables[3].Rows[i].Field<string>("Skill").Trim() + ", ";
+                if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Skill").ToString().Trim()) == false)
+                {
+                    skills = skills + dataSet.Tables[3].Rows[i].Field<string>("Skill").ToString().Trim() + " ";
+                }
                 i++;
             }
             i = 0;
