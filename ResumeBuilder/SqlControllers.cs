@@ -109,7 +109,6 @@ namespace ResumeBuilder
                 cnn.Open();
                 cmd.ExecuteNonQuery();
                 cnn.Close();
-                MessageBox.Show("OK!");
             }
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
             catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
@@ -147,7 +146,6 @@ namespace ResumeBuilder
                     cmd.ExecuteNonQuery();
                     cnn.Close();
                 }
-                MessageBox.Show("OK!");
             }
             catch (System.Data.SqlClient.SqlException) { }
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
@@ -305,7 +303,7 @@ namespace ResumeBuilder
             {
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim()) == false)
                 {
-                    personalProjects = personalProjects + dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim() + "\n";
+                    personalProjects = personalProjects + dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim() + " ";
                 }
                 i++;
             }

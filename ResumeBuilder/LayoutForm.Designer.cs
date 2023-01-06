@@ -36,6 +36,8 @@
             // layoutStylesCombobox
             // 
             this.layoutStylesCombobox.FormattingEnabled = true;
+            this.layoutStylesCombobox.Items.AddRange(new object[] {
+            "Classic Layout"});
             this.layoutStylesCombobox.Location = new System.Drawing.Point(12, 27);
             this.layoutStylesCombobox.Name = "layoutStylesCombobox";
             this.layoutStylesCombobox.Size = new System.Drawing.Size(244, 23);
@@ -81,9 +83,8 @@
         }
 
         #endregion
-
-        private ComboBox layoutStylesCombobox;
         private Label layoutStylesLabel;
         private Button previewSampleLayoutButton;
+        public ComboBox layoutStylesCombobox;
     }
 }

@@ -5,6 +5,7 @@
         public LayoutForm()
         {
             InitializeComponent();
+            layoutStylesCombobox.SelectedIndex = 0;
         }
     }
 }
