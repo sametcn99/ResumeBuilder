@@ -88,6 +88,7 @@ namespace ResumeBuilder
                     });
                 })
                     .GeneratePdf(path);
+
             }
             catch (System.IO.IOException ex)
             {
