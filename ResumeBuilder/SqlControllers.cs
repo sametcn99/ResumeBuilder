@@ -2,7 +2,9 @@
 using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
+using System.Drawing;
 using System.Text;
+using System.Windows.Forms;
 using static QuestPDF.Helpers.Colors;
 
 namespace ResumeBuilder
@@ -15,6 +17,7 @@ namespace ResumeBuilder
         public static int id;
         public int id2 = 0;
         string cmdstring = "";
+        string imagePath;
 
         public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string defaultEmptyValue = """
@@ -62,6 +65,40 @@ namespace ResumeBuilder
         public int getRandomID()
         {
             return id;
+        }
+
+
+        public string getPicture()
+        {
+            FormLogin formLogin = new FormLogin();
+            PhotoUploadForm photoUploadFormform = new PhotoUploadForm();
+            cnn = new SqlConnection(connectionString);
+            if (formLogin.getDescription() != "")
+            {
+                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{GetIdFromDescription().ToString().Trim()}'", cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cnn.Open();
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    imagePath = reader1[0].ToString();
+                }
+                cnn.Close();
+            }
+            else
+            {
+                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
+                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cnn.Open();
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    imagePath = reader1[0].ToString();
+                }
+                cnn.Close();
+            }
+            return imagePath;
         }
 
         public void SqlExecuter(string cmdstring)
@@ -145,13 +182,13 @@ namespace ResumeBuilder
         }
         public void ClearDatabase()
         {
-            SqlExecuter("delete from Person; delete from Job; delete from Education; delete from MoreDetails");
+            SqlExecuter("delete from Person; delete from Job; delete from Education; delete from MoreDetails; delete from Image");
         }
         public string GetDatabaseAsJsonText()
         {
             DataSet dataSet = new DataSet();
             var json = "";
-            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM MoreDetails";
+            cmdstring = "SELECT * FROM Person;SELECT * FROM Job;SELECT * FROM Education;SELECT * FROM MoreDetails; select * from Image";
             SqlDataAdapter dataAdapter = new SqlDataAdapter(cmdstring, connectionString);
             dataAdapter.Fill(dataSet);
             json = JsonConvert.SerializeObject(dataSet, Formatting.Indented);
@@ -172,7 +209,7 @@ namespace ResumeBuilder
                 readText = File.ReadAllText(file.FileName);
                 dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
                 SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString);
-                string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.MoreDetails" };
+                string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.MoreDetails", "dbo.Image" };
                 int i = 0;
                 while (i < dataSet.Tables.Count)
                 {

@@ -32,6 +32,7 @@
             this.selectPhotoButton = new System.Windows.Forms.Button();
             this.selectPhotoLabel = new System.Windows.Forms.Label();
             this.selectedPictureBox = new System.Windows.Forms.PictureBox();
+            this.getPhotoButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.selectedPictureBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,7 +40,7 @@
             // 
             this.selectedPhotoPathLabel.AutoSize = true;
             this.selectedPhotoPathLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.selectedPhotoPathLabel.Location = new System.Drawing.Point(316, 78);
+            this.selectedPhotoPathLabel.Location = new System.Drawing.Point(304, 46);
             this.selectedPhotoPathLabel.Margin = new System.Windows.Forms.Padding(5);
             this.selectedPhotoPathLabel.Name = "selectedPhotoPathLabel";
             this.selectedPhotoPathLabel.Size = new System.Drawing.Size(66, 15);
@@ -52,19 +53,20 @@
             this.selectPhotoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.selectPhotoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.selectPhotoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.selectPhotoButton.Location = new System.Drawing.Point(416, 359);
+            this.selectPhotoButton.Location = new System.Drawing.Point(444, 397);
             this.selectPhotoButton.Margin = new System.Windows.Forms.Padding(5);
             this.selectPhotoButton.Name = "selectPhotoButton";
             this.selectPhotoButton.Size = new System.Drawing.Size(100, 23);
             this.selectPhotoButton.TabIndex = 66;
-            this.selectPhotoButton.Text = "Select";
+            this.selectPhotoButton.Text = "Upload";
             this.selectPhotoButton.UseVisualStyleBackColor = false;
+            this.selectPhotoButton.Click += new System.EventHandler(this.selectPhotoButton_Click);
             // 
             // selectPhotoLabel
             // 
             this.selectPhotoLabel.AutoSize = true;
             this.selectPhotoLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.selectPhotoLabel.Location = new System.Drawing.Point(333, 359);
+            this.selectPhotoLabel.Location = new System.Drawing.Point(361, 397);
             this.selectPhotoLabel.Margin = new System.Windows.Forms.Padding(5);
             this.selectPhotoLabel.Name = "selectPhotoLabel";
             this.selectPhotoLabel.Size = new System.Drawing.Size(73, 15);
@@ -74,11 +76,26 @@
             // selectedPictureBox
             // 
             this.selectedPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.selectedPictureBox.Location = new System.Drawing.Point(316, 101);
+            this.selectedPictureBox.Location = new System.Drawing.Point(304, 69);
             this.selectedPictureBox.Name = "selectedPictureBox";
-            this.selectedPictureBox.Size = new System.Drawing.Size(200, 250);
+            this.selectedPictureBox.Size = new System.Drawing.Size(240, 320);
+            this.selectedPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.selectedPictureBox.TabIndex = 68;
             this.selectedPictureBox.TabStop = false;
+            // 
+            // getPhotoButton
+            // 
+            this.getPhotoButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.getPhotoButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.getPhotoButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.getPhotoButton.Location = new System.Drawing.Point(444, 430);
+            this.getPhotoButton.Margin = new System.Windows.Forms.Padding(5);
+            this.getPhotoButton.Name = "getPhotoButton";
+            this.getPhotoButton.Size = new System.Drawing.Size(100, 23);
+            this.getPhotoButton.TabIndex = 69;
+            this.getPhotoButton.Text = "Get Photo";
+            this.getPhotoButton.UseVisualStyleBackColor = false;
+            this.getPhotoButton.Click += new System.EventHandler(this.getPhotoButton_Click);
             // 
             // PhotoUploadForm
             // 
@@ -86,6 +103,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.getPhotoButton);
             this.Controls.Add(this.selectedPictureBox);
             this.Controls.Add(this.selectedPhotoPathLabel);
             this.Controls.Add(this.selectPhotoButton);
@@ -104,6 +122,7 @@
         private Label selectedPhotoPathLabel;
         private Button selectPhotoButton;
         private Label selectPhotoLabel;
-        private PictureBox selectedPictureBox;
+        public PictureBox selectedPictureBox;
+        private Button getPhotoButton;
     }
 }
