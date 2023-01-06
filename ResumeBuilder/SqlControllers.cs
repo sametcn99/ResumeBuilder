@@ -67,7 +67,6 @@ namespace ResumeBuilder
             return id;
         }
 
-
         public string getPicture()
         {
             FormLogin formLogin = new FormLogin();
@@ -110,6 +109,7 @@ namespace ResumeBuilder
                 cnn.Open();
                 cmd.ExecuteNonQuery();
                 cnn.Close();
+                MessageBox.Show("OK!");
             }
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
             catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
@@ -147,6 +147,7 @@ namespace ResumeBuilder
                     cmd.ExecuteNonQuery();
                     cnn.Close();
                 }
+                MessageBox.Show("OK!");
             }
             catch (System.Data.SqlClient.SqlException) { }
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }

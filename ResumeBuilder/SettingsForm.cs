@@ -31,6 +31,17 @@
         private void clearJsonDataButton_Click(object sender, EventArgs e)
         {
             sqlControllers.ClearDatabase();
+            var files = Directory.EnumerateFiles(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "*.jpg", SearchOption.AllDirectories);
+            foreach (var item in files)
+            {
+                try
+                {
+                    File.Delete(item);
+                }
+                catch (Exception)
+                { //log exception}
+                }
+            }
             MessageBox.Show("Cleared!\nApplication restarted.");
             Application.Restart();
         }

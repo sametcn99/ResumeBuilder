@@ -1,4 +1,6 @@
-﻿namespace ResumeBuilder
+﻿using Microsoft.VisualBasic.FileIO;
+
+namespace ResumeBuilder
 {
     public partial class FormLogin : Form
     {
