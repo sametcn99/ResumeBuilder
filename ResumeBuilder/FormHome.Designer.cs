@@ -42,7 +42,6 @@
             this.aboutPanelButton = new System.Windows.Forms.Button();
             this.helloLbl = new System.Windows.Forms.Label();
             this.navigationPanel = new System.Windows.Forms.Panel();
-            this.saveButton = new System.Windows.Forms.Button();
             this.printButton = new System.Windows.Forms.Button();
             this.homeButton = new System.Windows.Forms.Button();
             this.closeAppButton = new System.Windows.Forms.Button();
@@ -231,7 +230,6 @@
             // navigationPanel
             // 
             this.navigationPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(33)))));
-            this.navigationPanel.Controls.Add(this.saveButton);
             this.navigationPanel.Controls.Add(this.printButton);
             this.navigationPanel.Controls.Add(this.homeButton);
             this.navigationPanel.Controls.Add(this.closeAppButton);
@@ -241,23 +239,6 @@
             this.navigationPanel.Size = new System.Drawing.Size(850, 50);
             this.navigationPanel.TabIndex = 1;
             this.navigationPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.navigationPanel_MouseDown);
-            // 
-            // saveButton
-            // 
-            this.saveButton.Dock = System.Windows.Forms.DockStyle.Left;
-            this.saveButton.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.saveButton.FlatAppearance.BorderSize = 0;
-            this.saveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.saveButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.saveButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.saveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.saveButton.Location = new System.Drawing.Point(193, 0);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(98, 50);
-            this.saveButton.TabIndex = 9;
-            this.saveButton.Text = "SAVE";
-            this.toolTip1.SetToolTip(this.saveButton, "Save your data to edit it again");
-            this.saveButton.UseVisualStyleBackColor = true;
             // 
             // printButton
             // 
@@ -385,7 +366,6 @@
         private Button educationPanelButton;
         private Panel userPanel;
         private Panel childFormPanel;
-        private Button saveButton;
         private Button selectPhotoPanelButton;
         public Label helloLbl;
         private ToolTip toolTip1;

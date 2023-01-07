@@ -134,12 +134,20 @@ namespace ResumeBuilder
             ResumeLayouts resumeLayouts = new ResumeLayouts();
             LayoutForm layoutForm = new LayoutForm();
             SaveFileDialog save = new SaveFileDialog();
-            save.OverwritePrompt = false;
-            save.CreatePrompt = true;
-            save.InitialDirectory = @"D:\";
-            save.Title = "Save PDF File";
-            save.DefaultExt = "pdf";
-            save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+            if (AppControllers.savingOption == 1)
+            {
+                save.InitialDirectory = @"D:\";
+                save.Title = "Save DOCX File";
+            }
+            else
+            {
+                save.OverwritePrompt = false;
+                save.CreatePrompt = true;
+                save.InitialDirectory = @"D:\";
+                save.Title = "Save PDF File";
+                save.DefaultExt = "pdf";
+                save.Filter = "PDF Files (*.pdf)|*.pdf|All Files(*.*)|*.*";
+            }
             savingLabel.Visible = true;
             if (activeForm != null)
             {
@@ -181,11 +189,6 @@ namespace ResumeBuilder
                 homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                 homeButton.ForeColor = Color.White;
             }
-        }
-
-        private void saveButton_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
