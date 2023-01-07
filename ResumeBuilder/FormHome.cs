@@ -1,4 +1,5 @@
-﻿namespace ResumeBuilder
+﻿using static ResumeBuilder.AppControllers;
+namespace ResumeBuilder
 {
     public partial class FormHome : Form
     {
@@ -12,7 +13,7 @@
         public static extern bool ReleaseCapture();
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-
+        public string pdfPath = "";
         public FormHome()
         {
             InitializeComponent();
@@ -129,9 +130,9 @@
 
         private void printButton_Click(object sender, EventArgs e)
         {
-
             SqlControllers sqlControllers = new SqlControllers();
             ResumeLayouts resumeLayouts = new ResumeLayouts();
+            LayoutForm layoutForm = new LayoutForm();
             SaveFileDialog save = new SaveFileDialog();
             save.OverwritePrompt = false;
             save.CreatePrompt = true;
@@ -149,12 +150,25 @@
             }
             if (save.ShowDialog() == DialogResult.OK)
             {
-                LayoutForm layoutForm = new LayoutForm();
-                if (layoutForm.layoutStylesCombobox.SelectedIndex == 0)
+                pdfPath = save.FileName;
+                if (layoutForm.getSelectedLayout() == "0")
                 {
-                    resumeLayouts.ClassicLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString());
+                    resumeLayouts.ClassicLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString(), sqlControllers.fillPdfFields().Item10.ToString());
+                }
+                if (layoutForm.getSelectedLayout() == "1")
+                {
+                    resumeLayouts.ModernLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString(), sqlControllers.fillPdfFields().Item10.ToString());
                 }
                 savingLabel.Text = "Saved!";
+                if (AppControllers.savingOption == 1)
+                {
+                    SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
+                    f.OpenPdf(pdfPath);
+                    if (f.PageCount > 0)
+                        f.ToWord(pdfPath.Replace(".pdf", "") + @".docx");
+                    f.ClosePdf();
+                    File.Delete(pdfPath);
+                }
             }
         }
 
@@ -167,6 +181,11 @@
                 homeButton.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
                 homeButton.ForeColor = Color.White;
             }
+        }
+
+        private void saveButton_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

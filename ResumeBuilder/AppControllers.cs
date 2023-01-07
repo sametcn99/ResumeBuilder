@@ -5,6 +5,8 @@ namespace ResumeBuilder
 {
     internal class AppControllers
     {
+        public static int savingOption { get; set; }
+
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";

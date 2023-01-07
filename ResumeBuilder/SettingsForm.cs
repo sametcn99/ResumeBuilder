@@ -1,5 +1,7 @@
-﻿namespace ResumeBuilder
+﻿using static ResumeBuilder.AppControllers;
+namespace ResumeBuilder
 {
+
     public partial class SettingsForm : Form
     {
         AppControllers appControllers = new AppControllers();
@@ -56,6 +58,11 @@
         {
             int id = sqlControllers.GetIdFromDescriptionForRemovePerson(resumeVersionCombobox.SelectedItem.ToString().Trim());
             sqlControllers.SqlExecuter($"delete from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'; delete from Job where id = '{id}'; delete from Education where id = '{id}'; delete from MoreDetails where id = '{id}'");
+        }
+
+        private void radioButton2_Click(object sender, EventArgs e)
+        {
+            AppControllers.savingOption = 1;
         }
     }
 }

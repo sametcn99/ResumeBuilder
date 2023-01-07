@@ -13,7 +13,7 @@ namespace ResumeBuilder
     {
         SqlConnection cnn;
         SqlDataReader reader1;
-        public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills;
+        public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills, summary;
         public static int id;
         public int id2 = 0;
         string cmdstring = "";
@@ -263,12 +263,13 @@ namespace ResumeBuilder
             }
             return dataSet;
         }
-        public (string, string, string, string, string, string, string, string, string) fillPdfFields()
+        public (string, string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
             DataSet dataSet = GetPersonalTables();
             SqlExecuter(defaultEmptyValue);
             name = dataSet.Tables[0].Rows[0].Field<string>("Name").ToString().Trim();
-            personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();
+            personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim();
+            summary = dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();
             jobs = "";
             int i = 0;
             while (i < dataSet.Tables[1].Rows.Count)
@@ -339,7 +340,7 @@ namespace ResumeBuilder
             }
             i = 0;
             SqlExecuter(defaultNullValue);
-            return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills);
+            return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills, summary);
         }
         public int GetIdFromDescription()
         {

@@ -48,6 +48,8 @@
             this.loginPanelResumeVersionLabel = new System.Windows.Forms.Label();
             this.namesCombobox = new System.Windows.Forms.ComboBox();
             this.resumeVersionCombobox = new System.Windows.Forms.ComboBox();
+            this.appLanguagesLabel = new System.Windows.Forms.Label();
+            this.appLanguagesCombobox = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -220,6 +222,7 @@
             this.radioButton2.Text = "Ms Word File";
             this.toolTip1.SetToolTip(this.radioButton2, "Local Database is not availble");
             this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton2.Click += new System.EventHandler(this.radioButton2_Click);
             // 
             // removePersonButton
             // 
@@ -295,12 +298,35 @@
             this.resumeVersionCombobox.Size = new System.Drawing.Size(276, 23);
             this.resumeVersionCombobox.TabIndex = 13;
             // 
+            // appLanguagesLabel
+            // 
+            this.appLanguagesLabel.AutoSize = true;
+            this.appLanguagesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.appLanguagesLabel.Location = new System.Drawing.Point(506, 60);
+            this.appLanguagesLabel.Name = "appLanguagesLabel";
+            this.appLanguagesLabel.Size = new System.Drawing.Size(89, 15);
+            this.appLanguagesLabel.TabIndex = 17;
+            this.appLanguagesLabel.Text = "App Languages";
+            this.toolTip1.SetToolTip(this.appLanguagesLabel, "Theme changer is not avaible");
+            // 
+            // appLanguagesCombobox
+            // 
+            this.appLanguagesCombobox.ForeColor = System.Drawing.Color.Black;
+            this.appLanguagesCombobox.FormattingEnabled = true;
+            this.appLanguagesCombobox.Location = new System.Drawing.Point(506, 85);
+            this.appLanguagesCombobox.Margin = new System.Windows.Forms.Padding(10);
+            this.appLanguagesCombobox.Name = "appLanguagesCombobox";
+            this.appLanguagesCombobox.Size = new System.Drawing.Size(219, 23);
+            this.appLanguagesCombobox.TabIndex = 16;
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(850, 550);
+            this.Controls.Add(this.appLanguagesCombobox);
+            this.Controls.Add(this.appLanguagesLabel);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.clearJsonDataButton);
@@ -345,5 +371,7 @@
         private ComboBox namesCombobox;
         public Button removePersonButton;
         private GroupBox groupBox3;
+        private Label appLanguagesLabel;
+        public ComboBox appLanguagesCombobox;
     }
 }
