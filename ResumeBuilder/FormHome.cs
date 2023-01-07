@@ -138,6 +138,7 @@ namespace ResumeBuilder
             {
                 save.InitialDirectory = @"D:\";
                 save.Title = "Save DOCX File";
+                save.Filter = "DOCX Files (*.docx)|*|All Files(*.*)|*.*";
             }
             else
             {
