@@ -15,20 +15,14 @@
 
         private void ClearTextBoxes()
         {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             Action<Control.ControlCollection> func = null;
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             func = (controls) =>
             {
                 foreach (Control control in controls)
                     if (control is TextBox)
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                         (control as TextBox).Clear();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
                     else
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                         func(control.Controls);
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
             };
             func(Controls);
         }
@@ -86,21 +80,11 @@
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             skillTextbox.Text = dataGridView1.Rows[e.RowIndex].Cells["Skill"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             certificationTextbox.Text = dataGridView1.Rows[e.RowIndex].Cells["Certifications"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             languageTextbox.Text = dataGridView1.Rows[e.RowIndex].Cells["Languages"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             interestTextbox.Text = dataGridView1.Rows[e.RowIndex].Cells["Interests"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             personalProjectTitleTextbox.Text = dataGridView1.Rows[e.RowIndex].Cells["PersonalProjects"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
         private void skillRemoveButton_Click(object sender, EventArgs e)

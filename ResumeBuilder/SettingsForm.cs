@@ -33,9 +33,7 @@ namespace ResumeBuilder
         private void clearJsonDataButton_Click(object sender, EventArgs e)
         {
             sqlControllers.ClearDatabase();
-#pragma warning disable CS8604 // Possible null reference argument for parameter 'path' in 'IEnumerable<string> Directory.EnumerateFiles(string path, string searchPattern, SearchOption searchOption)'.
             var files = Directory.EnumerateFiles(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "*.jpg", SearchOption.AllDirectories);
-#pragma warning restore CS8604 // Possible null reference argument for parameter 'path' in 'IEnumerable<string> Directory.EnumerateFiles(string path, string searchPattern, SearchOption searchOption)'.
             foreach (var item in files)
             {
                 try
@@ -51,21 +49,15 @@ namespace ResumeBuilder
         }
         private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             foreach (var item in sqlControllers.GetDescriptions(namesCombobox.SelectedItem.ToString().Trim()))
             {
                 resumeVersionCombobox.Items.Add(item.Trim());
             }
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
         private void removePersonButton_Click(object sender, EventArgs e)
         {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             int id = sqlControllers.GetIdFromDescriptionForRemovePerson(resumeVersionCombobox.SelectedItem.ToString().Trim());
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             sqlControllers.SqlExecuter($"delete from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'; delete from Job where id = '{id}'; delete from Education where id = '{id}'; delete from MoreDetails where id = '{id}'");
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
         private void radioButton2_Click(object sender, EventArgs e)

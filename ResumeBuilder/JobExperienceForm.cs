@@ -3,9 +3,7 @@
     public partial class JobExperienceForm : Form
     {
         SqlControllers sqlControllers = new SqlControllers();
-#pragma warning disable CS8618 // Non-nullable field 'JobTitle' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         public static string JobTitle;
-#pragma warning restore CS8618 // Non-nullable field 'JobTitle' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         public JobExperienceForm()
         {
             InitializeComponent();
@@ -15,21 +13,15 @@
 
         private void ClearTextBoxes()
         {
-#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
             Action<Control.ControlCollection> func = null;
-#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
 
             func = (controls) =>
             {
                 foreach (Control control in controls)
                     if (control is TextBox)
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                         (control as TextBox).Clear();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
                     else
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
                         func(control.Controls);
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
             };
             func(Controls);
         }
@@ -52,9 +44,7 @@
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-#pragma warning disable CS8602 // Dereference of a possibly null reference.
             JobTitle = dataGridView1.Rows[e.RowIndex].Cells["JobTitle"].Value.ToString().Trim();
-#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
     }
 }
