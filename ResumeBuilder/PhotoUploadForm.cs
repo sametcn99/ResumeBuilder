@@ -1,6 +1,4 @@
-﻿using System.Windows.Forms;
-
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class PhotoUploadForm : Form
     {

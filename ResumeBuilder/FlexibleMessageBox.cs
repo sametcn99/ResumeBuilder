@@ -1,9 +1,5 @@
-﻿using System;
-using System.Diagnostics;
-using System.Drawing;
+﻿using System.Diagnostics;
 using System.Globalization;
-using System.Linq;
-using System.Windows.Forms;
 
 namespace ResumeBuilder
 {
@@ -109,7 +105,9 @@ namespace ResumeBuilder
         /// 
         /// Default is: SystemFonts.MessageBoxFont
         /// </summary>
+#pragma warning disable CS8601 // Possible null reference assignment.
         public static Font FONT = SystemFonts.MessageBoxFont;
+#pragma warning restore CS8601 // Possible null reference assignment.
 
         #endregion
 
@@ -122,7 +120,9 @@ namespace ResumeBuilder
         /// <returns>The dialog result.</returns>
         public static DialogResult Show(string text)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return FlexibleMessageBoxForm.Show(null, text, string.Empty, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         /// <summary>
@@ -144,7 +144,9 @@ namespace ResumeBuilder
         /// <returns>The dialog result.</returns>
         public static DialogResult Show(string text, string caption)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return FlexibleMessageBoxForm.Show(null, text, caption, MessageBoxButtons.OK, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         /// <summary>
@@ -168,7 +170,9 @@ namespace ResumeBuilder
         /// <returns>The dialog result.</returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return FlexibleMessageBoxForm.Show(null, text, caption, buttons, MessageBoxIcon.None, MessageBoxDefaultButton.Button1);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         /// <summary>
@@ -194,7 +198,9 @@ namespace ResumeBuilder
         /// <returns></returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return FlexibleMessageBoxForm.Show(null, text, caption, buttons, icon, MessageBoxDefaultButton.Button1);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         /// <summary>
@@ -222,7 +228,9 @@ namespace ResumeBuilder
         /// <returns>The dialog result.</returns>
         public static DialogResult Show(string text, string caption, MessageBoxButtons buttons, MessageBoxIcon icon, MessageBoxDefaultButton defaultButton)
         {
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             return FlexibleMessageBoxForm.Show(null, text, caption, buttons, icon, defaultButton);
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
         }
 
         /// <summary>
@@ -255,7 +263,9 @@ namespace ResumeBuilder
             /// <summary>
             /// Erforderliche Designervariable.
             /// </summary>
+#pragma warning disable CS8625 // Cannot convert null literal to non-nullable reference type.
             private System.ComponentModel.IContainer components = null;
+#pragma warning restore CS8625 // Cannot convert null literal to non-nullable reference type.
 
             /// <summary>
             /// Verwendete Ressourcen bereinigen.
@@ -291,7 +301,7 @@ namespace ResumeBuilder
                 // 
                 // button1
                 // 
-                this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button1.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button1.AutoSize = true;
                 this.button1.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button1.Location = new System.Drawing.Point(11, 67);
@@ -305,13 +315,13 @@ namespace ResumeBuilder
                 // 
                 // richTextBoxMessage
                 // 
-                this.richTextBoxMessage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                this.richTextBoxMessage.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
+                | System.Windows.Forms.AnchorStyles.Right);
                 this.richTextBoxMessage.BackColor = System.Drawing.Color.White;
                 this.richTextBoxMessage.BorderStyle = System.Windows.Forms.BorderStyle.None;
                 this.richTextBoxMessage.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.FlexibleMessageBoxFormBindingSource, "MessageText", true, System.Windows.Forms.DataSourceUpdateMode.OnPropertyChanged));
-                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                this.richTextBoxMessage.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, 0);
                 this.richTextBoxMessage.Location = new System.Drawing.Point(50, 26);
                 this.richTextBoxMessage.Margin = new System.Windows.Forms.Padding(0);
                 this.richTextBoxMessage.Name = "richTextBoxMessage";
@@ -321,13 +331,15 @@ namespace ResumeBuilder
                 this.richTextBoxMessage.TabIndex = 0;
                 this.richTextBoxMessage.TabStop = false;
                 this.richTextBoxMessage.Text = "<Message>";
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.richTextBoxMessage_LinkClicked(object sender, LinkClickedEventArgs e)' doesn't match the target delegate 'LinkClickedEventHandler' (possibly because of nullability attributes).
                 this.richTextBoxMessage.LinkClicked += new System.Windows.Forms.LinkClickedEventHandler(this.richTextBoxMessage_LinkClicked);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.richTextBoxMessage_LinkClicked(object sender, LinkClickedEventArgs e)' doesn't match the target delegate 'LinkClickedEventHandler' (possibly because of nullability attributes).
                 // 
                 // panel1
                 // 
-                this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
+                this.panel1.Anchor = (((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)
                 | System.Windows.Forms.AnchorStyles.Left)
-                | System.Windows.Forms.AnchorStyles.Right)));
+                | System.Windows.Forms.AnchorStyles.Right);
                 this.panel1.BackColor = System.Drawing.Color.White;
                 this.panel1.Controls.Add(this.pictureBoxForIcon);
                 this.panel1.Controls.Add(this.richTextBoxMessage);
@@ -347,7 +359,7 @@ namespace ResumeBuilder
                 // 
                 // button2
                 // 
-                this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button2.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button2.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button2.Location = new System.Drawing.Point(92, 67);
                 this.button2.MinimumSize = new System.Drawing.Size(0, 24);
@@ -360,7 +372,7 @@ namespace ResumeBuilder
                 // 
                 // button3
                 // 
-                this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+                this.button3.Anchor = (System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right);
                 this.button3.AutoSize = true;
                 this.button3.DialogResult = System.Windows.Forms.DialogResult.OK;
                 this.button3.Location = new System.Drawing.Point(173, 67);
@@ -390,7 +402,9 @@ namespace ResumeBuilder
                 this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
                 this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
                 this.Text = "<Caption>";
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.FlexibleMessageBoxForm_Shown(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).
                 this.Shown += new System.EventHandler(this.FlexibleMessageBoxForm_Shown);
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.FlexibleMessageBoxForm_Shown(object sender, EventArgs e)' doesn't match the target delegate 'EventHandler' (possibly because of nullability attributes).
                 ((System.ComponentModel.ISupportInitialize)(this.FlexibleMessageBoxFormBindingSource)).EndInit();
                 this.panel1.ResumeLayout(false);
                 ((System.ComponentModel.ISupportInitialize)(this.pictureBoxForIcon)).EndInit();
@@ -440,7 +454,25 @@ namespace ResumeBuilder
             /// <summary>
             /// Initializes a new instance of the <see cref="FlexibleMessageBoxForm"/> class.
             /// </summary>
+#pragma warning disable CS8618 // Non-nullable property 'CaptionText' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'richTextBoxMessage' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'button2' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'FlexibleMessageBoxFormBindingSource' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'panel1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable property 'MessageText' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'button1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'button3' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'pictureBoxForIcon' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
             private FlexibleMessageBoxForm()
+#pragma warning restore CS8618 // Non-nullable field 'pictureBoxForIcon' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'button3' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'button1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable property 'MessageText' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'panel1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'FlexibleMessageBoxFormBindingSource' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'button2' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'richTextBoxMessage' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable property 'CaptionText' must contain a non-null value when exiting constructor. Consider declaring the property as nullable.
             {
                 InitializeComponent();
 
@@ -448,7 +480,9 @@ namespace ResumeBuilder
                 Enum.TryParse<TwoLetterISOLanguageID>(CultureInfo.CurrentUICulture.TwoLetterISOLanguageName, out this.languageID);
 
                 this.KeyPreview = true;
+#pragma warning disable CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.FlexibleMessageBoxForm_KeyUp(object sender, KeyEventArgs e)' doesn't match the target delegate 'KeyEventHandler' (possibly because of nullability attributes).
                 this.KeyUp += FlexibleMessageBoxForm_KeyUp;
+#pragma warning restore CS8622 // Nullability of reference types in type of parameter 'sender' of 'void FlexibleMessageBoxForm.FlexibleMessageBoxForm_KeyUp(object sender, KeyEventArgs e)' doesn't match the target delegate 'KeyEventHandler' (possibly because of nullability attributes).
             }
 
             #endregion
@@ -462,7 +496,9 @@ namespace ResumeBuilder
             /// <returns>The string rows as 1-dimensional array</returns>
             private static string[] GetStringRows(string message)
             {
+#pragma warning disable CS8603 // Possible null reference return.
                 if (string.IsNullOrEmpty(message)) return null;
+#pragma warning restore CS8603 // Possible null reference return.
 
                 var messageRows = message.Split(new char[] { '\n' }, StringSplitOptions.None);
                 return messageRows;
@@ -753,7 +789,9 @@ namespace ResumeBuilder
                 try
                 {
                     Cursor.Current = Cursors.WaitCursor;
+#pragma warning disable CS8604 // Possible null reference argument for parameter 'fileName' in 'Process Process.Start(string fileName)'.
                     Process.Start(e.LinkText);
+#pragma warning restore CS8604 // Possible null reference argument for parameter 'fileName' in 'Process Process.Start(string fileName)'.
                 }
                 catch (Exception)
                 {

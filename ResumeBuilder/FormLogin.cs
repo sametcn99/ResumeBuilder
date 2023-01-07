@@ -1,7 +1,4 @@
-﻿
-
-using Microsoft.VisualBasic.FileIO;
-using ResumeBuilder.Properties;
+﻿using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
@@ -51,12 +48,16 @@ namespace ResumeBuilder
         {
             if (resumeVersionCombobox.SelectedItem is not null)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 description = resumeVersionCombobox.SelectedItem.ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 FormHome formHome = new FormHome();
                 formHome.Show();
                 formHome.helloLbl.Visible = true;
                 formHome.nameLbl.Visible = true;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 formHome.nameLbl.Text = namesCombobox.SelectedItem.ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 this.Hide();
             }
             else
@@ -84,10 +85,12 @@ namespace ResumeBuilder
         }
         private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             foreach (var item in sqlControllers.GetDescriptions(namesCombobox.SelectedItem.ToString().Trim()))
             {
                 resumeVersionCombobox.Items.Add(item.Trim());
             }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
         }
 
         private void FormLogin_Load(object sender, EventArgs e)

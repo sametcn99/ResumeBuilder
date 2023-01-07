@@ -82,7 +82,9 @@ namespace ResumeBuilder.RJControls
                 return base.Text;
             }
 
+#pragma warning disable CS8765 // Nullability of type of parameter 'value' doesn't match overridden member (possibly because of nullability attributes).
             set
+#pragma warning restore CS8765 // Nullability of type of parameter 'value' doesn't match overridden member (possibly because of nullability attributes).
             {
 
             }
@@ -130,7 +132,9 @@ namespace ResumeBuilder.RJControls
         {
             int toggleSize = this.Height - 5;
             pevent.Graphics.SmoothingMode = SmoothingMode.AntiAlias;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             pevent.Graphics.Clear(this.Parent.BackColor);
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
 
             if (this.Checked) //ON
             {

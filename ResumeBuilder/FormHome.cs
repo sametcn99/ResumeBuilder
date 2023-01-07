@@ -1,5 +1,4 @@
-﻿using static ResumeBuilder.AppControllers;
-namespace ResumeBuilder
+﻿namespace ResumeBuilder
 {
     public partial class FormHome : Form
     {
@@ -14,7 +13,11 @@ namespace ResumeBuilder
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
         public string pdfPath = "";
+#pragma warning disable CS8618 // Non-nullable field 'currentButton' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'activeForm' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         public FormHome()
+#pragma warning restore CS8618 // Non-nullable field 'activeForm' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'currentButton' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         {
 
             InitializeComponent();

@@ -1,23 +1,47 @@
-﻿using HarfBuzzSharp;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
-using System.Drawing;
 using System.Text;
-using System.Windows.Forms;
-using static QuestPDF.Helpers.Colors;
 
 namespace ResumeBuilder
 {
     internal class SqlControllers
     {
+#pragma warning disable CS8618 // Non-nullable field 'cnn' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         SqlConnection cnn;
+#pragma warning restore CS8618 // Non-nullable field 'cnn' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'reader1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         SqlDataReader reader1;
+#pragma warning restore CS8618 // Non-nullable field 'reader1' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'skills' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'personalProjects' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'certifications' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'educations' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'interests' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'summary' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'personDetails' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'jobs' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'name' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS8618 // Non-nullable field 'languages' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills, summary;
+#pragma warning restore CS8618 // Non-nullable field 'languages' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'name' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'jobs' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'personDetails' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'summary' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'interests' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'educations' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'certifications' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'personalProjects' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning restore CS8618 // Non-nullable field 'skills' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
+#pragma warning disable CS0649 // Field 'SqlControllers.id' is never assigned to, and will always have its default value 0
         public static int id;
+#pragma warning restore CS0649 // Field 'SqlControllers.id' is never assigned to, and will always have its default value 0
         public int id2 = 0;
         string cmdstring = "";
+#pragma warning disable CS8618 // Non-nullable field 'imagePath' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
         string imagePath;
+#pragma warning restore CS8618 // Non-nullable field 'imagePath' must contain a non-null value when exiting constructor. Consider declaring the field as nullable.
 
         public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string defaultEmptyValue = """
@@ -80,7 +104,9 @@ namespace ResumeBuilder
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
                 {
+#pragma warning disable CS8601 // Possible null reference assignment.
                     imagePath = reader1[0].ToString();
+#pragma warning restore CS8601 // Possible null reference assignment.
                 }
                 cnn.Close();
             }
@@ -93,11 +119,15 @@ namespace ResumeBuilder
                 reader1 = cmd.ExecuteReader();
                 if (reader1.Read())
                 {
+#pragma warning disable CS8601 // Possible null reference assignment.
                     imagePath = reader1[0].ToString();
+#pragma warning restore CS8601 // Possible null reference assignment.
                 }
                 cnn.Close();
             }
+#pragma warning disable CS8603 // Possible null reference return.
             return imagePath;
+#pragma warning restore CS8603 // Possible null reference return.
         }
 
         public void SqlExecuter(string cmdstring)
@@ -206,16 +236,20 @@ namespace ResumeBuilder
             if (file.ShowDialog() == DialogResult.OK)
             {
                 readText = File.ReadAllText(file.FileName);
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
                 dataSet = JsonConvert.DeserializeObject<DataSet>(readText);
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
                 SqlBulkCopy bulkCopy = new SqlBulkCopy(connectionString);
                 string[] tableNames = { "dbo.Person", "dbo.Job", "dbo.Education", "dbo.MoreDetails", "dbo.Image" };
                 int i = 0;
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 while (i < dataSet.Tables.Count)
                 {
                     bulkCopy.DestinationTableName = tableNames[i];
                     bulkCopy.WriteToServer(dataSet.Tables[i]);
                     i++;
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             }
         }
         public void ExportDatabase()
@@ -267,75 +301,125 @@ namespace ResumeBuilder
         {
             DataSet dataSet = GetPersonalTables();
             SqlExecuter(defaultEmptyValue);
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             name = dataSet.Tables[0].Rows[0].Field<string>("Name").ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
             summary = dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
             jobs = "";
             int i = 0;
             while (i < dataSet.Tables[1].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 jobs = jobs + dataSet.Tables[1].Rows[i].Field<string>("JobTitle").ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 jobs = jobs + " (" + dataSet.Tables[1].Rows[i].Field<string>("JobStart").ToString().Trim() + "-" + dataSet.Tables[1].Rows[i].Field<string>("JobEnd").ToString().Trim() + ")";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 jobs = jobs + "\n" + dataSet.Tables[1].Rows[i].Field<string>("JobDetail").ToString().Trim() + "\n";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             educations = "";
             i = 0;
             while (i < dataSet.Tables[2].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 educations = educations + dataSet.Tables[2].Rows[i].Field<string>("EducationTitle").ToString().Trim();
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 educations = educations + " (" + dataSet.Tables[2].Rows[i].Field<string>("EducationStart").ToString().Trim() + "-" + dataSet.Tables[2].Rows[i].Field<string>("EducationEnd").ToString().Trim() + ")";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 educations = educations + "\n" + dataSet.Tables[2].Rows[i].Field<string>("EducationDetail").ToString().Trim() + "\n";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
             certifications = "";
             while (i < dataSet.Tables[3].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Certifications").ToString().Trim()) == false)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     certifications = certifications + dataSet.Tables[3].Rows[i].Field<string>("Certifications").ToString().Trim() + " ";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
             personalProjects = "";
             while (i < dataSet.Tables[3].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim()) == false)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     personalProjects = personalProjects + dataSet.Tables[3].Rows[i].Field<string>("PersonalProjects").ToString().Trim() + " ";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
             languages = "";
             while (i < dataSet.Tables[3].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Languages").ToString().Trim()) == false)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     languages = languages + dataSet.Tables[3].Rows[i].Field<string>("Languages").ToString().Trim() + " ";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
             interests = "";
             while (i < dataSet.Tables[3].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Interests").ToString().Trim()) == false)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     interests = interests + dataSet.Tables[3].Rows[i].Field<string>("Interests").ToString().Trim() + " ";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
             skills = "";
             while (i < dataSet.Tables[3].Rows.Count)
             {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                 if (string.IsNullOrEmpty(dataSet.Tables[3].Rows[i].Field<string>("Skill").ToString().Trim()) == false)
                 {
+#pragma warning disable CS8602 // Dereference of a possibly null reference.
                     skills = skills + dataSet.Tables[3].Rows[i].Field<string>("Skill").ToString().Trim() + " ";
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 }
+#pragma warning restore CS8602 // Dereference of a possibly null reference.
                 i++;
             }
             i = 0;
