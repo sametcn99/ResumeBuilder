@@ -57,10 +57,675 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="layoutPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;settingsPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;childFormPanel.Name" xml:space="preserve">
+    <value>childFormPanel</value>
+  </data>
+  <data name="&gt;&gt;homeButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;addJobExperiencePanelButton.Name" xml:space="preserve">
+    <value>addJobExperiencePanelButton</value>
+  </data>
+  <data name="&gt;&gt;userPanel.Name" xml:space="preserve">
+    <value>userPanel</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="addJobExperiencePanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="savingLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;helloLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;educationPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="&gt;&gt;printButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userPanel.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="&gt;&gt;savingLabel.Name" xml:space="preserve">
+    <value>savingLabel</value>
+  </data>
+  <data name="settingsPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="aboutPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;logoLabel.Parent" xml:space="preserve">
+    <value>userPanel</value>
+  </data>
+  <data name="nameLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 15pt</value>
+  </data>
+  <data name="layoutPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 336</value>
+  </data>
+  <data name="&gt;&gt;leftMenuPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addMoreDetailPanelButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="educationPanelButton.Text" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="selectPhotoPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;personalDetailsPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="aboutPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;aboutPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="layoutPanelButton.Text" xml:space="preserve">
+    <value>Layout</value>
+  </data>
+  <data name="&gt;&gt;addMoreDetailPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>FormHome</value>
+  </data>
+  <data name="logoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="leftMenuPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 600</value>
+  </data>
+  <data name="childFormPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="helloLbl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="closeAppButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="&gt;&gt;closeAppButton.Parent" xml:space="preserve">
+    <value>navigationPanel</value>
+  </data>
+  <data name="nameLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>108, 28</value>
+  </data>
+  <data name="&gt;&gt;userPanel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="helloLbl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 46</value>
+  </data>
+  <data name="closeAppButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="childFormPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="addJobExperiencePanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="educationPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 224</value>
+  </data>
+  <data name="&gt;&gt;nameLbl.Parent" xml:space="preserve">
+    <value>childFormPanel</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;savingLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="homeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>95, 50</value>
+  </data>
+  <data name="&gt;&gt;printButton.Parent" xml:space="preserve">
+    <value>navigationPanel</value>
+  </data>
+  <data name="personalDetailsPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="homeButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="helloLbl.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;settingsPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="personalDetailsPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="educationPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="aboutPanelButton.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="&gt;&gt;addJobExperiencePanelButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="homeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="savingLabel.Text" xml:space="preserve">
+    <value>Saving...</value>
+  </data>
+  <data name="&gt;&gt;helloLbl.Name" xml:space="preserve">
+    <value>helloLbl</value>
+  </data>
+  <data name="&gt;&gt;closeAppButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="helloLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="homeButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;layoutPanelButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="closeAppButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>800, 0</value>
+  </data>
+  <data name="helloLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="homeButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;educationPanelButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="selectPhotoPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1000, 600</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addMoreDetailPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="layoutPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="aboutPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;nameLbl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="navigationPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="nameLbl.Text" xml:space="preserve">
+    <value>User Name</value>
+  </data>
+  <data name="printButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="navigationPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="nameLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>149, 44</value>
+  </data>
+  <data name="leftMenuPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="educationPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="settingsPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 491</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="settingsPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="addJobExperiencePanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 168</value>
+  </data>
+  <data name="&gt;&gt;closeAppButton.Name" xml:space="preserve">
+    <value>closeAppButton</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Name" xml:space="preserve">
+    <value>homeButton</value>
+  </data>
+  <data name="userPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="homeButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="selectPhotoPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="layoutPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;helloLbl.Parent" xml:space="preserve">
+    <value>childFormPanel</value>
+  </data>
+  <data name="selectPhotoPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;savingLabel.Parent" xml:space="preserve">
+    <value>childFormPanel</value>
+  </data>
+  <data name="logoLabel.TextAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleCenter</value>
+  </data>
+  <data name="printButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>98, 50</value>
+  </data>
+  <data name="&gt;&gt;childFormPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;logoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="selectPhotoPanelButton.Text" xml:space="preserve">
+    <value>Photo</value>
+  </data>
+  <data name="personalDetailsPanelButton.Text" xml:space="preserve">
+    <value>Personal Details</value>
+  </data>
+  <data name="nameLbl.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="closeAppButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>50, 50</value>
+  </data>
+  <data name="logoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;helloLbl.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="personalDetailsPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 56</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addJobExperiencePanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="personalDetailsPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="printButton.Text" xml:space="preserve">
+    <value>PRINT</value>
+  </data>
+  <data name="savingLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="leftMenuPanel.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="printButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="addJobExperiencePanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;logoLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;personalDetailsPanelButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="aboutPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel.Name" xml:space="preserve">
+    <value>navigationPanel</value>
+  </data>
+  <data name="addMoreDetailPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;layoutPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="aboutPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 547</value>
+  </data>
+  <data name="&gt;&gt;logoLabel.Name" xml:space="preserve">
+    <value>logoLabel</value>
+  </data>
+  <data name="educationPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;userPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;aboutPanelButton.Name" xml:space="preserve">
+    <value>aboutPanelButton</value>
+  </data>
+  <data name="addJobExperiencePanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="addJobExperiencePanelButton.Text" xml:space="preserve">
+    <value>Job Experience</value>
+  </data>
+  <data name="logoLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;printButton.Name" xml:space="preserve">
+    <value>printButton</value>
+  </data>
+  <data name="&gt;&gt;addJobExperiencePanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addMoreDetailPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="helloLbl.Text" xml:space="preserve">
+    <value>Hello,</value>
+  </data>
+  <data name="printButton.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="homeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="logoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;layoutPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="navigationPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 50</value>
+  </data>
+  <data name="childFormPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="&gt;&gt;personalDetailsPanelButton.Name" xml:space="preserve">
+    <value>personalDetailsPanelButton</value>
+  </data>
+  <data name="navigationPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="savingLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="educationPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="nameLbl.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addMoreDetailPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="educationPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;nameLbl.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;leftMenuPanel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="addJobExperiencePanelButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
+  <data name="&gt;&gt;leftMenuPanel.Name" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="layoutPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="helloLbl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 31</value>
+  </data>
+  <data name="closeAppButton.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt, style=Bold</value>
+  </data>
+  <data name="&gt;&gt;childFormPanel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;nameLbl.Name" xml:space="preserve">
+    <value>nameLbl</value>
+  </data>
+  <data name="closeAppButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="savingLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>54, 91</value>
+  </data>
+  <data name="childFormPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="savingLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;addJobExperiencePanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="closeAppButton.ToolTip" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="selectPhotoPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 112</value>
+  </data>
+  <data name="navigationPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>150, 0</value>
+  </data>
+  <data name="settingsPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;personalDetailsPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="settingsPanelButton.Text" xml:space="preserve">
+    <value>Settings</value>
+  </data>
+  <data name="nameLbl.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;educationPanelButton.Name" xml:space="preserve">
+    <value>educationPanelButton</value>
+  </data>
+  <data name="addMoreDetailPanelButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 280</value>
+  </data>
+  <data name="&gt;&gt;settingsPanelButton.Name" xml:space="preserve">
+    <value>settingsPanelButton</value>
+  </data>
+  <data name="&gt;&gt;printButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;aboutPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="aboutPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="personalDetailsPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="settingsPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoPanelButton.Name" xml:space="preserve">
+    <value>selectPhotoPanelButton</value>
+  </data>
+  <data name="personalDetailsPanelButton.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;navigationPanel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;homeButton.Parent" xml:space="preserve">
+    <value>navigationPanel</value>
+  </data>
+  <data name="savingLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 31</value>
+  </data>
+  <data name="printButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>95, 0</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>FormHome</value>
+  </data>
+  <data name="&gt;&gt;layoutPanelButton.Name" xml:space="preserve">
+    <value>layoutPanelButton</value>
+  </data>
+  <data name="homeButton.Text" xml:space="preserve">
+    <value>HOME</value>
+  </data>
+  <data name="homeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="printButton.ToolTip" xml:space="preserve">
+    <value>Print your resume as pdf file.</value>
+  </data>
+  <data name="addMoreDetailPanelButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="selectPhotoPanelButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoPanelButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;closeAppButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addMoreDetailPanelButton.Name" xml:space="preserve">
+    <value>addMoreDetailPanelButton</value>
+  </data>
+  <data name="&gt;&gt;addMoreDetailPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="leftMenuPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Left</value>
+  </data>
+  <data name="&gt;&gt;educationPanelButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="layoutPanelButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="userPanel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;settingsPanelButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="nameLbl.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="userPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="userPanel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="savingLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 17pt</value>
+  </data>
+  <data name="printButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="closeAppButton.Text" xml:space="preserve">
+    <value>X</value>
+  </data>
+  <data name="settingsPanelButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;aboutPanelButton.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;leftMenuPanel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="printButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="leftMenuPanel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="userPanel.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Top</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoPanelButton.Parent" xml:space="preserve">
+    <value>leftMenuPanel</value>
+  </data>
+  <data name="&gt;&gt;savingLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="addMoreDetailPanelButton.Text" xml:space="preserve">
+    <value>More Details</value>
+  </data>
+  <data name="logoLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Yu Gothic, 12pt, style=Bold</value>
+  </data>
+  <data name="logoLabel.Text" xml:space="preserve">
+    <value>RESUME
+BUILDER
+</value>
+  </data>
+  <data name="helloLbl.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 25pt, style=Italic</value>
+  </data>
+  <data name="&gt;&gt;childFormPanel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>en</value>
+  </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>25</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
 </root>

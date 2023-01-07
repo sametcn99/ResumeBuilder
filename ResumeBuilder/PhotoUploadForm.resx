@@ -57,4 +57,176 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="selectPhotoLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="getPhotoButton.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="&gt;&gt;getPhotoButton.Name" xml:space="preserve">
+    <value>getPhotoButton</value>
+  </data>
+  <data name="&gt;&gt;getPhotoButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoLabel.Name" xml:space="preserve">
+    <value>selectPhotoLabel</value>
+  </data>
+  <data name="&gt;&gt;selectedPhotoPathLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="selectedPictureBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 69</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="selectedPictureBox.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PhotoUploadForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="selectedPhotoPathLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="selectedPictureBox.SizeMode" type="System.Windows.Forms.PictureBoxSizeMode, System.Windows.Forms">
+    <value>Zoom</value>
+  </data>
+  <data name="&gt;&gt;selectedPhotoPathLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="selectPhotoLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="getPhotoButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="getPhotoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 430</value>
+  </data>
+  <data name="selectPhotoButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="selectPhotoLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="getPhotoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="selectedPictureBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>240, 320</value>
+  </data>
+  <data name="&gt;&gt;selectedPhotoPathLabel.Name" xml:space="preserve">
+    <value>selectedPhotoPathLabel</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="selectedPhotoPathLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>66, 15</value>
+  </data>
+  <data name="selectedPhotoPathLabel.Text" xml:space="preserve">
+    <value>Photo Path</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="selectedPhotoPathLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>304, 46</value>
+  </data>
+  <data name="&gt;&gt;selectedPhotoPathLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="selectPhotoLabel.Text" xml:space="preserve">
+    <value>Select Photo</value>
+  </data>
+  <data name="selectedPhotoPathLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>67</value>
+  </data>
+  <data name="&gt;&gt;selectedPictureBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;selectedPictureBox.Name" xml:space="preserve">
+    <value>selectedPictureBox</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>PhotoUploadForm</value>
+  </data>
+  <data name="selectPhotoButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="getPhotoButton.Text" xml:space="preserve">
+    <value>Get Photo</value>
+  </data>
+  <data name="selectedPhotoPathLabel.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="selectPhotoLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 15</value>
+  </data>
+  <data name="selectPhotoButton.Text" xml:space="preserve">
+    <value>Upload</value>
+  </data>
+  <data name="selectPhotoButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>444, 397</value>
+  </data>
+  <data name="selectedPhotoPathLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;getPhotoButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="selectPhotoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="getPhotoButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoButton.Name" xml:space="preserve">
+    <value>selectPhotoButton</value>
+  </data>
+  <data name="selectPhotoLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>361, 397</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selectedPictureBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.PictureBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="selectPhotoButton.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;selectPhotoLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;getPhotoButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;selectedPictureBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>en</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

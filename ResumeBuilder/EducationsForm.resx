@@ -57,4 +57,371 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="educationEndDateTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 81</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;educationDetailTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addEducationButton.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="educationTitleLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationTextCounterLabel.Text" xml:space="preserve">
+    <value>0/200</value>
+  </data>
+  <data name="educationDetailTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;addEducationButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="addEducationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;educationDetailTextbox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 12</value>
+  </data>
+  <data name="addEducationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>278, 194</value>
+  </data>
+  <data name="educationDetailTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationDetailTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 114</value>
+  </data>
+  <data name="&gt;&gt;educationDetailTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="educationDetailTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 70</value>
+  </data>
+  <data name="&gt;&gt;educationTitleLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>EducationsForm</value>
+  </data>
+  <data name="educationEndDateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="educationTitleTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="educationStartDateLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;educationDetailLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="educationStartDateLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="educationStartDateTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="educationStartDateTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 48</value>
+  </data>
+  <data name="educationTitleTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>52</value>
+  </data>
+  <data name="educationTitleLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>85, 15</value>
+  </data>
+  <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>120, 70</value>
+  </data>
+  <data name="educationTextCounterLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;educationTitleLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;educationDetailLabel.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="educationTextCounterLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="&gt;&gt;educationTextCounterLabel.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="educationTextCounterLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>36, 15</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationTitleLabel.Text" xml:space="preserve">
+    <value>Education Title</value>
+  </data>
+  <data name="&gt;&gt;educationTextCounterLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationStartDateTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="educationTextCounterLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="educationEndDateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>53</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="educationEndDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 15</value>
+  </data>
+  <data name="educationStartDateLabel.Text" xml:space="preserve">
+    <value>Education Start Date</value>
+  </data>
+  <data name="educationEndDateTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="educationTitleTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="educationTitleLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>43, 15</value>
+  </data>
+  <data name="educationStartDateTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <data name="educationDetailLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="educationStartDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>14, 48</value>
+  </data>
+  <data name="educationDetailLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 114</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationTitleTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="educationTitleTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>136, 15</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateTextbox.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;educationTitleLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;educationTitleTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateTextbox.Name" xml:space="preserve">
+    <value>educationStartDateTextbox</value>
+  </data>
+  <data name="&gt;&gt;educationDetailLabel.Name" xml:space="preserve">
+    <value>educationDetailLabel</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 500</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateLabel.Name" xml:space="preserve">
+    <value>educationStartDateLabel</value>
+  </data>
+  <data name="educationTitleLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="removeButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="educationEndDateTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="educationEndDateTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="removeButton.Text" xml:space="preserve">
+    <value>Remove Education</value>
+  </data>
+  <data name="educationDetailLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="addEducationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;educationTextCounterLabel.Name" xml:space="preserve">
+    <value>educationTextCounterLabel</value>
+  </data>
+  <data name="&gt;&gt;educationTextCounterLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="addEducationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateTextbox.Name" xml:space="preserve">
+    <value>educationEndDateTextbox</value>
+  </data>
+  <data name="&gt;&gt;addEducationButton.Name" xml:space="preserve">
+    <value>addEducationButton</value>
+  </data>
+  <data name="addEducationButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="educationStartDateLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 15</value>
+  </data>
+  <data name="educationDetailLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>93, 15</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateLabel.Name" xml:space="preserve">
+    <value>educationEndDateLabel</value>
+  </data>
+  <data name="educationDetailLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="&gt;&gt;educationTitleTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addEducationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationTextCounterLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>134, 194</value>
+  </data>
+  <data name="educationStartDateLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>51</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>73</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="educationEndDateLabel.Text" xml:space="preserve">
+    <value>Education End Date</value>
+  </data>
+  <data name="educationStartDateTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="educationDetailLabel.Text" xml:space="preserve">
+    <value>Education Detail</value>
+  </data>
+  <data name="&gt;&gt;educationStartDateLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
+    <value>removeButton</value>
+  </data>
+  <data name="&gt;&gt;educationDetailTextbox.Name" xml:space="preserve">
+    <value>educationDetailTextbox</value>
+  </data>
+  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>EducationsForm</value>
+  </data>
+  <data name="addEducationButton.Text" xml:space="preserve">
+    <value>Add Education</value>
+  </data>
+  <data name="removeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="&gt;&gt;educationDetailLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationDetailTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>200</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="educationTitleLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;educationTitleTextbox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="educationEndDateTextbox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>5, 5, 5, 5</value>
+  </data>
+  <data name="educationEndDateLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;removeButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="educationEndDateLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>16, 81</value>
+  </data>
+  <data name="educationDetailTextbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>258, 442</value>
+  </data>
+  <data name="&gt;&gt;educationEndDateTextbox.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;educationTitleLabel.Name" xml:space="preserve">
+    <value>educationTitleLabel</value>
+  </data>
+  <data name="&gt;&gt;educationTitleTextbox.Name" xml:space="preserve">
+    <value>educationTitleTextbox</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>tr</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

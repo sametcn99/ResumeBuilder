@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PersonalDetailsForm));
             this.summaryTextCounterLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.addressLabel = new System.Windows.Forms.Label();
@@ -51,221 +52,139 @@
             // 
             // summaryTextCounterLabel
             // 
-            this.summaryTextCounterLabel.AutoSize = true;
+            resources.ApplyResources(this.summaryTextCounterLabel, "summaryTextCounterLabel");
             this.summaryTextCounterLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.summaryTextCounterLabel.Location = new System.Drawing.Point(128, 376);
-            this.summaryTextCounterLabel.Margin = new System.Windows.Forms.Padding(5);
             this.summaryTextCounterLabel.Name = "summaryTextCounterLabel";
-            this.summaryTextCounterLabel.Size = new System.Drawing.Size(36, 15);
-            this.summaryTextCounterLabel.TabIndex = 40;
-            this.summaryTextCounterLabel.Text = "0/500";
             // 
             // nameLabel
             // 
-            this.nameLabel.AutoSize = true;
+            resources.ApplyResources(this.nameLabel, "nameLabel");
             this.nameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.nameLabel.Location = new System.Drawing.Point(79, 14);
-            this.nameLabel.Margin = new System.Windows.Forms.Padding(5);
             this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(39, 15);
-            this.nameLabel.TabIndex = 0;
-            this.nameLabel.Text = "Name";
             // 
             // addressLabel
             // 
-            this.addressLabel.AutoSize = true;
+            resources.ApplyResources(this.addressLabel, "addressLabel");
             this.addressLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.addressLabel.Location = new System.Drawing.Point(69, 47);
-            this.addressLabel.Margin = new System.Windows.Forms.Padding(5);
             this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(49, 15);
-            this.addressLabel.TabIndex = 2;
-            this.addressLabel.Text = "Address";
             // 
             // phoneNumberLabel
             // 
-            this.phoneNumberLabel.AutoSize = true;
+            resources.ApplyResources(this.phoneNumberLabel, "phoneNumberLabel");
             this.phoneNumberLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.phoneNumberLabel.Location = new System.Drawing.Point(30, 80);
-            this.phoneNumberLabel.Margin = new System.Windows.Forms.Padding(5);
             this.phoneNumberLabel.Name = "phoneNumberLabel";
-            this.phoneNumberLabel.Size = new System.Drawing.Size(88, 15);
-            this.phoneNumberLabel.TabIndex = 3;
-            this.phoneNumberLabel.Text = "Phone Number";
             // 
             // savePersonDataButton
             // 
+            resources.ApplyResources(this.savePersonDataButton, "savePersonDataButton");
             this.savePersonDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.savePersonDataButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.savePersonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.savePersonDataButton.Location = new System.Drawing.Point(272, 376);
-            this.savePersonDataButton.Margin = new System.Windows.Forms.Padding(5);
             this.savePersonDataButton.Name = "savePersonDataButton";
-            this.savePersonDataButton.Size = new System.Drawing.Size(100, 23);
-            this.savePersonDataButton.TabIndex = 10;
-            this.savePersonDataButton.Text = "Save/Update";
             this.savePersonDataButton.UseVisualStyleBackColor = false;
             this.savePersonDataButton.Click += new System.EventHandler(this.savePersonDataButton_Click);
             // 
             // emailLabel
             // 
-            this.emailLabel.AutoSize = true;
+            resources.ApplyResources(this.emailLabel, "emailLabel");
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.emailLabel.Location = new System.Drawing.Point(82, 113);
-            this.emailLabel.Margin = new System.Windows.Forms.Padding(5);
             this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(36, 15);
-            this.emailLabel.TabIndex = 4;
-            this.emailLabel.Text = "Email";
             // 
             // phoneNumberTextbox
             // 
+            resources.ApplyResources(this.phoneNumberTextbox, "phoneNumberTextbox");
             this.phoneNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.phoneNumberTextbox.ForeColor = System.Drawing.Color.Black;
-            this.phoneNumberTextbox.Location = new System.Drawing.Point(128, 80);
-            this.phoneNumberTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.phoneNumberTextbox.MaxLength = 12;
             this.phoneNumberTextbox.Name = "phoneNumberTextbox";
             this.phoneNumberTextbox.ShortcutsEnabled = false;
-            this.phoneNumberTextbox.Size = new System.Drawing.Size(244, 23);
-            this.phoneNumberTextbox.TabIndex = 5;
             this.phoneNumberTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextbox_KeyPress);
             // 
             // emailTextbox
             // 
+            resources.ApplyResources(this.emailTextbox, "emailTextbox");
             this.emailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailTextbox.ForeColor = System.Drawing.Color.Black;
-            this.emailTextbox.Location = new System.Drawing.Point(128, 113);
-            this.emailTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.emailTextbox.MaxLength = 50;
             this.emailTextbox.Name = "emailTextbox";
-            this.emailTextbox.Size = new System.Drawing.Size(244, 23);
-            this.emailTextbox.TabIndex = 6;
             // 
             // AddressTextbox
             // 
+            resources.ApplyResources(this.AddressTextbox, "AddressTextbox");
             this.AddressTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTextbox.ForeColor = System.Drawing.Color.Black;
-            this.AddressTextbox.Location = new System.Drawing.Point(128, 47);
-            this.AddressTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.AddressTextbox.MaxLength = 200;
             this.AddressTextbox.Name = "AddressTextbox";
-            this.AddressTextbox.Size = new System.Drawing.Size(244, 23);
-            this.AddressTextbox.TabIndex = 7;
             // 
             // nameTextbox
             // 
+            resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameTextbox.ForeColor = System.Drawing.Color.Black;
-            this.nameTextbox.Location = new System.Drawing.Point(128, 14);
-            this.nameTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.nameTextbox.MaxLength = 20;
             this.nameTextbox.Name = "nameTextbox";
-            this.nameTextbox.Size = new System.Drawing.Size(244, 23);
-            this.nameTextbox.TabIndex = 9;
             // 
             // summaryLabel
             // 
-            this.summaryLabel.AutoSize = true;
+            resources.ApplyResources(this.summaryLabel, "summaryLabel");
             this.summaryLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.summaryLabel.Location = new System.Drawing.Point(60, 263);
-            this.summaryLabel.Margin = new System.Windows.Forms.Padding(5);
             this.summaryLabel.Name = "summaryLabel";
-            this.summaryLabel.Size = new System.Drawing.Size(58, 15);
-            this.summaryLabel.TabIndex = 11;
-            this.summaryLabel.Text = "Summary";
             // 
             // summaryTextbox
             // 
+            resources.ApplyResources(this.summaryTextbox, "summaryTextbox");
             this.summaryTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summaryTextbox.ForeColor = System.Drawing.Color.Black;
-            this.summaryTextbox.Location = new System.Drawing.Point(128, 263);
-            this.summaryTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.summaryTextbox.MaxLength = 500;
-            this.summaryTextbox.Multiline = true;
             this.summaryTextbox.Name = "summaryTextbox";
-            this.summaryTextbox.Size = new System.Drawing.Size(244, 103);
-            this.summaryTextbox.TabIndex = 12;
             this.summaryTextbox.TextChanged += new System.EventHandler(this.summaryTextbox_TextChanged);
             // 
             // socialMediaLinksTextBox
             // 
+            resources.ApplyResources(this.socialMediaLinksTextBox, "socialMediaLinksTextBox");
             this.socialMediaLinksTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.socialMediaLinksTextBox.ForeColor = System.Drawing.Color.Black;
-            this.socialMediaLinksTextBox.Location = new System.Drawing.Point(128, 179);
-            this.socialMediaLinksTextBox.Margin = new System.Windows.Forms.Padding(5);
-            this.socialMediaLinksTextBox.MaxLength = 500;
-            this.socialMediaLinksTextBox.Multiline = true;
             this.socialMediaLinksTextBox.Name = "socialMediaLinksTextBox";
-            this.socialMediaLinksTextBox.Size = new System.Drawing.Size(244, 74);
-            this.socialMediaLinksTextBox.TabIndex = 39;
             // 
             // websiteLabel
             // 
-            this.websiteLabel.AutoSize = true;
+            resources.ApplyResources(this.websiteLabel, "websiteLabel");
             this.websiteLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.websiteLabel.Location = new System.Drawing.Point(69, 146);
-            this.websiteLabel.Margin = new System.Windows.Forms.Padding(5);
             this.websiteLabel.Name = "websiteLabel";
-            this.websiteLabel.Size = new System.Drawing.Size(49, 15);
-            this.websiteLabel.TabIndex = 36;
-            this.websiteLabel.Text = "Website";
             // 
             // socialMediaLinksLabel
             // 
-            this.socialMediaLinksLabel.AutoSize = true;
+            resources.ApplyResources(this.socialMediaLinksLabel, "socialMediaLinksLabel");
             this.socialMediaLinksLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.socialMediaLinksLabel.Location = new System.Drawing.Point(14, 179);
-            this.socialMediaLinksLabel.Margin = new System.Windows.Forms.Padding(5);
             this.socialMediaLinksLabel.Name = "socialMediaLinksLabel";
-            this.socialMediaLinksLabel.Size = new System.Drawing.Size(104, 15);
-            this.socialMediaLinksLabel.TabIndex = 38;
-            this.socialMediaLinksLabel.Text = "Social Media Links";
             // 
             // websiteTextbox
             // 
+            resources.ApplyResources(this.websiteTextbox, "websiteTextbox");
             this.websiteTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.websiteTextbox.ForeColor = System.Drawing.Color.Black;
-            this.websiteTextbox.Location = new System.Drawing.Point(128, 146);
-            this.websiteTextbox.Margin = new System.Windows.Forms.Padding(5);
-            this.websiteTextbox.MaxLength = 50;
             this.websiteTextbox.Name = "websiteTextbox";
-            this.websiteTextbox.Size = new System.Drawing.Size(244, 23);
-            this.websiteTextbox.TabIndex = 37;
             // 
             // dataGridView1
             // 
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            this.dataGridView1.Location = new System.Drawing.Point(388, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
-            this.dataGridView1.Size = new System.Drawing.Size(450, 500);
-            this.dataGridView1.TabIndex = 41;
             // 
             // removeButton
             // 
+            resources.ApplyResources(this.removeButton, "removeButton");
             this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.removeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.removeButton.Location = new System.Drawing.Point(252, 442);
-            this.removeButton.Margin = new System.Windows.Forms.Padding(5);
             this.removeButton.Name = "removeButton";
-            this.removeButton.Size = new System.Drawing.Size(120, 70);
-            this.removeButton.TabIndex = 61;
-            this.removeButton.Text = "Remove Personal Details";
             this.removeButton.UseVisualStyleBackColor = false;
             // 
             // PersonalDetailsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(850, 550);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.summaryTextCounterLabel);
@@ -287,7 +206,6 @@
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonalDetailsForm";
-            this.Text = "PersonalDetailsForm";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -57,4 +57,583 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="&gt;&gt;interestTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="skillsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>54</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="interestsRemoveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 279</value>
+  </data>
+  <data name="addSkillButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 41</value>
+  </data>
+  <data name="&gt;&gt;addCertificationButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="certificationsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>77, 15</value>
+  </data>
+  <data name="&gt;&gt;addCertificationButton.Name" xml:space="preserve">
+    <value>addCertificationButton</value>
+  </data>
+  <data name="certificationsRemoveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>76</value>
+  </data>
+  <data name="personalProjectLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>31, 192</value>
+  </data>
+  <data name="&gt;&gt;languagesLabel.Name" xml:space="preserve">
+    <value>languagesLabel</value>
+  </data>
+  <data name="skillRemoveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="skillRemoveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 41</value>
+  </data>
+  <data name="&gt;&gt;personalProjectTitleTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;languageTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="languageTextbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="certificationTextbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;certificationsRemoveButton.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="certificationsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>68</value>
+  </data>
+  <data name="&gt;&gt;addPersonalProjectButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;personalProjectLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="addCertificationButton.TabIndex" type="System.Int32, mscorlib">
+    <value>69</value>
+  </data>
+  <data name="interestsRemoveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>79</value>
+  </data>
+  <data name="certificationsRemoveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="addLanguageButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;personalProjectTitleTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addCertificationButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 102</value>
+  </data>
+  <data name="languagesRemoveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 163</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>MoreDetailsForm</value>
+  </data>
+  <data name="&gt;&gt;addSkillButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="interestTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="&gt;&gt;interestTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="interestsRemoveButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="addInterestButton.TabIndex" type="System.Int32, mscorlib">
+    <value>65</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
+    <value>dataGridView1</value>
+  </data>
+  <data name="&gt;&gt;interestsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;skillsLabel.Name" xml:space="preserve">
+    <value>skillsLabel</value>
+  </data>
+  <data name="&gt;&gt;interestsRemoveButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;addPersonalProjectButton.Name" xml:space="preserve">
+    <value>addPersonalProjectButton</value>
+  </data>
+  <data name="&gt;&gt;addInterestButton.ZOrder" xml:space="preserve">
+    <value>16</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="addPersonalProjectButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;languagesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="languagesRemoveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>77</value>
+  </data>
+  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>450, 500</value>
+  </data>
+  <data name="&gt;&gt;personalProjectLabel.ZOrder" xml:space="preserve">
+    <value>14</value>
+  </data>
+  <data name="addCertificationButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;certificationsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="addCertificationButton.Text" xml:space="preserve">
+    <value>Add/Update</value>
+  </data>
+  <data name="languageTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="&gt;&gt;certificationsLabel.Name" xml:space="preserve">
+    <value>certificationsLabel</value>
+  </data>
+  <data name="addInterestButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;addPersonalProjectButton.ZOrder" xml:space="preserve">
+    <value>19</value>
+  </data>
+  <data name="&gt;&gt;interestsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="addInterestButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 279</value>
+  </data>
+  <data name="addSkillButton.TabIndex" type="System.Int32, mscorlib">
+    <value>55</value>
+  </data>
+  <data name="&gt;&gt;skillTextbox.ZOrder" xml:space="preserve">
+    <value>11</value>
+  </data>
+  <data name="&gt;&gt;certificationsRemoveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="personalProjectLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>59</value>
+  </data>
+  <data name="interestTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="addLanguageButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;interestTextbox.Name" xml:space="preserve">
+    <value>interestTextbox</value>
+  </data>
+  <data name="languagesLabel.Text" xml:space="preserve">
+    <value>Languages</value>
+  </data>
+  <data name="&gt;&gt;skillsLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="interestTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>64</value>
+  </data>
+  <data name="&gt;&gt;addLanguageButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;skillsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="certificationsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;certificationsRemoveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addPersonalProjectButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="languagesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;addLanguageButton.Name" xml:space="preserve">
+    <value>addLanguageButton</value>
+  </data>
+  <data name="certificationsLabel.Text" xml:space="preserve">
+    <value>Certifications</value>
+  </data>
+  <data name="&gt;&gt;languagesLabel.ZOrder" xml:space="preserve">
+    <value>12</value>
+  </data>
+  <data name="skillTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>56</value>
+  </data>
+  <data name="&gt;&gt;addInterestButton.Name" xml:space="preserve">
+    <value>addInterestButton</value>
+  </data>
+  <data name="languagesRemoveButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;interestsLabel.ZOrder" xml:space="preserve">
+    <value>20</value>
+  </data>
+  <data name="&gt;&gt;addCertificationButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="personalProjectTitleTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 192</value>
+  </data>
+  <data name="skillTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="&gt;&gt;skillTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="personalProjectTitleTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="certificationTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 73</value>
+  </data>
+  <data name="skillTextbox.Multiline" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;languageTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="skillRemoveButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="&gt;&gt;skillRemoveButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="addLanguageButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 163</value>
+  </data>
+  <data name="&gt;&gt;skillsLabel.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="languageTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 134</value>
+  </data>
+  <data name="&gt;&gt;languagesRemoveButton.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="certificationsRemoveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="interestsRemoveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;personalProjectLabel.Name" xml:space="preserve">
+    <value>personalProjectLabel</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="certificationsRemoveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 105</value>
+  </data>
+  <data name="personalProjectRemoveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>78</value>
+  </data>
+  <data name="languagesRemoveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="languageTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>58</value>
+  </data>
+  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>388, 12</value>
+  </data>
+  <data name="&gt;&gt;interestsRemoveButton.Name" xml:space="preserve">
+    <value>interestsRemoveButton</value>
+  </data>
+  <data name="addSkillButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;addSkillButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="personalProjectLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;certificationTextbox.Name" xml:space="preserve">
+    <value>certificationTextbox</value>
+  </data>
+  <data name="personalProjectRemoveButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="languagesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>64, 15</value>
+  </data>
+  <data name="addPersonalProjectButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>283, 221</value>
+  </data>
+  <data name="&gt;&gt;certificationTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="addInterestButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;personalProjectRemoveButton.Name" xml:space="preserve">
+    <value>personalProjectRemoveButton</value>
+  </data>
+  <data name="&gt;&gt;addInterestButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="certificationTextbox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>244, 23</value>
+  </data>
+  <data name="certificationTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>70</value>
+  </data>
+  <data name="&gt;&gt;personalProjectTitleTextbox.ZOrder" xml:space="preserve">
+    <value>15</value>
+  </data>
+  <data name="skillRemoveButton.TabIndex" type="System.Int32, mscorlib">
+    <value>75</value>
+  </data>
+  <data name="languagesRemoveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="personalProjectTitleTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>50</value>
+  </data>
+  <data name="&gt;&gt;certificationsLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="certificationTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;addLanguageButton.ZOrder" xml:space="preserve">
+    <value>17</value>
+  </data>
+  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
+    <value>74</value>
+  </data>
+  <data name="personalProjectLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>92, 15</value>
+  </data>
+  <data name="&gt;&gt;certificationTextbox.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="interestsLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>63</value>
+  </data>
+  <data name="addInterestButton.Text" xml:space="preserve">
+    <value>Add/Update</value>
+  </data>
+  <data name="&gt;&gt;skillTextbox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="skillsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;personalProjectLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="personalProjectRemoveButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 221</value>
+  </data>
+  <data name="&gt;&gt;addInterestButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="languagesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>57</value>
+  </data>
+  <data name="interestsLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="interestTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 250</value>
+  </data>
+  <data name="addPersonalProjectButton.Text" xml:space="preserve">
+    <value>Add/Update</value>
+  </data>
+  <data name="languagesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>59, 134</value>
+  </data>
+  <data name="&gt;&gt;personalProjectRemoveButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="addPersonalProjectButton.TabIndex" type="System.Int32, mscorlib">
+    <value>62</value>
+  </data>
+  <data name="&gt;&gt;certificationsLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <data name="personalProjectRemoveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;interestsRemoveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;addSkillButton.Name" xml:space="preserve">
+    <value>addSkillButton</value>
+  </data>
+  <data name="skillsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>33, 15</value>
+  </data>
+  <data name="interestsLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>51, 15</value>
+  </data>
+  <data name="&gt;&gt;languagesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;certificationTextbox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;certificationsRemoveButton.Name" xml:space="preserve">
+    <value>certificationsRemoveButton</value>
+  </data>
+  <data name="languageTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="certificationsRemoveButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="skillTextbox.MaxLength" type="System.Int32, mscorlib">
+    <value>10</value>
+  </data>
+  <data name="certificationsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>46, 73</value>
+  </data>
+  <data name="skillRemoveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languagesRemoveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;interestsRemoveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addLanguageButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="addLanguageButton.Text" xml:space="preserve">
+    <value>Add/Update</value>
+  </data>
+  <data name="&gt;&gt;skillRemoveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="interestsRemoveButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;languagesRemoveButton.Name" xml:space="preserve">
+    <value>languagesRemoveButton</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="&gt;&gt;interestsLabel.Name" xml:space="preserve">
+    <value>interestsLabel</value>
+  </data>
+  <data name="&gt;&gt;languageTextbox.ZOrder" xml:space="preserve">
+    <value>13</value>
+  </data>
+  <data name="personalProjectRemoveButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="personalProjectLabel.Text" xml:space="preserve">
+    <value>Personel Project</value>
+  </data>
+  <data name="addLanguageButton.TabIndex" type="System.Int32, mscorlib">
+    <value>61</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MoreDetailsForm</value>
+  </data>
+  <data name="skillsLabel.Text" xml:space="preserve">
+    <value>Skills</value>
+  </data>
+  <data name="addSkillButton.Text" xml:space="preserve">
+    <value>Add/Update</value>
+  </data>
+  <data name="&gt;&gt;skillRemoveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="personalProjectTitleTextbox.TabIndex" type="System.Int32, mscorlib">
+    <value>66</value>
+  </data>
+  <data name="&gt;&gt;interestTextbox.ZOrder" xml:space="preserve">
+    <value>18</value>
+  </data>
+  <data name="&gt;&gt;addCertificationButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;personalProjectRemoveButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="skillTextbox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>129, 12</value>
+  </data>
+  <data name="interestsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>72, 250</value>
+  </data>
+  <data name="&gt;&gt;skillTextbox.Name" xml:space="preserve">
+    <value>skillTextbox</value>
+  </data>
+  <data name="skillsLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>90, 12</value>
+  </data>
+  <data name="addSkillButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="interestsLabel.Text" xml:space="preserve">
+    <value>Interests</value>
+  </data>
+  <data name="&gt;&gt;languagesRemoveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;addPersonalProjectButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;skillRemoveButton.Name" xml:space="preserve">
+    <value>skillRemoveButton</value>
+  </data>
+  <data name="addCertificationButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>90, 23</value>
+  </data>
+  <data name="&gt;&gt;personalProjectRemoveButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;personalProjectTitleTextbox.Name" xml:space="preserve">
+    <value>personalProjectTitleTextbox</value>
+  </data>
+  <data name="&gt;&gt;addSkillButton.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;languageTextbox.Name" xml:space="preserve">
+    <value>languageTextbox</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>tr</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
 </root>

@@ -16,7 +16,24 @@ namespace ResumeBuilder
         public string pdfPath = "";
         public FormHome()
         {
+
             InitializeComponent();
+
+        }
+        public void formRefresh()
+        {
+            //this.Close();
+            if (AppControllers.languageOption == 1)
+            {
+                //MessageBox.Show(AppControllers.languageOption.ToString());
+                Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("tr");
+                this.Controls.Clear();
+                InitializeComponent();
+            }
+            else
+            {
+                InitializeComponent();
+            }
         }
 
         //*****CHILDFORM METHODS*****

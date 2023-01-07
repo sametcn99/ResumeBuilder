@@ -1,4 +1,5 @@
-﻿using static ResumeBuilder.AppControllers;
+﻿using ResumeBuilder.Properties;
+using static ResumeBuilder.AppControllers;
 namespace ResumeBuilder
 {
 
@@ -63,6 +64,21 @@ namespace ResumeBuilder
         private void radioButton2_Click(object sender, EventArgs e)
         {
             AppControllers.savingOption = 1;
+        }
+
+        private void appLanguagesCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            switch (appLanguagesCombobox.SelectedIndex)
+            {
+                case 0:
+                    Settings.Default.Language = "en";
+                    break;
+                case 1:
+                    Settings.Default.Language = "tr";
+                    break;
+            }
+            Settings.Default.Save();
+            Application.Restart();
         }
     }
 }

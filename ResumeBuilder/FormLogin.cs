@@ -1,4 +1,7 @@
-﻿using Microsoft.VisualBasic.FileIO;
+﻿
+
+using Microsoft.VisualBasic.FileIO;
+using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
@@ -16,10 +19,19 @@ namespace ResumeBuilder
         public static extern bool ReleaseCapture();
         public const int WM_NCLBUTTONDOWN = 0xA1;
         public const int HT_CAPTION = 0x2;
-        FormHome formHome = new FormHome();
 
         public FormLogin()
         {
+            MessageBox.Show(Settings.Default.Language);
+            switch (Settings.Default.Language)
+            {
+                case "en":
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("en");
+                    break;
+                case "tr":
+                    Thread.CurrentThread.CurrentUICulture = new System.Globalization.CultureInfo("tr");
+                    break;
+            }
             InitializeComponent();
             foreach (var item in sqlControllers.GetNames())
             {
@@ -66,6 +78,7 @@ namespace ResumeBuilder
         }
         private void createNewResumeButton_Click(object sender, EventArgs e)
         {
+            FormHome formHome = new FormHome();
             formHome.Show();
             this.Hide();
         }
@@ -75,6 +88,11 @@ namespace ResumeBuilder
             {
                 resumeVersionCombobox.Items.Add(item.Trim());
             }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
