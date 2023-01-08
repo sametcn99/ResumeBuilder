@@ -67,17 +67,22 @@ namespace ResumeBuilder
 
         private void appLanguagesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            switch (appLanguagesCombobox.SelectedIndex)
+            DialogResult dialogResult = new DialogResult();
+            dialogResult = MessageBox.Show("Some of the operations you perform require an application restart to take affect.", "Uyarı!", MessageBoxButtons.OKCancel);
+            if (dialogResult == DialogResult.OK)
             {
-                case 0:
-                    Settings.Default.Language = "en";
-                    break;
-                case 1:
-                    Settings.Default.Language = "tr";
-                    break;
+                switch (appLanguagesCombobox.SelectedIndex)
+                {
+                    case 0:
+                        Settings.Default.Language = "en";
+                        break;
+                    case 1:
+                        Settings.Default.Language = "tr";
+                        break;
+                }
+                Settings.Default.Save();
+                Application.Restart();
             }
-            Settings.Default.Save();
-            Application.Restart();
         }
     }
 }

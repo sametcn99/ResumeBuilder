@@ -23,7 +23,7 @@
                 selectedPictureBox.Image = new Bitmap(opnfd.FileName);
                 if (formLogin.getDescription() != "")
                 {
-                    filepath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + "\\\\" + sqlControllers.GetIdFromDescription().ToString().Trim() + ".jpg";
+                    filepath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\" + sqlControllers.GetIdFromDescription().ToString().Trim() + ".jpg";
                     File.Copy(opnfd.FileName, filepath, true);
                 }
                 else
@@ -38,7 +38,10 @@
 
         private void getPhotoButton_Click(object sender, EventArgs e)
         {
-            selectedPictureBox.Image = new Bitmap(sqlControllers.getPicture());
+            if (!string.IsNullOrEmpty(sqlControllers.getPicture()))
+            {
+                selectedPictureBox.Image = new Bitmap(sqlControllers.getPicture());
+            }
         }
     }
 }

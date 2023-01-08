@@ -70,6 +70,7 @@ namespace ResumeBuilder
             cnn = new SqlConnection(connectionString);
             if (formLogin.getDescription() != "")
             {
+
                 SqlCommand cmd = new SqlCommand($"select image from Image where id = '{GetIdFromDescription().ToString().Trim()}'", cnn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 cnn.Open();
@@ -82,6 +83,8 @@ namespace ResumeBuilder
             }
             else
             {
+                MessageBox.Show("else");
+
                 PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
                 SqlCommand cmd = new SqlCommand($"select image from Image where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

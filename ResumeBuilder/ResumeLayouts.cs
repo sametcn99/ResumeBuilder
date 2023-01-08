@@ -38,12 +38,15 @@ namespace ResumeBuilder
                         page.Header().Row(row =>
                         {
                             row.Spacing(15);
-                            row.ConstantItem(150).Image(sqlControllers.getPicture());
+                            if (!string.IsNullOrEmpty(sqlControllers.getPicture()))
+                            {
+                                row.ConstantItem(150).Image(sqlControllers.getPicture());
+                            }
                             row.RelativeItem().Column(column =>
                             {
-                                column.Item().Text(name).FontSize(18).FontColor(Colors.Blue.Medium).Bold();
-                                column.Item().Text(personDetails);
-                                column.Item().Text(summary);
+                                if (name != "") column.Item().Text(name).FontSize(18).FontColor(Colors.Blue.Medium).Bold();
+                                if (personDetails != "") column.Item().Text(personDetails);
+                                if (summary != "") column.Item().Text(summary);
                             });
                         }
                         );
@@ -97,7 +100,6 @@ namespace ResumeBuilder
                     });
                 })
                     .GeneratePdf(path);
-
             }
             catch (System.IO.IOException ex)
             {
@@ -122,8 +124,8 @@ namespace ResumeBuilder
                         row.ConstantItem(150).Image(sqlControllers.getPicture());
                         row.RelativeItem().Text(text =>
                         {
-                            text.Line(name).Bold().FontSize(19);
-                            text.Line(summary).Italic();
+                            if (name != "") text.Line(name).Bold().FontSize(19);
+                            if (summary != "") text.Line(summary).Italic();
                         });
                     });
                     page.Content().Column(column =>
