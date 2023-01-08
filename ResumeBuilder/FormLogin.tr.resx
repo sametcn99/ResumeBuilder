@@ -65,10 +65,10 @@
     <value>72, 111</value>
   </data>
   <data name="loginPanelResumeVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>126, 20</value>
+    <value>133, 20</value>
   </data>
   <data name="loginPanelResumeVersionLabel.Text" xml:space="preserve">
-    <value>Özgeçmiş Version</value>
+    <value>Özgeçmiş Versiyon</value>
   </data>
   <data name="loginPanelNameLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>107, 68</value>

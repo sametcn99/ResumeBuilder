@@ -5,6 +5,8 @@ namespace ResumeBuilder
 {
     internal class AppControllers
     {
+        public string[] titlesTR = { "IS DENEYIMI", "EGITIM BILGILERI", "SERTIFIKALAR", "KISISEL PROJELER", "DIL", "ILGI ALANI/ HOBI", "YETENEK" };
+        public string[] titlesEN = { "JOB", "EDUCATION", "CERTIFICATES", "PERSONAL PROJECTS", "LANGUAGES", "INTERESTS", "SKILLS" };
         public static int savingOption { get; set; }
         public static int languageOption { get; set; }
         public void OpenURL(string url)

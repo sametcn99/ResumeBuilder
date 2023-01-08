@@ -19,7 +19,6 @@ namespace ResumeBuilder
 
         public FormLogin()
         {
-            MessageBox.Show(Settings.Default.Language);
             switch (Settings.Default.Language)
             {
                 case "en":
