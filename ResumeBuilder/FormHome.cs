@@ -1,4 +1,6 @@
-﻿namespace ResumeBuilder
+﻿using ResumeBuilder.Properties;
+
+namespace ResumeBuilder
 {
     public partial class FormHome : Form
     {
@@ -183,7 +185,7 @@
                     resumeLayouts.ModernLayout(save.FileName, sqlControllers.fillPdfFields().Item1.ToString(), sqlControllers.fillPdfFields().Item2.ToString(), sqlControllers.fillPdfFields().Item3.ToString(), sqlControllers.fillPdfFields().Item4.ToString(), sqlControllers.fillPdfFields().Item5.ToString(), sqlControllers.fillPdfFields().Item6.ToString(), sqlControllers.fillPdfFields().Item7.ToString(), sqlControllers.fillPdfFields().Item8.ToString(), sqlControllers.fillPdfFields().Item9.ToString(), sqlControllers.fillPdfFields().Item10.ToString());
                 }
                 savingLabel.Text = "Saved!";
-                if (AppControllers.savingOption == 1)
+                if (Settings.Default.SavingFileOption == 1)
                 {
                     SautinSoft.PdfFocus f = new SautinSoft.PdfFocus();
                     f.OpenPdf(pdfPath);

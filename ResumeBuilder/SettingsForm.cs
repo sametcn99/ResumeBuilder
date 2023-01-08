@@ -57,12 +57,12 @@ namespace ResumeBuilder
         private void removePersonButton_Click(object sender, EventArgs e)
         {
             int id = sqlControllers.GetIdFromDescriptionForRemovePerson(resumeVersionCombobox.SelectedItem.ToString().Trim());
-            sqlControllers.SqlExecuter($"delete from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'; delete from Job where id = '{id}'; delete from Education where id = '{id}'; delete from MoreDetails where id = '{id}'");
+            sqlControllers.SqlExecuter($"delete from Person where description = '{resumeVersionCombobox.SelectedItem.ToString().Trim()}'; delete from Job where id = '{id}'; delete from Education where id = '{id}'; delete from MoreDetails where id = '{id}'; delete from Image where id = '{id}'");
         }
 
         private void radioButton2_Click(object sender, EventArgs e)
         {
-            AppControllers.savingOption = 1;
+            Settings.Default.SavingFileOption = 1;
         }
 
         private void appLanguagesCombobox_SelectedIndexChanged(object sender, EventArgs e)
@@ -83,6 +83,11 @@ namespace ResumeBuilder
                 Settings.Default.Save();
                 Application.Restart();
             }
+        }
+
+        private void radioButton1_Click(object sender, EventArgs e)
+        {
+            Settings.Default.SavingFileOption = 0;
         }
     }
 }

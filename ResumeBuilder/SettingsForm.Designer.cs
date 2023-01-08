@@ -163,6 +163,7 @@
             this.radioButton1.TabStop = true;
             this.toolTip1.SetToolTip(this.radioButton1, resources.GetString("radioButton1.ToolTip"));
             this.radioButton1.UseVisualStyleBackColor = true;
+            this.radioButton1.Click += new System.EventHandler(this.radioButton1_Click);
             // 
             // radioButton2
             // 
