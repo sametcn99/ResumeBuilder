@@ -1,0 +1,4 @@
+﻿when exporting data save the uploaded image
+when import data is clicked import image with data
+add light theme
+add local database

@@ -17,9 +17,7 @@ namespace ResumeBuilder
         public string pdfPath = "";
         public FormHome()
         {
-
             InitializeComponent();
-
         }
         public void formRefresh()
         {
