@@ -30,12 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingsForm));
-            this.rjToggleButton1 = new ResumeBuilder.RJControls.RJToggleButton();
-            this.label1 = new System.Windows.Forms.Label();
             this.showJsonDataButton = new System.Windows.Forms.Button();
-            this.sqlModeRadioButton = new System.Windows.Forms.RadioButton();
-            this.localModeRadioButton = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.importJsonDataButton = new System.Windows.Forms.Button();
             this.exportJsonDataButton = new System.Windows.Forms.Button();
             this.clearJsonDataButton = new System.Windows.Forms.Button();
@@ -51,30 +46,9 @@
             this.resumeVersionCombobox = new System.Windows.Forms.ComboBox();
             this.appLanguagesLabel = new System.Windows.Forms.Label();
             this.appLanguagesCombobox = new System.Windows.Forms.ComboBox();
-            this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // rjToggleButton1
-            // 
-            resources.ApplyResources(this.rjToggleButton1, "rjToggleButton1");
-            this.rjToggleButton1.Checked = true;
-            this.rjToggleButton1.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.rjToggleButton1.Name = "rjToggleButton1";
-            this.rjToggleButton1.OffBackColor = System.Drawing.Color.White;
-            this.rjToggleButton1.OffToggleColor = System.Drawing.Color.Black;
-            this.rjToggleButton1.OnBackColor = System.Drawing.Color.Black;
-            this.rjToggleButton1.OnToggleColor = System.Drawing.Color.White;
-            this.toolTip1.SetToolTip(this.rjToggleButton1, resources.GetString("rjToggleButton1.ToolTip"));
-            this.rjToggleButton1.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            resources.ApplyResources(this.label1, "label1");
-            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.label1.Name = "label1";
-            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // showJsonDataButton
             // 
@@ -85,34 +59,6 @@
             this.toolTip1.SetToolTip(this.showJsonDataButton, resources.GetString("showJsonDataButton.ToolTip"));
             this.showJsonDataButton.UseVisualStyleBackColor = true;
             this.showJsonDataButton.Click += new System.EventHandler(this.showJsonDataButton_Click);
-            // 
-            // sqlModeRadioButton
-            // 
-            resources.ApplyResources(this.sqlModeRadioButton, "sqlModeRadioButton");
-            this.sqlModeRadioButton.Checked = true;
-            this.sqlModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.sqlModeRadioButton.Name = "sqlModeRadioButton";
-            this.sqlModeRadioButton.TabStop = true;
-            this.toolTip1.SetToolTip(this.sqlModeRadioButton, resources.GetString("sqlModeRadioButton.ToolTip"));
-            this.sqlModeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // localModeRadioButton
-            // 
-            resources.ApplyResources(this.localModeRadioButton, "localModeRadioButton");
-            this.localModeRadioButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.localModeRadioButton.Name = "localModeRadioButton";
-            this.toolTip1.SetToolTip(this.localModeRadioButton, resources.GetString("localModeRadioButton.ToolTip"));
-            this.localModeRadioButton.UseVisualStyleBackColor = true;
-            // 
-            // groupBox1
-            // 
-            resources.ApplyResources(this.groupBox1, "groupBox1");
-            this.groupBox1.Controls.Add(this.sqlModeRadioButton);
-            this.groupBox1.Controls.Add(this.localModeRadioButton);
-            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.TabStop = false;
-            this.toolTip1.SetToolTip(this.groupBox1, resources.GetString("groupBox1.ToolTip"));
             // 
             // importJsonDataButton
             // 
@@ -259,15 +205,10 @@
             this.Controls.Add(this.clearJsonDataButton);
             this.Controls.Add(this.exportJsonDataButton);
             this.Controls.Add(this.importJsonDataButton);
-            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.showJsonDataButton);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.rjToggleButton1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "SettingsForm";
             this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
@@ -278,13 +219,7 @@
         }
 
         #endregion
-
-        private RJControls.RJToggleButton rjToggleButton1;
-        private Label label1;
         private Button showJsonDataButton;
-        private RadioButton sqlModeRadioButton;
-        private RadioButton localModeRadioButton;
-        private GroupBox groupBox1;
         private Button importJsonDataButton;
         private Button exportJsonDataButton;
         private Button clearJsonDataButton;

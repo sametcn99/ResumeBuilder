@@ -1,4 +1,5 @@
 ﻿using ResumeBuilder.Properties;
+using static ResumeBuilder.AppControllers;
 namespace ResumeBuilder
 {
 
