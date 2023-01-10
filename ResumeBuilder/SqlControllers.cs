@@ -15,7 +15,7 @@ namespace ResumeBuilder
         string cmdstring = "";
         string imagePath;
 
-        public string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
+        public static string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
@@ -58,6 +58,194 @@ namespace ResumeBuilder
             UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
             UPDATE Education SET EducationTitle = null WHERE EducationTitle = '';
             """;
+        public string CreateDatabaseScript = """
+                        USE [master]
+            GO
+            /****** Object:  Database [ResumeBuilderDb]    Script Date: 1/9/2023 5:42:14 PM ******/
+            CREATE DATABASE [ResumeBuilderDb]
+             CONTAINMENT = NONE
+             ON  PRIMARY 
+            ( NAME = N'ResumeBuilderDb', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\ResumeBuilderDb.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
+             LOG ON 
+            ( NAME = N'ResumeBuilderDb_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL16.SQLEXPRESS\MSSQL\DATA\ResumeBuilderDb_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
+             WITH CATALOG_COLLATION = DATABASE_DEFAULT, LEDGER = OFF
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET COMPATIBILITY_LEVEL = 160
+            GO
+            IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
+            begin
+            EXEC [ResumeBuilderDb].[dbo].[sp_fulltext_database] @action = 'enable'
+            end
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ANSI_NULL_DEFAULT OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ANSI_NULLS OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ANSI_PADDING OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ANSI_WARNINGS OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ARITHABORT OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET AUTO_CLOSE OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET AUTO_SHRINK OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET AUTO_UPDATE_STATISTICS ON 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET CURSOR_CLOSE_ON_COMMIT OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET CURSOR_DEFAULT  GLOBAL 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET CONCAT_NULL_YIELDS_NULL OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET NUMERIC_ROUNDABORT OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET QUOTED_IDENTIFIER OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET RECURSIVE_TRIGGERS OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET  DISABLE_BROKER 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET DATE_CORRELATION_OPTIMIZATION OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET TRUSTWORTHY OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ALLOW_SNAPSHOT_ISOLATION OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET PARAMETERIZATION SIMPLE 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET READ_COMMITTED_SNAPSHOT OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET HONOR_BROKER_PRIORITY OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET RECOVERY SIMPLE 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET  MULTI_USER 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET PAGE_VERIFY CHECKSUM  
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET DB_CHAINING OFF 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET TARGET_RECOVERY_TIME = 60 SECONDS 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET DELAYED_DURABILITY = DISABLED 
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET ACCELERATED_DATABASE_RECOVERY = OFF  
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET QUERY_STORE = ON
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET QUERY_STORE (OPERATION_MODE = READ_WRITE, CLEANUP_POLICY = (STALE_QUERY_THRESHOLD_DAYS = 30), DATA_FLUSH_INTERVAL_SECONDS = 900, INTERVAL_LENGTH_MINUTES = 60, MAX_STORAGE_SIZE_MB = 1000, QUERY_CAPTURE_MODE = AUTO, SIZE_BASED_CLEANUP_MODE = AUTO, MAX_PLANS_PER_QUERY = 200, WAIT_STATS_CAPTURE_MODE = ON)
+            GO
+            USE [ResumeBuilderDb]
+            GO
+            /****** Object:  Table [dbo].[Education]    Script Date: 1/9/2023 5:42:15 PM ******/
+            SET ANSI_NULLS ON
+            GO
+            SET QUOTED_IDENTIFIER ON
+            GO
+            CREATE TABLE [dbo].[Education](
+            	[id] [int] NOT NULL,
+            	[EducationTitle] [nchar](100) NOT NULL,
+            	[EducationDetail] [nchar](200) NULL,
+            	[EducationStart] [nchar](10) NULL,
+            	[EducationEnd] [nchar](10) NULL
+            ) ON [PRIMARY]
+            GO
+            /****** Object:  Table [dbo].[Image]    Script Date: 1/9/2023 5:42:15 PM ******/
+            SET ANSI_NULLS ON
+            GO
+            SET QUOTED_IDENTIFIER ON
+            GO
+            CREATE TABLE [dbo].[Image](
+            	[id] [int] NOT NULL,
+            	[image] [ntext] NULL,
+             CONSTRAINT [PK_Image] PRIMARY KEY CLUSTERED 
+            (
+            	[id] ASC
+            )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+            ) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+            GO
+            /****** Object:  Table [dbo].[Job]    Script Date: 1/9/2023 5:42:15 PM ******/
+            SET ANSI_NULLS ON
+            GO
+            SET QUOTED_IDENTIFIER ON
+            GO
+            CREATE TABLE [dbo].[Job](
+            	[id] [int] NOT NULL,
+            	[JobTitle] [nchar](100) NOT NULL,
+            	[JobDetail] [nchar](200) NULL,
+            	[JobStart] [nchar](10) NOT NULL,
+            	[JobEnd] [nchar](10) NOT NULL
+            ) ON [PRIMARY]
+            GO
+            /****** Object:  Table [dbo].[MoreDetails]    Script Date: 1/9/2023 5:42:15 PM ******/
+            SET ANSI_NULLS ON
+            GO
+            SET QUOTED_IDENTIFIER ON
+            GO
+            CREATE TABLE [dbo].[MoreDetails](
+            	[id] [int] NOT NULL,
+            	[Skill] [nchar](10) NULL,
+            	[Languages] [nchar](10) NULL,
+            	[Interests] [nchar](10) NULL,
+            	[Certifications] [nchar](10) NULL,
+            	[PersonalProjects] [nchar](50) NULL
+            ) ON [PRIMARY]
+            GO
+            /****** Object:  Table [dbo].[Person]    Script Date: 1/9/2023 5:42:15 PM ******/
+            SET ANSI_NULLS ON
+            GO
+            SET QUOTED_IDENTIFIER ON
+            GO
+            CREATE TABLE [dbo].[Person](
+            	[id] [int] NOT NULL,
+            	[Name] [nchar](50) NOT NULL,
+            	[Address] [nchar](200) NULL,
+            	[PhoneNumber] [nchar](12) NULL,
+            	[Email] [nchar](50) NULL,
+            	[Website] [nchar](50) NULL,
+            	[SocialMedia] [nchar](500) NULL,
+            	[Summary] [nchar](500) NULL,
+            	[description] [nvarchar](50) NOT NULL,
+             CONSTRAINT [PK_Person] PRIMARY KEY CLUSTERED 
+            (
+            	[id] ASC
+            )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
+            ) ON [PRIMARY]
+            GO
+            USE [master]
+            GO
+            ALTER DATABASE [ResumeBuilderDb] SET  READ_WRITE 
+            GO
+            
+
+            """;
+
+        public bool CheckDatabaseExists()
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    connection.Close();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    MessageBox.Show("database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Application.Exit();
+                    return false;
+
+                }
+            }
+        }
+
         public int getRandomID()
         {
             return id;

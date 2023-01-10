@@ -19,6 +19,11 @@ namespace ResumeBuilder
 
         public FormLogin()
         {
+            if (sqlControllers.CheckDatabaseExists() == false)
+            {
+                Application.Exit();
+            }
+
             switch (Settings.Default.Language)
             {
                 case "en":
