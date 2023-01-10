@@ -5,7 +5,7 @@ this app generates your CV as PDF file <br>
   <li>Save multiple Resumes for one person and edit anytime.</li>
   <li>Import and Export your all created resumes</li>
   <li>Print as Pdf or MS Word(docx) file</li>
-  <li>You can add; Name, Address, Phone Number, Email, Website, Social Media Links, Summary, Job informations, Education informations, Skills, Languages, Certifications and Photo to resume.</li>
+  <li>You can add; Name, Address, Phone Number, Email, Website, Social Media Links, Summary, Job informations, Education informations, Skills, Languages, Certifications and Photo to your resume.</li>
 </ul>
 
 <h1>Built With</h1>
