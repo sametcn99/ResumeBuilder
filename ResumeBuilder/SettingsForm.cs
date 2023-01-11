@@ -35,20 +35,26 @@ namespace ResumeBuilder
         }
         private void clearJsonDataButton_Click(object sender, EventArgs e)
         {
-            sqlControllers.ClearDatabase();
-            var files = Directory.EnumerateFiles(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "*.jpg", SearchOption.AllDirectories);
-            foreach (var item in files)
+            try
             {
-                try
+                sqlControllers.ClearDatabase();
+                var files = Directory.EnumerateFiles(Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location), "*.jpg", SearchOption.AllDirectories);
+                foreach (var item in files)
                 {
-                    File.Delete(item);
+                    try
+                    {
+                        File.Delete(item);
+                    }
+                    catch (Exception)
+                    { //log exception}
+                    }
                 }
-                catch (Exception)
-                { //log exception}
-                }
+                MessageBox.Show("Cleared!\nApplication restarted.");
+                Application.Restart();
             }
-            MessageBox.Show("Cleared!\nApplication restarted.");
-            Application.Restart();
+            catch (Exception)
+            {
+            }
         }
         private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
