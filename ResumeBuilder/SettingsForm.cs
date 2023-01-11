@@ -11,6 +11,8 @@ namespace ResumeBuilder
         public SettingsForm()
         {
             InitializeComponent();
+            //SqlControllers sqlControllers = new SqlControllers();
+            connectionStringLabel.Text = "Connection String: \n" + sqlControllers.getConnectionString().ToString();
             foreach (var item in sqlControllers.GetNames())
             {
                 namesCombobox.Items.Add(item.Trim());
@@ -89,6 +91,11 @@ namespace ResumeBuilder
         private void radioButton1_Click(object sender, EventArgs e)
         {
             Settings.Default.SavingFileOption = 0;
+        }
+
+        private void connectionStringLabel_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(sqlControllers.getConnectionString().ToString());
         }
     }
 }

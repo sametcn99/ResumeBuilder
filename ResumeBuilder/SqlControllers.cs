@@ -16,6 +16,7 @@ namespace ResumeBuilder
         string imagePath;
 
         public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        //public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\ResumeBuilderLocalDb.mdf;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
@@ -226,6 +227,11 @@ namespace ResumeBuilder
 
             """;
 
+        public string getConnectionString()
+        {
+            return connectionString;
+        }
+
         public bool CheckDatabaseExists()
         {
             //MessageBox.Show(connectionString);
@@ -239,13 +245,33 @@ namespace ResumeBuilder
                 }
                 catch (SqlException ex)
                 {
+                    connection.Close();
                     MessageBox.Show("database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     //Application.Exit();
                     return false;
-
                 }
             }
         }
+        //public bool CheckDatabaseExists2()
+        //{
+        //    using (SqlConnection connection = new SqlConnection(connectionString2))
+        //    {
+        //        try
+        //        {
+        //            connection.Open();
+        //            connection.Close();
+        //            connectionString = connectionString2;
+        //            return true;
+        //        }
+        //        catch (SqlException ex)
+        //        {
+        //            connection.Close();
+        //            MessageBox.Show("Database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            //Application.Exit();
+        //            return false;
+        //        }
+        //    }
+
 
         public int getRandomID()
         {

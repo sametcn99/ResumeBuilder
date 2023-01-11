@@ -21,7 +21,12 @@ namespace ResumeBuilder
         {
             if (sqlControllers.CheckDatabaseExists() == false)
             {
-                Application.Exit();
+                //if (sqlControllers.CheckDatabaseExists2() == false)
+                //{
+                //    MessageBox.Show("database is not exists");
+                //    Application.Exit();
+                //}
+
             }
 
             switch (Settings.Default.Language)
