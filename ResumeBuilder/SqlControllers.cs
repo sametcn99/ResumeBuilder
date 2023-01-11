@@ -15,7 +15,7 @@ namespace ResumeBuilder
         string cmdstring = "";
         string imagePath;
 
-        public static string connectionString = "Data Source=.\\SQLEXPRESS;Initial Catalog=ResumeBuilderDb;Integrated Security=True";
+        public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
@@ -228,6 +228,7 @@ namespace ResumeBuilder
 
         public bool CheckDatabaseExists()
         {
+            //MessageBox.Show(connectionString);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -452,8 +453,8 @@ namespace ResumeBuilder
         }
         public (string, string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
-            DataSet dataSet = GetPersonalTables();
             SqlExecuter(defaultEmptyValue);
+            DataSet dataSet = GetPersonalTables();
             name = dataSet.Tables[0].Rows[0].Field<string>("Name").ToString().Trim();
             personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim();
             summary = dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();

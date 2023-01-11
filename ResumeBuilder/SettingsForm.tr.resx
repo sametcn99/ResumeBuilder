@@ -58,44 +58,29 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>496, 19</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>80, 15</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Karanlık Tema</value>
+  <data name="showJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 12</value>
   </data>
   <data name="showJsonDataButton.Text" xml:space="preserve">
     <value>Veri Göster</value>
   </data>
-  <data name="sqlModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 19</value>
-  </data>
-  <data name="sqlModeRadioButton.Text" xml:space="preserve">
-    <value>SQL Veritabanı</value>
-  </data>
-  <data name="localModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>105, 19</value>
-  </data>
-  <data name="localModeRadioButton.Text" xml:space="preserve">
-    <value>Yerel Veritabanı</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Veritabanı Modları</value>
+  <data name="importJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 124</value>
   </data>
   <data name="importJsonDataButton.Text" xml:space="preserve">
     <value>Verileri İçe Aktar</value>
   </data>
+  <data name="exportJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 68</value>
+  </data>
   <data name="exportJsonDataButton.Text" xml:space="preserve">
     <value>Verileri Dışa Aktar</value>
   </data>
+  <data name="clearJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 180</value>
+  </data>
   <data name="clearJsonDataButton.Text" xml:space="preserve">
     <value>Verileri Sil</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Özgeçmiş Kayıt Modu</value>
   </data>
   <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
     <value>31, 22</value>
@@ -115,6 +100,12 @@
   <data name="radioButton2.Text" xml:space="preserve">
     <value>Ms Word Dosyası</value>
   </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 253</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Özgeçmiş Kayıt Modu</value>
+  </data>
   <data name="removePersonButton.Text" xml:space="preserve">
     <value>Sil</value>
   </data>
@@ -133,10 +124,16 @@
   <data name="loginPanelResumeVersionLabel.Text" xml:space="preserve">
     <value>Özgeçmiş Sürümü</value>
   </data>
+  <data name="appLanguagesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 12</value>
+  </data>
   <data name="appLanguagesLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>81, 15</value>
   </data>
   <data name="appLanguagesLabel.Text" xml:space="preserve">
     <value>Uygulama Dili</value>
+  </data>
+  <data name="appLanguagesCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 37</value>
   </data>
 </root>

@@ -57,345 +57,420 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
-  </data>
-  <data name="&gt;&gt;rjToggleButton1.ZOrder" xml:space="preserve">
-    <value>10</value>
-  </data>
-  <data name="&gt;&gt;loginPanelResumeVersionLabel.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>302, 232</value>
-  </data>
-  <data name="radioButton1.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;importJsonDataButton.ZOrder" xml:space="preserve">
-    <value>6</value>
-  </data>
-  <data name="&gt;&gt;resumeVersionCombobox.Name" xml:space="preserve">
-    <value>resumeVersionCombobox</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="showJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="showJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="clearJsonDataButton.Text" xml:space="preserve">
-    <value>Clear Data</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="exportJsonDataButton.Text" xml:space="preserve">
-    <value>Export Data</value>
-  </data>
-  <data name="$this.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 9</value>
-  </data>
-  <data name="&gt;&gt;removePersonButton.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="showJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;importJsonDataButton.Name" xml:space="preserve">
-    <value>importJsonDataButton</value>
-  </data>
-  <data name="&gt;&gt;loginPanelResumeVersionLabel.Name" xml:space="preserve">
-    <value>loginPanelResumeVersionLabel</value>
-  </data>
-  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 78</value>
-  </data>
-  <data name="&gt;&gt;showJsonDataButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;loginPanelNameLabel.Name" xml:space="preserve">
-    <value>loginPanelNameLabel</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="importJsonDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;localModeRadioButton.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="localModeRadioButton.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;exportJsonDataButton.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="loginPanelNameLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>14</value>
-  </data>
-  <data name="label1.ToolTip" xml:space="preserve">
-    <value>Theme changer is not avaible</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="namesCombobox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="localModeRadioButton.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesLabel.Name" xml:space="preserve">
-    <value>appLanguagesLabel</value>
-  </data>
-  <data name="removePersonButton.ToolTip" xml:space="preserve">
-    <value>Continue editing to existing resume</value>
-  </data>
-  <data name="rjToggleButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;localModeRadioButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="appLanguagesCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="removePersonButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesCombobox.Name" xml:space="preserve">
-    <value>appLanguagesCombobox</value>
-  </data>
-  <data name="clearJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="exportJsonDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="loginPanelNameLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="appLanguagesLabel.Text" xml:space="preserve">
-    <value>App Languages</value>
-  </data>
-  <data name="rjToggleButton1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesCombobox.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="localModeRadioButton.ToolTip" xml:space="preserve">
-    <value>Local Database is not availble</value>
-  </data>
-  <data name="sqlModeRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;namesCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="importJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 225</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;sqlModeRadioButton.Name" xml:space="preserve">
-    <value>sqlModeRadioButton</value>
-  </data>
-  <data name="appLanguagesCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 23</value>
-  </data>
-  <data name="&gt;&gt;namesCombobox.Name" xml:space="preserve">
-    <value>namesCombobox</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="rjToggleButton1.MinimumSize" type="System.Drawing.Size, System.Drawing">
     <value>45, 22</value>
   </data>
-  <data name="exportJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <data name="&gt;&gt;showJsonDataButton.Name" xml:space="preserve">
-    <value>showJsonDataButton</value>
-  </data>
-  <data name="clearJsonDataButton.ToolTip" xml:space="preserve">
-    <value>Clear all data</value>
-  </data>
-  <data name="removePersonButton.Text" xml:space="preserve">
-    <value>Remove</value>
-  </data>
-  <data name="&gt;&gt;rjToggleButton1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="appLanguagesCombobox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="showJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 113</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;sqlModeRadioButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;showJsonDataButton.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;exportJsonDataButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;rjToggleButton1.Type" xml:space="preserve">
-    <value>ResumeBuilder.RJControls.RJToggleButton, ResumeBuilder, Culture=neutral, PublicKeyToken=null</value>
-  </data>
-  <data name="&gt;&gt;rjToggleButton1.Name" xml:space="preserve">
-    <value>rjToggleButton1</value>
-  </data>
-  <data name="loginPanelResumeVersionLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>15</value>
-  </data>
-  <data name="exportJsonDataButton.ToolTip" xml:space="preserve">
-    <value>Export your data</value>
-  </data>
-  <data name="resumeVersionCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 23</value>
-  </data>
-  <data name="appLanguagesLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>89, 15</value>
-  </data>
-  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>850, 550</value>
-  </data>
-  <data name="importJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <data name="&gt;&gt;removePersonButton.Name" xml:space="preserve">
-    <value>removePersonButton</value>
-  </data>
-  <data name="radioButton2.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="loginPanelResumeVersionLabel.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="&gt;&gt;importJsonDataButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="appLanguagesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 60</value>
-  </data>
-  <data name="&gt;&gt;exportJsonDataButton.Name" xml:space="preserve">
-    <value>exportJsonDataButton</value>
-  </data>
-  <data name="loginPanelNameLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>114, 20</value>
-  </data>
-  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;loginPanelNameLabel.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
-    <value>radioButton2</value>
-  </data>
-  <data name="loginPanelResumeVersionLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+  <data name="&gt;&gt;appLanguagesCombobox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="appLanguagesCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
+  <data name="radioButton1.Text" xml:space="preserve">
+    <value>PDF File</value>
   </data>
-  <data name="loginPanelResumeVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>116, 20</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="appLanguagesLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
-  <data name="importJsonDataButton.ToolTip" xml:space="preserve">
-    <value>Import your data</value>
+  <data name="rjToggleButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>45, 22</value>
   </data>
-  <data name="groupBox3.Text" xml:space="preserve">
-    <value>Remove Resume Version</value>
+  <data name="appLanguagesLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>89, 15</value>
   </data>
-  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>141, 78</value>
+  <data name="&gt;&gt;appLanguagesCombobox.Name" xml:space="preserve">
+    <value>appLanguagesCombobox</value>
   </data>
-  <data name="appLanguagesCombobox.Items" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="importJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="localModeRadioButton.Text" xml:space="preserve">
-    <value>Local Database</value>
+  <data name="&gt;&gt;groupBox2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="loginPanelResumeVersionLabel.Location" type="System.Drawing.Point, System.Drawing">
     <value>6, 96</value>
   </data>
-  <data name="namesCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>12</value>
+  <data name="&gt;&gt;clearJsonDataButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>52, 22</value>
+  <data name="groupBox3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>302, 232</value>
   </data>
-  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>25, 47</value>
   </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>70, 15</value>
+  <data name="&gt;&gt;showJsonDataButton.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="importJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+  <data name="&gt;&gt;clearJsonDataButton.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>SettingsForm</value>
+  </data>
+  <data name="groupBox3.Text" xml:space="preserve">
+    <value>Remove Resume Version</value>
+  </data>
+  <data name="importJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 225</value>
+  </data>
+  <data name="removePersonButton.ToolTip" xml:space="preserve">
+    <value>Continue editing to existing resume</value>
+  </data>
+  <data name="&gt;&gt;rjToggleButton1.Name" xml:space="preserve">
+    <value>rjToggleButton1</value>
+  </data>
+  <data name="appLanguagesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 60</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="importJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="loginPanelNameLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>114, 20</value>
+  </data>
+  <data name="removePersonButton.Text" xml:space="preserve">
+    <value>Remove</value>
+  </data>
+  <data name="exportJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="showJsonDataButton.Text" xml:space="preserve">
+    <value>Show Data</value>
+  </data>
+  <data name="localModeRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>SettingsForm</value>
+  </data>
+  <data name="rjToggleButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;loginPanelResumeVersionLabel.Name" xml:space="preserve">
+    <value>loginPanelResumeVersionLabel</value>
+  </data>
+  <data name="removePersonButton.TabIndex" type="System.Int32, mscorlib">
+    <value>11</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="clearJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
     <value>Flat</value>
   </data>
-  <data name="&gt;&gt;appLanguagesCombobox.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;exportJsonDataButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;namesCombobox.ZOrder" xml:space="preserve">
+    <value>3</value>
   </data>
   <data name="sqlModeRadioButton.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
   </data>
+  <data name="radioButton1.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="appLanguagesCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 85</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="groupBox2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>141, 78</value>
+  </data>
+  <data name="&gt;&gt;loginPanelResumeVersionLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="showJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 113</value>
+  </data>
+  <data name="resumeVersionCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 126</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;localModeRadioButton.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;importJsonDataButton.Name" xml:space="preserve">
+    <value>importJsonDataButton</value>
+  </data>
+  <data name="localModeRadioButton.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="&gt;&gt;removePersonButton.Name" xml:space="preserve">
+    <value>removePersonButton</value>
+  </data>
+  <data name="appLanguagesCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="&gt;&gt;namesCombobox.Name" xml:space="preserve">
+    <value>namesCombobox</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sqlModeRadioButton.Text" xml:space="preserve">
+    <value>SQL Database</value>
+  </data>
+  <data name="importJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="$this.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;resumeVersionCombobox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>Dark Theme</value>
+  </data>
+  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
+    <value>16</value>
+  </data>
+  <data name="radioButton2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="localModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>104, 19</value>
+  </data>
+  <data name="showJsonDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="rjToggleButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="localModeRadioButton.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="localModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>17, 47</value>
+  </data>
+  <data name="sqlModeRadioButton.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="&gt;&gt;exportJsonDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>116, 20</value>
+  </data>
+  <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>52, 22</value>
+  </data>
+  <data name="&gt;&gt;namesCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;clearJsonDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>9</value>
+  </data>
+  <data name="exportJsonDataButton.ToolTip" xml:space="preserve">
+    <value>Export your data</value>
+  </data>
+  <data name="clearJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;resumeVersionCombobox.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="exportJsonDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="groupBox2.Text" xml:space="preserve">
+    <value>Save Resume as</value>
+  </data>
+  <data name="&gt;&gt;exportJsonDataButton.Name" xml:space="preserve">
+    <value>exportJsonDataButton</value>
+  </data>
+  <data name="&gt;&gt;loginPanelResumeVersionLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="exportJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;loginPanelNameLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox1.ToolTip" xml:space="preserve">
+    <value>Change Database models</value>
+  </data>
+  <data name="clearJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="&gt;&gt;appLanguagesLabel.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="resumeVersionCombobox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;namesCombobox.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="localModeRadioButton.ToolTip" xml:space="preserve">
+    <value>Local Database is not availble</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="namesCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;appLanguagesCombobox.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="groupBox3.ToolTip" xml:space="preserve">
+    <value>Change Database models</value>
+  </data>
+  <data name="&gt;&gt;appLanguagesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="groupBox1.Text" xml:space="preserve">
+    <value>Database Modes</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
+    <value>toolTip1</value>
+  </data>
+  <data name="resumeVersionCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 19</value>
+  </data>
+  <data name="&gt;&gt;removePersonButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="sqlModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>24, 22</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>70, 15</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="clearJsonDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="&gt;&gt;rjToggleButton1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="appLanguagesCombobox.Items" xml:space="preserve">
+    <value>English</value>
+  </data>
+  <data name="&gt;&gt;showJsonDataButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;importJsonDataButton.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="loginPanelNameLabel.Text" xml:space="preserve">
+    <value>Name Surname:</value>
+  </data>
+  <data name="removePersonButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>132, 162</value>
+  </data>
+  <data name="showJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="loginPanelNameLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>14</value>
+  </data>
+  <data name="removePersonButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="removePersonButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="groupBox3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 9</value>
+  </data>
+  <data name="sqlModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>97, 19</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="namesCombobox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
   <data name="&gt;&gt;radioButton1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
+  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="groupBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 78</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.Text" xml:space="preserve">
+    <value>Resume Version:</value>
+  </data>
+  <data name="clearJsonDataButton.Text" xml:space="preserve">
+    <value>Clear Data</value>
+  </data>
+  <data name="&gt;&gt;importJsonDataButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="appLanguagesCombobox.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="appLanguagesCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="showJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleLeft</value>
+  </data>
+  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
   <data name="&gt;&gt;localModeRadioButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;appLanguagesCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;localModeRadioButton.Name" xml:space="preserve">
+    <value>localModeRadioButton</value>
+  </data>
+  <data name="appLanguagesCombobox.Items1" xml:space="preserve">
+    <value>Turkish(Türkçe)</value>
+  </data>
+  <data name="&gt;&gt;showJsonDataButton.Name" xml:space="preserve">
+    <value>showJsonDataButton</value>
+  </data>
+  <data name="sqlModeRadioButton.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 19</value>
@@ -403,314 +478,239 @@
   <data name="&gt;&gt;sqlModeRadioButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>SettingsForm</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="removePersonButton.TabIndex" type="System.Int32, mscorlib">
-    <value>11</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="exportJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;exportJsonDataButton.ZOrder" xml:space="preserve">
-    <value>5</value>
-  </data>
-  <data name="&gt;&gt;resumeVersionCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="showJsonDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>SettingsForm</value>
-  </data>
-  <data name="appLanguagesLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="radioButton2.ToolTip" xml:space="preserve">
-    <value>Local Database is not availble</value>
-  </data>
-  <data name="localModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>17, 47</value>
-  </data>
-  <data name="groupBox2.Text" xml:space="preserve">
-    <value>Save Resume as</value>
-  </data>
-  <data name="&gt;&gt;namesCombobox.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;clearJsonDataButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="localModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 19</value>
-  </data>
-  <data name="appLanguagesCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 85</value>
-  </data>
-  <data name="sqlModeRadioButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>24, 22</value>
-  </data>
-  <data name="sqlModeRadioButton.Text" xml:space="preserve">
-    <value>SQL Database</value>
-  </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>9</value>
-  </data>
-  <data name="showJsonDataButton.ToolTip" xml:space="preserve">
-    <value>Show Data</value>
-  </data>
-  <data name="exportJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
-    <value>radioButton1</value>
-  </data>
-  <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>25, 47</value>
-  </data>
-  <data name="groupBox1.Text" xml:space="preserve">
-    <value>Database Modes</value>
-  </data>
-  <data name="radioButton2.Text" xml:space="preserve">
-    <value>Ms Word File</value>
-  </data>
-  <data name="&gt;&gt;clearJsonDataButton.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="groupBox3.ToolTip" xml:space="preserve">
-    <value>Change Database models</value>
-  </data>
-  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;loginPanelNameLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="sqlModeRadioButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>97, 19</value>
-  </data>
-  <data name="removePersonButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <data name="radioButton1.Text" xml:space="preserve">
-    <value>PDF File</value>
-  </data>
-  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>188, 253</value>
-  </data>
-  <data name="&gt;&gt;resumeVersionCombobox.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="resumeVersionCombobox.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="rjToggleButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>582, 16</value>
-  </data>
-  <data name="&gt;&gt;loginPanelResumeVersionLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>67, 19</value>
-  </data>
-  <data name="groupBox2.ToolTip" xml:space="preserve">
-    <value>Change Database models</value>
-  </data>
-  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="namesCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 63</value>
-  </data>
-  <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
-  </data>
-  <data name="showJsonDataButton.Text" xml:space="preserve">
-    <value>Show Data</value>
-  </data>
-  <data name="&gt;&gt;appLanguagesCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="loginPanelResumeVersionLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="clearJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 281</value>
-  </data>
-  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="&gt;&gt;radioButton1.Parent" xml:space="preserve">
-    <value>groupBox2</value>
-  </data>
-  <data name="groupBox3.TabIndex" type="System.Int32, mscorlib">
-    <value>16</value>
-  </data>
-  <data name="loginPanelNameLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 33</value>
-  </data>
-  <data name="&gt;&gt;toolTip1.Name" xml:space="preserve">
-    <value>toolTip1</value>
-  </data>
-  <data name="resumeVersionCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
-  </data>
-  <data name="radioButton1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;removePersonButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;loginPanelResumeVersionLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="resumeVersionCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
-  </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>Dark Theme</value>
-  </data>
-  <data name="localModeRadioButton.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="namesCombobox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>276, 23</value>
-  </data>
-  <data name="loginPanelNameLabel.Text" xml:space="preserve">
-    <value>Name Surname:</value>
-  </data>
-  <data name="rjToggleButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>45, 22</value>
-  </data>
-  <data name="clearJsonDataButton.TabIndex" type="System.Int32, mscorlib">
-    <value>9</value>
-  </data>
-  <data name="importJsonDataButton.Text" xml:space="preserve">
-    <value>Import Data</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+  <data name="&gt;&gt;removePersonButton.ZOrder" xml:space="preserve">
     <value>2</value>
   </data>
-  <data name="appLanguagesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>17</value>
+  <data name="&gt;&gt;radioButton2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>506, 19</value>
-  </data>
-  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="loginPanelResumeVersionLabel.Text" xml:space="preserve">
-    <value>Resume Version:</value>
-  </data>
-  <data name="&gt;&gt;clearJsonDataButton.Name" xml:space="preserve">
-    <value>clearJsonDataButton</value>
-  </data>
-  <data name="removePersonButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>132, 162</value>
-  </data>
-  <data name="loginPanelNameLabel.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="rjToggleButton1.ToolTip" xml:space="preserve">
-    <value>Theme changer is not avaible</value>
-  </data>
-  <data name="&gt;&gt;clearJsonDataButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="radioButton1.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
-  </data>
-  <data name="clearJsonDataButton.ImageAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleLeft</value>
-  </data>
-  <data name="&gt;&gt;removePersonButton.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="groupBox1.ToolTip" xml:space="preserve">
-    <value>Change Database models</value>
-  </data>
-  <data name="exportJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 169</value>
-  </data>
-  <data name="removePersonButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <data name="&gt;&gt;radioButton2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;resumeVersionCombobox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;loginPanelNameLabel.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="clearJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 50</value>
-  </data>
-  <data name="sqlModeRadioButton.ToolTip" xml:space="preserve">
-    <value />
-  </data>
-  <data name="loginPanelNameLabel.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Segoe UI, 11pt</value>
-  </data>
-  <data name="resumeVersionCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 126</value>
-  </data>
-  <data name="&gt;&gt;localModeRadioButton.Name" xml:space="preserve">
-    <value>localModeRadioButton</value>
-  </data>
-  <data name="&gt;&gt;namesCombobox.Parent" xml:space="preserve">
-    <value>groupBox3</value>
-  </data>
-  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
-    <value>groupBox1</value>
-  </data>
-  <data name="&gt;&gt;importJsonDataButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="appLanguagesLabel.ToolTip" xml:space="preserve">
-    <value>Theme changer is not avaible</value>
+  <data name="appLanguagesCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 23</value>
   </data>
   <data name="&gt;&gt;showJsonDataButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="&gt;&gt;appLanguagesLabel.Name" xml:space="preserve">
+    <value>appLanguagesLabel</value>
+  </data>
+  <data name="clearJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 281</value>
+  </data>
+  <data name="&gt;&gt;clearJsonDataButton.Name" xml:space="preserve">
+    <value>clearJsonDataButton</value>
+  </data>
+  <data name="groupBox2.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="radioButton2.Text" xml:space="preserve">
+    <value>Ms Word File</value>
+  </data>
+  <data name="appLanguagesLabel.ToolTip" xml:space="preserve">
+    <value>Theme changer is not avaible</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;localModeRadioButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>506, 19</value>
+  </data>
+  <data name="loginPanelNameLabel.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;loginPanelNameLabel.Name" xml:space="preserve">
+    <value>loginPanelNameLabel</value>
+  </data>
+  <data name="radioButton2.ToolTip" xml:space="preserve">
+    <value>Local Database is not availble</value>
+  </data>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="namesCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>12</value>
+  </data>
+  <data name="rjToggleButton1.ToolTip" xml:space="preserve">
+    <value>Theme changer is not avaible</value>
+  </data>
+  <data name="namesCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 63</value>
+  </data>
+  <data name="&gt;&gt;removePersonButton.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="groupBox2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>188, 253</value>
+  </data>
+  <data name="label1.ToolTip" xml:space="preserve">
+    <value>Theme changer is not avaible</value>
+  </data>
+  <data name="exportJsonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="radioButton1.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="appLanguagesLabel.Text" xml:space="preserve">
+    <value>App Languages</value>
+  </data>
+  <data name="loginPanelNameLabel.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 11pt</value>
+  </data>
+  <data name="namesCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 23</value>
+  </data>
+  <data name="&gt;&gt;loginPanelNameLabel.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="resumeVersionCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="resumeVersionCombobox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>276, 23</value>
+  </data>
+  <data name="&gt;&gt;sqlModeRadioButton.Name" xml:space="preserve">
+    <value>sqlModeRadioButton</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="clearJsonDataButton.ToolTip" xml:space="preserve">
+    <value>Clear all data</value>
+  </data>
+  <data name="loginPanelNameLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 33</value>
+  </data>
+  <data name="exportJsonDataButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 169</value>
+  </data>
+  <data name="radioButton2.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
+    <value>MiddleRight</value>
+  </data>
+  <data name="importJsonDataButton.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="loginPanelResumeVersionLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>15</value>
+  </data>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;sqlModeRadioButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;loginPanelResumeVersionLabel.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="&gt;&gt;resumeVersionCombobox.Name" xml:space="preserve">
+    <value>resumeVersionCombobox</value>
+  </data>
+  <data name="groupBox2.ToolTip" xml:space="preserve">
+    <value>Change Database models</value>
+  </data>
+  <data name="sqlModeRadioButton.ToolTip" xml:space="preserve">
+    <value />
+  </data>
+  <data name="&gt;&gt;appLanguagesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="showJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="&gt;&gt;rjToggleButton1.Type" xml:space="preserve">
+    <value>ResumeBuilder.RJControls.RJToggleButton, ResumeBuilder, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="rjToggleButton1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>582, 16</value>
+  </data>
   <data name="&gt;&gt;sqlModeRadioButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="sqlModeRadioButton.CheckAlign" type="System.Drawing.ContentAlignment, System.Drawing">
-    <value>MiddleRight</value>
+  <data name="&gt;&gt;resumeVersionCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="appLanguagesCombobox.Items1" xml:space="preserve">
-    <value>Turkish(Türkçe)</value>
+  <data name="exportJsonDataButton.Text" xml:space="preserve">
+    <value>Export Data</value>
   </data>
-  <data name="namesCombobox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>10, 10, 10, 10</value>
+  <data name="showJsonDataButton.ToolTip" xml:space="preserve">
+    <value>Show Data</value>
   </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="importJsonDataButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>150, 50</value>
+  </data>
+  <data name="importJsonDataButton.ToolTip" xml:space="preserve">
+    <value>Import your data</value>
+  </data>
+  <data name="&gt;&gt;radioButton2.Name" xml:space="preserve">
+    <value>radioButton2</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.Name" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="importJsonDataButton.Text" xml:space="preserve">
+    <value>Import Data</value>
+  </data>
+  <data name="&gt;&gt;toolTip1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolTip, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="removePersonButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="localModeRadioButton.Text" xml:space="preserve">
+    <value>Local Database</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;rjToggleButton1.ZOrder" xml:space="preserve">
+    <value>10</value>
+  </data>
+  <data name="&gt;&gt;groupBox1.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;importJsonDataButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;radioButton1.Name" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="loginPanelNameLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;exportJsonDataButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;groupBox2.Name" xml:space="preserve">
+    <value>groupBox2</value>
+  </data>
+  <data name="&gt;&gt;loginPanelNameLabel.Parent" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <data name="appLanguagesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>17</value>
+  </data>
+  <data name="&gt;&gt;groupBox3.Name" xml:space="preserve">
+    <value>groupBox3</value>
+  </data>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
+    <value>tr</value>
+  </metadata>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>en</value>
   </metadata>
   <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>

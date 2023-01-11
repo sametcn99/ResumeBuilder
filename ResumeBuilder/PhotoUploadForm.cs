@@ -23,12 +23,12 @@
                 selectedPictureBox.Image = new Bitmap(opnfd.FileName);
                 if (formLogin.getDescription() != "")
                 {
-                    filepath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\" + sqlControllers.GetIdFromDescription().ToString().Trim() + ".jpg";
+                    filepath = Application.StartupPath + @"\" + sqlControllers.GetIdFromDescription().ToString().Trim() + ".jpg";
                     File.Copy(opnfd.FileName, filepath, true);
                 }
                 else
                 {
-                    filepath = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location) + @"\" + personalDetailsForm.getID().ToString().Trim().ToString().Trim() + ".jpg";
+                    filepath = Application.StartupPath + @"\" + personalDetailsForm.getID().ToString().Trim().ToString().Trim() + ".jpg";
                     File.Copy(opnfd.FileName, filepath, true);
                 }
                 var image = new ImageConverter().ConvertTo(selectedPictureBox.Image, typeof(Byte[]));
