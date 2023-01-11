@@ -15,8 +15,8 @@ namespace ResumeBuilder
         string cmdstring = "";
         string imagePath;
 
-        //public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        //public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\ResumeBuilderLocalDb.mdf;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
