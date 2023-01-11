@@ -47,6 +47,8 @@
             this.appLanguagesLabel = new System.Windows.Forms.Label();
             this.appLanguagesCombobox = new System.Windows.Forms.ComboBox();
             this.connectionStringLabel = new System.Windows.Forms.Label();
+            this.resetToDefaultSettingsButton = new System.Windows.Forms.Button();
+            this.changeTitlesButton = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
@@ -191,15 +193,36 @@
             // connectionStringLabel
             // 
             resources.ApplyResources(this.connectionStringLabel, "connectionStringLabel");
+            this.connectionStringLabel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.connectionStringLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.connectionStringLabel.Name = "connectionStringLabel";
             this.connectionStringLabel.Click += new System.EventHandler(this.connectionStringLabel_Click);
+            // 
+            // resetToDefaultSettingsButton
+            // 
+            this.resetToDefaultSettingsButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            resources.ApplyResources(this.resetToDefaultSettingsButton, "resetToDefaultSettingsButton");
+            this.resetToDefaultSettingsButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.resetToDefaultSettingsButton.Name = "resetToDefaultSettingsButton";
+            this.resetToDefaultSettingsButton.UseVisualStyleBackColor = true;
+            this.resetToDefaultSettingsButton.Click += new System.EventHandler(this.resetToDefaultSettingsButton_Click);
+            // 
+            // changeTitlesButton
+            // 
+            this.changeTitlesButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            resources.ApplyResources(this.changeTitlesButton, "changeTitlesButton");
+            this.changeTitlesButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            this.changeTitlesButton.Name = "changeTitlesButton";
+            this.changeTitlesButton.UseVisualStyleBackColor = true;
+            this.changeTitlesButton.Click += new System.EventHandler(this.changeTitlesButton_Click);
             // 
             // SettingsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls.Add(this.changeTitlesButton);
+            this.Controls.Add(this.resetToDefaultSettingsButton);
             this.Controls.Add(this.connectionStringLabel);
             this.Controls.Add(this.appLanguagesCombobox);
             this.Controls.Add(this.appLanguagesLabel);
@@ -238,5 +261,7 @@
         private Label appLanguagesLabel;
         public ComboBox appLanguagesCombobox;
         public Label connectionStringLabel;
+        private Button resetToDefaultSettingsButton;
+        private Button changeTitlesButton;
     }
 }

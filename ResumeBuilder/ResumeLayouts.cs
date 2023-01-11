@@ -2,6 +2,7 @@
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ResumeBuilder.Properties;
+using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
@@ -9,17 +10,25 @@ namespace ResumeBuilder
     {
         SqlControllers sqlControllers = new SqlControllers();
         public string[] titles = { "", "", "", "", "", "", "" };
+
         public void printingLanguage()
         {
-            AppControllers appControllers = new AppControllers();
-            if (Settings.Default.Language == "tr")
-            {
-                titles = appControllers.titlesTR;
-            }
-            else
-            {
-                titles = appControllers.titlesEN;
-            }
+            titles[0] = Settings.Default.jobTitleLanguage;
+            titles[1] = Settings.Default.educationTitleLanguage;
+            titles[2] = Settings.Default.certificationsTitleLanguage;
+            titles[3] = Settings.Default.personalProjectsTitleLanguage;
+            titles[4] = Settings.Default.languagesTitleLanguage;
+            titles[5] = Settings.Default.interestsTitleLanguage;
+            titles[6] = Settings.Default.skillsTitleLanguage;
+            //AppControllers appControllers = new AppControllers();
+            //if (Settings.Default.Language == "tr")
+            //{
+            //    titles = appControllers.titlesTR;
+            //}
+            //if (Settings.Default.Language == "en")
+            //{
+            //    titles = appControllers.titlesEN;
+            //}
         }
 
         public void ClassicLayout(string path, string name, string personDetails, string jobs, string educations, string certifications, string personalProjects, string languages, string interests, string skills, string summary)

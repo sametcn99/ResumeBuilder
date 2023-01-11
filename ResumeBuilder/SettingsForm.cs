@@ -70,6 +70,7 @@ namespace ResumeBuilder
 
         private void appLanguagesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            AppControllers appControllers = new AppControllers();
             DialogResult dialogResult = new DialogResult();
             dialogResult = MessageBox.Show("Some of the operations you perform require an application restart to take affect.", "Uyarı!", MessageBoxButtons.OKCancel);
             if (dialogResult == DialogResult.OK)
@@ -78,9 +79,23 @@ namespace ResumeBuilder
                 {
                     case 0:
                         Settings.Default.Language = "en";
+                        Settings.Default.jobTitleLanguage = appControllers.titlesEN[0].Trim();
+                        Settings.Default.educationTitleLanguage = appControllers.titlesEN[1].Trim();
+                        Settings.Default.certificationsTitleLanguage = appControllers.titlesEN[2].Trim();
+                        Settings.Default.personalProjectsTitleLanguage = appControllers.titlesEN[3].Trim();
+                        Settings.Default.languagesTitleLanguage = appControllers.titlesEN[4].Trim();
+                        Settings.Default.interestsTitleLanguage = appControllers.titlesEN[5].Trim();
+                        Settings.Default.skillsTitleLanguage = appControllers.titlesEN[6].Trim();
                         break;
                     case 1:
                         Settings.Default.Language = "tr";
+                        Settings.Default.jobTitleLanguage = appControllers.titlesTR[0].Trim();
+                        Settings.Default.educationTitleLanguage = appControllers.titlesTR[1].Trim();
+                        Settings.Default.certificationsTitleLanguage = appControllers.titlesTR[2].Trim();
+                        Settings.Default.personalProjectsTitleLanguage = appControllers.titlesTR[3].Trim();
+                        Settings.Default.languagesTitleLanguage = appControllers.titlesTR[4].Trim();
+                        Settings.Default.interestsTitleLanguage = appControllers.titlesTR[5].Trim();
+                        Settings.Default.skillsTitleLanguage = appControllers.titlesTR[6].Trim();
                         break;
                 }
                 Settings.Default.Save();
@@ -96,6 +111,19 @@ namespace ResumeBuilder
         private void connectionStringLabel_Click(object sender, EventArgs e)
         {
             MessageBox.Show(sqlControllers.getConnectionString().ToString());
+        }
+
+        private void resetToDefaultSettingsButton_Click(object sender, EventArgs e)
+        {
+            Settings.Default.Reset();
+            MessageBox.Show("Settings changed to default.\nRestarted Program.");
+            Application.Restart();
+        }
+
+        private void changeTitlesButton_Click(object sender, EventArgs e)
+        {
+            ChangeResumeTitles changeResumeTitles = new ChangeResumeTitles();
+            changeResumeTitles.Show();
         }
     }
 }

@@ -8,5 +8,26 @@
     <Setting Name="SavingFileOption" Type="System.Int32" Scope="User">
       <Value Profile="(Default)">0</Value>
     </Setting>
+    <Setting Name="jobTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">JOB</Value>
+    </Setting>
+    <Setting Name="educationTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">EDUCATION</Value>
+    </Setting>
+    <Setting Name="certificationsTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">CERTIFICATES</Value>
+    </Setting>
+    <Setting Name="personalProjectsTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">PERSONAL PROJECTS</Value>
+    </Setting>
+    <Setting Name="languagesTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">LANGUAGES</Value>
+    </Setting>
+    <Setting Name="interestsTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">INTERESTS</Value>
+    </Setting>
+    <Setting Name="skillsTitleLanguage" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SKILLS</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -46,5 +46,89 @@ namespace ResumeBuilder.Properties {
                 this["SavingFileOption"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("JOB")]
+        public string jobTitleLanguage {
+            get {
+                return ((string)(this["jobTitleLanguage"]));
+            }
+            set {
+                this["jobTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("EDUCATION")]
+        public string educationTitleLanguage {
+            get {
+                return ((string)(this["educationTitleLanguage"]));
+            }
+            set {
+                this["educationTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("CERTIFICATES")]
+        public string certificationsTitleLanguage {
+            get {
+                return ((string)(this["certificationsTitleLanguage"]));
+            }
+            set {
+                this["certificationsTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("PERSONAL PROJECTS")]
+        public string personalProjectsTitleLanguage {
+            get {
+                return ((string)(this["personalProjectsTitleLanguage"]));
+            }
+            set {
+                this["personalProjectsTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("LANGUAGES")]
+        public string languagesTitleLanguage {
+            get {
+                return ((string)(this["languagesTitleLanguage"]));
+            }
+            set {
+                this["languagesTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("INTERESTS")]
+        public string interestsTitleLanguage {
+            get {
+                return ((string)(this["interestsTitleLanguage"]));
+            }
+            set {
+                this["interestsTitleLanguage"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("SKILLS")]
+        public string skillsTitleLanguage {
+            get {
+                return ((string)(this["skillsTitleLanguage"]));
+            }
+            set {
+                this["skillsTitleLanguage"] = value;
+            }
+        }
     }
 }
