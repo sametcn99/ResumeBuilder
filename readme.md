@@ -1,5 +1,6 @@
 # Resume Builder
 this app generates your CV as PDF or DOCX file <br>
+<a href="https://sourceforge.net/projects/resumebuilder/files/latest/download"><img alt="Download Resume Builder" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>
 <h1>Features</h1>
 <ul>
   <li>Save multiple Resumes for one person and edit anytime.</li>
