@@ -22,4 +22,5 @@ this app generates your CV as PDF or DOCX file <br>
   <li>SautinSoft Pdf Focus .NET Library</i>
   <li>Newtonsoft JSON.NET .NET Library</i>
 </ul>
-Note: To run the solution need to enter connection string in SqlControllers class 
+
+<h3><i>Note: To run the solution need to enter connection string in SqlControllers class.</i></h3>
