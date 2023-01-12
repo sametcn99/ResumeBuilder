@@ -4,6 +4,7 @@ this app generates your CV as PDF or DOCX file <br>
 <h1>Features</h1>
 <ul>
   <li>Save multiple Resumes for one person and edit anytime.</li>
+  <li>Save your resume using multiple layouts</li>
   <li>Automatically saving</li>
   <li>Import and Export your all created resumes</li>
   <li>Print as Pdf or MS Word(docx) file</li>
