@@ -3,7 +3,7 @@ this app generates your CV as PDF or DOCX file <br>
 ![alt text](https://repository-images.githubusercontent.com/576042902/37e60d01-004b-4d49-89be-d1189cf4b9c1)
 
 <a href="https://sourceforge.net/p/resumebuilder/"><img alt="Download Resume Builder" src="https://sourceforge.net/sflogo.php?type=18&group_id=3591689" width=200></a>     <a href="https://sourceforge.net/projects/resumebuilder/files/latest/download"><img alt="Download Resume Builder" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>   <a href="https://sourceforge.net/projects/resumebuilder/files/latest/download"><img alt="Download Resume Builder" src="https://img.shields.io/sourceforge/dt/resumebuilder.svg" ></a>
-
+[![GPLv3 license](https://img.shields.io/badge/License-GPLv3-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 <h1>Features</h1>
 <ul>
   <li>Save multiple Resumes for one person and edit anytime.</li>
