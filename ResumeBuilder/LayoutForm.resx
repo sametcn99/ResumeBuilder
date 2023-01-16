@@ -57,109 +57,296 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="$this.Text" xml:space="preserve">
-    <value>LayoutForm</value>
+  <data name="layoutStylesCombobox.Items" xml:space="preserve">
+    <value>Classic Layout</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="previewSampleLayoutButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
-    <value>Flat</value>
-  </data>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="previewSampleLayoutButton.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="layoutStylesCombobox.Items1" xml:space="preserve">
+    <value>Modern Layout</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="layoutStylesCombobox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 27</value>
+  </data>
   <data name="layoutStylesCombobox.Size" type="System.Drawing.Size, System.Drawing">
     <value>244, 23</value>
   </data>
-  <data name="&gt;&gt;layoutStylesLabel.Parent" xml:space="preserve">
-    <value>$this</value>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="layoutStylesCombobox.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesCombobox.Name" xml:space="preserve">
+    <value>layoutStylesCombobox</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesCombobox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;layoutStylesCombobox.Parent" xml:space="preserve">
     <value>$this</value>
   </data>
   <data name="&gt;&gt;layoutStylesCombobox.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>9</value>
   </data>
   <data name="layoutStylesLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>850, 550</value>
-  </data>
-  <data name="&gt;&gt;layoutStylesLabel.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;previewSampleLayoutButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;previewSampleLayoutButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;layoutStylesLabel.Name" xml:space="preserve">
-    <value>layoutStylesLabel</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>LayoutForm</value>
-  </data>
-  <data name="layoutStylesCombobox.Items1" xml:space="preserve">
-    <value>Modern Layout</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>7, 15</value>
-  </data>
-  <data name="layoutStylesLabel.Text" xml:space="preserve">
-    <value>Layout Styles</value>
-  </data>
-  <data name="previewSampleLayoutButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>100, 23</value>
-  </data>
-  <data name="layoutStylesCombobox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 27</value>
-  </data>
-  <data name="layoutStylesLabel.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="previewSampleLayoutButton.Text" xml:space="preserve">
-    <value>Preview Sample</value>
-  </data>
-  <data name="&gt;&gt;layoutStylesLabel.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="layoutStylesCombobox.Items" xml:space="preserve">
-    <value>Classic Layout</value>
-  </data>
-  <data name="previewSampleLayoutButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>156, 56</value>
-  </data>
-  <data name="&gt;&gt;previewSampleLayoutButton.Name" xml:space="preserve">
-    <value>previewSampleLayoutButton</value>
+  <data name="layoutStylesLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>12, 9</value>
   </data>
   <data name="layoutStylesLabel.Size" type="System.Drawing.Size, System.Drawing">
     <value>76, 15</value>
   </data>
-  <data name="&gt;&gt;layoutStylesCombobox.Name" xml:space="preserve">
-    <value>layoutStylesCombobox</value>
+  <data name="layoutStylesLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="layoutStylesLabel.Text" xml:space="preserve">
+    <value>Layout Styles</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesLabel.Name" xml:space="preserve">
+    <value>layoutStylesLabel</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;layoutStylesLabel.ZOrder" xml:space="preserve">
+    <value>8</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="previewSampleLayoutButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="previewSampleLayoutButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>156, 56</value>
+  </data>
+  <data name="previewSampleLayoutButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="previewSampleLayoutButton.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="previewSampleLayoutButton.Text" xml:space="preserve">
+    <value>Preview Sample</value>
+  </data>
+  <data name="&gt;&gt;previewSampleLayoutButton.Name" xml:space="preserve">
+    <value>previewSampleLayoutButton</value>
+  </data>
+  <data name="&gt;&gt;previewSampleLayoutButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;previewSampleLayoutButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;previewSampleLayoutButton.ZOrder" xml:space="preserve">
+    <value>7</value>
+  </data>
+  <data name="titleFontSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="titleFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>306, 9</value>
+  </data>
+  <data name="titleFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>79, 15</value>
+  </data>
+  <data name="titleFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="titleFontSizeLabel.Text" xml:space="preserve">
+    <value>Title Font Size</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeLabel.Name" xml:space="preserve">
+    <value>titleFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>6</value>
+  </data>
+  <data name="detailFontSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="detailFontSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="detailFontSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>298, 52</value>
+  </data>
+  <data name="detailFontSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>87, 15</value>
+  </data>
+  <data name="detailFontSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="detailFontSizeLabel.Text" xml:space="preserve">
+    <value>Detail Font Size</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeLabel.Name" xml:space="preserve">
+    <value>detailFontSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeLabel.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="pictureSizeLabel.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="pictureSizeLabel.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="pictureSizeLabel.Location" type="System.Drawing.Point, System.Drawing">
+    <value>318, 95</value>
+  </data>
+  <data name="pictureSizeLabel.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 15</value>
+  </data>
+  <data name="pictureSizeLabel.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="pictureSizeLabel.Text" xml:space="preserve">
+    <value>Picture Size</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeLabel.Name" xml:space="preserve">
+    <value>pictureSizeLabel</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeLabel.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeLabel.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeLabel.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="titleFontSizeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 9</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="titleFontSizeTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="titleFontSizeTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="titleFontSizeTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeTextBox.Name" xml:space="preserve">
+    <value>titleFontSizeTextBox</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;titleFontSizeTextBox.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="pictureSizeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 95</value>
+  </data>
+  <data name="pictureSizeTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="pictureSizeTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="pictureSizeTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeTextBox.Name" xml:space="preserve">
+    <value>pictureSizeTextBox</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;pictureSizeTextBox.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="detailFontSizeTextBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 52</value>
+  </data>
+  <data name="detailFontSizeTextBox.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>10, 10, 10, 10</value>
+  </data>
+  <data name="detailFontSizeTextBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="detailFontSizeTextBox.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeTextBox.Name" xml:space="preserve">
+    <value>detailFontSizeTextBox</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeTextBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TextBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeTextBox.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;detailFontSizeTextBox.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="resetButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
+    <value>Flat</value>
+  </data>
+  <data name="resetButton.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="resetButton.Location" type="System.Drawing.Point, System.Drawing">
+    <value>398, 131</value>
+  </data>
+  <data name="resetButton.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 23</value>
+  </data>
+  <data name="resetButton.TabIndex" type="System.Int32, mscorlib">
+    <value>9</value>
+  </data>
+  <data name="resetButton.Text" xml:space="preserve">
+    <value>Reset</value>
+  </data>
+  <data name="&gt;&gt;resetButton.Name" xml:space="preserve">
+    <value>resetButton</value>
+  </data>
+  <data name="&gt;&gt;resetButton.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;resetButton.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;resetButton.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>7, 15</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>850, 550</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Title Font Size</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>LayoutForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;layoutStylesCombobox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="layoutStylesLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 9</value>
-  </data>
-  <data name="&gt;&gt;previewSampleLayoutButton.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="layoutStylesCombobox.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, System.Private.CoreLib, Culture=neutral, PublicKeyToken=7cec85d7bea7798e">
-    <value>tr</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
 </root>

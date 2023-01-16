@@ -2,7 +2,6 @@
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ResumeBuilder.Properties;
-using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
@@ -20,15 +19,6 @@ namespace ResumeBuilder
             titles[4] = Settings.Default.languagesTitleLanguage;
             titles[5] = Settings.Default.interestsTitleLanguage;
             titles[6] = Settings.Default.skillsTitleLanguage;
-            //AppControllers appControllers = new AppControllers();
-            //if (Settings.Default.Language == "tr")
-            //{
-            //    titles = appControllers.titlesTR;
-            //}
-            //if (Settings.Default.Language == "en")
-            //{
-            //    titles = appControllers.titlesEN;
-            //}
         }
 
         public void ClassicLayout(string path, string name, string personDetails, string jobs, string educations, string certifications, string personalProjects, string languages, string interests, string skills, string summary)
@@ -43,13 +33,13 @@ namespace ResumeBuilder
                         page.Size(PageSizes.A4);
                         page.Margin(1, Unit.Centimetre);
                         page.PageColor(Colors.White);
-                        page.DefaultTextStyle(x => x.FontSize(11));
+                        page.DefaultTextStyle(x => x.FontSize(Settings.Default.detailFontSize));
                         page.Header().Row(row =>
                         {
                             row.Spacing(15);
                             if (!string.IsNullOrEmpty(sqlControllers.getPicture()))
                             {
-                                row.ConstantItem(150).Image(sqlControllers.getPicture());
+                                row.ConstantItem(Settings.Default.pictureSize).Image(sqlControllers.getPicture());
                             }
                             row.RelativeItem().Column(column =>
                             {
@@ -69,39 +59,40 @@ namespace ResumeBuilder
                                     x.Item().Text(titles[0]).Bold().FontSize(13);
                                     x.Item().Text(jobs);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (educations != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                     x.Item().Text(titles[1]).Bold().FontSize(13);
                                     x.Item().Text(educations);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (certifications != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
+
                                     x.Item().Text(titles[2]).Bold().FontSize(13);
                                     x.Item().Text(certifications);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (personalProjects != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                     x.Item().Text(titles[3]).Bold().FontSize(13);
                                     x.Item().Text(personalProjects);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (languages != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                     x.Item().Text(titles[4]).Bold().FontSize(13);
                                     x.Item().Text(languages);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (interests != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                     x.Item().Text(titles[5]).Bold().FontSize(13);
                                     x.Item().Text(interests);
                                 }
-                                x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                 if (skills != "")
                                 {
+                                    x.Item().PaddingVertical(5).LineHorizontal(1).LineColor(Colors.Grey.Medium);
                                     x.Item().Text(titles[6]).Bold().FontSize(13);
                                     x.Item().Text(skills);
                                 }
@@ -126,11 +117,11 @@ namespace ResumeBuilder
                     page.Size(PageSizes.A4);
                     page.Margin(5, Unit.Millimetre);
                     page.PageColor(Colors.White);
-                    page.DefaultTextStyle(x => x.FontSize(11));
+                    page.DefaultTextStyle(x => x.FontSize(Settings.Default.detailFontSize));
                     page.Header().Row(row =>
                     {
                         row.Spacing(10);
-                        row.ConstantItem(150).Image(sqlControllers.getPicture());
+                        row.ConstantItem(Settings.Default.pictureSize).Image(sqlControllers.getPicture());
                         row.RelativeItem().Text(text =>
                         {
                             if (name != "") text.Line(name).Bold().FontSize(19);
@@ -146,27 +137,27 @@ namespace ResumeBuilder
                                 text.Line(personDetails);
                                 if (languages != "")
                                 {
-                                    text.Line(titles[4]).Bold().FontSize(13);
+                                    text.Line(titles[4]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(languages);
                                 }
                                 if (certifications != "")
                                 {
-                                    text.Line(titles[2]).Bold().FontSize(13);
+                                    text.Line(titles[2]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(certifications);
                                 }
                                 if (skills != "")
                                 {
-                                    text.Line(titles[6]).Bold().FontSize(13);
+                                    text.Line(titles[6]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(skills);
                                 }
                                 if (personalProjects != "")
                                 {
-                                    text.Line(titles[3]).Bold().FontSize(13);
+                                    text.Line(titles[3]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(personalProjects);
                                 }
                                 if (interests != "")
                                 {
-                                    column.Item().Text(titles[5]).Bold().FontSize(13);
+                                    column.Item().Text(titles[5]).Bold().FontSize(Settings.Default.titleFontSize);
                                     column.Item().Text(interests);
                                 }
                             });
@@ -174,12 +165,12 @@ namespace ResumeBuilder
                             {
                                 if (jobs != "")
                                 {
-                                    text.Line(titles[0]).Bold().FontSize(13);
+                                    text.Line(titles[0]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(jobs);
                                 }
                                 if (educations != "")
                                 {
-                                    text.Line(titles[1]).Bold().FontSize(13);
+                                    text.Line(titles[1]).Bold().FontSize(Settings.Default.titleFontSize);
                                     text.Line(educations);
                                 }
                             });

@@ -298,8 +298,7 @@ namespace ResumeBuilder
             }
             else
             {
-                MessageBox.Show("else");
-
+                MessageBox.Show("photo not found!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
                 SqlCommand cmd = new SqlCommand($"select image from Image where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
                 SqlDataAdapter da = new SqlDataAdapter(cmd);

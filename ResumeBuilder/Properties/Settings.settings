@@ -29,5 +29,14 @@
     <Setting Name="skillsTitleLanguage" Type="System.String" Scope="User">
       <Value Profile="(Default)">SKILLS</Value>
     </Setting>
+    <Setting Name="titleFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">13</Value>
+    </Setting>
+    <Setting Name="detailFontSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">11</Value>
+    </Setting>
+    <Setting Name="pictureSize" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">150</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

@@ -130,5 +130,41 @@ namespace ResumeBuilder.Properties {
                 this["skillsTitleLanguage"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("13")]
+        public int titleFontSize {
+            get {
+                return ((int)(this["titleFontSize"]));
+            }
+            set {
+                this["titleFontSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("11")]
+        public int detailFontSize {
+            get {
+                return ((int)(this["detailFontSize"]));
+            }
+            set {
+                this["detailFontSize"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("150")]
+        public int pictureSize {
+            get {
+                return ((int)(this["pictureSize"]));
+            }
+            set {
+                this["pictureSize"] = value;
+            }
+        }
     }
 }
