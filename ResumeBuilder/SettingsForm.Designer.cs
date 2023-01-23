@@ -101,7 +101,6 @@
             resources.ApplyResources(this.groupBox2, "groupBox2");
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.TabStop = false;
-            this.toolTip1.SetToolTip(this.groupBox2, resources.GetString("groupBox2.ToolTip"));
             // 
             // radioButton1
             // 
@@ -143,7 +142,6 @@
             resources.ApplyResources(this.groupBox3, "groupBox3");
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.TabStop = false;
-            this.toolTip1.SetToolTip(this.groupBox3, resources.GetString("groupBox3.ToolTip"));
             // 
             // loginPanelNameLabel
             // 
@@ -177,7 +175,6 @@
             resources.ApplyResources(this.appLanguagesLabel, "appLanguagesLabel");
             this.appLanguagesLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.appLanguagesLabel.Name = "appLanguagesLabel";
-            this.toolTip1.SetToolTip(this.appLanguagesLabel, resources.GetString("appLanguagesLabel.ToolTip"));
             // 
             // appLanguagesCombobox
             // 
