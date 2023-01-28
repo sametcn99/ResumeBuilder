@@ -15,10 +15,15 @@
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
     <PackageReadmeFile>readme.md</PackageReadmeFile>
     <PackageRequireLicenseAcceptance>False</PackageRequireLicenseAcceptance>
+    <ApplicationIcon>Resources\applogo.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
     <None Remove="Resources\ResumeBuilderLocalDb.mdf" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\applogo.ico" />
   </ItemGroup>
 
   <ItemGroup>
