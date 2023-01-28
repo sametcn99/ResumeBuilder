@@ -35,7 +35,6 @@
             this.phoneNumberLabel = new System.Windows.Forms.Label();
             this.savePersonDataButton = new System.Windows.Forms.Button();
             this.emailLabel = new System.Windows.Forms.Label();
-            this.phoneNumberTextbox = new System.Windows.Forms.TextBox();
             this.emailTextbox = new System.Windows.Forms.TextBox();
             this.AddressTextbox = new System.Windows.Forms.TextBox();
             this.nameTextbox = new System.Windows.Forms.TextBox();
@@ -47,6 +46,8 @@
             this.websiteTextbox = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.removeButton = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.countriesCombobox = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -76,8 +77,8 @@
             // 
             // savePersonDataButton
             // 
-            resources.ApplyResources(this.savePersonDataButton, "savePersonDataButton");
             this.savePersonDataButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
+            resources.ApplyResources(this.savePersonDataButton, "savePersonDataButton");
             this.savePersonDataButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.savePersonDataButton.Name = "savePersonDataButton";
             this.savePersonDataButton.UseVisualStyleBackColor = false;
@@ -89,34 +90,25 @@
             this.emailLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
             this.emailLabel.Name = "emailLabel";
             // 
-            // phoneNumberTextbox
-            // 
-            resources.ApplyResources(this.phoneNumberTextbox, "phoneNumberTextbox");
-            this.phoneNumberTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.phoneNumberTextbox.ForeColor = System.Drawing.Color.Black;
-            this.phoneNumberTextbox.Name = "phoneNumberTextbox";
-            this.phoneNumberTextbox.ShortcutsEnabled = false;
-            this.phoneNumberTextbox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.phoneNumberTextbox_KeyPress);
-            // 
             // emailTextbox
             // 
-            resources.ApplyResources(this.emailTextbox, "emailTextbox");
             this.emailTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.emailTextbox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.emailTextbox, "emailTextbox");
             this.emailTextbox.Name = "emailTextbox";
             // 
             // AddressTextbox
             // 
-            resources.ApplyResources(this.AddressTextbox, "AddressTextbox");
             this.AddressTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTextbox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.AddressTextbox, "AddressTextbox");
             this.AddressTextbox.Name = "AddressTextbox";
             // 
             // nameTextbox
             // 
-            resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.nameTextbox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.nameTextbox, "nameTextbox");
             this.nameTextbox.Name = "nameTextbox";
             // 
             // summaryLabel
@@ -127,17 +119,17 @@
             // 
             // summaryTextbox
             // 
-            resources.ApplyResources(this.summaryTextbox, "summaryTextbox");
             this.summaryTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.summaryTextbox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.summaryTextbox, "summaryTextbox");
             this.summaryTextbox.Name = "summaryTextbox";
             this.summaryTextbox.TextChanged += new System.EventHandler(this.summaryTextbox_TextChanged);
             // 
             // socialMediaLinksTextBox
             // 
-            resources.ApplyResources(this.socialMediaLinksTextBox, "socialMediaLinksTextBox");
             this.socialMediaLinksTextBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.socialMediaLinksTextBox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.socialMediaLinksTextBox, "socialMediaLinksTextBox");
             this.socialMediaLinksTextBox.Name = "socialMediaLinksTextBox";
             // 
             // websiteLabel
@@ -154,37 +146,53 @@
             // 
             // websiteTextbox
             // 
-            resources.ApplyResources(this.websiteTextbox, "websiteTextbox");
             this.websiteTextbox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.websiteTextbox.ForeColor = System.Drawing.Color.Black;
+            resources.ApplyResources(this.websiteTextbox, "websiteTextbox");
             this.websiteTextbox.Name = "websiteTextbox";
             // 
             // dataGridView1
             // 
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
+            resources.ApplyResources(this.dataGridView1, "dataGridView1");
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 25;
             // 
             // removeButton
             // 
-            resources.ApplyResources(this.removeButton, "removeButton");
             this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
             this.removeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
+            resources.ApplyResources(this.removeButton, "removeButton");
             this.removeButton.Name = "removeButton";
             this.removeButton.UseVisualStyleBackColor = false;
+            // 
+            // maskedTextBox1
+            // 
+            resources.ApplyResources(this.maskedTextBox1, "maskedTextBox1");
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Click += new System.EventHandler(this.maskedTextBox1_Click);
+            this.maskedTextBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.maskedTextBox1_KeyDown);
+            // 
+            // countriesCombobox
+            // 
+            resources.ApplyResources(this.countriesCombobox, "countriesCombobox");
+            this.countriesCombobox.FormattingEnabled = true;
+            this.countriesCombobox.Name = "countriesCombobox";
+            this.countriesCombobox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.countriesCombobox_KeyPress);
             // 
             // PersonalDetailsForm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.countriesCombobox);
             this.Controls.Add(this.removeButton);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.summaryTextCounterLabel);
@@ -199,7 +207,6 @@
             this.Controls.Add(this.socialMediaLinksTextBox);
             this.Controls.Add(this.emailLabel);
             this.Controls.Add(this.summaryLabel);
-            this.Controls.Add(this.phoneNumberTextbox);
             this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.emailTextbox);
             this.Controls.Add(this.AddressTextbox);
@@ -219,7 +226,6 @@
         private Label phoneNumberLabel;
         private Button savePersonDataButton;
         private Label emailLabel;
-        public TextBox phoneNumberTextbox;
         public TextBox emailTextbox;
         public TextBox AddressTextbox;
         public TextBox nameTextbox;
@@ -231,5 +237,7 @@
         private TextBox websiteTextbox;
         private DataGridView dataGridView1;
         private Button removeButton;
+        private MaskedTextBox maskedTextBox1;
+        private ComboBox countriesCombobox;
     }
 }

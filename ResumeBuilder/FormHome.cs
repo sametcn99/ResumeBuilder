@@ -148,6 +148,7 @@ namespace ResumeBuilder
             ResumeLayouts resumeLayouts = new ResumeLayouts();
             LayoutForm layoutForm = new LayoutForm();
             SaveFileDialog save = new SaveFileDialog();
+            PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
             if (AppControllers.savingOption == 1)
             {
                 save.InitialDirectory = @"D:\";

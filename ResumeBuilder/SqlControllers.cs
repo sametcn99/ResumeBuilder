@@ -7,6 +7,7 @@ namespace ResumeBuilder
 {
     internal class SqlControllers
     {
+        //fields
         SqlConnection cnn;
         SqlDataReader reader1;
         public static string name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills, summary;
@@ -14,9 +15,9 @@ namespace ResumeBuilder
         public int id2 = 0;
         string cmdstring = "";
         string imagePath;
-
-        public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
-        //public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        string phoneNumber = "";
+        //public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\ResumeBuilderLocalDb.mdf;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
@@ -227,92 +228,7 @@ namespace ResumeBuilder
 
             """;
 
-        public string getConnectionString()
-        {
-            return connectionString;
-        }
-
-        public bool CheckDatabaseExists()
-        {
-            //MessageBox.Show(connectionString);
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                try
-                {
-                    connection.Open();
-                    connection.Close();
-                    return true;
-                }
-                catch (SqlException ex)
-                {
-                    connection.Close();
-                    MessageBox.Show("database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //Application.Exit();
-                    return false;
-                }
-            }
-        }
-        //public bool CheckDatabaseExists2()
-        //{
-        //    using (SqlConnection connection = new SqlConnection(connectionString2))
-        //    {
-        //        try
-        //        {
-        //            connection.Open();
-        //            connection.Close();
-        //            connectionString = connectionString2;
-        //            return true;
-        //        }
-        //        catch (SqlException ex)
-        //        {
-        //            connection.Close();
-        //            MessageBox.Show("Database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        //            //Application.Exit();
-        //            return false;
-        //        }
-        //    }
-
-
-        public int getRandomID()
-        {
-            return id;
-        }
-
-        public string getPicture()
-        {
-            FormLogin formLogin = new FormLogin();
-            PhotoUploadForm photoUploadFormform = new PhotoUploadForm();
-            cnn = new SqlConnection(connectionString);
-            if (formLogin.getDescription() != "")
-            {
-
-                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{GetIdFromDescription().ToString().Trim()}'", cnn);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                cnn.Open();
-                reader1 = cmd.ExecuteReader();
-                if (reader1.Read())
-                {
-                    imagePath = reader1[0].ToString();
-                }
-                cnn.Close();
-            }
-            else
-            {
-                MessageBox.Show("photo not found!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
-                SqlDataAdapter da = new SqlDataAdapter(cmd);
-                cnn.Open();
-                reader1 = cmd.ExecuteReader();
-                if (reader1.Read())
-                {
-                    imagePath = reader1[0].ToString();
-                }
-                cnn.Close();
-            }
-            return imagePath;
-        }
-
+        //sql script executers
         public void SqlExecuter(string cmdstring)
         {
             try
@@ -364,6 +280,50 @@ namespace ResumeBuilder
             catch (System.IndexOutOfRangeException ex) { MessageBox.Show("something went wrong\n " + ex.Message); }
             catch (Exception ex) { MessageBox.Show("an unexpected error occurred " + ex.Message); throw; }
         }
+
+        //Get some values
+        public string getConnectionString()
+        {
+            return connectionString;
+        }
+        public int getRandomID()
+        {
+            return id;
+        }
+        public string getPicture()
+        {
+            FormLogin formLogin = new FormLogin();
+            PhotoUploadForm photoUploadFormform = new PhotoUploadForm();
+            cnn = new SqlConnection(connectionString);
+            if (formLogin.getDescription() != "")
+            {
+
+                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{GetIdFromDescription().ToString().Trim()}'", cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cnn.Open();
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    imagePath = reader1[0].ToString();
+                }
+                cnn.Close();
+            }
+            else
+            {
+                MessageBox.Show("photo not found!", "error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
+                SqlCommand cmd = new SqlCommand($"select image from Image where id = '{personalDetailsForm.getID().ToString().Trim()}'", cnn);
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                cnn.Open();
+                reader1 = cmd.ExecuteReader();
+                if (reader1.Read())
+                {
+                    imagePath = reader1[0].ToString();
+                }
+                cnn.Close();
+            }
+            return imagePath;
+        }
         public List<string> GetDescriptions(string selectedName)
         {
             List<string> description = new List<string>();
@@ -392,6 +352,74 @@ namespace ResumeBuilder
             cnn.Close();
             return names;
         }
+        public DataSet GetPersonTable()
+        {
+            FormLogin formLogin = new FormLogin();
+            DataSet dataSet = new DataSet();
+            if (formLogin.getDescription() != "")
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'", connectionString);
+                dataAdapter.Fill(dataSet);
+            }
+            return dataSet;
+        }
+        public DataSet GetPersonalTables()
+        {
+            DataSet dataSet = new DataSet();
+            FormLogin formLogin = new FormLogin();
+            if (formLogin.getDescription() != "")
+            {
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'", connectionString);
+                dataAdapter.Fill(dataSet);
+                phoneNumber = dataSet.Tables[0].Rows[0].Field<string>("AreaCode").ToString().Trim() + " " + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim();
+            }
+            else
+            {
+                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
+                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Job where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Education where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from MoreDetails where id = '{personalDetailsForm.getID().ToString().Trim()}'", connectionString);
+                dataAdapter.Fill(dataSet);
+                phoneNumber = dataSet.Tables[0].Rows[0].Field<string>("AreaCode").ToString().Trim() + " " + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim();
+            }
+            return dataSet;
+        }
+        public int GetIdFromDescription()
+        {
+            try
+            {
+                FormLogin formLogin = new FormLogin();
+                formLogin.getDescription();
+                cnn = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{formLogin.getDescription().Trim()}'", cnn);
+                cnn.Open();
+                id2 = (int)cmd.ExecuteScalar();
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("Please fill Person Details First!");
+            }
+            return id2;
+        }
+        public int GetIdFromDescriptionForRemovePerson(string description)
+        {
+            try
+            {
+                FormLogin formLogin = new FormLogin();
+                formLogin.getDescription();
+                cnn = new SqlConnection(connectionString);
+                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{description}'", cnn);
+                cnn.Open();
+                id2 = (int)cmd.ExecuteScalar();
+                cnn.Close();
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Please fill Person Details First!");
+            }
+            return id2;
+        }
+
+        //Database Controllers
         public void ClearDatabase()
         {
             SqlExecuter("delete from Person; delete from Job; delete from Education; delete from MoreDetails; delete from Image");
@@ -448,40 +476,33 @@ namespace ResumeBuilder
                 MessageBox.Show("Saved!\nYou can import this file when you need edit.");
             }
         }
-        public DataSet GetPersonTable()
+        public bool CheckDatabaseExists()
         {
-            FormLogin formLogin = new FormLogin();
-            DataSet dataSet = new DataSet();
-            if (formLogin.getDescription() != "")
+            //MessageBox.Show(connectionString);
+            using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'", connectionString);
-                dataAdapter.Fill(dataSet);
+                try
+                {
+                    connection.Open();
+                    connection.Close();
+                    return true;
+                }
+                catch (SqlException ex)
+                {
+                    connection.Close();
+                    MessageBox.Show("database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    //Application.Exit();
+                    return false;
+                }
             }
-            return dataSet;
         }
-        public DataSet GetPersonalTables()
-        {
-            DataSet dataSet = new DataSet();
-            FormLogin formLogin = new FormLogin();
-            if (formLogin.getDescription() != "")
-            {
-                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{formLogin.getDescription()}'; select * from Job where id = '{GetIdFromDescription().ToString().Trim()}'; select * from Education where id = '{GetIdFromDescription().ToString().Trim()}'; select * from MoreDetails where id = '{GetIdFromDescription().ToString().Trim()}'", connectionString);
-                dataAdapter.Fill(dataSet);
-            }
-            else
-            {
-                PersonalDetailsForm personalDetailsForm = new PersonalDetailsForm();
-                SqlDataAdapter dataAdapter = new SqlDataAdapter($"select * from Person where description = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Job where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from Education where id = '{personalDetailsForm.getID().ToString().Trim()}'; select * from MoreDetails where id = '{personalDetailsForm.getID().ToString().Trim()}'", connectionString);
-                dataAdapter.Fill(dataSet);
-            }
-            return dataSet;
-        }
+
         public (string, string, string, string, string, string, string, string, string, string) fillPdfFields()
         {
             SqlExecuter(defaultEmptyValue);
             DataSet dataSet = GetPersonalTables();
             name = dataSet.Tables[0].Rows[0].Field<string>("Name").ToString().Trim();
-            personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("PhoneNumber").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim();
+            personDetails = dataSet.Tables[0].Rows[0].Field<string>("Address").ToString().Trim() + "\n" + phoneNumber + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Email").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("Website").ToString().Trim() + "\n" + dataSet.Tables[0].Rows[0].Field<string>("SocialMedia").ToString().Trim();
             summary = dataSet.Tables[0].Rows[0].Field<string>("Summary").ToString().Trim();
             jobs = "";
             int i = 0;
@@ -554,42 +575,6 @@ namespace ResumeBuilder
             i = 0;
             SqlExecuter(defaultNullValue);
             return (name, personDetails, jobs, educations, certifications, personalProjects, languages, interests, skills, summary);
-        }
-        public int GetIdFromDescription()
-        {
-            try
-            {
-                FormLogin formLogin = new FormLogin();
-                formLogin.getDescription();
-                cnn = new SqlConnection(connectionString);
-                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{formLogin.getDescription().Trim()}'", cnn);
-                cnn.Open();
-                id2 = (int)cmd.ExecuteScalar();
-                cnn.Close();
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Please fill Person Details First!");
-            }
-            return id2;
-        }
-        public int GetIdFromDescriptionForRemovePerson(string description)
-        {
-            try
-            {
-                FormLogin formLogin = new FormLogin();
-                formLogin.getDescription();
-                cnn = new SqlConnection(connectionString);
-                SqlCommand cmd = new SqlCommand($"select id from Person where description = '{description}'", cnn);
-                cnn.Open();
-                id2 = (int)cmd.ExecuteScalar();
-                cnn.Close();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Please fill Person Details First!");
-            }
-            return id2;
         }
     }
 }
