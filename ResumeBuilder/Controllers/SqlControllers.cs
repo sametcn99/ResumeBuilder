@@ -16,8 +16,7 @@ namespace ResumeBuilder.Controllers
         string cmdstring = "";
         string imagePath;
         string phoneNumber = "";
-        //public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}ResumeBuilderLocalDb.mdf;Integrated Security=True";
-        public string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\samet\source\repos\ResumeBuilder\ResumeBuilder\Database\ResumeBuilderLocalDb.mdf;Integrated Security=True";
+        public string connectionString = $"Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename={Application.StartupPath}Database\\ResumeBuilderLocalDb.mdf;Integrated Security=True";
         public string defaultEmptyValue = """
             UPDATE MoreDetails SET PersonalProjects = ''  WHERE PersonalProjects IS NULL;
             UPDATE MoreDetails SET Skill = '' WHERE Skill IS NULL;
@@ -311,7 +310,7 @@ namespace ResumeBuilder.Controllers
         }
         public bool CheckDatabaseExists()
         {
-            //MessageBox.Show(connectionString);
+            MessageBox.Show(connectionString);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
@@ -324,7 +323,6 @@ namespace ResumeBuilder.Controllers
                 {
                     connection.Close();
                     MessageBox.Show("database is not exist. please import database and restart the app.", "ERROR!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    //Application.Exit();
                     return false;
                 }
             }
