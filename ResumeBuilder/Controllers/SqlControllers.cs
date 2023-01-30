@@ -310,7 +310,6 @@ namespace ResumeBuilder.Controllers
         }
         public bool CheckDatabaseExists()
         {
-            MessageBox.Show(connectionString);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 try
