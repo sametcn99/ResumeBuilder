@@ -30,6 +30,5 @@ this app generates your CV as PDF or DOCX file <br>
   <li>Newtonsoft JSON.NET .NET Library</i>
 </ul>
 
-<h3><i>Note: To run the solution need to enter connection string in SqlControllers class.</i></h3>
 <h1>License</h1>
 Licensed under the GPL 3.0 license.
