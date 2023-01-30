@@ -14,9 +14,6 @@ namespace ResumeBuilder
         public PersonalDetailsForm()
         {
             InitializeComponent();
-            dataGridView1.Rows.Clear();
-            dataGridView1.DataSource = SqlControllers.GetPersonalTables().Tables[0];
-            dataGridView1.Refresh();
             FormLogin formLogin = new FormLogin();
             if (countriesCombobox.DataSource == null)
             {
