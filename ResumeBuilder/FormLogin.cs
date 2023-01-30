@@ -1,4 +1,5 @@
-﻿using ResumeBuilder.Properties;
+﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
@@ -19,15 +20,7 @@ namespace ResumeBuilder
 
         public FormLogin()
         {
-            if (sqlControllers.CheckDatabaseExists() == false)
-            {
-                //if (sqlControllers.CheckDatabaseExists2() == false)
-                //{
-                //    MessageBox.Show("database is not exists");
-                //    Application.Exit();
-                //}
-
-            }
+            sqlControllers.CheckDatabaseExists();
 
             switch (Settings.Default.Language)
             {

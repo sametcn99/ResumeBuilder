@@ -88,7 +88,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;summaryTextCounterLabel.ZOrder" xml:space="preserve">
-    <value>4</value>
+    <value>2</value>
   </data>
   <data name="nameLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -118,7 +118,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nameLabel.ZOrder" xml:space="preserve">
-    <value>5</value>
+    <value>3</value>
   </data>
   <data name="addressLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -148,7 +148,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;addressLabel.ZOrder" xml:space="preserve">
-    <value>8</value>
+    <value>6</value>
   </data>
   <data name="phoneNumberLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -178,7 +178,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;phoneNumberLabel.ZOrder" xml:space="preserve">
-    <value>10</value>
+    <value>8</value>
   </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="savePersonDataButton.FlatStyle" type="System.Windows.Forms.FlatStyle, System.Windows.Forms">
@@ -209,7 +209,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;savePersonDataButton.ZOrder" xml:space="preserve">
-    <value>12</value>
+    <value>10</value>
   </data>
   <data name="emailLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -239,7 +239,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;emailLabel.ZOrder" xml:space="preserve">
-    <value>14</value>
+    <value>12</value>
   </data>
   <data name="emailTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 113</value>
@@ -266,7 +266,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;emailTextbox.ZOrder" xml:space="preserve">
-    <value>17</value>
+    <value>15</value>
   </data>
   <data name="AddressTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 47</value>
@@ -293,7 +293,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;AddressTextbox.ZOrder" xml:space="preserve">
-    <value>18</value>
+    <value>16</value>
   </data>
   <data name="nameTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 14</value>
@@ -320,7 +320,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;nameTextbox.ZOrder" xml:space="preserve">
-    <value>16</value>
+    <value>14</value>
   </data>
   <data name="summaryLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -350,7 +350,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;summaryLabel.ZOrder" xml:space="preserve">
-    <value>15</value>
+    <value>13</value>
   </data>
   <data name="summaryTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 263</value>
@@ -380,7 +380,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;summaryTextbox.ZOrder" xml:space="preserve">
-    <value>6</value>
+    <value>4</value>
   </data>
   <data name="socialMediaLinksTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 179</value>
@@ -410,7 +410,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;socialMediaLinksTextBox.ZOrder" xml:space="preserve">
-    <value>13</value>
+    <value>11</value>
   </data>
   <data name="websiteLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -440,7 +440,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;websiteLabel.ZOrder" xml:space="preserve">
-    <value>11</value>
+    <value>9</value>
   </data>
   <data name="socialMediaLinksLabel.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -470,7 +470,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;socialMediaLinksLabel.ZOrder" xml:space="preserve">
-    <value>9</value>
+    <value>7</value>
   </data>
   <data name="websiteTextbox.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 146</value>
@@ -497,55 +497,7 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;websiteTextbox.ZOrder" xml:space="preserve">
-    <value>7</value>
-  </data>
-  <data name="dataGridView1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>388, 12</value>
-  </data>
-  <data name="dataGridView1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>450, 500</value>
-  </data>
-  <data name="dataGridView1.TabIndex" type="System.Int32, mscorlib">
-    <value>41</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Name" xml:space="preserve">
-    <value>dataGridView1</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridView, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;dataGridView1.ZOrder" xml:space="preserve">
-    <value>3</value>
-  </data>
-  <data name="removeButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>252, 442</value>
-  </data>
-  <data name="removeButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>5, 5, 5, 5</value>
-  </data>
-  <data name="removeButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 70</value>
-  </data>
-  <data name="removeButton.TabIndex" type="System.Int32, mscorlib">
-    <value>61</value>
-  </data>
-  <data name="removeButton.Text" xml:space="preserve">
-    <value>Remove Personal Details</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Name" xml:space="preserve">
-    <value>removeButton</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Button, System.Windows.Forms, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;removeButton.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;removeButton.ZOrder" xml:space="preserve">
-    <value>2</value>
+    <value>5</value>
   </data>
   <data name="maskedTextBox1.Font" type="System.Drawing.Font, System.Drawing">
     <value>Segoe UI, 9pt</value>

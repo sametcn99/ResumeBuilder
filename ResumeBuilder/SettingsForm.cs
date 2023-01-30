@@ -1,5 +1,6 @@
-﻿using ResumeBuilder.Properties;
-using static ResumeBuilder.AppControllers;
+﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Properties;
+using static ResumeBuilder.Controllers.AppControllers;
 namespace ResumeBuilder
 {
 

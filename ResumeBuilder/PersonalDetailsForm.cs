@@ -1,14 +1,22 @@
-﻿using System.Text.RegularExpressions;
-using static ResumeBuilder.AppControllers;
+﻿using ResumeBuilder.Controllers;
+using System.Data;
+using System.Data.Entity.Core.Common.CommandTrees.ExpressionBuilder;
+using System.Text.RegularExpressions;
+using static ResumeBuilder.Controllers.AppControllers;
+using static ResumeBuilder.Datasets.PersonalDataset;
 namespace ResumeBuilder
 {
     public partial class PersonalDetailsForm : Form
     {
+
         SqlControllers SqlControllers = new SqlControllers();
         public static int id = 0;
         public PersonalDetailsForm()
         {
             InitializeComponent();
+            dataGridView1.Rows.Clear();
+            dataGridView1.DataSource = SqlControllers.GetPersonalTables().Tables[0];
+            dataGridView1.Refresh();
             FormLogin formLogin = new FormLogin();
             if (countriesCombobox.DataSource == null)
             {

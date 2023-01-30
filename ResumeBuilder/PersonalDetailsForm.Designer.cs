@@ -44,11 +44,8 @@
             this.websiteLabel = new System.Windows.Forms.Label();
             this.socialMediaLinksLabel = new System.Windows.Forms.Label();
             this.websiteTextbox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.removeButton = new System.Windows.Forms.Button();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.countriesCombobox = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // summaryTextCounterLabel
@@ -151,27 +148,6 @@
             resources.ApplyResources(this.websiteTextbox, "websiteTextbox");
             this.websiteTextbox.Name = "websiteTextbox";
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.GridColor = System.Drawing.Color.MidnightBlue;
-            resources.ApplyResources(this.dataGridView1, "dataGridView1");
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 25;
-            // 
-            // removeButton
-            // 
-            this.removeButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(66)))), ((int)(((byte)(66)))), ((int)(((byte)(66)))));
-            this.removeButton.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(238)))), ((int)(((byte)(238)))), ((int)(((byte)(238)))));
-            resources.ApplyResources(this.removeButton, "removeButton");
-            this.removeButton.Name = "removeButton";
-            this.removeButton.UseVisualStyleBackColor = false;
-            // 
             // maskedTextBox1
             // 
             resources.ApplyResources(this.maskedTextBox1, "maskedTextBox1");
@@ -193,8 +169,6 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.countriesCombobox);
-            this.Controls.Add(this.removeButton);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.summaryTextCounterLabel);
             this.Controls.Add(this.nameLabel);
             this.Controls.Add(this.summaryTextbox);
@@ -213,7 +187,6 @@
             this.ForeColor = System.Drawing.Color.Coral;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "PersonalDetailsForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -235,8 +208,6 @@
         private Label websiteLabel;
         private Label socialMediaLinksLabel;
         private TextBox websiteTextbox;
-        private DataGridView dataGridView1;
-        private Button removeButton;
         private MaskedTextBox maskedTextBox1;
         private ComboBox countriesCombobox;
     }

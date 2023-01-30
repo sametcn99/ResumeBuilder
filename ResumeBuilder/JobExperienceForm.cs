@@ -1,4 +1,6 @@
-﻿namespace ResumeBuilder
+﻿using ResumeBuilder.Controllers;
+
+namespace ResumeBuilder
 {
     public partial class JobExperienceForm : Form
     {

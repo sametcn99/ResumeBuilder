@@ -1,4 +1,5 @@
-﻿using ResumeBuilder.Properties;
+﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

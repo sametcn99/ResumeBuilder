@@ -1,4 +1,6 @@
-﻿namespace ResumeBuilder
+﻿using ResumeBuilder.Controllers;
+
+namespace ResumeBuilder
 {
     public partial class MoreDetailsForm : Form
     {
@@ -8,9 +10,6 @@
         public MoreDetailsForm()
         {
             InitializeComponent();
-            dataGridView1.Rows.Clear();
-            dataGridView1.DataSource = sqlControllers.GetPersonalTables().Tables[3];
-            dataGridView1.Refresh();
         }
 
         private void ClearTextBoxes()

@@ -1,4 +1,5 @@
-﻿using ResumeBuilder.Properties;
+﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
