@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System.Diagnostics;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -8,6 +8,11 @@ namespace ResumeBuilder.Controllers
     internal class AppControllers
     {
         //fields
+        /*
+        The class also contains various fields, such as "phoneNumber",
+        "regexNumber", "numberWithNoCountryCode","regexNumberWithNoCountryCode", "titlesTR", "titlesEN", "savingOption",
+        and "languageOption", which are used to store various data used in the application.
+        */
         public static string phoneNumber;
         public static string regexNumber;
         public static string numberWithNoCountryCode;
@@ -18,6 +23,7 @@ namespace ResumeBuilder.Controllers
         public static int languageOption { get; set; }
 
         //methods
+        //The "OpenURL" method opens a URL in the default web browser.
         public void OpenURL(string url)
         {
             string key = @"htmlfile\shell\open\command";
@@ -28,6 +34,8 @@ namespace ResumeBuilder.Controllers
             p.StartInfo.Arguments = url;
             p.Start();
         }
+        
+        //The "validatePhoneNumber" method validates a phone number by checking if it has the correct format and length.
         public static bool validatePhoneNumber(string areaCode1, string phoneNumber1)
         {
             try
@@ -52,6 +60,8 @@ namespace ResumeBuilder.Controllers
                 return false;
             }
         }
+
+        //The "GetKeyFromValue" method returns the key associated with a given value in a dictionary.
         public static string GetKeyFromValue(string valueVar)
         {
             foreach (string keyVar in CountryCodes.countryCodesMapping.Keys)
@@ -65,11 +75,15 @@ namespace ResumeBuilder.Controllers
             }
             return null;
         }
+
+        //The "regex" method removes all non-numeric characters from a string.
         public static string regex(string input)
         {
             input = Regex.Replace(input, @"[^0-9]+", "");
             return input;
         }
+
+        //The "DropDownWidth" method calculates the maximum width of the items in a ComboBox control.
         public static int DropDownWidth(ComboBox myCombo)
         {
             int maxWidth = 0;
