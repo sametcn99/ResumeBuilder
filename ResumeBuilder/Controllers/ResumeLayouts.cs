@@ -1,4 +1,4 @@
-﻿using QuestPDF.Fluent;
+using QuestPDF.Fluent;
 using QuestPDF.Helpers;
 using QuestPDF.Infrastructure;
 using ResumeBuilder.Properties;
@@ -7,6 +7,19 @@ namespace ResumeBuilder.Controllers
 {
     internal class ResumeLayouts
     {
+
+        /*
+        This code defines a class called "ResumeLayouts" that contains two methods for generating PDF resumes 
+        with different layouts: "ClassicLayout" and "ModernLayout". 
+        Both methods take in various strings representing the details of a person's resume (e.g. name, job history, education, etc.) 
+        and use the QuestPDF library to generate a PDF document with the specified layout. 
+        The "ClassicLayout" method uses a simple layout with a header containing the person's name and details, followed by 
+        sections for job history, education, certifications, personal projects, languages, interests, and skills. 
+        The "ModernLayout" method uses a more modern layout with a header containing the person's name and summary, 
+        followed by a two-column layout with a section for personal details, languages, certifications, skills, personal projects, 
+        and interests on the left, and a section for job history and education on the right. 
+        The class also contains a method called "printingLanguage" that sets the titles of each section based on the user's language preferences.
+        */
         SqlControllers sqlControllers = new SqlControllers();
         public string[] titles = { "", "", "", "", "", "", "" };
 
@@ -21,6 +34,13 @@ namespace ResumeBuilder.Controllers
             titles[6] = Settings.Default.skillsTitleLanguage;
         }
 
+/*This code defines a method called "ClassicLayout" that takes in several string parameters representing 
+various details about a person, such as their name, job history, education, certifications, personal 
+projects, languages, interests, and skills. The method uses a library called "Document" to create a 
+PDF document with a classic layout design. The PDF document includes a header section with the person's name, 
+personal details, and summary, as well as several content sections for their job history, education, 
+certifications, personal projects, languages, interests, and skills. The method also handles potential errors, 
+such as if the PDF file is already open and cannot be written to.*/
         public void ClassicLayout(string path, string name, string personDetails, string jobs, string educations, string certifications, string personalProjects, string languages, string interests, string skills, string summary)
         {
             printingLanguage();
@@ -107,6 +127,17 @@ namespace ResumeBuilder.Controllers
             }
         }
 
+
+/*This code defines a method called "ModernLayout" that takes in several string parameters representing 
+various details about a person's resume, such as their name, job history, education, skills, and interests. 
+The method uses a library called "Document" to create a PDF document that displays these details in a modern 
+layout format. The PDF document is created with an A4 page size and a 5mm margin. The header of the document 
+includes the person's name and a summary of their skills or experience, as well as an image of the person. 
+The main content of the document is divided into two columns, with the left column displaying details such 
+as the person's personal information, language skills, certifications, personal projects, and interests. 
+The right column displays details such as the person's job history and education. The method also includes 
+some formatting options, such as bold and italic text, and allows for customization of font sizes. 
+Finally, the PDF document is saved to a specified file path.*/
         public void ModernLayout(string path, string name, string personDetails, string jobs, string educations, string certifications, string personalProjects, string languages, string interests, string skills, string summary)
         {
             printingLanguage();
