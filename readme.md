@@ -1,5 +1,6 @@
 # Resume Builder
-this app generates your CV as PDF or DOCX file <br>
+This project is a desktop application that allows users to create and manage their resumes.<br>
+It is built using C# and Windows Forms, and it uses a SQL Server database to store and retrieve data.<br>
 ![alt text](https://repository-images.githubusercontent.com/576042902/37e60d01-004b-4d49-89be-d1189cf4b9c1)
 
 <a href="https://sourceforge.net/p/resumebuilder/"><img alt="Download Resume Builder" src="https://sourceforge.net/sflogo.php?type=18&group_id=3591689" width=200></a>     <a href="https://sourceforge.net/projects/resumebuilder/files/latest/download"><img alt="Download Resume Builder" src="https://a.fsdn.com/con/app/sf-download-button" width=276 height=48 srcset="https://a.fsdn.com/con/app/sf-download-button?button_size=2x 2x"></a>   <a href="https://sourceforge.net/projects/resumebuilder/files/latest/download"><img alt="Download Resume Builder" src="https://img.shields.io/sourceforge/dt/resumebuilder.svg" ></a>
@@ -19,6 +20,22 @@ this app generates your CV as PDF or DOCX file <br>
   <li>Change Font and Picture Sizes</li>
   <li>English and Turkish UI</li>
 </ul>
+
+<h1>Usage</h1>
+Usage
+To use this project, follow these steps:
+<ul>
+<li>Open the project in Visual Studio.</li>
+<li>Build and run the project.</li>
+<li>Fill in your personal details, job history, education, and more details.</li>
+<li>Upload your photo.</li>
+<li>Choose a resume layout and export your resume as a PDF or DOCX file.</li>
+<li>Import or export your resume data as a JSON file.</li>
+<li>View information about the developer and visit their Github profile.</li>
+</ul>
+
+<h1>Contributing</h1>
+This project is open for contributions. If you find any bugs or issues, please report them on the Github repository. You can also suggest new features or improvements.
 
 <h1>Built With</h1>
 <ul>
