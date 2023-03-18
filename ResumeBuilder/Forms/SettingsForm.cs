@@ -1,4 +1,4 @@
-﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Controllers;
 using ResumeBuilder.Properties;
 using static ResumeBuilder.Controllers.AppControllers;
 namespace ResumeBuilder
@@ -6,6 +6,12 @@ namespace ResumeBuilder
 
     public partial class SettingsForm : Form
     {
+        /*This code defines the behavior of the SettingsForm in the ResumeBuilder application. 
+        It includes methods for exporting and importing data from a SQL database, displaying and 
+        clearing data, removing a person's information from the database, changing the language 
+        of the application, changing the saving file option, displaying the connection string, 
+        resetting settings to default, and changing the titles of sections in a resume. 
+        It also initializes the form by populating combo boxes with data from the database and setting the connection string label.*/
         AppControllers appControllers = new AppControllers();
         SqlControllers sqlControllers = new SqlControllers();
 
