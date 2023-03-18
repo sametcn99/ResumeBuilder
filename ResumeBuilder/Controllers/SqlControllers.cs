@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System.Data;
 using System.Data.SqlClient;
 using System.Text;
@@ -7,6 +7,13 @@ namespace ResumeBuilder.Controllers
 {
     internal class SqlControllers
     {
+        /*
+        This code is a C# class that contains various methods for interacting with a SQL Server database. 
+        The methods include executing SQL commands, retrieving data from the database, and manipulating data in the database. 
+        The class also includes methods for exporting and importing the database as a JSON file, as well as filling out a PDF document
+         with data from the database. The code uses ADO.NET to connect to the database and execute SQL commands. Overall, this code 
+         provides a set of tools for managing and working with a SQL Server database in a C# application.
+        */
         //fields
         SqlConnection cnn;
         SqlDataReader reader1;
