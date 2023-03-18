@@ -1,8 +1,15 @@
-﻿using ResumeBuilder.Controllers;
+using ResumeBuilder.Controllers;
 using ResumeBuilder.Properties;
 
 namespace ResumeBuilder
 {
+    /*This code defines the behavior of the login form in the ResumeBuilder application. 
+    It initializes the necessary controllers, sets the language based on user preferences, 
+    populates the names and resume versions in the respective combo boxes, and handles user 
+    interactions such as clicking the login button, creating a new resume, selecting a name 
+    or resume version, and closing the application. It also includes a method to get and set 
+    the description and ID of the selected resume version.
+*/
     public partial class FormLogin : Form
     {
         AppControllers appControllers = new AppControllers();
@@ -22,6 +29,9 @@ namespace ResumeBuilder
         {
             sqlControllers.CheckDatabaseExists();
 
+            /**
+            * Sets the current UI culture based on the language setting in the application settings.
+            */
             switch (Settings.Default.Language)
             {
                 case "en":
@@ -32,6 +42,11 @@ namespace ResumeBuilder
                     break;
             }
             InitializeComponent();
+
+
+            /**
+            * Adds the names from the sqlControllers to the namesCombobox.
+            */
             foreach (var item in sqlControllers.GetNames())
             {
                 namesCombobox.Items.Add(item.Trim());
@@ -39,6 +54,11 @@ namespace ResumeBuilder
         }
 
         public string getDescription() { return description; }
+
+
+        /**
+        * Sets the description of an object.
+        */
         public string setDescription(string value)
         {
             description = value;
@@ -46,6 +66,16 @@ namespace ResumeBuilder
         }
         public int getID() { return id; }
 
+
+
+/**
+ * Handles the click event of the login button. 
+ If the resume version combobox is not null, it sets the description to the selected item of the combobox, 
+ creates a new FormHome object, shows it, sets the helloLbl and nameLbl to visible, and sets the text of 
+ the nameLbl to the selected item of the namesCombobox. If the resume version combobox is null, it displays a message box.
+ * @param sender The object that raised the event.
+ * @param e The event arguments.
+ */
         private void loginButton_Click(object sender, EventArgs e)
         {
             if (resumeVersionCombobox.SelectedItem is not null)
@@ -63,6 +93,12 @@ namespace ResumeBuilder
                 MessageBox.Show("Select Resume to Continue!");
             }
         }
+
+
+
+        /**
+        * Handles the MouseDown event of the navigationPanel control.
+        */
         private void navigationPanel_MouseDown(object sender, MouseEventArgs e)
         {
             if (e.Button == MouseButtons.Left)
@@ -81,6 +117,11 @@ namespace ResumeBuilder
             formHome.Show();
             this.Hide();
         }
+
+        /**
+        * @description Handles the SelectedIndexChanged event of the namesCombobox control.
+        *              Populates the resumeVersionCombobox with the descriptions of the selected item from the namesCombobox.
+        */
         private void namesCombobox_SelectedIndexChanged(object sender, EventArgs e)
         {
             foreach (var item in sqlControllers.GetDescriptions(namesCombobox.SelectedItem.ToString().Trim()))
